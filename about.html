@@ -5,23 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=.0">
 <title>من نحن | دليلك</title>
 <meta name="description" content="تعرف على موقع دليلك: رسالتنا، قيمنا، ولماذا نكتب المحتوى العربي المفيد.">
-<link rel="canonical" href="https://sbdh285.github.io/dalilak/about.html">
+<link rel="canonical" href="https://sbdh1285.github.io/dalilak/about.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="من نحن">
 <meta property="og:description" content="تعرف على موقع دليلك: رسالتنا، قيمنا، ولماذا نكتب المحتوى العربي المفيد.">
-<meta property="og:url" content="https://sbdh285.github.io/dalilak/about.html">
-<meta property="og:image" content="https://sbdh285.github.io/dalilak/images/og-default.png">
+<meta property="og:url" content="https://sbdh1285.github.io/dalilak/about.html">
+<meta property="og:image" content="https://sbdh1285.github.io/dalilak/images/og-default.png">
 <meta property="og:site_name" content="دليلك">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="من نحن">
 <meta name="twitter:description" content="تعرف على موقع دليلك: رسالتنا، قيمنا، ولماذا نكتب المحتوى العربي المفيد.">
-<meta name="twitter:image" content="https://sbdh285.github.io/dalilak/images/og-default.png">
+<meta name="twitter:image" content="https://sbdh1285.github.io/dalilak/images/og-default.png">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0f66e">
 <link rel="preload" href="fonts/tajawal-00.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="manifest" href="manifest.json">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "من نحن", "description": "تعرف على موقع دليلك: رسالتنا، قيمنا، ولماذا نكتب المحتوى العربي المفيد.", "url": "https://sbdh285.github.io/dalilak/about.html", "inLanguage": "ar", "publisher": {"@type": "Organization", "name": "دليلك", "url": "https://sbdh285.github.io/dalilak"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "من نحن", "description": "تعرف على موقع دليلك: رسالتنا، قيمنا، ولماذا نكتب المحتوى العربي المفيد.", "url": "https://sbdh1285.github.io/dalilak/about.html", "inLanguage": "ar", "publisher": {"@type": "Organization", "name": "دليلك", "url": "https://sbdh1285.github.io/dalilak"}}</script>
 <style>
 @font-face{font-family:'Tajawal';src:url('fonts/tajawal-400.woff2') format('woff2');font-weight:400;font-display:swap}
 @font-face{font-family:'Tajawal';src:url('fonts/tajawal-00.woff2') format('woff2');font-weight:00;font-display:swap}
@@ -282,7 +282,7 @@ var theme=localStorage.getItem('theme');
 if(theme==='dark')document.documentElement.setAttribute('data-theme','dark');
 document.getElementById('themeBtn').addEventListener('click',function(){var d=document.documentElement;if(d.getAttribute('data-theme')==='dark'){d.removeAttribute('data-theme');localStorage.setItem('theme','light')}else{d.setAttribute('data-theme','dark');localStorage.setItem('theme','dark')}});
 var sb=document.getElementById('searchInput'),res=document.getElementById('searchRes');
-sb.addEventListener('input',function(){var q=sb.value.trim().toLowerCase();res.innerHTML='';if(q.length<2){res.classList.remove('open');return}if(!idx||!idx.length){res.innerHTML='<a>جارٍ التحميل…</a>';res.classList.add('open');return}var hits=idx.filter(function(x){return (x.t&&x.t.toLowerCase().indexOf(q)>-)||(x.c&&x.c.toLowerCase().indexOf(q)>-)}).slice(0,);if(!hits.length){res.innerHTML='<a>لا توجد نتائج مطابقة</a>';res.classList.add('open');return}hits.forEach(function(x){var e=document.createElement('a');e.href=base+'posts/'+x.s+'.html';e.innerHTML='<span class="sr-cat">'+x.c+'</span>'+x.t;res.appendChild(e)});res.classList.add('open')});
+sb.addEventListener('input',function(){var q=sb.value.trim().toLowerCase();res.innerHTML='';if(q.length<2){res.classList.remove('open');return}if(!idx||!idx.length){res.innerHTML='<a>جارٍ التحميل…</a>';res.classList.add('open');return}var hits=idx.filter(function(x){return (x.t&&x.t.toLowerCase().indexOf(q)>-1)||(x.c&&x.c.toLowerCase().indexOf(q)>-1)}).slice(0,7);if(!hits.length){res.innerHTML='<a>لا توجد نتائج مطابقة</a>';res.classList.add('open');return}hits.forEach(function(x){var e=document.createElement('a');e.href=base+'posts/'+x.s+'.html';e.innerHTML='<span class="sr-cat">'+x.c+'</span>'+x.t;res.appendChild(e)});res.classList.add('open')});
 document.addEventListener('click',function(e){if(!e.target.closest('.search-box'))res.classList.remove('open')});
 document.getElementById('burger').addEventListener('click',function(){document.getElementById('nav').classList.toggle('open')});
 window.copyLink=function(){var u=location.href;navigator.clipboard.writeText(u).then(function(){var t=document.getElementById('toast');t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2200)})};

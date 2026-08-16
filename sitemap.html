@@ -2,23 +2,23 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>خريطة الموقع | دليلك</title>
 <meta name="description" content="دليل صفحات وأقسام موقع دليلك.">
-<link rel="canonical" href="https://sbdh285.github.io/dalilak/sitemap.html">
+<link rel="canonical" href="https://sbdh1285.github.io/dalilak/sitemap.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="خريطة الموقع">
 <meta property="og:description" content="دليل صفحات وأقسام موقع دليلك.">
-<meta property="og:url" content="https://sbdh285.github.io/dalilak/sitemap.html">
-<meta property="og:image" content="https://sbdh285.github.io/dalilak/images/og-default.png">
+<meta property="og:url" content="https://sbdh1285.github.io/dalilak/sitemap.html">
+<meta property="og:image" content="https://sbdh1285.github.io/dalilak/images/og-default.png">
 <meta property="og:site_name" content="دليلك">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="خريطة الموقع">
 <meta name="twitter:description" content="دليل صفحات وأقسام موقع دليلك.">
-<meta name="twitter:image" content="https://sbdh285.github.io/dalilak/images/og-default.png">
+<meta name="twitter:image" content="https://sbdh1285.github.io/dalilak/images/og-default.png">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0f66e">
-<link rel="preload" href="fonts/tajawal-00.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#0f766e">
+<link rel="preload" href="fonts/tajawal-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="manifest" href="manifest.json">
 <style>
@@ -202,13 +202,13 @@ footer p{font-size:.9rem;line-height:.9}
 <body>
 <div id="progress"></div>
 <button id="toTop" title="العودة للأعلى">↑</button>
-<div id="toast">تم نسخ الرابط</div>
+<div id="toast">✅ تم نسخ الرابط</div>
 <header><div class="wrap hbar">
   <a class="logo" href="index.html"><span class="logo-ic">📘</span> دليلك</a>
   <nav id="nav"><a href="index.html">الرئيسية</a><a href="category/home-tips.html">نصائح منزلية</a><a href="category/recipes.html">وصفات لذيذة</a><a href="category/knowledge.html">معلومات عامة</a><a href="category/tech.html">تكنولوجيا</a><a href="about.html">من نحن</a><a href="contact.html">اتصل بنا</a></nav>
   <div class="h-actions">
     <div class="search-box">
-      <input class="icon-btn" id="searchInput" placeholder="🔍" style="width:50px;text-align:right;padding:0 2px;font-family:inherit">
+      <input class="icon-btn" id="searchInput" placeholder="🔍" style="width:150px;text-align:right;padding:0 12px;font-family:inherit">
       <div class="search-res" id="searchRes"></div>
     </div>
     <button class="icon-btn" id="themeBtn" title="الوضع الليلي">🌙</button>
@@ -217,7 +217,7 @@ footer p{font-size:.9rem;line-height:.9}
 </div></header>
 <main>
 <div class="page">
-<h>خريطة الموقع</h>
+<h1>خريطة الموقع</h1>
 <p class="sub">دليل سريع لكل أقسام وصفحات دليلك</p>
 <h2>الأقسام</h2>
 <ul>
@@ -243,8 +243,8 @@ footer p{font-size:.9rem;line-height:.9}
 <footer><div class="wrap">
   <div class="fgrid">
     <div>
-      <div class="logo-ic" style="width:44px;height:44px;font-size:.3rem">📘</div>
-      <h4 style="margin:0px 0 8px">دليلك</h4>
+      <div class="logo-ic" style="width:44px;height:44px;font-size:1.3rem">📘</div>
+      <h4 style="margin:10px 0 8px">دليلك</h4>
       <p>دليلك اليومي لنصائح عملية، وصفات شهية، ومعلومات مفيدة. محتوى عربي أصلي، مكتوب بعناية، ويحدّث باستمرار ليقدم لك الفائدة أولًا.</p>
     </div>
     <div>
@@ -262,13 +262,13 @@ footer p{font-size:.9rem;line-height:.9}
     </div>
     <div>
       <h4>تواصل معنا</h4>
-      <p>contact@dalilak.com</p>
+      <p>📧 contact@dalilak.com</p>
       <p>نرحب بملاحظاتك واقتراحاتك حول المواضيع التي تهمك.</p>
     </div>
   </div>
   <div class="f-bottom">
     <span>© 2026 دليلك — جميع الحقوق محفوظة.</span>
-    <span>صُنع بحب للمحتوى العربي المفيد</span>
+    <span>صُنع بحب ❤️ للمحتوى العربي المفيد</span>
   </div>
 </div></footer>
 <script>
@@ -280,7 +280,7 @@ var theme=localStorage.getItem('theme');
 if(theme==='dark')document.documentElement.setAttribute('data-theme','dark');
 document.getElementById('themeBtn').addEventListener('click',function(){var d=document.documentElement;if(d.getAttribute('data-theme')==='dark'){d.removeAttribute('data-theme');localStorage.setItem('theme','light')}else{d.setAttribute('data-theme','dark');localStorage.setItem('theme','dark')}});
 var sb=document.getElementById('searchInput'),res=document.getElementById('searchRes');
-sb.addEventListener('input',function(){var q=sb.value.trim().toLowerCase();res.innerHTML='';if(q.length<2){res.classList.remove('open');return}if(!idx||!idx.length){res.innerHTML='<a>جارٍ التحميل…</a>';res.classList.add('open');return}var hits=idx.filter(function(x){return (x.t&&x.t.toLowerCase().indexOf(q)>-)||(x.c&&x.c.toLowerCase().indexOf(q)>-)}).slice(0,);if(!hits.length){res.innerHTML='<a>لا توجد نتائج مطابقة</a>';res.classList.add('open');return}hits.forEach(function(x){var e=document.createElement('a');e.href=base+'posts/'+x.s+'.html';e.innerHTML='<span class="sr-cat">'+x.c+'</span>'+x.t;res.appendChild(e)});res.classList.add('open')});
+sb.addEventListener('input',function(){var q=sb.value.trim().toLowerCase();res.innerHTML='';if(q.length<2){res.classList.remove('open');return}if(!idx||!idx.length){res.innerHTML='<a>جارٍ التحميل…</a>';res.classList.add('open');return}var hits=idx.filter(function(x){return (x.t&&x.t.toLowerCase().indexOf(q)>-1)||(x.c&&x.c.toLowerCase().indexOf(q)>-1)}).slice(0,7);if(!hits.length){res.innerHTML='<a>لا توجد نتائج مطابقة</a>';res.classList.add('open');return}hits.forEach(function(x){var e=document.createElement('a');e.href=base+'posts/'+x.s+'.html';e.innerHTML='<span class="sr-cat">'+x.c+'</span>'+x.t;res.appendChild(e)});res.classList.add('open')});
 document.addEventListener('click',function(e){if(!e.target.closest('.search-box'))res.classList.remove('open')});
 document.getElementById('burger').addEventListener('click',function(){document.getElementById('nav').classList.toggle('open')});
 window.copyLink=function(){var u=location.href;navigator.clipboard.writeText(u).then(function(){var t=document.getElementById('toast');t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2200)})};
