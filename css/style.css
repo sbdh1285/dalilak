@@ -6,7 +6,7 @@
 [data-theme="dark"]{--p:#2dd4bf;--p2:#4b8a6;--pa:#5eead4;--ac:#fbbf24;--bg:#0b220;--card:#a2e;--tx:#e2e8f0;--mut:#94a3b8;--bd:#e293b;--hov:#e293b}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Tajawal',"Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--tx);line-height:.9;direction:rtl;text-align:right;transition:background .25s}
+body{font-family:'Tajawal',"Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--tx);line-height:1.9;direction:rtl;text-align:right;transition:background .25s}
 img{max-width:00%}
 a{color:var(--p);text-decoration:none}
 a:hover{color:var(--pa)}
@@ -119,7 +119,7 @@ footer{background:var(--dk);color:#cbd5e;margin-top:60px}
 footer h4{color:#fff;font-size:.02rem;margin-bottom:4px}
 footer a{color:#cbd5e;display:block;padding:3px 0;font-size:.92rem}
 footer a:hover{color:#fff}
-footer p{font-size:.9rem;line-height:.9}
+footer p{font-size:.9rem;line-height:1.9}
 .f-bottom{border-top:px solid #e293b;padding:8px 0;font-size:.85rem;color:#94a3b8;display:flex;justify-content:space-between;gap:0px;flex-wrap:wrap}
 /* ===== 404 ===== */
 .nf{text-align:center;padding:90px 0}
