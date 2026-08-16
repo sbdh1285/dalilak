@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /404.html
 
-Sitemap: https://www.dalilak.com/sitemap.xml
+Sitemap: https://sbdh1285.github.io/dalilak/sitemap.xml
