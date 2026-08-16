@@ -18,6 +18,7 @@
 <meta name="twitter:image" content="https://sbdh1285.github.io/dalilak/images/og-eliminate-bad-smells.png">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0f766e">
+<link rel="preload" href="../fonts/tajawal-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="manifest" href="../manifest.json">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "كيف تتخلص من الروائح الكريهة في منزلك نهائيًا", "description": "طرق فعالة للتخلص من الروائح الكريهة في المنزل نهائيًا: حلول للمطبخ والحمام، التهوية، الفحم النشط، وحيل طبيعية مجربة.", "url": "https://sbdh1285.github.io/dalilak/posts/eliminate-bad-smells.html", "inLanguage": "ar", "publisher": {"@type": "Organization", "name": "دليلك", "url": "https://sbdh1285.github.io/dalilak"}}</script>
@@ -153,6 +154,36 @@ footer p{font-size:.9rem;line-height:1.9}
 #progress{position:fixed;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--p2),var(--ac));width:0;z-index:100;transition:width .1s}
 #toTop{position:fixed;bottom:22px;left:22px;width:46px;height:46px;border-radius:12px;background:var(--pa);color:#fff;border:none;font-size:1.2rem;cursor:pointer;display:none;z-index:90;box-shadow:0 8px 20px rgba(0,0,0,.25)}
 #toTop.show{display:block}
+/* جدول المحتويات */
+.toc{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px 22px;margin:0 0 28px;font-size:.95rem}
+.toc b{color:var(--pa);display:block;margin-bottom:10px}
+.toc ul{list-style:none;padding:0;display:grid;gap:6px}
+.toc a{color:var(--tx);display:inline-flex;gap:8px;align-items:center}
+.toc a:before{content:"◆";color:var(--p2);font-size:.6rem}
+.toc a:hover{color:var(--p)}
+/* Toast */
+#toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--pa);color:#fff;padding:11px 22px;border-radius:999px;font-size:.9rem;font-weight:700;opacity:0;pointer-events:none;transition:all .3s;z-index:120}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* زر نسخ */
+.sh-cp{background:#334155;color:#fff;border:none;cursor:pointer;font-family:inherit;font-size:.87rem;font-weight:700;padding:9px 16px;border-radius:10px;display:inline-flex;align-items:center;gap:7px}
+.sh-cp:hover{background:#1e293b}
+/* مميز */
+.featured{background:var(--card);border:1px solid var(--bd);border-radius:20px;overflow:hidden;display:grid;grid-template-columns:1.2fr 1fr;margin:40px 0 8px;transition:box-shadow .2s}
+.featured:hover{box-shadow:0 14px 34px rgba(15,23,42,.1)}
+.featured img{width:100%;height:100%;object-fit:cover;min-height:280px}
+.f-body{padding:28px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.f-tag{display:inline-block;background:var(--ac);color:#1e293b;font-size:.78rem;font-weight:800;padding:4px 12px;border-radius:999px;align-self:flex-start}
+.f-body h2{font-size:1.4rem;line-height:1.6}
+.f-body h2 a{color:var(--tx)}
+.f-body p{color:var(--mut)}
+/* FAQ */
+.faq{display:grid;gap:12px;margin-bottom:10px}
+.faq details{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 20px;cursor:pointer}
+.faq summary{font-weight:700;color:var(--pa);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.faq summary:after{content:"+";font-size:1.3rem;color:var(--p2)}
+.faq details[open] summary:after{content:"−"}
+.faq p{margin:12px 0 0;color:var(--mut);font-size:.95rem}
+@media(max-width:760px){.featured{grid-template-columns:1fr}.featured img{min-height:200px}}
 .note-p{background:#f1f5f9;border-radius:12px;padding:14px 16px;margin:18px 0;font-size:.95rem}
 [data-theme="dark"] .note-p{background:#1e293b}
 .btn-row{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
@@ -193,28 +224,29 @@ footer p{font-size:.9rem;line-height:1.9}
     <span>📅 2026-06-09</span>
     <span>⏱️ 2 دقائق قراءة</span>
   </div>
-  <img class="art-img" src="../images/og-eliminate-bad-smells.png" alt="كيف تتخلص من الروائح الكريهة في منزلك نهائيًا">
+  <img class="art-img" src="../images/og-eliminate-bad-smells.png" alt="كيف تتخلص من الروائح الكريهة في منزلك نهائيًا" width="1200" height="630">
+  <nav class="toc"><b>📑 محتويات المقال</b><ul><li><a href="#sec-0">أولًا: المطبخ — المصدر الأول للروائح</a></li><li><a href="#sec-1">ثانيًا: الحمام</a></li><li><a href="#sec-2">ثالثًا: حلول عامة لكل المنزل</a></li><li><a href="#sec-3">الوقاية خير من العلاج</a></li><li><a href="#sec-4">الخلاصة</a></li></ul></nav>
   <div class="art-body"><p>الروائح الكريهة في المنزل مشكلة محرجة، خاصة عند استقبال الضيوف. والحقيقة أن معظم الناس يعالجون الأعراض بالمعطرات الجوية التي تخفي الرائحة مؤقتًا بدل معالجة المصدر. في هذا الدليل نتعامل مع الجذور الحقيقية للروائح في كل ركن من المنزل.</p>
-<h2>أولًا: المطبخ — المصدر الأول للروائح</h2>
+<h2 id="sec-0">أولًا: المطبخ — المصدر الأول للروائح</h2>
 <h3>الثلاجة</h3>
 <p>افحص الثلاجة وأخرج أي أطعمة منتهية الصلاحية فورًا. نظف الرفوف بمحلول الماء والخل، وضع علبة صغيرة مفتوحة من بيكربونات الصودا في ركن الثلاجة لامتصاص الروائح؛ استبدلها كل شهر.</p>
 <h3>سلة المهملات</h3>
 <p>اغسل السلة بالماء والصابون مرة أسبوعيًا وجففها جيدًا، وضع في قاعها قليلًا من بيكربونات الصودا. استخدم أكياسًا جيدة لا تتمزق، ولا تترك المهملات أكثر من يومين.</p>
 <h3>البالوعة</h3>
 <p>بقايا الطعام تتراكم في البالوعة وتتعفن. اسكب كوبًا من الملح ثم كوبًا من الخل الساخن مرة أسبوعيًا، واتركه 10 دقائق ثم اشطف بماء مغلي.</p>
-<h2>ثانيًا: الحمام</h2>
+<h2 id="sec-1">ثانيًا: الحمام</h2>
 <p>الرطوبة هي العدو الأول للحمام. افتح نافذة الحمام أو شغّل الشفاط بعد كل استحمام لمدة 20 دقيقة على الأقل. عالج التسربات فورًا، وجفف المناشف بعيدًا عن بعضها، ونظف ستارة الحمام أو استبدلها إذا ظهر عليها العفن.</p>
 <div class="tip"><span class="t-ic">💡</span><div><strong>نصيحة:</strong> ضع كوبًا صغيرًا من القهوة المطحونة الجافة في ركن الحمام؛ القهوة تمتص الروائح وتترك رائحة خفيفة لطيفة، وتستبدل كل أسبوعين.</div></div>
-<h2>ثالثًا: حلول عامة لكل المنزل</h2>
+<h2 id="sec-2">ثالثًا: حلول عامة لكل المنزل</h2>
 <h3>التهوية اليومية</h3>
 <p>افتح النوافذ 10 دقائق صباحًا كل يوم. دوران الهواء يطرد الروائح والرطوبة معًا، وهو أرخص جهاز تعطير في العالم.</p>
 <h3>الفحم النشط</h3>
 <p>ضع قطعًا من الفحم النشط في أماكن الرطوبة: خزانة الأحذية، تحت الحوض، داخل خزانة الملابس. الفحم يمتص الروائح لشهور، ويمكنك إعادة تفعيله بتعريضه للشمس.</p>
 <h3>الملابس المخزنة</h3>
 <p>الملابس المخزنة لفترات طويلة تكتسب رائحة العفن. أضف أكياس اللافندر أو قطعة قطن مبللة بزيت عطري إلى الخزائن، وتأكد أن الملابس جافة تمامًا قبل تخزينها.</p>
-<h2>الوقاية خير من العلاج</h2>
+<h2 id="sec-3">الوقاية خير من العلاج</h2>
 <ul><li>اطبخ مع تشغيل الشفاط، وأغلق باب المطبخ أثناء قلي الأسماك.</li><li>نظف بقايا الطعام عن الأسطح مباشرة بعد الطهي.</li><li>لا تترك الملابس المبللة في الغسالة بعد انتهاء الدورة.</li><li>عالج البقع الرطبة على الجدران فورًا قبل نمو العفن.</li></ul>
-<h2>الخلاصة</h2>
+<h2 id="sec-4">الخلاصة</h2>
 <p>القاعدة الذهبية بسيطة: الروائح الكريهة لا تختفي بالتعطير، بل بإزالة مصدرها. ابدأ بالبحث عن السبب: طعام فاسد، رطوبة، أو بقايا متراكمة، ثم عالج السبب، وستجد أن البيت يعود لرائحته النظيفة الطبيعية دون أي معطرات.</p></div>
   
 <div class="share">
@@ -223,6 +255,7 @@ footer p{font-size:.9rem;line-height:1.9}
   <a class="sh-tg" href="https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Feliminate-bad-smells.html&text=%D9%83%D9%8A%D9%81%20%D8%AA%D8%AA%D8%AE%D9%84%D8%B5%20%D9%85%D9%86%20%D8%A7%D9%84%D8%B1%D9%88%D8%A7%D8%A6%D8%AD%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%87%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%86%D8%B2%D9%84%D9%83%20%D9%86%D9%87%D8%A7%D8%A6%D9%8A%D9%8B%D8%A7" target="_blank" rel="noopener">تيليجرام</a>
   <a class="sh-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Feliminate-bad-smells.html" target="_blank" rel="noopener">فيسبوك</a>
   <a class="sh-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Feliminate-bad-smells.html&text=%D9%83%D9%8A%D9%81%20%D8%AA%D8%AA%D8%AE%D9%84%D8%B5%20%D9%85%D9%86%20%D8%A7%D9%84%D8%B1%D9%88%D8%A7%D8%A6%D8%AD%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%87%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%86%D8%B2%D9%84%D9%83%20%D9%86%D9%87%D8%A7%D8%A6%D9%8A%D9%8B%D8%A7" target="_blank" rel="noopener">إكس</a>
+  <button class="sh-cp" onclick="copyLink()">🔗 نسخ الرابط</button>
 </div>
   <div class="author">
     <div class="author-av">✍️</div>
@@ -236,7 +269,7 @@ footer p{font-size:.9rem;line-height:1.9}
   <div class="sec-h"><h2>مقالات ذات صلة</h2></div>
   <div class="grid">
     <article class="card">
-      <a href="../posts/tidy-home-in-15-minutes.html"><img class="card-img" src="../images/og-tidy-home-in-15-minutes.png" alt="ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية مجرّبة" loading="lazy"></a>
+      <a href="../posts/tidy-home-in-15-minutes.html"><img class="card-img" src="../images/og-tidy-home-in-15-minutes.png" alt="ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية مجرّبة" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">🏠 نصائح منزلية</span>
         <h3><a href="../posts/tidy-home-in-15-minutes.html">ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية مجرّبة</a></h3>
@@ -248,7 +281,7 @@ footer p{font-size:.9rem;line-height:1.9}
       </div>
     </article>
     <article class="card">
-      <a href="../posts/natural-cleaning-recipes.html"><img class="card-img" src="../images/og-natural-cleaning-recipes.png" alt="6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك" loading="lazy"></a>
+      <a href="../posts/natural-cleaning-recipes.html"><img class="card-img" src="../images/og-natural-cleaning-recipes.png" alt="6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">🏠 نصائح منزلية</span>
         <h3><a href="../posts/natural-cleaning-recipes.html">6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك</a></h3>
@@ -260,7 +293,7 @@ footer p{font-size:.9rem;line-height:1.9}
       </div>
     </article>
     <article class="card">
-      <a href="../posts/save-electricity-bill.html"><img class="card-img" src="../images/og-save-electricity-bill.png" alt="10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك" loading="lazy"></a>
+      <a href="../posts/save-electricity-bill.html"><img class="card-img" src="../images/og-save-electricity-bill.png" alt="10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">🏠 نصائح منزلية</span>
         <h3><a href="../posts/save-electricity-bill.html">10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك</a></h3>
@@ -292,6 +325,7 @@ footer p{font-size:.9rem;line-height:1.9}
       <a href="../contact.html">اتصل بنا</a>
       <a href="../privacy-policy.html">سياسة الخصوصية</a>
       <a href="../terms.html">شروط الاستخدام</a>
+      <a href="../feed.xml">📡 خلاصة RSS</a>
     </div>
     <div>
       <h4>تواصل معنا</h4>
@@ -305,10 +339,11 @@ footer p{font-size:.9rem;line-height:1.9}
   </div>
 </div></footer>
 <button id="toTop" title="العودة للأعلى">↑</button>
+<div id="toast">✅ تم نسخ الرابط</div>
 
 <script>
 (function(){
-var idx=[{"t": "ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية مجرّبة", "s": "tidy-home-in-15-minutes", "c": "نصائح منزلية"}, {"t": "6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك", "s": "natural-cleaning-recipes", "c": "نصائح منزلية"}, {"t": "كيف تتخلص من الروائح الكريهة في منزلك نهائيًا", "s": "eliminate-bad-smells", "c": "نصائح منزلية"}, {"t": "10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك", "s": "save-electricity-bill", "c": "نصائح منزلية"}, {"t": "مناقيش الزعتر: وصفة بيتية سهلة واقتصادية خطوة بخطوة", "s": "zaatar-manakeesh", "c": "وصفات لذيذة"}, {"t": "شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة", "s": "lentil-soup-recipe", "c": "وصفات لذيذة"}, {"t": "كيكة البرتقال الهشة بدون فرن: طريقة القدر السحرية", "s": "orange-cake-no-oven", "c": "وصفات لذيذة"}, {"t": "سلطة الفواكه المنعشة: طبق صحي ولذيذ في 10 دقائق", "s": "fruit-salad-recipe", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن جسم الإنسان لم تكن تعرفها", "s": "amazing-human-body-facts", "c": "معلومات عامة"}, {"t": "لماذا نحتاج إلى النوم؟ أهمية النوم لصحتك وعقلك", "s": "why-we-need-sleep", "c": "معلومات عامة"}, {"t": "قصة القهوة: رحلتها من اليمن إلى العالم", "s": "coffee-story-yemen", "c": "معلومات عامة"}, {"t": "كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة", "s": "age-of-earth", "c": "معلومات عامة"}, {"t": "كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين", "s": "choose-smartphone-budget", "c": "تكنولوجيا"}, {"t": "أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين", "s": "protect-online-accounts", "c": "تكنولوجيا"}, {"t": "الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟", "s": "ai-explained-simply", "c": "تكنولوجيا"}, {"t": "تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة", "s": "speed-up-slow-computer", "c": "تكنولوجيا"}, {"t": "تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة", "s": "quick-kitchen-cleaning", "c": "نصائح منزلية"}, {"t": "كيف تنظم ثلاجتك وتمنع هدر الطعام نهائيًا", "s": "organize-fridge-waste", "c": "نصائح منزلية"}, {"t": "كبسة الدجاج السعودية: الوصفة الأصلية خطوة بخطوة", "s": "chicken-kabsa", "c": "وصفات لذيذة"}, {"t": "بسبوسة القشطة: حلى سهل يذوب في الفم", "s": "qishta-basbousa", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا", "s": "amazing-water-facts", "c": "معلومات عامة"}, {"t": "عجائب الكون: رحلة بين المجرات والنجوم", "s": "galaxies-and-stars", "c": "معلومات عامة"}, {"t": "أفضل تطبيقات أندرويد المجانية: 10 تطبيقات لا غنى عنها", "s": "essential-android-apps", "c": "تكنولوجيا"}, {"t": "الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك", "s": "safe-online-payments", "c": "تكنولوجيا"}];
+var idx=[{"t": "ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية مجرّبة", "s": "tidy-home-in-15-minutes", "c": "نصائح منزلية"}, {"t": "6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك", "s": "natural-cleaning-recipes", "c": "نصائح منزلية"}, {"t": "كيف تتخلص من الروائح الكريهة في منزلك نهائيًا", "s": "eliminate-bad-smells", "c": "نصائح منزلية"}, {"t": "10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك", "s": "save-electricity-bill", "c": "نصائح منزلية"}, {"t": "مناقيش الزعتر: وصفة بيتية سهلة واقتصادية خطوة بخطوة", "s": "zaatar-manakeesh", "c": "وصفات لذيذة"}, {"t": "شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة", "s": "lentil-soup-recipe", "c": "وصفات لذيذة"}, {"t": "كيكة البرتقال الهشة بدون فرن: طريقة القدر السحرية", "s": "orange-cake-no-oven", "c": "وصفات لذيذة"}, {"t": "سلطة الفواكه المنعشة: طبق صحي ولذيذ في 10 دقائق", "s": "fruit-salad-recipe", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن جسم الإنسان لم تكن تعرفها", "s": "amazing-human-body-facts", "c": "معلومات عامة"}, {"t": "لماذا نحتاج إلى النوم؟ أهمية النوم لصحتك وعقلك", "s": "why-we-need-sleep", "c": "معلومات عامة"}, {"t": "قصة القهوة: رحلتها من اليمن إلى العالم", "s": "coffee-story-yemen", "c": "معلومات عامة"}, {"t": "كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة", "s": "age-of-earth", "c": "معلومات عامة"}, {"t": "كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين", "s": "choose-smartphone-budget", "c": "تكنولوجيا"}, {"t": "أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين", "s": "protect-online-accounts", "c": "تكنولوجيا"}, {"t": "الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟", "s": "ai-explained-simply", "c": "تكنولوجيا"}, {"t": "تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة", "s": "speed-up-slow-computer", "c": "تكنولوجيا"}, {"t": "تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة", "s": "quick-kitchen-cleaning", "c": "نصائح منزلية"}, {"t": "كيف تنظم ثلاجتك وتمنع هدر الطعام نهائيًا", "s": "organize-fridge-waste", "c": "نصائح منزلية"}, {"t": "كبسة الدجاج السعودية: الوصفة الأصلية خطوة بخطوة", "s": "chicken-kabsa", "c": "وصفات لذيذة"}, {"t": "بسبوسة القشطة: حلى سهل يذوب في الفم", "s": "qishta-basbousa", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا", "s": "amazing-water-facts", "c": "معلومات عامة"}, {"t": "عجائب الكون: رحلة بين المجرات والنجوم", "s": "galaxies-and-stars", "c": "معلومات عامة"}, {"t": "أفضل تطبيقات أندرويد المجانية: 10 تطبيقات لا غنى عنها", "s": "essential-android-apps", "c": "تكنولوجيا"}, {"t": "الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك", "s": "safe-online-payments", "c": "تكنولوجيا"}, {"t": "سمبوسك الجبن المقرمش: وصفة العجينة الذهبية", "s": "samosa-cheese-dough", "c": "وصفات لذيذة"}, {"t": "عصير الليمون بالنعناع المثلج: مشروب الصيف المثالي", "s": "lemon-mint-drink", "c": "وصفات لذيذة"}, {"t": "غسيل الملابس بذكاء: دليلك الكامل لملابس نظيفة تدوم", "s": "laundry-guide-tips", "c": "نصائح منزلية"}, {"t": "طرد الحشرات من المنزل بطرق طبيعية وآمنة", "s": "natural-insect-repellents", "c": "نصائح منزلية"}, {"t": "عجائب مملكة الحيوان: حقائق تدهش الكبار قبل الصغار", "s": "amazing-animal-facts", "c": "معلومات عامة"}, {"t": "توفير بيانات الجوال: 8 حيل عملية توفر لك الكثير", "s": "save-mobile-data", "c": "تكنولوجيا"}];
 var theme=localStorage.getItem('theme');
 if(theme==='dark')document.documentElement.setAttribute('data-theme','dark');
 document.getElementById('themeBtn').addEventListener('click',function(){
@@ -325,6 +360,7 @@ hits.forEach(function(x){var e=document.createElement('a');e.href='posts/'+x.s+'
 res.classList.add('open')});
 document.addEventListener('click',function(e){if(!e.target.closest('.search-box'))res.classList.remove('open')});
 document.getElementById('burger').addEventListener('click',function(){document.getElementById('nav').classList.toggle('open')});
+window.copyLink=function(){var u=location.href;navigator.clipboard.writeText(u).then(function(){var t=document.getElementById('toast');t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2200)})};
 
 window.addEventListener('scroll',function(){var h=document.documentElement;var p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';var t=document.getElementById('toTop');if(h.scrollTop>500){t.classList.add('show')}else{t.classList.remove('show')}});
 document.getElementById('toTop').addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});

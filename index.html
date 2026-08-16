@@ -18,6 +18,7 @@
 <meta name="twitter:image" content="https://sbdh1285.github.io/dalilak/images/og-default.png">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0f766e">
+<link rel="preload" href="fonts/tajawal-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="manifest" href="manifest.json">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "دليلك | دليلك اليومي لنصائح عملية، وصفات شهية، ومعلومات مفيدة", "description": "موقع دليلك العربي: نصائح منزلية عملية، وصفات شهية وسهلة، معلومات عامة ممتعة، وشروحات تقنية مبسطة لكل أفراد العائلة.", "url": "https://sbdh1285.github.io/dalilak/", "inLanguage": "ar", "publisher": {"@type": "Organization", "name": "دليلك", "url": "https://sbdh1285.github.io/dalilak"}}</script>
@@ -153,6 +154,36 @@ footer p{font-size:.9rem;line-height:1.9}
 #progress{position:fixed;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--p2),var(--ac));width:0;z-index:100;transition:width .1s}
 #toTop{position:fixed;bottom:22px;left:22px;width:46px;height:46px;border-radius:12px;background:var(--pa);color:#fff;border:none;font-size:1.2rem;cursor:pointer;display:none;z-index:90;box-shadow:0 8px 20px rgba(0,0,0,.25)}
 #toTop.show{display:block}
+/* جدول المحتويات */
+.toc{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px 22px;margin:0 0 28px;font-size:.95rem}
+.toc b{color:var(--pa);display:block;margin-bottom:10px}
+.toc ul{list-style:none;padding:0;display:grid;gap:6px}
+.toc a{color:var(--tx);display:inline-flex;gap:8px;align-items:center}
+.toc a:before{content:"◆";color:var(--p2);font-size:.6rem}
+.toc a:hover{color:var(--p)}
+/* Toast */
+#toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--pa);color:#fff;padding:11px 22px;border-radius:999px;font-size:.9rem;font-weight:700;opacity:0;pointer-events:none;transition:all .3s;z-index:120}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* زر نسخ */
+.sh-cp{background:#334155;color:#fff;border:none;cursor:pointer;font-family:inherit;font-size:.87rem;font-weight:700;padding:9px 16px;border-radius:10px;display:inline-flex;align-items:center;gap:7px}
+.sh-cp:hover{background:#1e293b}
+/* مميز */
+.featured{background:var(--card);border:1px solid var(--bd);border-radius:20px;overflow:hidden;display:grid;grid-template-columns:1.2fr 1fr;margin:40px 0 8px;transition:box-shadow .2s}
+.featured:hover{box-shadow:0 14px 34px rgba(15,23,42,.1)}
+.featured img{width:100%;height:100%;object-fit:cover;min-height:280px}
+.f-body{padding:28px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.f-tag{display:inline-block;background:var(--ac);color:#1e293b;font-size:.78rem;font-weight:800;padding:4px 12px;border-radius:999px;align-self:flex-start}
+.f-body h2{font-size:1.4rem;line-height:1.6}
+.f-body h2 a{color:var(--tx)}
+.f-body p{color:var(--mut)}
+/* FAQ */
+.faq{display:grid;gap:12px;margin-bottom:10px}
+.faq details{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 20px;cursor:pointer}
+.faq summary{font-weight:700;color:var(--pa);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.faq summary:after{content:"+";font-size:1.3rem;color:var(--p2)}
+.faq details[open] summary:after{content:"−"}
+.faq p{margin:12px 0 0;color:var(--mut);font-size:.95rem}
+@media(max-width:760px){.featured{grid-template-columns:1fr}.featured img{min-height:200px}}
 .note-p{background:#f1f5f9;border-radius:12px;padding:14px 16px;margin:18px 0;font-size:.95rem}
 [data-theme="dark"] .note-p{background:#1e293b}
 .btn-row{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
@@ -190,7 +221,7 @@ footer p{font-size:.9rem;line-height:1.9}
   <p>موقع دليلك العربي: نصائح منزلية عملية، وصفات شهية وسهلة، معلومات عامة ممتعة، وشروحات تقنية مبسطة لكل أفراد العائلة.</p>
   <div class="hero-badges">
     <span class="badge">✅ محتوى أصلي 100%</span>
-    <span class="badge">📚 24+ مقالًا مفيدًا</span>
+    <span class="badge">📚 30+ مقالًا مفيدًا</span>
     <span class="badge">🗂️ 4 أقسام متنوعة</span>
     <span class="badge">🚀 سريع ومتوافق مع الجوال</span>
   </div>
@@ -199,6 +230,18 @@ footer p{font-size:.9rem;line-height:1.9}
     <a class="btn btn-b" href="about.html">تعرّف علينا</a>
   </div>
 </div></div>
+
+<section class="sec"><div class="wrap">
+  <a class="featured" href="posts/lemon-mint-drink.html">
+    <img src="images/og-lemon-mint-drink.png" alt="عصير الليمون بالنعناع المثلج: مشروب الصيف المثالي" loading="eager" width="1200" height="630">
+    <div class="f-body">
+      <span class="f-tag">⭐ مقال مميز</span>
+      <h2>عصير الليمون بالنعناع المثلج: مشروب الصيف المثالي</h2>
+      <p>عصير الليمون بالنعناع الذي تطلبه في المطاعم — يصنع في بيتك بدقائق: مكونات بسيطة، توازن حلاوة مثالي، وطريقة التقديم الأنيقة.</p>
+      <span style="color:var(--p);font-weight:700">اقرأ المقال ←</span>
+    </div>
+  </a>
+</div></section>
 
 <section class="sec"><div class="wrap">
   <div class="sec-h"><h2>🗂️ أقسام الموقع</h2></div>
@@ -233,7 +276,43 @@ footer p{font-size:.9rem;line-height:1.9}
   <div class="sec-h"><h2>✨ أحدث المقالات</h2><a href="category/home-tips.html">عرض الكل ←</a></div>
   <div class="grid">
     <article class="card">
-      <a href="posts/qishta-basbousa.html"><img class="card-img" src="images/og-qishta-basbousa.png" alt="بسبوسة القشطة: حلى سهل يذوب في الفم" loading="lazy"></a>
+      <a href="posts/lemon-mint-drink.html"><img class="card-img" src="images/og-lemon-mint-drink.png" alt="عصير الليمون بالنعناع المثلج: مشروب الصيف المثالي" loading="lazy" width="1200" height="630"></a>
+      <div class="card-body">
+        <span class="cat-chip">🍽️ وصفات لذيذة</span>
+        <h3><a href="posts/lemon-mint-drink.html">عصير الليمون بالنعناع المثلج: مشروب الصيف المثالي</a></h3>
+        <p>عصير الليمون بالنعناع الذي تطلبه في المطاعم — يصنع في بيتك بدقائق: مكونات بسيطة، توازن حلاوة مثالي، وطريقة التقديم الأنيقة.</p>
+        <div class="card-meta">
+          <span>📅 2026-08-15</span>
+          <span>⏱️ 2 دقائق</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <a href="posts/samosa-cheese-dough.html"><img class="card-img" src="images/og-samosa-cheese-dough.png" alt="سمبوسك الجبن المقرمش: وصفة العجينة الذهبية" loading="lazy" width="1200" height="630"></a>
+      <div class="card-body">
+        <span class="cat-chip">🍽️ وصفات لذيذة</span>
+        <h3><a href="posts/samosa-cheese-dough.html">سمبوسك الجبن المقرمش: وصفة العجينة الذهبية</a></h3>
+        <p>سمبوسك مقرمش من الخارج، جبن ذائب من الداخل — أسرار العجينة الذهبية والحشوة المثالية، مع طريقة القلي والفرن.</p>
+        <div class="card-meta">
+          <span>📅 2026-08-14</span>
+          <span>⏱️ 3 دقائق</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <a href="posts/laundry-guide-tips.html"><img class="card-img" src="images/og-laundry-guide-tips.png" alt="غسيل الملابس بذكاء: دليلك الكامل لملابس نظيفة تدوم" loading="lazy" width="1200" height="630"></a>
+      <div class="card-body">
+        <span class="cat-chip">🏠 نصائح منزلية</span>
+        <h3><a href="posts/laundry-guide-tips.html">غسيل الملابس بذكاء: دليلك الكامل لملابس نظيفة تدوم</a></h3>
+        <p>من فرز الألوان إلى تجفيف القمصان: دليل شامل لغسيل الملابس بشكل صحيح — يحافظ على ألوانها، يطيل عمرها، ويوفر مسحوقك.</p>
+        <div class="card-meta">
+          <span>📅 2026-08-13</span>
+          <span>⏱️ 3 دقائق</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <a href="posts/qishta-basbousa.html"><img class="card-img" src="images/og-qishta-basbousa.png" alt="بسبوسة القشطة: حلى سهل يذوب في الفم" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">🍽️ وصفات لذيذة</span>
         <h3><a href="posts/qishta-basbousa.html">بسبوسة القشطة: حلى سهل يذوب في الفم</a></h3>
@@ -245,7 +324,19 @@ footer p{font-size:.9rem;line-height:1.9}
       </div>
     </article>
     <article class="card">
-      <a href="posts/speed-up-slow-computer.html"><img class="card-img" src="images/og-speed-up-slow-computer.png" alt="تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة" loading="lazy"></a>
+      <a href="posts/natural-insect-repellents.html"><img class="card-img" src="images/og-natural-insect-repellents.png" alt="طرد الحشرات من المنزل بطرق طبيعية وآمنة" loading="lazy" width="1200" height="630"></a>
+      <div class="card-body">
+        <span class="cat-chip">🏠 نصائح منزلية</span>
+        <h3><a href="posts/natural-insect-repellents.html">طرد الحشرات من المنزل بطرق طبيعية وآمنة</a></h3>
+        <p>النمل والصراصير والناموس والذباب: طرق طبيعية فعالة وآمنة للأطفال والحيوانات لطرد الحشرات ومنع دخولها من الأساس.</p>
+        <div class="card-meta">
+          <span>📅 2026-08-11</span>
+          <span>⏱️ 3 دقائق</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <a href="posts/speed-up-slow-computer.html"><img class="card-img" src="images/og-speed-up-slow-computer.png" alt="تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">📱 تكنولوجيا</span>
         <h3><a href="posts/speed-up-slow-computer.html">تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة</a></h3>
@@ -257,7 +348,19 @@ footer p{font-size:.9rem;line-height:1.9}
       </div>
     </article>
     <article class="card">
-      <a href="posts/quick-kitchen-cleaning.html"><img class="card-img" src="images/og-quick-kitchen-cleaning.png" alt="تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة" loading="lazy"></a>
+      <a href="posts/amazing-animal-facts.html"><img class="card-img" src="images/og-amazing-animal-facts.png" alt="عجائب مملكة الحيوان: حقائق تدهش الكبار قبل الصغار" loading="lazy" width="1200" height="630"></a>
+      <div class="card-body">
+        <span class="cat-chip">💡 معلومات عامة</span>
+        <h3><a href="posts/amazing-animal-facts.html">عجائب مملكة الحيوان: حقائق تدهش الكبار قبل الصغار</a></h3>
+        <p>الأخطبوط بثلاثة قلوب، والحوت الأزرق أكبر من الديناصورات، والحرباء تلون جلودها بالمشاعر — جولة في أغرب قدرات الحيوانات.</p>
+        <div class="card-meta">
+          <span>📅 2026-08-09</span>
+          <span>⏱️ 3 دقائق</span>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <a href="posts/quick-kitchen-cleaning.html"><img class="card-img" src="images/og-quick-kitchen-cleaning.png" alt="تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">🏠 نصائح منزلية</span>
         <h3><a href="posts/quick-kitchen-cleaning.html">تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة</a></h3>
@@ -267,9 +370,26 @@ footer p{font-size:.9rem;line-height:1.9}
           <span>⏱️ 2 دقائق</span>
         </div>
       </div>
+    </article></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-h"><h2>📚 مقالات إضافية</h2></div>
+  <div class="grid">
+    <article class="card">
+      <a href="posts/save-mobile-data.html"><img class="card-img" src="images/og-save-mobile-data.png" alt="توفير بيانات الجوال: 8 حيل عملية توفر لك الكثير" loading="lazy" width="1200" height="630"></a>
+      <div class="card-body">
+        <span class="cat-chip">📱 تكنولوجيا</span>
+        <h3><a href="posts/save-mobile-data.html">توفير بيانات الجوال: 8 حيل عملية توفر لك الكثير</a></h3>
+        <p>باقة بياناتك تنفد قبل نهاية الشهر؟ 8 حيل مجربة لتوفير بيانات الجوال: التطبيقات الشرهة، التحديثات، الخرائط، والضغط الذكي.</p>
+        <div class="card-meta">
+          <span>📅 2026-08-07</span>
+          <span>⏱️ 3 دقائق</span>
+        </div>
+      </div>
     </article>
     <article class="card">
-      <a href="posts/organize-fridge-waste.html"><img class="card-img" src="images/og-organize-fridge-waste.png" alt="كيف تنظم ثلاجتك وتمنع هدر الطعام نهائيًا" loading="lazy"></a>
+      <a href="posts/organize-fridge-waste.html"><img class="card-img" src="images/og-organize-fridge-waste.png" alt="كيف تنظم ثلاجتك وتمنع هدر الطعام نهائيًا" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">🏠 نصائح منزلية</span>
         <h3><a href="posts/organize-fridge-waste.html">كيف تنظم ثلاجتك وتمنع هدر الطعام نهائيًا</a></h3>
@@ -281,7 +401,7 @@ footer p{font-size:.9rem;line-height:1.9}
       </div>
     </article>
     <article class="card">
-      <a href="posts/essential-android-apps.html"><img class="card-img" src="images/og-essential-android-apps.png" alt="أفضل تطبيقات أندرويد المجانية: 10 تطبيقات لا غنى عنها" loading="lazy"></a>
+      <a href="posts/essential-android-apps.html"><img class="card-img" src="images/og-essential-android-apps.png" alt="أفضل تطبيقات أندرويد المجانية: 10 تطبيقات لا غنى عنها" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">📱 تكنولوجيا</span>
         <h3><a href="posts/essential-android-apps.html">أفضل تطبيقات أندرويد المجانية: 10 تطبيقات لا غنى عنها</a></h3>
@@ -293,7 +413,7 @@ footer p{font-size:.9rem;line-height:1.9}
       </div>
     </article>
     <article class="card">
-      <a href="posts/fruit-salad-recipe.html"><img class="card-img" src="images/og-fruit-salad-recipe.png" alt="سلطة الفواكه المنعشة: طبق صحي ولذيذ في 10 دقائق" loading="lazy"></a>
+      <a href="posts/fruit-salad-recipe.html"><img class="card-img" src="images/og-fruit-salad-recipe.png" alt="سلطة الفواكه المنعشة: طبق صحي ولذيذ في 10 دقائق" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">🍽️ وصفات لذيذة</span>
         <h3><a href="posts/fruit-salad-recipe.html">سلطة الفواكه المنعشة: طبق صحي ولذيذ في 10 دقائق</a></h3>
@@ -305,7 +425,7 @@ footer p{font-size:.9rem;line-height:1.9}
       </div>
     </article>
     <article class="card">
-      <a href="posts/safe-online-payments.html"><img class="card-img" src="images/og-safe-online-payments.png" alt="الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك" loading="lazy"></a>
+      <a href="posts/safe-online-payments.html"><img class="card-img" src="images/og-safe-online-payments.png" alt="الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">📱 تكنولوجيا</span>
         <h3><a href="posts/safe-online-payments.html">الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك</a></h3>
@@ -317,7 +437,7 @@ footer p{font-size:.9rem;line-height:1.9}
       </div>
     </article>
     <article class="card">
-      <a href="posts/chicken-kabsa.html"><img class="card-img" src="images/og-chicken-kabsa.png" alt="كبسة الدجاج السعودية: الوصفة الأصلية خطوة بخطوة" loading="lazy"></a>
+      <a href="posts/chicken-kabsa.html"><img class="card-img" src="images/og-chicken-kabsa.png" alt="كبسة الدجاج السعودية: الوصفة الأصلية خطوة بخطوة" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">🍽️ وصفات لذيذة</span>
         <h3><a href="posts/chicken-kabsa.html">كبسة الدجاج السعودية: الوصفة الأصلية خطوة بخطوة</a></h3>
@@ -327,14 +447,9 @@ footer p{font-size:.9rem;line-height:1.9}
           <span>⏱️ 2 دقائق</span>
         </div>
       </div>
-    </article></div>
-</div></section>
-
-<section class="sec"><div class="wrap">
-  <div class="sec-h"><h2>📚 مقالات إضافية</h2></div>
-  <div class="grid">
+    </article>
     <article class="card">
-      <a href="posts/amazing-water-facts.html"><img class="card-img" src="images/og-amazing-water-facts.png" alt="حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا" loading="lazy"></a>
+      <a href="posts/amazing-water-facts.html"><img class="card-img" src="images/og-amazing-water-facts.png" alt="حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">💡 معلومات عامة</span>
         <h3><a href="posts/amazing-water-facts.html">حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا</a></h3>
@@ -346,7 +461,7 @@ footer p{font-size:.9rem;line-height:1.9}
       </div>
     </article>
     <article class="card">
-      <a href="posts/ai-explained-simply.html"><img class="card-img" src="images/og-ai-explained-simply.png" alt="الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟" loading="lazy"></a>
+      <a href="posts/ai-explained-simply.html"><img class="card-img" src="images/og-ai-explained-simply.png" alt="الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">📱 تكنولوجيا</span>
         <h3><a href="posts/ai-explained-simply.html">الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟</a></h3>
@@ -356,79 +471,18 @@ footer p{font-size:.9rem;line-height:1.9}
           <span>⏱️ 3 دقائق</span>
         </div>
       </div>
-    </article>
-    <article class="card">
-      <a href="posts/galaxies-and-stars.html"><img class="card-img" src="images/og-galaxies-and-stars.png" alt="عجائب الكون: رحلة بين المجرات والنجوم" loading="lazy"></a>
-      <div class="card-body">
-        <span class="cat-chip">💡 معلومات عامة</span>
-        <h3><a href="posts/galaxies-and-stars.html">عجائب الكون: رحلة بين المجرات والنجوم</a></h3>
-        <p>مجرة درب التبانة وحدها تحوي 200 مليار نجم، والكون فيه أكثر من تريليوني مجرة — جولة مذهلة في اتساع الكون وأسراره.</p>
-        <div class="card-meta">
-          <span>📅 2026-07-18</span>
-          <span>⏱️ 3 دقائق</span>
-        </div>
-      </div>
-    </article>
-    <article class="card">
-      <a href="posts/orange-cake-no-oven.html"><img class="card-img" src="images/og-orange-cake-no-oven.png" alt="كيكة البرتقال الهشة بدون فرن: طريقة القدر السحرية" loading="lazy"></a>
-      <div class="card-body">
-        <span class="cat-chip">🍽️ وصفات لذيذة</span>
-        <h3><a href="posts/orange-cake-no-oven.html">كيكة البرتقال الهشة بدون فرن: طريقة القدر السحرية</a></h3>
-        <p>لا تملك فرنًا؟ لا مشكلة! كيكة البرتقال الهشة والعطرية تُطهى على الموقد في قدر عادي — وصفة سهلة بمكونات متوفرة.</p>
-        <div class="card-meta">
-          <span>📅 2026-07-15</span>
-          <span>⏱️ 2 دقائق</span>
-        </div>
-      </div>
-    </article>
-    <article class="card">
-      <a href="posts/age-of-earth.html"><img class="card-img" src="images/og-age-of-earth.png" alt="كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة" loading="lazy"></a>
-      <div class="card-body">
-        <span class="cat-chip">💡 معلومات عامة</span>
-        <h3><a href="posts/age-of-earth.html">كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة</a></h3>
-        <p>الأرض عمرها 4.54 مليار سنة تقريبًا — لكن كيف عرف العلماء ذلك؟ رحلة ممتعة عبر الزمن الجيولوجي وتاريخ كوكبنا.</p>
-        <div class="card-meta">
-          <span>📅 2026-07-08</span>
-          <span>⏱️ 3 دقائق</span>
-        </div>
-      </div>
-    </article>
-    <article class="card">
-      <a href="posts/lentil-soup-recipe.html"><img class="card-img" src="images/og-lentil-soup-recipe.png" alt="شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة" loading="lazy"></a>
-      <div class="card-body">
-        <span class="cat-chip">🍽️ وصفات لذيذة</span>
-        <h3><a href="posts/lentil-soup-recipe.html">شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة</a></h3>
-        <p>شوربة العدس — الطبق الدافئ الذي يجمع العائلة: مكونات بسيطة، خطوات واضحة، وأسرار الشيف للحصول على قوام كريمي وطعم لا يقاوم.</p>
-        <div class="card-meta">
-          <span>📅 2026-07-02</span>
-          <span>⏱️ 2 دقائق</span>
-        </div>
-      </div>
-    </article>
-    <article class="card">
-      <a href="posts/save-electricity-bill.html"><img class="card-img" src="images/og-save-electricity-bill.png" alt="10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك" loading="lazy"></a>
-      <div class="card-body">
-        <span class="cat-chip">🏠 نصائح منزلية</span>
-        <h3><a href="posts/save-electricity-bill.html">10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك</a></h3>
-        <p>تخفيض فاتورة الكهرباء لا يعني العيش في الظلام؛ 10 تغييرات صغيرة ذكية توفر لك المال شهريًا وتستفيد منها طوال العام.</p>
-        <div class="card-meta">
-          <span>📅 2026-06-21</span>
-          <span>⏱️ 2 دقائق</span>
-        </div>
-      </div>
-    </article>
-    <article class="card">
-      <a href="posts/coffee-story-yemen.html"><img class="card-img" src="images/og-coffee-story-yemen.png" alt="قصة القهوة: رحلتها من اليمن إلى العالم" loading="lazy"></a>
-      <div class="card-body">
-        <span class="cat-chip">💡 معلومات عامة</span>
-        <h3><a href="posts/coffee-story-yemen.html">قصة القهوة: رحلتها من اليمن إلى العالم</a></h3>
-        <p>اليمن هي الموطن الأصلي لشجرة البن العربي، ومن ميناء المخا انطلقت القهوة لتغزو العالم — رحلة تاريخية ممتعة.</p>
-        <div class="card-meta">
-          <span>📅 2026-06-14</span>
-          <span>⏱️ 3 دقائق</span>
-        </div>
-      </div>
     </article></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-h"><h2>❓ الأسئلة الشائعة</h2></div>
+  <div class="faq">
+    <details open><summary>ما هو موقع دليلك؟</summary><p>دليلك موقع عربي يقدم محتوى عمليًا ومفيدًا في أربعة أقسام: نصائح منزلية، وصفات لذيذة، معلومات عامة، وتكنولوجيا — كلها مكتوبة بأسلوب مبسط وواضح.</p></details>
+    <details><summary>هل محتوى الموقع مجاني؟</summary><p>نعم، جميع مقالات دليلك مجانية بالكامل ويمكن قراءتها دون تسجيل أو اشتراك.</p></details>
+    <details><summary>كم مرة يُضاف محتوى جديد؟</summary><p>نضيف مقالات جديدة باستمرار في جميع الأقسام، ونحدّث المقالات القائمة لتبقى دقيقة ومفيدة.</p></details>
+    <details><summary>هل يمكنني اقتراح موضوع لمقال؟</summary><p>بالتأكيد! نرحب بجميع الاقتراحات عبر صفحة اتصل بنا، ونختار المواضيع بناءً على احتياجات قرائنا.</p></details>
+    <details><summary>هل المعلومات الصحية في الموقع بديل عن الطبيب؟</summary><p>لا، المحتوى في الموقع لأغراض تثقيفية عامة فقط، ولا يغني عن استشارة المختصين في الحالات الصحية.</p></details>
+  </div>
 </div></section>
 
 <section class="sec"><div class="wrap">
@@ -439,7 +493,8 @@ footer p{font-size:.9rem;line-height:1.9}
   </div>
 </div></section>
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "دليلك", "url": "https://sbdh1285.github.io/dalilak", "description": "موقع دليلك العربي: نصائح منزلية عملية، وصفات شهية وسهلة، معلومات عامة ممتعة، وشروحات تقنية مبسطة لكل أفراد العائلة.", "email": "contact@dalilak.com"}</script></main>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "دليلك", "url": "https://sbdh1285.github.io/dalilak", "description": "موقع دليلك العربي: نصائح منزلية عملية، وصفات شهية وسهلة، معلومات عامة ممتعة، وشروحات تقنية مبسطة لكل أفراد العائلة.", "email": "contact@dalilak.com"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ما هو موقع دليلك؟", "acceptedAnswer": {"@type": "Answer", "text": "دليلك موقع عربي يقدم محتوى عمليًا ومفيدًا في أربعة أقسام: نصائح منزلية، وصفات لذيذة، معلومات عامة، وتكنولوجيا — كلها مكتوبة بأسلوب مبسط وواضح."}}, {"@type": "Question", "name": "هل محتوى الموقع مجاني؟", "acceptedAnswer": {"@type": "Answer", "text": "نعم، جميع مقالات دليلك مجانية بالكامل ويمكن قراءتها دون تسجيل أو اشتراك."}}, {"@type": "Question", "name": "كم مرة يُضاف محتوى جديد؟", "acceptedAnswer": {"@type": "Answer", "text": "نضيف مقالات جديدة باستمرار في جميع الأقسام، ونحدّث المقالات القائمة لتبقى دقيقة ومفيدة."}}, {"@type": "Question", "name": "هل يمكنني اقتراح موضوع لمقال؟", "acceptedAnswer": {"@type": "Answer", "text": "بالتأكيد! نرحب بجميع الاقتراحات عبر صفحة اتصل بنا، ونختار المواضيع بناءً على احتياجات قرائنا."}}, {"@type": "Question", "name": "هل المعلومات الصحية في الموقع بديل عن الطبيب؟", "acceptedAnswer": {"@type": "Answer", "text": "لا، المحتوى في الموقع لأغراض تثقيفية عامة فقط، ولا يغني عن استشارة المختصين في الحالات الصحية."}}]}</script></main>
 
 <footer><div class="wrap">
   <div class="fgrid">
@@ -458,6 +513,7 @@ footer p{font-size:.9rem;line-height:1.9}
       <a href="contact.html">اتصل بنا</a>
       <a href="privacy-policy.html">سياسة الخصوصية</a>
       <a href="terms.html">شروط الاستخدام</a>
+      <a href="feed.xml">📡 خلاصة RSS</a>
     </div>
     <div>
       <h4>تواصل معنا</h4>
@@ -471,10 +527,11 @@ footer p{font-size:.9rem;line-height:1.9}
   </div>
 </div></footer>
 <button id="toTop" title="العودة للأعلى">↑</button>
+<div id="toast">✅ تم نسخ الرابط</div>
 
 <script>
 (function(){
-var idx=[{"t": "ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية مجرّبة", "s": "tidy-home-in-15-minutes", "c": "نصائح منزلية"}, {"t": "6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك", "s": "natural-cleaning-recipes", "c": "نصائح منزلية"}, {"t": "كيف تتخلص من الروائح الكريهة في منزلك نهائيًا", "s": "eliminate-bad-smells", "c": "نصائح منزلية"}, {"t": "10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك", "s": "save-electricity-bill", "c": "نصائح منزلية"}, {"t": "مناقيش الزعتر: وصفة بيتية سهلة واقتصادية خطوة بخطوة", "s": "zaatar-manakeesh", "c": "وصفات لذيذة"}, {"t": "شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة", "s": "lentil-soup-recipe", "c": "وصفات لذيذة"}, {"t": "كيكة البرتقال الهشة بدون فرن: طريقة القدر السحرية", "s": "orange-cake-no-oven", "c": "وصفات لذيذة"}, {"t": "سلطة الفواكه المنعشة: طبق صحي ولذيذ في 10 دقائق", "s": "fruit-salad-recipe", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن جسم الإنسان لم تكن تعرفها", "s": "amazing-human-body-facts", "c": "معلومات عامة"}, {"t": "لماذا نحتاج إلى النوم؟ أهمية النوم لصحتك وعقلك", "s": "why-we-need-sleep", "c": "معلومات عامة"}, {"t": "قصة القهوة: رحلتها من اليمن إلى العالم", "s": "coffee-story-yemen", "c": "معلومات عامة"}, {"t": "كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة", "s": "age-of-earth", "c": "معلومات عامة"}, {"t": "كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين", "s": "choose-smartphone-budget", "c": "تكنولوجيا"}, {"t": "أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين", "s": "protect-online-accounts", "c": "تكنولوجيا"}, {"t": "الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟", "s": "ai-explained-simply", "c": "تكنولوجيا"}, {"t": "تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة", "s": "speed-up-slow-computer", "c": "تكنولوجيا"}, {"t": "تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة", "s": "quick-kitchen-cleaning", "c": "نصائح منزلية"}, {"t": "كيف تنظم ثلاجتك وتمنع هدر الطعام نهائيًا", "s": "organize-fridge-waste", "c": "نصائح منزلية"}, {"t": "كبسة الدجاج السعودية: الوصفة الأصلية خطوة بخطوة", "s": "chicken-kabsa", "c": "وصفات لذيذة"}, {"t": "بسبوسة القشطة: حلى سهل يذوب في الفم", "s": "qishta-basbousa", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا", "s": "amazing-water-facts", "c": "معلومات عامة"}, {"t": "عجائب الكون: رحلة بين المجرات والنجوم", "s": "galaxies-and-stars", "c": "معلومات عامة"}, {"t": "أفضل تطبيقات أندرويد المجانية: 10 تطبيقات لا غنى عنها", "s": "essential-android-apps", "c": "تكنولوجيا"}, {"t": "الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك", "s": "safe-online-payments", "c": "تكنولوجيا"}];
+var idx=[{"t": "ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية مجرّبة", "s": "tidy-home-in-15-minutes", "c": "نصائح منزلية"}, {"t": "6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك", "s": "natural-cleaning-recipes", "c": "نصائح منزلية"}, {"t": "كيف تتخلص من الروائح الكريهة في منزلك نهائيًا", "s": "eliminate-bad-smells", "c": "نصائح منزلية"}, {"t": "10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك", "s": "save-electricity-bill", "c": "نصائح منزلية"}, {"t": "مناقيش الزعتر: وصفة بيتية سهلة واقتصادية خطوة بخطوة", "s": "zaatar-manakeesh", "c": "وصفات لذيذة"}, {"t": "شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة", "s": "lentil-soup-recipe", "c": "وصفات لذيذة"}, {"t": "كيكة البرتقال الهشة بدون فرن: طريقة القدر السحرية", "s": "orange-cake-no-oven", "c": "وصفات لذيذة"}, {"t": "سلطة الفواكه المنعشة: طبق صحي ولذيذ في 10 دقائق", "s": "fruit-salad-recipe", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن جسم الإنسان لم تكن تعرفها", "s": "amazing-human-body-facts", "c": "معلومات عامة"}, {"t": "لماذا نحتاج إلى النوم؟ أهمية النوم لصحتك وعقلك", "s": "why-we-need-sleep", "c": "معلومات عامة"}, {"t": "قصة القهوة: رحلتها من اليمن إلى العالم", "s": "coffee-story-yemen", "c": "معلومات عامة"}, {"t": "كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة", "s": "age-of-earth", "c": "معلومات عامة"}, {"t": "كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين", "s": "choose-smartphone-budget", "c": "تكنولوجيا"}, {"t": "أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين", "s": "protect-online-accounts", "c": "تكنولوجيا"}, {"t": "الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟", "s": "ai-explained-simply", "c": "تكنولوجيا"}, {"t": "تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة", "s": "speed-up-slow-computer", "c": "تكنولوجيا"}, {"t": "تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة", "s": "quick-kitchen-cleaning", "c": "نصائح منزلية"}, {"t": "كيف تنظم ثلاجتك وتمنع هدر الطعام نهائيًا", "s": "organize-fridge-waste", "c": "نصائح منزلية"}, {"t": "كبسة الدجاج السعودية: الوصفة الأصلية خطوة بخطوة", "s": "chicken-kabsa", "c": "وصفات لذيذة"}, {"t": "بسبوسة القشطة: حلى سهل يذوب في الفم", "s": "qishta-basbousa", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا", "s": "amazing-water-facts", "c": "معلومات عامة"}, {"t": "عجائب الكون: رحلة بين المجرات والنجوم", "s": "galaxies-and-stars", "c": "معلومات عامة"}, {"t": "أفضل تطبيقات أندرويد المجانية: 10 تطبيقات لا غنى عنها", "s": "essential-android-apps", "c": "تكنولوجيا"}, {"t": "الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك", "s": "safe-online-payments", "c": "تكنولوجيا"}, {"t": "سمبوسك الجبن المقرمش: وصفة العجينة الذهبية", "s": "samosa-cheese-dough", "c": "وصفات لذيذة"}, {"t": "عصير الليمون بالنعناع المثلج: مشروب الصيف المثالي", "s": "lemon-mint-drink", "c": "وصفات لذيذة"}, {"t": "غسيل الملابس بذكاء: دليلك الكامل لملابس نظيفة تدوم", "s": "laundry-guide-tips", "c": "نصائح منزلية"}, {"t": "طرد الحشرات من المنزل بطرق طبيعية وآمنة", "s": "natural-insect-repellents", "c": "نصائح منزلية"}, {"t": "عجائب مملكة الحيوان: حقائق تدهش الكبار قبل الصغار", "s": "amazing-animal-facts", "c": "معلومات عامة"}, {"t": "توفير بيانات الجوال: 8 حيل عملية توفر لك الكثير", "s": "save-mobile-data", "c": "تكنولوجيا"}];
 var theme=localStorage.getItem('theme');
 if(theme==='dark')document.documentElement.setAttribute('data-theme','dark');
 document.getElementById('themeBtn').addEventListener('click',function(){
@@ -491,6 +548,7 @@ hits.forEach(function(x){var e=document.createElement('a');e.href='posts/'+x.s+'
 res.classList.add('open')});
 document.addEventListener('click',function(e){if(!e.target.closest('.search-box'))res.classList.remove('open')});
 document.getElementById('burger').addEventListener('click',function(){document.getElementById('nav').classList.toggle('open')});
+window.copyLink=function(){var u=location.href;navigator.clipboard.writeText(u).then(function(){var t=document.getElementById('toast');t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2200)})};
 
 })();
 </script>

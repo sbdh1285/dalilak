@@ -1,0 +1,2 @@
+# Google AdSense - بعد قبول طلبك أضف السطر التالي بمعرّف الناشر:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

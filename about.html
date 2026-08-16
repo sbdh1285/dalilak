@@ -18,6 +18,7 @@
 <meta name="twitter:image" content="https://sbdh1285.github.io/dalilak/images/og-default.png">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0f766e">
+<link rel="preload" href="fonts/tajawal-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="manifest" href="manifest.json">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "من نحن", "description": "تعرف على موقع دليلك: رسالتنا، قيمنا، ولماذا نكتب المحتوى العربي المفيد.", "url": "https://sbdh1285.github.io/dalilak/about.html", "inLanguage": "ar", "publisher": {"@type": "Organization", "name": "دليلك", "url": "https://sbdh1285.github.io/dalilak"}}</script>
@@ -153,6 +154,36 @@ footer p{font-size:.9rem;line-height:1.9}
 #progress{position:fixed;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--p2),var(--ac));width:0;z-index:100;transition:width .1s}
 #toTop{position:fixed;bottom:22px;left:22px;width:46px;height:46px;border-radius:12px;background:var(--pa);color:#fff;border:none;font-size:1.2rem;cursor:pointer;display:none;z-index:90;box-shadow:0 8px 20px rgba(0,0,0,.25)}
 #toTop.show{display:block}
+/* جدول المحتويات */
+.toc{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px 22px;margin:0 0 28px;font-size:.95rem}
+.toc b{color:var(--pa);display:block;margin-bottom:10px}
+.toc ul{list-style:none;padding:0;display:grid;gap:6px}
+.toc a{color:var(--tx);display:inline-flex;gap:8px;align-items:center}
+.toc a:before{content:"◆";color:var(--p2);font-size:.6rem}
+.toc a:hover{color:var(--p)}
+/* Toast */
+#toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--pa);color:#fff;padding:11px 22px;border-radius:999px;font-size:.9rem;font-weight:700;opacity:0;pointer-events:none;transition:all .3s;z-index:120}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* زر نسخ */
+.sh-cp{background:#334155;color:#fff;border:none;cursor:pointer;font-family:inherit;font-size:.87rem;font-weight:700;padding:9px 16px;border-radius:10px;display:inline-flex;align-items:center;gap:7px}
+.sh-cp:hover{background:#1e293b}
+/* مميز */
+.featured{background:var(--card);border:1px solid var(--bd);border-radius:20px;overflow:hidden;display:grid;grid-template-columns:1.2fr 1fr;margin:40px 0 8px;transition:box-shadow .2s}
+.featured:hover{box-shadow:0 14px 34px rgba(15,23,42,.1)}
+.featured img{width:100%;height:100%;object-fit:cover;min-height:280px}
+.f-body{padding:28px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.f-tag{display:inline-block;background:var(--ac);color:#1e293b;font-size:.78rem;font-weight:800;padding:4px 12px;border-radius:999px;align-self:flex-start}
+.f-body h2{font-size:1.4rem;line-height:1.6}
+.f-body h2 a{color:var(--tx)}
+.f-body p{color:var(--mut)}
+/* FAQ */
+.faq{display:grid;gap:12px;margin-bottom:10px}
+.faq details{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 20px;cursor:pointer}
+.faq summary{font-weight:700;color:var(--pa);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.faq summary:after{content:"+";font-size:1.3rem;color:var(--p2)}
+.faq details[open] summary:after{content:"−"}
+.faq p{margin:12px 0 0;color:var(--mut);font-size:.95rem}
+@media(max-width:760px){.featured{grid-template-columns:1fr}.featured img{min-height:200px}}
 .note-p{background:#f1f5f9;border-radius:12px;padding:14px 16px;margin:18px 0;font-size:.95rem}
 [data-theme="dark"] .note-p{background:#1e293b}
 .btn-row{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
@@ -238,10 +269,11 @@ footer p{font-size:.9rem;line-height:1.9}
   </div>
 </div></footer>
 <button id="toTop" title="العودة للأعلى">↑</button>
+<div id="toast">✅ تم نسخ الرابط</div>
 
 <script>
 (function(){
-var idx=[{"t": "ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية مجرّبة", "s": "tidy-home-in-15-minutes", "c": "نصائح منزلية"}, {"t": "6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك", "s": "natural-cleaning-recipes", "c": "نصائح منزلية"}, {"t": "كيف تتخلص من الروائح الكريهة في منزلك نهائيًا", "s": "eliminate-bad-smells", "c": "نصائح منزلية"}, {"t": "10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك", "s": "save-electricity-bill", "c": "نصائح منزلية"}, {"t": "مناقيش الزعتر: وصفة بيتية سهلة واقتصادية خطوة بخطوة", "s": "zaatar-manakeesh", "c": "وصفات لذيذة"}, {"t": "شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة", "s": "lentil-soup-recipe", "c": "وصفات لذيذة"}, {"t": "كيكة البرتقال الهشة بدون فرن: طريقة القدر السحرية", "s": "orange-cake-no-oven", "c": "وصفات لذيذة"}, {"t": "سلطة الفواكه المنعشة: طبق صحي ولذيذ في 10 دقائق", "s": "fruit-salad-recipe", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن جسم الإنسان لم تكن تعرفها", "s": "amazing-human-body-facts", "c": "معلومات عامة"}, {"t": "لماذا نحتاج إلى النوم؟ أهمية النوم لصحتك وعقلك", "s": "why-we-need-sleep", "c": "معلومات عامة"}, {"t": "قصة القهوة: رحلتها من اليمن إلى العالم", "s": "coffee-story-yemen", "c": "معلومات عامة"}, {"t": "كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة", "s": "age-of-earth", "c": "معلومات عامة"}, {"t": "كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين", "s": "choose-smartphone-budget", "c": "تكنولوجيا"}, {"t": "أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين", "s": "protect-online-accounts", "c": "تكنولوجيا"}, {"t": "الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟", "s": "ai-explained-simply", "c": "تكنولوجيا"}, {"t": "تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة", "s": "speed-up-slow-computer", "c": "تكنولوجيا"}, {"t": "تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة", "s": "quick-kitchen-cleaning", "c": "نصائح منزلية"}, {"t": "كيف تنظم ثلاجتك وتمنع هدر الطعام نهائيًا", "s": "organize-fridge-waste", "c": "نصائح منزلية"}, {"t": "كبسة الدجاج السعودية: الوصفة الأصلية خطوة بخطوة", "s": "chicken-kabsa", "c": "وصفات لذيذة"}, {"t": "بسبوسة القشطة: حلى سهل يذوب في الفم", "s": "qishta-basbousa", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا", "s": "amazing-water-facts", "c": "معلومات عامة"}, {"t": "عجائب الكون: رحلة بين المجرات والنجوم", "s": "galaxies-and-stars", "c": "معلومات عامة"}, {"t": "أفضل تطبيقات أندرويد المجانية: 10 تطبيقات لا غنى عنها", "s": "essential-android-apps", "c": "تكنولوجيا"}, {"t": "الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك", "s": "safe-online-payments", "c": "تكنولوجيا"}];
+var idx=[{"t": "ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية مجرّبة", "s": "tidy-home-in-15-minutes", "c": "نصائح منزلية"}, {"t": "6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك", "s": "natural-cleaning-recipes", "c": "نصائح منزلية"}, {"t": "كيف تتخلص من الروائح الكريهة في منزلك نهائيًا", "s": "eliminate-bad-smells", "c": "نصائح منزلية"}, {"t": "10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك", "s": "save-electricity-bill", "c": "نصائح منزلية"}, {"t": "مناقيش الزعتر: وصفة بيتية سهلة واقتصادية خطوة بخطوة", "s": "zaatar-manakeesh", "c": "وصفات لذيذة"}, {"t": "شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة", "s": "lentil-soup-recipe", "c": "وصفات لذيذة"}, {"t": "كيكة البرتقال الهشة بدون فرن: طريقة القدر السحرية", "s": "orange-cake-no-oven", "c": "وصفات لذيذة"}, {"t": "سلطة الفواكه المنعشة: طبق صحي ولذيذ في 10 دقائق", "s": "fruit-salad-recipe", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن جسم الإنسان لم تكن تعرفها", "s": "amazing-human-body-facts", "c": "معلومات عامة"}, {"t": "لماذا نحتاج إلى النوم؟ أهمية النوم لصحتك وعقلك", "s": "why-we-need-sleep", "c": "معلومات عامة"}, {"t": "قصة القهوة: رحلتها من اليمن إلى العالم", "s": "coffee-story-yemen", "c": "معلومات عامة"}, {"t": "كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة", "s": "age-of-earth", "c": "معلومات عامة"}, {"t": "كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين", "s": "choose-smartphone-budget", "c": "تكنولوجيا"}, {"t": "أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين", "s": "protect-online-accounts", "c": "تكنولوجيا"}, {"t": "الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟", "s": "ai-explained-simply", "c": "تكنولوجيا"}, {"t": "تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة", "s": "speed-up-slow-computer", "c": "تكنولوجيا"}, {"t": "تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة", "s": "quick-kitchen-cleaning", "c": "نصائح منزلية"}, {"t": "كيف تنظم ثلاجتك وتمنع هدر الطعام نهائيًا", "s": "organize-fridge-waste", "c": "نصائح منزلية"}, {"t": "كبسة الدجاج السعودية: الوصفة الأصلية خطوة بخطوة", "s": "chicken-kabsa", "c": "وصفات لذيذة"}, {"t": "بسبوسة القشطة: حلى سهل يذوب في الفم", "s": "qishta-basbousa", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا", "s": "amazing-water-facts", "c": "معلومات عامة"}, {"t": "عجائب الكون: رحلة بين المجرات والنجوم", "s": "galaxies-and-stars", "c": "معلومات عامة"}, {"t": "أفضل تطبيقات أندرويد المجانية: 10 تطبيقات لا غنى عنها", "s": "essential-android-apps", "c": "تكنولوجيا"}, {"t": "الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك", "s": "safe-online-payments", "c": "تكنولوجيا"}, {"t": "سمبوسك الجبن المقرمش: وصفة العجينة الذهبية", "s": "samosa-cheese-dough", "c": "وصفات لذيذة"}, {"t": "عصير الليمون بالنعناع المثلج: مشروب الصيف المثالي", "s": "lemon-mint-drink", "c": "وصفات لذيذة"}, {"t": "غسيل الملابس بذكاء: دليلك الكامل لملابس نظيفة تدوم", "s": "laundry-guide-tips", "c": "نصائح منزلية"}, {"t": "طرد الحشرات من المنزل بطرق طبيعية وآمنة", "s": "natural-insect-repellents", "c": "نصائح منزلية"}, {"t": "عجائب مملكة الحيوان: حقائق تدهش الكبار قبل الصغار", "s": "amazing-animal-facts", "c": "معلومات عامة"}, {"t": "توفير بيانات الجوال: 8 حيل عملية توفر لك الكثير", "s": "save-mobile-data", "c": "تكنولوجيا"}];
 var theme=localStorage.getItem('theme');
 if(theme==='dark')document.documentElement.setAttribute('data-theme','dark');
 document.getElementById('themeBtn').addEventListener('click',function(){
@@ -258,6 +290,7 @@ hits.forEach(function(x){var e=document.createElement('a');e.href='posts/'+x.s+'
 res.classList.add('open')});
 document.addEventListener('click',function(e){if(!e.target.closest('.search-box'))res.classList.remove('open')});
 document.getElementById('burger').addEventListener('click',function(){document.getElementById('nav').classList.toggle('open')});
+window.copyLink=function(){var u=location.href;navigator.clipboard.writeText(u).then(function(){var t=document.getElementById('toast');t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2200)})};
 
 })();
 </script>

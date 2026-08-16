@@ -18,6 +18,7 @@
 <meta name="twitter:image" content="https://sbdh1285.github.io/dalilak/images/og-protect-online-accounts.png">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0f766e">
+<link rel="preload" href="../fonts/tajawal-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="manifest" href="../manifest.json">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين", "description": "دليل حماية الحسابات على الإنترنت: إنشاء كلمات مرور قوية، تفعيل التحقق بخطوتين، التعرف على رسائل الاحتيال، وتأمين بريدك الإلكتروني.", "url": "https://sbdh1285.github.io/dalilak/posts/protect-online-accounts.html", "inLanguage": "ar", "publisher": {"@type": "Organization", "name": "دليلك", "url": "https://sbdh1285.github.io/dalilak"}}</script>
@@ -153,6 +154,36 @@ footer p{font-size:.9rem;line-height:1.9}
 #progress{position:fixed;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--p2),var(--ac));width:0;z-index:100;transition:width .1s}
 #toTop{position:fixed;bottom:22px;left:22px;width:46px;height:46px;border-radius:12px;background:var(--pa);color:#fff;border:none;font-size:1.2rem;cursor:pointer;display:none;z-index:90;box-shadow:0 8px 20px rgba(0,0,0,.25)}
 #toTop.show{display:block}
+/* جدول المحتويات */
+.toc{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px 22px;margin:0 0 28px;font-size:.95rem}
+.toc b{color:var(--pa);display:block;margin-bottom:10px}
+.toc ul{list-style:none;padding:0;display:grid;gap:6px}
+.toc a{color:var(--tx);display:inline-flex;gap:8px;align-items:center}
+.toc a:before{content:"◆";color:var(--p2);font-size:.6rem}
+.toc a:hover{color:var(--p)}
+/* Toast */
+#toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--pa);color:#fff;padding:11px 22px;border-radius:999px;font-size:.9rem;font-weight:700;opacity:0;pointer-events:none;transition:all .3s;z-index:120}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* زر نسخ */
+.sh-cp{background:#334155;color:#fff;border:none;cursor:pointer;font-family:inherit;font-size:.87rem;font-weight:700;padding:9px 16px;border-radius:10px;display:inline-flex;align-items:center;gap:7px}
+.sh-cp:hover{background:#1e293b}
+/* مميز */
+.featured{background:var(--card);border:1px solid var(--bd);border-radius:20px;overflow:hidden;display:grid;grid-template-columns:1.2fr 1fr;margin:40px 0 8px;transition:box-shadow .2s}
+.featured:hover{box-shadow:0 14px 34px rgba(15,23,42,.1)}
+.featured img{width:100%;height:100%;object-fit:cover;min-height:280px}
+.f-body{padding:28px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.f-tag{display:inline-block;background:var(--ac);color:#1e293b;font-size:.78rem;font-weight:800;padding:4px 12px;border-radius:999px;align-self:flex-start}
+.f-body h2{font-size:1.4rem;line-height:1.6}
+.f-body h2 a{color:var(--tx)}
+.f-body p{color:var(--mut)}
+/* FAQ */
+.faq{display:grid;gap:12px;margin-bottom:10px}
+.faq details{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 20px;cursor:pointer}
+.faq summary{font-weight:700;color:var(--pa);font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.faq summary:after{content:"+";font-size:1.3rem;color:var(--p2)}
+.faq details[open] summary:after{content:"−"}
+.faq p{margin:12px 0 0;color:var(--mut);font-size:.95rem}
+@media(max-width:760px){.featured{grid-template-columns:1fr}.featured img{min-height:200px}}
 .note-p{background:#f1f5f9;border-radius:12px;padding:14px 16px;margin:18px 0;font-size:.95rem}
 [data-theme="dark"] .note-p{background:#1e293b}
 .btn-row{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
@@ -193,27 +224,28 @@ footer p{font-size:.9rem;line-height:1.9}
     <span>📅 2026-06-03</span>
     <span>⏱️ 3 دقائق قراءة</span>
   </div>
-  <img class="art-img" src="../images/og-protect-online-accounts.png" alt="أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين">
+  <img class="art-img" src="../images/og-protect-online-accounts.png" alt="أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين" width="1200" height="630">
+  <nav class="toc"><b>📑 محتويات المقال</b><ul><li><a href="#sec-0">1. كلمة المرور: خط الدفاع الأول</a></li><li><a href="#sec-1">2. التحقق بخطوتين: حارس البوابة</a></li><li><a href="#sec-2">3. تعرف على الاحتيال قبل أن تقع فيه</a></li><li><a href="#sec-3">4. عادات يومية تحميك</a></li><li><a href="#sec-4">ماذا تفعل إذا اخترق حسابك؟</a></li><li><a href="#sec-5">الخلاصة</a></li></ul></nav>
   <div class="art-body"><p>في عصر تنتقل فيه حياتنا كلها إلى الإنترنت — البريد، الحسابات البنكية، الصور، ورسائل العائلة — أصبحت حماية الحسابات ضرورة لا رفاهية. الخبر الجيد أن معظم الاختراقات تحدث بسبب أخطاء بسيطة يمكن تفاديها بسهولة. إليك دليلك العملي لتأمين حساباتك في خطوات واضحة.</p>
-<h2>1. كلمة المرور: خط الدفاع الأول</h2>
+<h2 id="sec-0">1. كلمة المرور: خط الدفاع الأول</h2>
 <h3>ما الذي يجعل كلمة المرور قوية؟</h3>
 <p>كلمة مرور مثل «123456» أو اسم عائلتك تُكسر في ثوانٍ. القاعدة الحديثة: الطول أهم من التعقيد. جملة طويلة يسهل تذكرها وصعبة التخمين أفضل بكثير من «م@2#كx» التي ستنساها. مثال: «تفاحتي_المفضلة_زرقاء2026» أقوى وأسهل في التذكر.</p>
 <h3>كيف تدير كلمات مرور كثيرة؟</h3>
 <p>استخدام كلمة مرور واحدة لكل المواقع كارثة؛ اختراق موقع واحد يعني وصولًا لكل حساباتك. الحل: تطبيقات إدارة كلمات المرور (Password Manager) التي تحفظ كلمات قوية مختلفة لكل موقع وتذكرك بها تلقائيًا. أشهرها مجاني للاستخدام الأساسي.</p>
-<h2>2. التحقق بخطوتين: حارس البوابة</h2>
+<h2 id="sec-1">2. التحقق بخطوتين: حارس البوابة</h2>
 <p>حتى لو سرقت كلمة مرورك، التحقق بخطوتين (2FA) يمنع الدخول لأن الدخول يحتاج رمزًا إضافيًا يصل لهاتفك. فعّله على أهم حساباتك فورًا: البريد الإلكتروني، واتساب، البنوك، والوسائل الاجتماعية. طريقة الرمز بالتطبيق (Authenticator App) أفضل وأأمن من الرسائل النصية.</p>
 <div class="tip"><span class="t-ic">💡</span><div><strong>نصيحة:</strong> ابدأ بالبريد الإلكتروني! من يملك بريدك الإلكتروني يستطيع استعادة كلمات مرور كل حساباتك الأخرى، لذا فهو الحساب الأهم على الإطلاق.</div></div>
-<h2>3. تعرف على الاحتيال قبل أن تقع فيه</h2>
+<h2 id="sec-2">3. تعرف على الاحتيال قبل أن تقع فيه</h2>
 <h3>الرسائل المشبوهة (التصيد الاحتيالي)</h3>
 <p>قد تصلك رسالة «حسابك سيغلق خلال 24 ساعة، اضغط هنا» أو «فزت بجائزة». هذه أشهر أساليب الاحتيال. القواعد الثلاث:</p>
 <ul><li>لا تضغط على الروابط في الرسائل غير المتوقعة؛ افتح الموقع مباشرة من المتصفح.</li><li>راجع عنوان المرسل بدقة؛ الاحتياليون يستخدمون عناوين مشابهة مثل amaz0n-support.com.</li><li>أي جهة تطلب «رمز التحقق» من هاتفك هي محتال — الأرقام لا تُطلب أبدًا.</li></ul>
 <h3>مكالمات الدعم الفني المزيفة</h3>
 <p>لا تثق بأي اتصال يدعي أنه من شركة تكنولوجيا ويطلب منك تثبيت برامج أو إعطاء رموز. الشركات الحقيقية لا تتصل بك أولًا لحل مشكلة لم تبلغ عنها.</p>
-<h2>4. عادات يومية تحميك</h2>
+<h2 id="sec-3">4. عادات يومية تحميك</h2>
 <ul><li>فعّل التحديثات التلقائية لهاتفك وتطبيقاتك؛ الإصلاحات الأمنية تنزل بها.</li><li>راجع «الأجهزة المتصلة» بحساباتك من فترة لأخرى وسجّل خروج الأجهزة الغريبة.</li><li>لا تستخدم شبكة واي فاي عامة غير محمية للمعاملات البنكية.</li><li>انشئ بريدًا إلكترونيًا منفصلًا للتسجيلات غير المهمة.</li><li>استخدم بطاقة افتراضية أو حدد سقفًا للدفع الإلكتروني إن أمكن.</li></ul>
-<h2>ماذا تفعل إذا اخترق حسابك؟</h2>
+<h2 id="sec-4">ماذا تفعل إذا اخترق حسابك؟</h2>
 <ol><li>غيّر كلمة المرور فورًا عبر «نسيت كلمة المرور».</li><li>فعّل التحقق بخطوتين إذا لم يكن مفعلًا.</li><li>أبلغ الجهة (البنك، المنصة) واتبع إجراءاتهم.</li><li>أخبر جهات اتصالك أن حسابك قد اخترق حتى لا يقعوا ضحية لرسائل مزيفة منك.</li><li>راجع أجهزتك المتصلة وسجّل خروج أي جهاز لا تعرفه.</li></ol>
-<h2>الخلاصة</h2>
+<h2 id="sec-5">الخلاصة</h2>
 <p>الأمن الرقمي ليس تخصصًا للخبراء؛ إنه عادات بسيطة: كلمات مرور قوية ومختلفة، تحقق بخطوتين، ووعي بأساليب الاحتيال. خصص ساعة هذا الأسبوع لتأمين أهم حساباتك، وستنام مطمئنًا وأنت تعلم أن بوابة حياتك الرقمية مغلقة بإحكام.</p></div>
   
 <div class="share">
@@ -222,6 +254,7 @@ footer p{font-size:.9rem;line-height:1.9}
   <a class="sh-tg" href="https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fprotect-online-accounts.html&text=%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A7%D8%AA%20%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20%D8%AD%D8%B3%D8%A7%D8%A8%D8%A7%D8%AA%D9%83%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%A5%D9%86%D8%AA%D8%B1%D9%86%D8%AA%3A%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%20%D9%84%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86" target="_blank" rel="noopener">تيليجرام</a>
   <a class="sh-fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fprotect-online-accounts.html" target="_blank" rel="noopener">فيسبوك</a>
   <a class="sh-x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fprotect-online-accounts.html&text=%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A7%D8%AA%20%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20%D8%AD%D8%B3%D8%A7%D8%A8%D8%A7%D8%AA%D9%83%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%A5%D9%86%D8%AA%D8%B1%D9%86%D8%AA%3A%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%20%D9%84%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86" target="_blank" rel="noopener">إكس</a>
+  <button class="sh-cp" onclick="copyLink()">🔗 نسخ الرابط</button>
 </div>
   <div class="author">
     <div class="author-av">✍️</div>
@@ -235,7 +268,7 @@ footer p{font-size:.9rem;line-height:1.9}
   <div class="sec-h"><h2>مقالات ذات صلة</h2></div>
   <div class="grid">
     <article class="card">
-      <a href="../posts/choose-smartphone-budget.html"><img class="card-img" src="../images/og-choose-smartphone-budget.png" alt="كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين" loading="lazy"></a>
+      <a href="../posts/choose-smartphone-budget.html"><img class="card-img" src="../images/og-choose-smartphone-budget.png" alt="كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">📱 تكنولوجيا</span>
         <h3><a href="../posts/choose-smartphone-budget.html">كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين</a></h3>
@@ -247,7 +280,7 @@ footer p{font-size:.9rem;line-height:1.9}
       </div>
     </article>
     <article class="card">
-      <a href="../posts/ai-explained-simply.html"><img class="card-img" src="../images/og-ai-explained-simply.png" alt="الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟" loading="lazy"></a>
+      <a href="../posts/ai-explained-simply.html"><img class="card-img" src="../images/og-ai-explained-simply.png" alt="الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">📱 تكنولوجيا</span>
         <h3><a href="../posts/ai-explained-simply.html">الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟</a></h3>
@@ -259,7 +292,7 @@ footer p{font-size:.9rem;line-height:1.9}
       </div>
     </article>
     <article class="card">
-      <a href="../posts/speed-up-slow-computer.html"><img class="card-img" src="../images/og-speed-up-slow-computer.png" alt="تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة" loading="lazy"></a>
+      <a href="../posts/speed-up-slow-computer.html"><img class="card-img" src="../images/og-speed-up-slow-computer.png" alt="تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة" loading="lazy" width="1200" height="630"></a>
       <div class="card-body">
         <span class="cat-chip">📱 تكنولوجيا</span>
         <h3><a href="../posts/speed-up-slow-computer.html">تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة</a></h3>
@@ -291,6 +324,7 @@ footer p{font-size:.9rem;line-height:1.9}
       <a href="../contact.html">اتصل بنا</a>
       <a href="../privacy-policy.html">سياسة الخصوصية</a>
       <a href="../terms.html">شروط الاستخدام</a>
+      <a href="../feed.xml">📡 خلاصة RSS</a>
     </div>
     <div>
       <h4>تواصل معنا</h4>
@@ -304,10 +338,11 @@ footer p{font-size:.9rem;line-height:1.9}
   </div>
 </div></footer>
 <button id="toTop" title="العودة للأعلى">↑</button>
+<div id="toast">✅ تم نسخ الرابط</div>
 
 <script>
 (function(){
-var idx=[{"t": "ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية مجرّبة", "s": "tidy-home-in-15-minutes", "c": "نصائح منزلية"}, {"t": "6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك", "s": "natural-cleaning-recipes", "c": "نصائح منزلية"}, {"t": "كيف تتخلص من الروائح الكريهة في منزلك نهائيًا", "s": "eliminate-bad-smells", "c": "نصائح منزلية"}, {"t": "10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك", "s": "save-electricity-bill", "c": "نصائح منزلية"}, {"t": "مناقيش الزعتر: وصفة بيتية سهلة واقتصادية خطوة بخطوة", "s": "zaatar-manakeesh", "c": "وصفات لذيذة"}, {"t": "شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة", "s": "lentil-soup-recipe", "c": "وصفات لذيذة"}, {"t": "كيكة البرتقال الهشة بدون فرن: طريقة القدر السحرية", "s": "orange-cake-no-oven", "c": "وصفات لذيذة"}, {"t": "سلطة الفواكه المنعشة: طبق صحي ولذيذ في 10 دقائق", "s": "fruit-salad-recipe", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن جسم الإنسان لم تكن تعرفها", "s": "amazing-human-body-facts", "c": "معلومات عامة"}, {"t": "لماذا نحتاج إلى النوم؟ أهمية النوم لصحتك وعقلك", "s": "why-we-need-sleep", "c": "معلومات عامة"}, {"t": "قصة القهوة: رحلتها من اليمن إلى العالم", "s": "coffee-story-yemen", "c": "معلومات عامة"}, {"t": "كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة", "s": "age-of-earth", "c": "معلومات عامة"}, {"t": "كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين", "s": "choose-smartphone-budget", "c": "تكنولوجيا"}, {"t": "أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين", "s": "protect-online-accounts", "c": "تكنولوجيا"}, {"t": "الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟", "s": "ai-explained-simply", "c": "تكنولوجيا"}, {"t": "تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة", "s": "speed-up-slow-computer", "c": "تكنولوجيا"}, {"t": "تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة", "s": "quick-kitchen-cleaning", "c": "نصائح منزلية"}, {"t": "كيف تنظم ثلاجتك وتمنع هدر الطعام نهائيًا", "s": "organize-fridge-waste", "c": "نصائح منزلية"}, {"t": "كبسة الدجاج السعودية: الوصفة الأصلية خطوة بخطوة", "s": "chicken-kabsa", "c": "وصفات لذيذة"}, {"t": "بسبوسة القشطة: حلى سهل يذوب في الفم", "s": "qishta-basbousa", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا", "s": "amazing-water-facts", "c": "معلومات عامة"}, {"t": "عجائب الكون: رحلة بين المجرات والنجوم", "s": "galaxies-and-stars", "c": "معلومات عامة"}, {"t": "أفضل تطبيقات أندرويد المجانية: 10 تطبيقات لا غنى عنها", "s": "essential-android-apps", "c": "تكنولوجيا"}, {"t": "الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك", "s": "safe-online-payments", "c": "تكنولوجيا"}];
+var idx=[{"t": "ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية مجرّبة", "s": "tidy-home-in-15-minutes", "c": "نصائح منزلية"}, {"t": "6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك", "s": "natural-cleaning-recipes", "c": "نصائح منزلية"}, {"t": "كيف تتخلص من الروائح الكريهة في منزلك نهائيًا", "s": "eliminate-bad-smells", "c": "نصائح منزلية"}, {"t": "10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك", "s": "save-electricity-bill", "c": "نصائح منزلية"}, {"t": "مناقيش الزعتر: وصفة بيتية سهلة واقتصادية خطوة بخطوة", "s": "zaatar-manakeesh", "c": "وصفات لذيذة"}, {"t": "شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة", "s": "lentil-soup-recipe", "c": "وصفات لذيذة"}, {"t": "كيكة البرتقال الهشة بدون فرن: طريقة القدر السحرية", "s": "orange-cake-no-oven", "c": "وصفات لذيذة"}, {"t": "سلطة الفواكه المنعشة: طبق صحي ولذيذ في 10 دقائق", "s": "fruit-salad-recipe", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن جسم الإنسان لم تكن تعرفها", "s": "amazing-human-body-facts", "c": "معلومات عامة"}, {"t": "لماذا نحتاج إلى النوم؟ أهمية النوم لصحتك وعقلك", "s": "why-we-need-sleep", "c": "معلومات عامة"}, {"t": "قصة القهوة: رحلتها من اليمن إلى العالم", "s": "coffee-story-yemen", "c": "معلومات عامة"}, {"t": "كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة", "s": "age-of-earth", "c": "معلومات عامة"}, {"t": "كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين", "s": "choose-smartphone-budget", "c": "تكنولوجيا"}, {"t": "أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين", "s": "protect-online-accounts", "c": "تكنولوجيا"}, {"t": "الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟", "s": "ai-explained-simply", "c": "تكنولوجيا"}, {"t": "تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة", "s": "speed-up-slow-computer", "c": "تكنولوجيا"}, {"t": "تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة", "s": "quick-kitchen-cleaning", "c": "نصائح منزلية"}, {"t": "كيف تنظم ثلاجتك وتمنع هدر الطعام نهائيًا", "s": "organize-fridge-waste", "c": "نصائح منزلية"}, {"t": "كبسة الدجاج السعودية: الوصفة الأصلية خطوة بخطوة", "s": "chicken-kabsa", "c": "وصفات لذيذة"}, {"t": "بسبوسة القشطة: حلى سهل يذوب في الفم", "s": "qishta-basbousa", "c": "وصفات لذيذة"}, {"t": "حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا", "s": "amazing-water-facts", "c": "معلومات عامة"}, {"t": "عجائب الكون: رحلة بين المجرات والنجوم", "s": "galaxies-and-stars", "c": "معلومات عامة"}, {"t": "أفضل تطبيقات أندرويد المجانية: 10 تطبيقات لا غنى عنها", "s": "essential-android-apps", "c": "تكنولوجيا"}, {"t": "الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك", "s": "safe-online-payments", "c": "تكنولوجيا"}, {"t": "سمبوسك الجبن المقرمش: وصفة العجينة الذهبية", "s": "samosa-cheese-dough", "c": "وصفات لذيذة"}, {"t": "عصير الليمون بالنعناع المثلج: مشروب الصيف المثالي", "s": "lemon-mint-drink", "c": "وصفات لذيذة"}, {"t": "غسيل الملابس بذكاء: دليلك الكامل لملابس نظيفة تدوم", "s": "laundry-guide-tips", "c": "نصائح منزلية"}, {"t": "طرد الحشرات من المنزل بطرق طبيعية وآمنة", "s": "natural-insect-repellents", "c": "نصائح منزلية"}, {"t": "عجائب مملكة الحيوان: حقائق تدهش الكبار قبل الصغار", "s": "amazing-animal-facts", "c": "معلومات عامة"}, {"t": "توفير بيانات الجوال: 8 حيل عملية توفر لك الكثير", "s": "save-mobile-data", "c": "تكنولوجيا"}];
 var theme=localStorage.getItem('theme');
 if(theme==='dark')document.documentElement.setAttribute('data-theme','dark');
 document.getElementById('themeBtn').addEventListener('click',function(){
@@ -324,6 +359,7 @@ hits.forEach(function(x){var e=document.createElement('a');e.href='posts/'+x.s+'
 res.classList.add('open')});
 document.addEventListener('click',function(e){if(!e.target.closest('.search-box'))res.classList.remove('open')});
 document.getElementById('burger').addEventListener('click',function(){document.getElementById('nav').classList.toggle('open')});
+window.copyLink=function(){var u=location.href;navigator.clipboard.writeText(u).then(function(){var t=document.getElementById('toast');t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2200)})};
 
 window.addEventListener('scroll',function(){var h=document.documentElement;var p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';var t=document.getElementById('toTop');if(h.scrollTop>500){t.classList.add('show')}else{t.classList.remove('show')}});
 document.getElementById('toTop').addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
