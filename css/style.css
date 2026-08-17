@@ -212,6 +212,23 @@ h1,h2,h3,h4{font-family:var(--title);text-wrap:balance}
 .author-av:after{content:"د";font-size:1.45rem;font-weight:700}
 .author b{font-family:var(--title)}
 .author p{font-size:.83rem;color:var(--muted);line-height:1.6;margin-top:3px}
+/* تحسينات المحتوى والتحرير */
+.quick-answer{background:var(--primary-soft);border-right:4px solid var(--primary);padding:22px 24px;margin:0 0 30px}
+.quick-answer h2{border:0!important;margin:0 0 8px!important;padding:0!important;font-size:1.22rem!important;color:var(--primary)!important}
+.quick-answer p{margin:0!important;line-height:1.9}
+.table-wrap{overflow-x:auto;margin:0 0 28px;border:1px solid var(--line)}
+.seo-table{width:100%;border-collapse:collapse;min-width:580px;background:var(--surface);font-size:.92rem}
+.seo-table th,.seo-table td{padding:13px 14px;text-align:right;vertical-align:top;border-bottom:1px solid var(--line);border-left:1px solid var(--line)}
+.seo-table th{font-family:var(--title);background:var(--surface-2);color:var(--text);font-weight:700}
+.seo-table tr:last-child td{border-bottom:0}.seo-table th:last-child,.seo-table td:last-child{border-left:0}
+.check-list{list-style:none!important;padding:0!important}
+.check-list li{position:relative;padding-right:27px!important}
+.check-list li:before{content:"✓";position:absolute;right:0;top:0;color:var(--primary);font-weight:800}
+.transparency-box{background:var(--accent-soft);border-right:4px solid var(--accent);padding:20px 22px;margin:24px 0}
+.transparency-box strong{font-family:var(--title);font-size:1.05rem}.transparency-box p{margin:6px 0 0}
+.page-updated{margin-top:35px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+.cluster-links{margin:34px 0 0;padding:22px 24px;background:var(--surface);border-top:3px solid var(--accent);border-bottom:1px solid var(--line)}
+.cluster-links h2{font-size:1.14rem;margin-bottom:12px}.cluster-links ul{display:grid;gap:8px;padding-right:20px}.cluster-links a{font-weight:700}
 /* الصفحات العامة والنماذج */
 .page{width:min(800px,calc(100% - 40px));margin:0 auto;padding:54px 0 72px}
 .page h1{font-size:clamp(2.1rem,5vw,3.35rem);line-height:1.3;margin-bottom:8px;padding-bottom:17px;border-bottom:3px solid var(--primary)}

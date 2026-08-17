@@ -338,6 +338,8 @@ def make_info_page(filename: str, title: str, description: str, body: str, neste
 
 
 def create_trust_pages() -> None:
+    if (ROOT / "site-config.json").exists() and (ROOT / "authors" / "editorial-team.html").exists():
+        return
     make_info_page(
         "editorial-policy.html",
         "سياسة التحرير",

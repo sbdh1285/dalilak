@@ -49,6 +49,15 @@ python3 tools/audit_site.py
 
 تعيد أداة الصيانة بناء `search-index.json`، وتحدّث البيانات المشتركة، ثم تعيد تطبيق قالب المجلة تلقائيًا.
 
+## المرحلة الأولى من SEO
+
+تم توثيق خريطة الكلمات والعناقيد في `seo-content-plan.json`، وتقرير التدقيق في `docs/seo-phase-1.md`. لإعادة تطبيق تحسينات المرحلة الأولى وRecipe Schema وصفحات noindex:
+
+```bash
+python3 tools/phase_one_seo.py
+python3 tools/audit_site.py
+```
+
 ## النشر
 
 الموقع ملفات ثابتة ويُنشر من فرع `main` عبر GitHub Pages. لا يحتاج خطوة build ولا قاعدة بيانات.
