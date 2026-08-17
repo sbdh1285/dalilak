@@ -1,0 +1,4530 @@
+{
+  "generated": "2026-08-17",
+  "summary": {
+    "pages": 54,
+    "articles": 34,
+    "images": 55,
+    "links": 327
+  },
+  "articles": [
+    {
+      "slug": "account-recovery-plan",
+      "path": "posts/account-recovery-plan.html",
+      "headline": "خطة استرداد الحسابات قبل الاختراق: ورقة عمل عملية",
+      "category": "تكنولوجيا",
+      "datePublished": "2026-08-17",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/account-recovery-plan.jpg",
+        "alt": "مفتاح ورموز احتياطية حول قفل رقمي لاسترداد الحسابات"
+      },
+      "toc": [
+        {
+          "id": "quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "inventory",
+          "title": "1. جرد الحسابات المهمة"
+        },
+        {
+          "id": "backup",
+          "title": "2. افصل عوامل الاسترداد"
+        },
+        {
+          "id": "drill",
+          "title": "3. نفذ اختبارًا دون تسجيل الخروج"
+        },
+        {
+          "id": "incident",
+          "title": "4. عند الاشتباه بالاختراق"
+        },
+        {
+          "id": "worksheet",
+          "title": "ورقة العمل"
+        },
+        {
+          "id": "loss",
+          "title": "سيناريو فقد الهاتف"
+        },
+        {
+          "id": "shared",
+          "title": "الحسابات المشتركة والعمل"
+        },
+        {
+          "id": "privacy",
+          "title": "ما الذي لا تكتبه في ورقة الجرد؟"
+        },
+        {
+          "id": "schedule",
+          "title": "جدول مراجعة واقعي"
+        },
+        {
+          "id": "conclusion",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf",
+        "https://www.cisa.gov/secure-our-world/use-strong-passwords"
+      ]
+    },
+    {
+      "slug": "age-of-earth",
+      "path": "posts/age-of-earth.html",
+      "headline": "كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة",
+      "category": "معلومات عامة",
+      "datePublished": "2026-07-08",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/age-of-earth.jpg",
+        "alt": "كوكب الأرض مع طبقات صخرية ومدار زمني"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "كيف تقرأ الخط الزمني؟"
+        },
+        {
+          "id": "sec-0",
+          "title": "كيف عرف العلماء عمر الأرض؟"
+        },
+        {
+          "id": "sec-1",
+          "title": "الجدول الزمني لحياة الأرض"
+        },
+        {
+          "id": "sec-2",
+          "title": "كيف نقيس هذه الأزمنة الهائلة؟"
+        },
+        {
+          "id": "sec-3",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://pubs.usgs.gov/gip/geotime/age.html",
+        "https://naturalhistory.si.edu/education/teaching-resources/anthropology-and-social-studies/age-earth"
+      ]
+    },
+    {
+      "slug": "ai-explained-simply",
+      "path": "posts/ai-explained-simply.html",
+      "headline": "الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟",
+      "category": "تكنولوجيا",
+      "datePublished": "2026-07-22",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/ai-explained-simply.jpg",
+        "alt": "شريحة ذكاء اصطناعي محاطة بعقد شبكة مترابطة"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "seo-flow",
+          "title": "من التدريب إلى الإجابة"
+        },
+        {
+          "id": "seo-safe",
+          "title": "استخدام عملي أكثر أمانًا"
+        },
+        {
+          "id": "sec-0",
+          "title": "ما هو الذكاء الاصطناعي؟"
+        },
+        {
+          "id": "sec-1",
+          "title": "كيف «يتعلم» الذكاء الاصطناعي؟"
+        },
+        {
+          "id": "sec-2",
+          "title": "أمثلة من حياتك اليومية"
+        },
+        {
+          "id": "sec-3",
+          "title": "أنواع الذكاء الاصطناعي"
+        },
+        {
+          "id": "sec-4",
+          "title": "الذكاء الاصطناعي التوليدي: صانع المحتوى الجديد"
+        },
+        {
+          "id": "sec-5",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-6",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.nist.gov/itl/ai-risk-management-framework",
+        "https://oecd.ai/en/ai-principles"
+      ]
+    },
+    {
+      "slug": "amazing-animal-facts",
+      "path": "posts/amazing-animal-facts.html",
+      "headline": "عجائب مملكة الحيوان: حقائق تدهش الكبار قبل الصغار",
+      "category": "معلومات عامة",
+      "datePublished": "2026-08-02",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/amazing-animal-facts.jpg",
+        "alt": "حوت وأخطبوط وآثار أقدام ترمز إلى تنوع الحيوانات"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "اختبار سريع للمعلومة"
+        },
+        {
+          "id": "sec-0",
+          "title": "الأخطبوط: عبقري البحار"
+        },
+        {
+          "id": "sec-1",
+          "title": "الحوت الأزرق: عملاق كل العصور"
+        },
+        {
+          "id": "sec-2",
+          "title": "الحرباء: كاميرا حية"
+        },
+        {
+          "id": "sec-3",
+          "title": "النمل: حضارة تحت أقدامنا"
+        },
+        {
+          "id": "sec-4",
+          "title": "خفافيش وطيور ودلافين"
+        },
+        {
+          "id": "sec-5",
+          "title": "أرقام قياسية في مملكة الحيوان"
+        },
+        {
+          "id": "sec-6",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://nationalzoo.si.edu/animals",
+        "https://www.britannica.com/animal/animal"
+      ]
+    },
+    {
+      "slug": "amazing-human-body-facts",
+      "path": "posts/amazing-human-body-facts.html",
+      "headline": "حقائق مبسطة عن جسم الإنسان: القلب والعظام والجلد والدماغ",
+      "category": "معلومات عامة",
+      "datePublished": "2026-05-05",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/amazing-human-body-facts.jpg",
+        "alt": "قلب ودماغ وعظام ضمن رسم تشريحي مبسط"
+      },
+      "toc": [
+        {
+          "id": "sec-0",
+          "title": "القلب: مضخة تتكيف مع نشاطك"
+        },
+        {
+          "id": "sec-1",
+          "title": "العظام: نسيج حي يتجدد"
+        },
+        {
+          "id": "sec-2",
+          "title": "الجلد: حاجز منظم ومعقد"
+        },
+        {
+          "id": "sec-3",
+          "title": "الدماغ: شبكة عصبية لا آلة حسابية بسيطة"
+        },
+        {
+          "id": "sec-4",
+          "title": "المعدة: حمض وحاجز واقٍ"
+        },
+        {
+          "id": "sec-5",
+          "title": "حقائق عملية بدل الأرقام المدهشة"
+        },
+        {
+          "id": "sec-6",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://medlineplus.gov/anatomy.html",
+        "https://www.ncbi.nlm.nih.gov/books/NBK607445/"
+      ]
+    },
+    {
+      "slug": "amazing-water-facts",
+      "path": "posts/amazing-water-facts.html",
+      "headline": "حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا",
+      "category": "معلومات عامة",
+      "datePublished": "2026-07-25",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/amazing-water-facts.jpg",
+        "alt": "قطرات ماء وأمواج ودورة مائية مبسطة"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "ماء الشرب ليس مجرد كمية"
+        },
+        {
+          "id": "sec-0",
+          "title": "الماء في جسمك"
+        },
+        {
+          "id": "sec-1",
+          "title": "الماء على كوكب الأرض"
+        },
+        {
+          "id": "sec-2",
+          "title": "دورة الماء: آلة إعادة التدوير الأعظم"
+        },
+        {
+          "id": "sec-3",
+          "title": "لماذا نحتاج إلى شرب الماء؟"
+        },
+        {
+          "id": "sec-4",
+          "title": "كم تحتاج من الماء يوميًا؟"
+        },
+        {
+          "id": "sec-5",
+          "title": "حقائق سريعة تدهشك"
+        },
+        {
+          "id": "sec-6",
+          "title": "كيف تحافظ على الماء؟"
+        },
+        {
+          "id": "sec-7",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.usgs.gov/special-topics/water-science-school",
+        "https://www.who.int/news-room/fact-sheets/detail/drinking-water"
+      ]
+    },
+    {
+      "slug": "chicken-kabsa",
+      "path": "posts/chicken-kabsa.html",
+      "headline": "كبسة الدجاج السعودية: طريقة منزلية خطوة بخطوة",
+      "category": "وصفات لذيذة",
+      "datePublished": "2026-07-28",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/chicken-kabsa.jpg",
+        "alt": "طبق أرز بسمتي ودجاج وبهارات خليجية"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "seo-table",
+          "title": "حل مشكلات الكبسة"
+        },
+        {
+          "id": "seo-serve",
+          "title": "التحضير المسبق والتقديم"
+        },
+        {
+          "id": "sec-0",
+          "title": "المكونات"
+        },
+        {
+          "id": "sec-1",
+          "title": "طريقة التحضير"
+        },
+        {
+          "id": "sec-2",
+          "title": "أسرار الكبسة الناجحة"
+        },
+        {
+          "id": "sec-3",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"
+      ]
+    },
+    {
+      "slug": "choose-smartphone-budget",
+      "path": "posts/choose-smartphone-budget.html",
+      "headline": "كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين",
+      "category": "تكنولوجيا",
+      "datePublished": "2026-04-25",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/choose-smartphone-budget.jpg",
+        "alt": "ثلاثة هواتف مع علامات مقارنة واختيار"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "seo-table",
+          "title": "المواصفة المناسبة حسب استخدامك"
+        },
+        {
+          "id": "seo-check",
+          "title": "قائمة فحص قبل الدفع"
+        },
+        {
+          "id": "sec-0",
+          "title": "أولًا: حدد ميزانيتك بصدق"
+        },
+        {
+          "id": "sec-1",
+          "title": "المعالج (Processor): محرك الهاتف"
+        },
+        {
+          "id": "sec-2",
+          "title": "الذاكرة: لا تقل عن هذه الأرقام"
+        },
+        {
+          "id": "sec-3",
+          "title": "الكاميرا: ماذا يعني الرقم الكبير فعلًا؟"
+        },
+        {
+          "id": "sec-4",
+          "title": "البطارية والشحن"
+        },
+        {
+          "id": "sec-5",
+          "title": "ما الذي يمكنك التضحية به؟"
+        },
+        {
+          "id": "sec-6",
+          "title": "قواعد ذهبية قبل الشراء"
+        },
+        {
+          "id": "sec-7",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://consumer.ftc.gov/articles/how-secure-your-voice-assistant-and-protect-your-privacy",
+        "https://support.google.com/android/answer/7664692"
+      ]
+    },
+    {
+      "slug": "cleaning-products-never-mix",
+      "path": "posts/cleaning-products-never-mix.html",
+      "headline": "مواد تنظيف لا تخلطها معًا: جدول سلامة منزلي",
+      "category": "نصائح منزلية",
+      "datePublished": "2026-08-17",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/cleaning-products-never-mix.jpg",
+        "alt": "عبوتا تنظيف منفصلتان مع علامة منع الخلط"
+      },
+      "toc": [
+        {
+          "id": "quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "why",
+          "title": "لماذا الخلط خطر؟"
+        },
+        {
+          "id": "table",
+          "title": "جدول «لا تخلط»"
+        },
+        {
+          "id": "label",
+          "title": "كيف تقرأ الملصق؟"
+        },
+        {
+          "id": "incident",
+          "title": "إذا حدث خلط بالخطأ"
+        },
+        {
+          "id": "worksheet",
+          "title": "بطاقة قبل التنظيف"
+        },
+        {
+          "id": "children",
+          "title": "الأطفال والحيوانات والعبوات"
+        },
+        {
+          "id": "room-plan",
+          "title": "خطة غرفة واحدة"
+        },
+        {
+          "id": "faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "conclusion",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.cdc.gov/natural-disasters/safety/how-to-safely-clean-and-sanitize-with-bleach.html",
+        "https://www.cdc.gov/niosh/docs/2012-126/pdfs/2012-126.pdf"
+      ]
+    },
+    {
+      "slug": "coffee-story-yemen",
+      "path": "posts/coffee-story-yemen.html",
+      "headline": "قصة القهوة: رحلتها من اليمن إلى العالم",
+      "category": "معلومات عامة",
+      "datePublished": "2026-06-14",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/coffee-story-yemen.jpg",
+        "alt": "فنجان قهوة وحبوب ومدرجات جبلية ترمز إلى اليمن"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "seo-timeline",
+          "title": "خط زمني مختصر"
+        },
+        {
+          "id": "seo-yemen",
+          "title": "ما الذي يميز القهوة اليمنية؟"
+        },
+        {
+          "id": "sec-0",
+          "title": "البداية: البن العربي في مرتفعات اليمن"
+        },
+        {
+          "id": "sec-1",
+          "title": "الصوفية والقهوة: صحوة العبادة"
+        },
+        {
+          "id": "sec-2",
+          "title": "ميناء المخا: بوابة القهوة إلى العالم"
+        },
+        {
+          "id": "sec-3",
+          "title": "انتشار القهوة: من إسطنبول إلى أوروبا"
+        },
+        {
+          "id": "sec-4",
+          "title": "لماذا البن اليمني مميز؟"
+        },
+        {
+          "id": "sec-5",
+          "title": "القهوة اليوم: عودة الريادة"
+        },
+        {
+          "id": "sec-6",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.britannica.com/topic/coffee",
+        "https://www.ico.org/documents/icc-105-14e-statement-yemen.pdf"
+      ]
+    },
+    {
+      "slug": "eliminate-bad-smells",
+      "path": "posts/eliminate-bad-smells.html",
+      "headline": "كيف تتخلص من الروائح الكريهة في المنزل: دليل عملي",
+      "category": "نصائح منزلية",
+      "datePublished": "2026-06-09",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/eliminate-bad-smells.jpg",
+        "alt": "نافذة مفتوحة وتيارات هواء تزيل مصدر الرائحة"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "متى تحتاج فنيًا؟"
+        },
+        {
+          "id": "sec-0",
+          "title": "أولًا: المطبخ — المصدر الأول للروائح"
+        },
+        {
+          "id": "sec-1",
+          "title": "ثانيًا: الحمام"
+        },
+        {
+          "id": "sec-2",
+          "title": "ثالثًا: حلول عامة لكل المنزل"
+        },
+        {
+          "id": "sec-3",
+          "title": "الوقاية خير من العلاج"
+        },
+        {
+          "id": "sec-4",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.epa.gov/indoor-air-quality-iaq",
+        "https://www.cdc.gov/mold-health/about/index.html"
+      ]
+    },
+    {
+      "slug": "essential-android-apps",
+      "path": "posts/essential-android-apps.html",
+      "headline": "أفضل تطبيقات أندرويد المجانية: 10 تطبيقات لا غنى عنها",
+      "category": "تكنولوجيا",
+      "datePublished": "2026-08-03",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/essential-android-apps.jpg",
+        "alt": "هاتف يعرض شبكة تطبيقات متنوعة بلا شعارات"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "اختبار الصلاحيات"
+        },
+        {
+          "id": "sec-0",
+          "title": "1. إدارة الملفات: Solid Explorer"
+        },
+        {
+          "id": "sec-1",
+          "title": "2. مكافحة الفيروسات: Malwarebytes"
+        },
+        {
+          "id": "sec-2",
+          "title": "3. تنظيف الهاتف: Files by Google"
+        },
+        {
+          "id": "sec-3",
+          "title": "4. الخصوصية: NetGuard"
+        },
+        {
+          "id": "sec-4",
+          "title": "5. الملاحظات: Google Keep"
+        },
+        {
+          "id": "sec-5",
+          "title": "6. القراءة: ReadEra"
+        },
+        {
+          "id": "sec-6",
+          "title": "7. التصوير: Open Camera"
+        },
+        {
+          "id": "sec-7",
+          "title": "8. الرياضة والحركة: Google Fit"
+        },
+        {
+          "id": "sec-8",
+          "title": "9. البطارية: AccuBattery"
+        },
+        {
+          "id": "sec-9",
+          "title": "10. الطقس: Weawow"
+        },
+        {
+          "id": "sec-10",
+          "title": "تطبيقات تجنبها"
+        },
+        {
+          "id": "sec-11",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://support.google.com/googleplay/answer/2812853",
+        "https://www.android.com/safety/"
+      ]
+    },
+    {
+      "slug": "fruit-salad-recipe",
+      "path": "posts/fruit-salad-recipe.html",
+      "headline": "سلطة الفواكه المنعشة: طبق صحي ولذيذ في 10 دقائق",
+      "category": "وصفات لذيذة",
+      "datePublished": "2026-08-01",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/fruit-salad-recipe.jpg",
+        "alt": "وعاء فواكه ملونة مع تفاح وبرتقال وعنب"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "اختيار التركيبة"
+        },
+        {
+          "id": "sec-0",
+          "title": "كيف تختار الفواكه؟"
+        },
+        {
+          "id": "sec-1",
+          "title": "خطوات التحضير الصحيحة"
+        },
+        {
+          "id": "sec-2",
+          "title": "صوص العسل والليمون والنعناع"
+        },
+        {
+          "id": "sec-3",
+          "title": "أفكار تقديم إبداعية"
+        },
+        {
+          "id": "sec-4",
+          "title": "فوائد لا تتوقعها"
+        },
+        {
+          "id": "sec-5",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.fda.gov/food/people-risk-foodborne-illness/cleaning-food-safety-moms-be"
+      ]
+    },
+    {
+      "slug": "galaxies-and-stars",
+      "path": "posts/galaxies-and-stars.html",
+      "headline": "عجائب الكون: رحلة بين المجرات والنجوم",
+      "category": "معلومات عامة",
+      "datePublished": "2026-07-18",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/galaxies-and-stars.jpg",
+        "alt": "مجرة حلزونية ونجوم وكواكب في فضاء عميق"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "ثلاثة مفاهيم لا تخلط بينها"
+        },
+        {
+          "id": "sec-0",
+          "title": "ما هي المجرة؟"
+        },
+        {
+          "id": "sec-1",
+          "title": "كم عدد المجرات في الكون؟"
+        },
+        {
+          "id": "sec-2",
+          "title": "أنواع المجرات"
+        },
+        {
+          "id": "sec-3",
+          "title": "النجوم: مصانع الكون"
+        },
+        {
+          "id": "sec-4",
+          "title": "عجائب أخرى في الكون"
+        },
+        {
+          "id": "sec-5",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://spaceplace.nasa.gov/galaxy/en/",
+        "https://science.nasa.gov/universe/"
+      ]
+    },
+    {
+      "slug": "gulf-rice-spices-guide",
+      "path": "posts/gulf-rice-spices-guide.html",
+      "headline": "دليل بهارات الأرز الخليجي: الكبسة والمندي والمجبوس",
+      "category": "وصفات لذيذة",
+      "datePublished": "2026-08-17",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/gulf-rice-spices-guide.jpg",
+        "alt": "أوعية بهارات وقرفة وهيل ولومي مجفف"
+      },
+      "toc": [
+        {
+          "id": "quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "compare",
+          "title": "مقارنة عملية"
+        },
+        {
+          "id": "base",
+          "title": "خلطة بداية قابلة للتعديل"
+        },
+        {
+          "id": "whole",
+          "title": "متى تستخدم البهارات الصحيحة؟"
+        },
+        {
+          "id": "lومي",
+          "title": "التعامل مع اللومي"
+        },
+        {
+          "id": "storage",
+          "title": "التخزين والتوثيق"
+        },
+        {
+          "id": "safety",
+          "title": "ملاحظة حساسية وسلامة"
+        },
+        {
+          "id": "ratio",
+          "title": "طريقة اختبار الخلطة دون إفساد القدر"
+        },
+        {
+          "id": "log",
+          "title": "سجل طبخة قابل للتكرار"
+        },
+        {
+          "id": "variations",
+          "title": "الاختلافات الإقليمية"
+        },
+        {
+          "id": "ready",
+          "title": "الخلطات الجاهزة"
+        },
+        {
+          "id": "conclusion",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": []
+    },
+    {
+      "slug": "laundry-guide-tips",
+      "path": "posts/laundry-guide-tips.html",
+      "headline": "غسيل الملابس بذكاء: دليلك الكامل لملابس نظيفة تدوم",
+      "category": "نصائح منزلية",
+      "datePublished": "2026-08-13",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/new-laundry-guide-tips.jpg",
+        "alt": "ملابس قطنية مطوية بعناية بجوار سلة غسيل"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "قائمة قبل تشغيل الغسالة"
+        },
+        {
+          "id": "sec-0",
+          "title": "أولًا: الفرز — القاعدة الذهبية"
+        },
+        {
+          "id": "sec-1",
+          "title": "ثانيًا: اقرأ رمز الغسيل (لكن بذكاء)"
+        },
+        {
+          "id": "sec-2",
+          "title": "ثالثًا: الماء البارد هو الصديق"
+        },
+        {
+          "id": "sec-3",
+          "title": "رابعًا: البقع — عالجها قبل الغسيل لا بعده"
+        },
+        {
+          "id": "sec-4",
+          "title": "خامسًا: كمية المسحوق والمنعم الصحيحة"
+        },
+        {
+          "id": "sec-5",
+          "title": "سادسًا: التجفيف الصحيح"
+        },
+        {
+          "id": "sec-6",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.epa.gov/saferchoice",
+        "https://www.energystar.gov/products/clothes_washers"
+      ]
+    },
+    {
+      "slug": "lemon-mint-drink",
+      "path": "posts/lemon-mint-drink.html",
+      "headline": "عصير الليمون بالنعناع المثلج: مشروب الصيف المثالي",
+      "category": "وصفات لذيذة",
+      "datePublished": "2026-08-15",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/new-lemon-mint-drink.jpg",
+        "alt": "كأس عصير ليمون ونعناع مثلج مع شرائح ليمون وأوراق نعناع"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "مقياس قابل للتعديل"
+        },
+        {
+          "id": "sec-0",
+          "title": "المكونات (لأربعة أكواب)"
+        },
+        {
+          "id": "sec-1",
+          "title": "طريقة التحضير"
+        },
+        {
+          "id": "sec-2",
+          "title": "لماذا النعناع يفرك قبل إضافته؟"
+        },
+        {
+          "id": "sec-3",
+          "title": "تعديلات تناسب كل الأذواق"
+        },
+        {
+          "id": "sec-4",
+          "title": "أفكار تقديم أنيقة"
+        },
+        {
+          "id": "sec-5",
+          "title": "كم يدوم في الثلاجة؟"
+        },
+        {
+          "id": "sec-6",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.fda.gov/food/people-risk-foodborne-illness/cleaning-food-safety-moms-be"
+      ]
+    },
+    {
+      "slug": "lentil-soup-recipe",
+      "path": "posts/lentil-soup-recipe.html",
+      "headline": "شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة",
+      "category": "وصفات لذيذة",
+      "datePublished": "2026-07-02",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/lentil-soup-recipe.jpg",
+        "alt": "وعاء شوربة عدس ساخنة مع ليمون وكمون"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "ضبط القوام والحفظ"
+        },
+        {
+          "id": "sec-0",
+          "title": "المكونات"
+        },
+        {
+          "id": "sec-1",
+          "title": "طريقة التحضير"
+        },
+        {
+          "id": "sec-2",
+          "title": "أسرار الشيف الثلاثة"
+        },
+        {
+          "id": "sec-3",
+          "title": "أخطاء شائعة يجب تجنبها"
+        },
+        {
+          "id": "sec-4",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"
+      ]
+    },
+    {
+      "slug": "natural-cleaning-recipes",
+      "path": "posts/natural-cleaning-recipes.html",
+      "headline": "6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك",
+      "category": "نصائح منزلية",
+      "datePublished": "2026-05-28",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/natural-cleaning-recipes.jpg",
+        "alt": "ليمون وعبوة تنظيف وفرشاة للأسطح المنزلية"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "seo-plan",
+          "title": "اختر الطريقة حسب السطح"
+        },
+        {
+          "id": "seo-check",
+          "title": "قائمة سلامة قبل البدء"
+        },
+        {
+          "id": "sec-0",
+          "title": "1. خلطة تنظيف الزجاج والمرايا"
+        },
+        {
+          "id": "sec-1",
+          "title": "2. بيكربونات الصودا لتنظيف البالوعة"
+        },
+        {
+          "id": "sec-2",
+          "title": "3. معجون بيكربونات الصودا لإزالة البقع"
+        },
+        {
+          "id": "sec-3",
+          "title": "4. الليمون لتعقيم وتلميع الأسطح"
+        },
+        {
+          "id": "sec-4",
+          "title": "5. زيت الزيتون والخل لتلميع الخشب"
+        },
+        {
+          "id": "sec-5",
+          "title": "6. تعطير الغرف بطبيعي"
+        },
+        {
+          "id": "sec-6",
+          "title": "احتياطات مهمة"
+        },
+        {
+          "id": "sec-7",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.epa.gov/saferchoice",
+        "https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html"
+      ]
+    },
+    {
+      "slug": "natural-insect-repellents",
+      "path": "posts/natural-insect-repellents.html",
+      "headline": "الوقاية من حشرات المنزل ومكافحتها بأمان",
+      "category": "نصائح منزلية",
+      "datePublished": "2026-08-11",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/new-natural-insect-repellents.jpg",
+        "alt": "نباتات ريحان ونعناع قرب نافذة منزلية مزودة بشبك"
+      },
+      "toc": [
+        {
+          "id": "sec-0",
+          "title": "الوقاية أولًا"
+        },
+        {
+          "id": "sec-1",
+          "title": "النمل: أزل المصدر والمسار"
+        },
+        {
+          "id": "sec-2",
+          "title": "الصراصير: لا تصنع طعومًا مكشوفة"
+        },
+        {
+          "id": "sec-3",
+          "title": "البعوض: امنع التكاثر واللدغ"
+        },
+        {
+          "id": "sec-4",
+          "title": "الذباب: النظافة والمصائد المناسبة"
+        },
+        {
+          "id": "sec-5",
+          "title": "العناكب والسمك الفضي"
+        },
+        {
+          "id": "sec-6",
+          "title": "استخدام المبيدات"
+        },
+        {
+          "id": "sec-7",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.epa.gov/safepestcontrol",
+        "https://www.epa.gov/ipm"
+      ]
+    },
+    {
+      "slug": "orange-cake-no-oven",
+      "path": "posts/orange-cake-no-oven.html",
+      "headline": "كيكة البرتقال الهشة بدون فرن: طريقة القدر السحرية",
+      "category": "وصفات لذيذة",
+      "datePublished": "2026-07-15",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/orange-cake-no-oven.jpg",
+        "alt": "قطعة كيكة برتقال وقدر طهي وشرائح برتقال"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "قبل قلب الكيكة"
+        },
+        {
+          "id": "sec-0",
+          "title": "المكونات"
+        },
+        {
+          "id": "sec-1",
+          "title": "طريقة التحضير"
+        },
+        {
+          "id": "sec-2",
+          "title": "لماذا تعمل طريقة القدر؟"
+        },
+        {
+          "id": "sec-3",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-4",
+          "title": "أفكار للتقديم"
+        },
+        {
+          "id": "sec-5",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.fda.gov/media/114863/download"
+      ]
+    },
+    {
+      "slug": "organize-fridge-waste",
+      "path": "posts/organize-fridge-waste.html",
+      "headline": "كيف تنظم ثلاجتك وتقلل هدر الطعام",
+      "category": "نصائح منزلية",
+      "datePublished": "2026-08-04",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/organize-fridge-waste.jpg",
+        "alt": "ثلاجة مفتوحة برفوف مرتبة وعلب طعام واضحة"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "seo-plan",
+          "title": "نظام أسبوعي يقلل النسيان"
+        },
+        {
+          "id": "seo-table",
+          "title": "خريطة مختصرة للرفوف"
+        },
+        {
+          "id": "sec-0",
+          "title": "لماذا تنظيم الثلاجة؟"
+        },
+        {
+          "id": "sec-1",
+          "title": "خريطة الثلاجة المثالية: ماذا يوضع أين؟"
+        },
+        {
+          "id": "sec-2",
+          "title": "نظام «الأول فيخرج أولًا»"
+        },
+        {
+          "id": "sec-3",
+          "title": "درجة الحرارة الصحيحة"
+        },
+        {
+          "id": "sec-4",
+          "title": "حفظ بقايا الطعام بذكاء"
+        },
+        {
+          "id": "sec-5",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/refrigeration",
+        "https://www.energystar.gov/products/refrigerators"
+      ]
+    },
+    {
+      "slug": "protect-online-accounts",
+      "path": "posts/protect-online-accounts.html",
+      "headline": "أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين",
+      "category": "تكنولوجيا",
+      "datePublished": "2026-06-03",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/protect-online-accounts.jpg",
+        "alt": "درع وقفل ومفتاح مرور لحماية الحسابات"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "seo-plan",
+          "title": "خطة حماية مرتبة حسب الأولوية"
+        },
+        {
+          "id": "seo-check",
+          "title": "علامات تستدعي تصرفًا فوريًا"
+        },
+        {
+          "id": "sec-0",
+          "title": "1. كلمة المرور: خط الدفاع الأول"
+        },
+        {
+          "id": "sec-1",
+          "title": "2. التحقق بخطوتين: حارس البوابة"
+        },
+        {
+          "id": "sec-2",
+          "title": "3. تعرف على الاحتيال قبل أن تقع فيه"
+        },
+        {
+          "id": "sec-3",
+          "title": "4. عادات يومية تحميك"
+        },
+        {
+          "id": "sec-4",
+          "title": "ماذا تفعل إذا اخترق حسابك؟"
+        },
+        {
+          "id": "sec-5",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.cisa.gov/MFA",
+        "https://www.cisa.gov/secure-our-world/use-strong-passwords"
+      ]
+    },
+    {
+      "slug": "qishta-basbousa",
+      "path": "posts/qishta-basbousa.html",
+      "headline": "بسبوسة القشطة: حلى سهل يذوب في الفم",
+      "category": "وصفات لذيذة",
+      "datePublished": "2026-08-12",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/new-qishta-basbousa.jpg",
+        "alt": "قطع بسبوسة بالقشطة واللوز على طبق تقديم"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "علامات النضج"
+        },
+        {
+          "id": "sec-0",
+          "title": "المكونات"
+        },
+        {
+          "id": "sec-1",
+          "title": "طريقة التحضير"
+        },
+        {
+          "id": "sec-2",
+          "title": "أخطاء تفسد البسبوسة"
+        },
+        {
+          "id": "sec-3",
+          "title": "تنويعات لذيذة"
+        },
+        {
+          "id": "sec-4",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"
+      ]
+    },
+    {
+      "slug": "quick-kitchen-cleaning",
+      "path": "posts/quick-kitchen-cleaning.html",
+      "headline": "تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة",
+      "category": "نصائح منزلية",
+      "datePublished": "2026-08-05",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/new-quick-kitchen-cleaning.jpg",
+        "alt": "مطبخ مرتب مع أدوات تنظيف مناسبة للأسطح"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "ترتيب يقلل إعادة العمل"
+        },
+        {
+          "id": "sec-0",
+          "title": "قبل أن تبدأ: تجهيز 5 دقائق"
+        },
+        {
+          "id": "sec-1",
+          "title": "الدقائق 5-15: الأسطح الساخنة والشحوم"
+        },
+        {
+          "id": "sec-2",
+          "title": "الدقائق 15-22: الحوض والصرف"
+        },
+        {
+          "id": "sec-3",
+          "title": "الدقائق 22-27: اللمسات النهائية"
+        },
+        {
+          "id": "sec-4",
+          "title": "الدقائق 27-30: الأرضية"
+        },
+        {
+          "id": "sec-5",
+          "title": "أدوات تجعل التنظيف أسرع"
+        },
+        {
+          "id": "sec-6",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html",
+        "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/cleanliness-helps-prevent"
+      ]
+    },
+    {
+      "slug": "safe-online-payments",
+      "path": "posts/safe-online-payments.html",
+      "headline": "الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك",
+      "category": "تكنولوجيا",
+      "datePublished": "2026-07-30",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/safe-online-payments.jpg",
+        "alt": "بطاقة دفع داخل درع مع علامة تحقق"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "seo-plan",
+          "title": "فحص المتجر قبل الشراء"
+        },
+        {
+          "id": "seo-incident",
+          "title": "ماذا تفعل بعد عملية مشبوهة؟"
+        },
+        {
+          "id": "sec-0",
+          "title": "قبل أن تدفع: علامات الموقع الآمن"
+        },
+        {
+          "id": "sec-1",
+          "title": "الأهم: لا تشارك بيانات البطاقة أو رموز التحقق مع جهة غير موثوقة"
+        },
+        {
+          "id": "sec-2",
+          "title": "أدوات تحميك أثناء الدفع"
+        },
+        {
+          "id": "sec-3",
+          "title": "ماذا تفعل عند الشك في عملية احتيال؟"
+        },
+        {
+          "id": "sec-4",
+          "title": "عادات يومية تحميك"
+        },
+        {
+          "id": "sec-5",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://consumer.ftc.gov/articles/online-shopping",
+        "https://www.cisa.gov/news-events/news/shop-safely-online-holiday-season-tips-secure-our-world"
+      ]
+    },
+    {
+      "slug": "samosa-cheese-dough",
+      "path": "posts/samosa-cheese-dough.html",
+      "headline": "سمبوسك الجبن المقرمش: وصفة العجينة الذهبية",
+      "category": "وصفات لذيذة",
+      "datePublished": "2026-08-14",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/new-samosa-cheese-dough.jpg",
+        "alt": "سمبوسك جبن ذهبي مقرمش مقدم على طبق خزفي"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "القلي أو الفرن"
+        },
+        {
+          "id": "sec-0",
+          "title": "المكونات"
+        },
+        {
+          "id": "sec-1",
+          "title": "طريقة تحضير العجينة"
+        },
+        {
+          "id": "sec-2",
+          "title": "طريقة تحضير الحشوة"
+        },
+        {
+          "id": "sec-3",
+          "title": "التشكيل: مثلث أم ظرف؟"
+        },
+        {
+          "id": "sec-4",
+          "title": "القلي المثالي"
+        },
+        {
+          "id": "sec-5",
+          "title": "بديل صحي: السمبوسك بالفرن"
+        },
+        {
+          "id": "sec-6",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-7",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.fda.gov/media/114863/download"
+      ]
+    },
+    {
+      "slug": "save-electricity-bill",
+      "path": "posts/save-electricity-bill.html",
+      "headline": "10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك",
+      "category": "نصائح منزلية",
+      "datePublished": "2026-06-21",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/save-electricity-bill.jpg",
+        "alt": "مصباح LED ومكيف وعداد استهلاك منزلي"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "seo-plan",
+          "title": "تدقيق منزلي خلال 30 دقيقة"
+        },
+        {
+          "id": "seo-table",
+          "title": "أين تبدأ؟"
+        },
+        {
+          "id": "sec-0",
+          "title": "1. استبدل الإضاءة التقليدية بمصابيح LED"
+        },
+        {
+          "id": "sec-1",
+          "title": "2. افصل الأجهزة غير المستخدمة"
+        },
+        {
+          "id": "sec-2",
+          "title": "3. اضبط المكيف على 24 درجة"
+        },
+        {
+          "id": "sec-3",
+          "title": "4. استخدم الغسالة في الماء البارد"
+        },
+        {
+          "id": "sec-4",
+          "title": "5. ضع الثلاجة في المكان الصحيح"
+        },
+        {
+          "id": "sec-5",
+          "title": "6. استخدم سخان الماء بذكاء"
+        },
+        {
+          "id": "sec-6",
+          "title": "7. أغلق الأجهزة بدل الشاشة"
+        },
+        {
+          "id": "sec-7",
+          "title": "8. جفف الملابس بالهواء"
+        },
+        {
+          "id": "sec-8",
+          "title": "9. عزل الحرارة بسيط"
+        },
+        {
+          "id": "sec-9",
+          "title": "10. راقب فاتورتك"
+        },
+        {
+          "id": "sec-10",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.energystar.gov/saveathome",
+        "https://www.iea.org/topics/energy-efficiency"
+      ]
+    },
+    {
+      "slug": "save-mobile-data",
+      "path": "posts/save-mobile-data.html",
+      "headline": "توفير بيانات الجوال: 8 حيل عملية توفر لك الكثير",
+      "category": "تكنولوجيا",
+      "datePublished": "2026-08-06",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/new-save-mobile-data.jpg",
+        "alt": "هاتف ذكي بجوار جهاز اتصال على مكتب"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "تجربة أسبوع واحد"
+        },
+        {
+          "id": "sec-0",
+          "title": "1. اكتشف التطبيقات الشرهة أولًا"
+        },
+        {
+          "id": "sec-1",
+          "title": "2. امنع التطبيقات من العمل في الخلفية"
+        },
+        {
+          "id": "sec-2",
+          "title": "3. أوقف التحديثات التلقائية للتطبيقات"
+        },
+        {
+          "id": "sec-3",
+          "title": "4. فعّل وضع توفير البيانات في التطبيقات"
+        },
+        {
+          "id": "sec-4",
+          "title": "5. خرائط بلا بيانات: التحميل المسبق"
+        },
+        {
+          "id": "sec-5",
+          "title": "6. متصفح بضغط البيانات"
+        },
+        {
+          "id": "sec-6",
+          "title": "7. توخَّ الحذر مع الفيديو — أكبر مستهلك"
+        },
+        {
+          "id": "sec-7",
+          "title": "8. رصد حصة البيانات وضبط تنبيه"
+        },
+        {
+          "id": "sec-8",
+          "title": "مكافأة: تحقق من باقاتك البديلة"
+        },
+        {
+          "id": "sec-9",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://support.google.com/android/answer/9458407",
+        "https://support.google.com/android/answer/9458407"
+      ]
+    },
+    {
+      "slug": "speed-up-slow-computer",
+      "path": "posts/speed-up-slow-computer.html",
+      "headline": "تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة",
+      "category": "تكنولوجيا",
+      "datePublished": "2026-08-10",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/new-speed-up-slow-computer.jpg",
+        "alt": "حاسوب مكتبي في مساحة عمل تقنية مرتبة"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "حدد عنق الزجاجة"
+        },
+        {
+          "id": "sec-0",
+          "title": "1. أعد التشغيل — بجدية"
+        },
+        {
+          "id": "sec-1",
+          "title": "2. تخلّص من برامج بدء التشغيل"
+        },
+        {
+          "id": "sec-2",
+          "title": "3. نظّف مساحة القرص"
+        },
+        {
+          "id": "sec-3",
+          "title": "4. افحص البرامج الضارة"
+        },
+        {
+          "id": "sec-4",
+          "title": "5. أغلق البرامج الثقيلة في الخلفية"
+        },
+        {
+          "id": "sec-5",
+          "title": "6. حدّث نظامك وبرامجك"
+        },
+        {
+          "id": "sec-6",
+          "title": "7. فكر في ترقية ذكية (اختياري)"
+        },
+        {
+          "id": "sec-7",
+          "title": "ما الذي يجب أن تتجنبه؟"
+        },
+        {
+          "id": "sec-8",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96",
+        "https://support.microsoft.com/windows/free-up-drive-space-in-windows-85529ccb-c365-490d-b548-831022bc9b32"
+      ]
+    },
+    {
+      "slug": "tidy-home-in-15-minutes",
+      "path": "posts/tidy-home-in-15-minutes.html",
+      "headline": "ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية",
+      "category": "نصائح منزلية",
+      "datePublished": "2026-05-12",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/tidy-home-in-15-minutes.jpg",
+        "alt": "غرفة مرتبة مع رف وسلة ومؤقت"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "اختر نتيجة واحدة"
+        },
+        {
+          "id": "sec-0",
+          "title": "لماذا 15 دقيقة يوميًا؟"
+        },
+        {
+          "id": "sec-1",
+          "title": "خطة الأسبوع: مهام كل يوم"
+        },
+        {
+          "id": "sec-2",
+          "title": "قواعد ذهبية تجعل الترتيب أسهل"
+        },
+        {
+          "id": "sec-3",
+          "title": "أدوات صغيرة تسهّل المهمة"
+        },
+        {
+          "id": "sec-4",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": []
+    },
+    {
+      "slug": "used-smartphone-checklist",
+      "path": "posts/used-smartphone-checklist.html",
+      "headline": "شراء هاتف مستعمل: قائمة فحص قبل الدفع",
+      "category": "تكنولوجيا",
+      "datePublished": "2026-08-17",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/used-smartphone-checklist.jpg",
+        "alt": "هاتف تحت عدسة فحص مع بطارية وعلامة تحقق"
+      },
+      "toc": [
+        {
+          "id": "quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "ownership",
+          "title": "أولًا: الملكية وقفل التنشيط"
+        },
+        {
+          "id": "hardware",
+          "title": "ثانيًا: اختبار العتاد"
+        },
+        {
+          "id": "software",
+          "title": "ثالثًا: النظام والتحديثات"
+        },
+        {
+          "id": "deal",
+          "title": "رابعًا: توثيق الصفقة"
+        },
+        {
+          "id": "after",
+          "title": "بعد الشراء"
+        },
+        {
+          "id": "price",
+          "title": "كيف تقرر إن كان السعر منطقيًا؟"
+        },
+        {
+          "id": "battery",
+          "title": "فحص البطارية دون ادعاء دقة كاملة"
+        },
+        {
+          "id": "repair",
+          "title": "علامات إصلاح سابق"
+        },
+        {
+          "id": "receipt",
+          "title": "قائمة التسليم"
+        },
+        {
+          "id": "conclusion",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://support.google.com/android/answer/7680439",
+        "https://support.google.com/pixelphone/answer/4596836"
+      ]
+    },
+    {
+      "slug": "why-we-need-sleep",
+      "path": "posts/why-we-need-sleep.html",
+      "headline": "لماذا نحتاج إلى النوم؟ أهمية النوم لصحتك وعقلك",
+      "category": "معلومات عامة",
+      "datePublished": "2026-05-20",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/why-we-need-sleep.jpg",
+        "alt": "سرير وهلال ونجوم في غرفة هادئة"
+      },
+      "toc": [
+        {
+          "id": "support-check",
+          "title": "سجل بسيط لمدة أسبوعين"
+        },
+        {
+          "id": "sec-0",
+          "title": "ماذا يحدث في دماغك أثناء النوم؟"
+        },
+        {
+          "id": "sec-1",
+          "title": "الفوائد الأربع الكبرى للنوم"
+        },
+        {
+          "id": "sec-2",
+          "title": "ماذا يحدث عند النوم أقل من 6 ساعات؟"
+        },
+        {
+          "id": "sec-3",
+          "title": "كم ساعة تحتاج؟"
+        },
+        {
+          "id": "sec-4",
+          "title": "نصائح علمية لنوم أفضل"
+        },
+        {
+          "id": "sec-5",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.cdc.gov/sleep/about/index.html",
+        "https://www.nhlbi.nih.gov/health/sleep-deprivation"
+      ]
+    },
+    {
+      "slug": "zaatar-manakeesh",
+      "path": "posts/zaatar-manakeesh.html",
+      "headline": "مناقيش الزعتر: وصفة بيتية سهلة واقتصادية خطوة بخطوة",
+      "category": "وصفات لذيذة",
+      "datePublished": "2026-04-18",
+      "dateModified": "2026-08-17",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/covers/zaatar-manakeesh.jpg",
+        "alt": "مناقيش زعتر دائرية مع زيت زيتون وأوراق زعتر"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "seo-table",
+          "title": "دليل ضبط العجينة"
+        },
+        {
+          "id": "seo-store",
+          "title": "الحفظ وإعادة التسخين"
+        },
+        {
+          "id": "sec-0",
+          "title": "المكونات"
+        },
+        {
+          "id": "sec-1",
+          "title": "طريقة تحضير العجينة"
+        },
+        {
+          "id": "sec-2",
+          "title": "تحضير خلطة الزعتر"
+        },
+        {
+          "id": "sec-3",
+          "title": "التشكيل والخبز"
+        },
+        {
+          "id": "sec-4",
+          "title": "أسرار نجاح المناقيش"
+        },
+        {
+          "id": "sec-5",
+          "title": "أفكار للتقديم"
+        },
+        {
+          "id": "sec-6",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": []
+    }
+  ],
+  "pages": [
+    {
+      "path": "404.html",
+      "title": "الصفحة غير موجودة | دليلك",
+      "description": "عذرًا، الصفحة التي تبحث عنها غير موجودة.",
+      "canonical": "https://sbdh1285.github.io/dalilak/404.html",
+      "h1": "عذرًا! الصفحة غير موجودة",
+      "links": [
+        "#main-content",
+        "about.html",
+        "authors/editorial-team.html",
+        "category/home-tips.html",
+        "category/knowledge.html",
+        "category/recipes.html",
+        "category/tech.html",
+        "contact.html",
+        "disclaimer.html",
+        "editorial-policy.html",
+        "guide-safe-cleaning.html",
+        "index.html",
+        "privacy-policy.html",
+        "sitemap.html",
+        "terms.html"
+      ],
+      "images": []
+    },
+    {
+      "path": "about.html",
+      "title": "من نحن | دليلك",
+      "description": "تعرف على موقع دليلك: رسالتنا، قيمنا، ولماذا نكتب المحتوى العربي المفيد.",
+      "canonical": "https://sbdh1285.github.io/dalilak/about.html",
+      "h1": "من نحن",
+      "links": [
+        "#main-content",
+        "about.html",
+        "authors/editorial-team.html",
+        "category/home-tips.html",
+        "category/knowledge.html",
+        "category/recipes.html",
+        "category/tech.html",
+        "contact.html",
+        "disclaimer.html",
+        "editorial-policy.html",
+        "guide-safe-cleaning.html",
+        "index.html",
+        "privacy-policy.html",
+        "sitemap.html",
+        "terms.html"
+      ],
+      "images": []
+    },
+    {
+      "path": "authors/editorial-team.html",
+      "title": "فريق تحرير دليلك | دليلك",
+      "description": "صفحة فريق تحرير دليلك المسؤول عن إعداد المحتوى العربي ومراجعته وتحديثه.",
+      "canonical": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html",
+      "h1": "فريق تحرير دليلك",
+      "links": [
+        "#main-content",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html"
+      ],
+      "images": []
+    },
+    {
+      "path": "category/home-tips.html",
+      "title": "نصائح منزلية — مقالات ونصائح | دليلك",
+      "description": "نصائح منزلية عملية: ترتيب المنزل، التنظيف الطبيعي، التخلص من الروائح، وتوفير الكهرباء.",
+      "canonical": "https://sbdh1285.github.io/dalilak/category/home-tips.html",
+      "h1": "نصائح منزلية",
+      "links": [
+        "#main-content",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/cleaning-products-never-mix.html",
+        "../posts/eliminate-bad-smells.html",
+        "../posts/laundry-guide-tips.html",
+        "../posts/natural-cleaning-recipes.html",
+        "../posts/natural-insect-repellents.html",
+        "../posts/organize-fridge-waste.html",
+        "../posts/quick-kitchen-cleaning.html",
+        "../posts/save-electricity-bill.html",
+        "../posts/tidy-home-in-15-minutes.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html"
+      ],
+      "images": [
+        "../images/covers/cleaning-products-never-mix.jpg",
+        "../images/covers/eliminate-bad-smells.jpg",
+        "../images/covers/natural-cleaning-recipes.jpg",
+        "../images/covers/organize-fridge-waste.jpg",
+        "../images/covers/save-electricity-bill.jpg",
+        "../images/covers/tidy-home-in-15-minutes.jpg",
+        "../images/new-laundry-guide-tips.jpg",
+        "../images/new-natural-insect-repellents.jpg",
+        "../images/new-quick-kitchen-cleaning.jpg"
+      ]
+    },
+    {
+      "path": "category/knowledge.html",
+      "title": "معلومات عامة — مقالات ونصائح | دليلك",
+      "description": "معلومات عامة ممتعة ومفيدة: حقائق عن جسم الإنسان، النوم، قصة القهوة، وتاريخ الأرض.",
+      "canonical": "https://sbdh1285.github.io/dalilak/category/knowledge.html",
+      "h1": "معلومات عامة",
+      "links": [
+        "#main-content",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/coffee-story-yemen.html",
+        "../posts/galaxies-and-stars.html",
+        "../posts/why-we-need-sleep.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/coffee-story-yemen.jpg",
+        "../images/covers/galaxies-and-stars.jpg",
+        "../images/covers/why-we-need-sleep.jpg"
+      ]
+    },
+    {
+      "path": "category/recipes.html",
+      "title": "وصفات لذيذة — مقالات ونصائح | دليلك",
+      "description": "وصفات لذيذة وسهلة خطوة بخطوة: مناقيش الزعتر، شوربة العدس، كيكة البرتقال، وسلطات صحية.",
+      "canonical": "https://sbdh1285.github.io/dalilak/category/recipes.html",
+      "h1": "وصفات لذيذة",
+      "links": [
+        "#main-content",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/chicken-kabsa.html",
+        "../posts/fruit-salad-recipe.html",
+        "../posts/gulf-rice-spices-guide.html",
+        "../posts/lemon-mint-drink.html",
+        "../posts/lentil-soup-recipe.html",
+        "../posts/orange-cake-no-oven.html",
+        "../posts/qishta-basbousa.html",
+        "../posts/samosa-cheese-dough.html",
+        "../posts/zaatar-manakeesh.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html"
+      ],
+      "images": [
+        "../images/covers/chicken-kabsa.jpg",
+        "../images/covers/fruit-salad-recipe.jpg",
+        "../images/covers/gulf-rice-spices-guide.jpg",
+        "../images/covers/lentil-soup-recipe.jpg",
+        "../images/covers/orange-cake-no-oven.jpg",
+        "../images/covers/zaatar-manakeesh.jpg",
+        "../images/new-lemon-mint-drink.jpg",
+        "../images/new-qishta-basbousa.jpg",
+        "../images/new-samosa-cheese-dough.jpg"
+      ]
+    },
+    {
+      "path": "category/tech.html",
+      "title": "تكنولوجيا — مقالات ونصائح | دليلك",
+      "description": "شروحات تقنية مبسطة: اختيار الهاتف المناسب، حماية حساباتك، الذكاء الاصطناعي، وتسريع الكمبيوتر.",
+      "canonical": "https://sbdh1285.github.io/dalilak/category/tech.html",
+      "h1": "تكنولوجيا",
+      "links": [
+        "#main-content",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/account-recovery-plan.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/choose-smartphone-budget.html",
+        "../posts/essential-android-apps.html",
+        "../posts/protect-online-accounts.html",
+        "../posts/safe-online-payments.html",
+        "../posts/save-mobile-data.html",
+        "../posts/speed-up-slow-computer.html",
+        "../posts/used-smartphone-checklist.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html"
+      ],
+      "images": [
+        "../images/covers/account-recovery-plan.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/choose-smartphone-budget.jpg",
+        "../images/covers/essential-android-apps.jpg",
+        "../images/covers/protect-online-accounts.jpg",
+        "../images/covers/safe-online-payments.jpg",
+        "../images/covers/used-smartphone-checklist.jpg",
+        "../images/new-save-mobile-data.jpg",
+        "../images/new-speed-up-slow-computer.jpg"
+      ]
+    },
+    {
+      "path": "contact.html",
+      "title": "اتصل بنا | دليلك",
+      "description": "تواصل مع فريق دليلك: استفسارات، اقتراحات مواضيع، وملاحظات على المقالات.",
+      "canonical": "https://sbdh1285.github.io/dalilak/contact.html",
+      "h1": "اتصل بنا",
+      "links": [
+        "#main-content",
+        "about.html",
+        "authors/editorial-team.html",
+        "category/home-tips.html",
+        "category/knowledge.html",
+        "category/recipes.html",
+        "category/tech.html",
+        "contact.html",
+        "disclaimer.html",
+        "editorial-policy.html",
+        "guide-safe-cleaning.html",
+        "index.html",
+        "privacy-policy.html",
+        "sitemap.html",
+        "terms.html"
+      ],
+      "images": []
+    },
+    {
+      "path": "disclaimer.html",
+      "title": "إخلاء المسؤولية | دليلك",
+      "description": "إخلاء مسؤولية دليلك: المحتوى للأغراض العامة ولا يشكل نصيحة متخصصة.",
+      "canonical": "https://sbdh1285.github.io/dalilak/disclaimer.html",
+      "h1": "إخلاء المسؤولية",
+      "links": [
+        "#main-content",
+        "about.html",
+        "authors/editorial-team.html",
+        "category/home-tips.html",
+        "category/knowledge.html",
+        "category/recipes.html",
+        "category/tech.html",
+        "contact.html",
+        "disclaimer.html",
+        "editorial-policy.html",
+        "guide-safe-cleaning.html",
+        "index.html",
+        "privacy-policy.html",
+        "sitemap.html",
+        "terms.html"
+      ],
+      "images": []
+    },
+    {
+      "path": "editorial-policy.html",
+      "title": "سياسة التحرير | دليلك",
+      "description": "تعرف على آلية إعداد محتوى دليلك ومراجعته وتصحيحه وتحديثه.",
+      "canonical": "https://sbdh1285.github.io/dalilak/editorial-policy.html",
+      "h1": "سياسة التحرير",
+      "links": [
+        "#main-content",
+        "about.html",
+        "authors/editorial-team.html",
+        "category/home-tips.html",
+        "category/knowledge.html",
+        "category/recipes.html",
+        "category/tech.html",
+        "contact.html",
+        "disclaimer.html",
+        "editorial-policy.html",
+        "guide-safe-cleaning.html",
+        "index.html",
+        "privacy-policy.html",
+        "sitemap.html",
+        "terms.html"
+      ],
+      "images": []
+    },
+    {
+      "path": "guide-account-security.html",
+      "title": "دليل حماية الحسابات | دليلك",
+      "description": "منع الاختراق والاسترداد والدفع الإلكتروني الآمن بخطوات قابلة للتطبيق.",
+      "canonical": "https://sbdh1285.github.io/dalilak/guide-account-security.html",
+      "h1": "دليل حماية الحسابات",
+      "links": [
+        "#main-content",
+        "about.html",
+        "authors/editorial-team.html",
+        "category/home-tips.html",
+        "category/knowledge.html",
+        "category/recipes.html",
+        "category/tech.html",
+        "contact.html",
+        "disclaimer.html",
+        "editorial-policy.html",
+        "guide-safe-cleaning.html",
+        "index.html",
+        "posts/account-recovery-plan.html",
+        "posts/ai-explained-simply.html",
+        "posts/protect-online-accounts.html",
+        "posts/safe-online-payments.html",
+        "privacy-policy.html",
+        "sitemap.html",
+        "terms.html"
+      ],
+      "images": [
+        "images/covers/account-recovery-plan.jpg",
+        "images/covers/ai-explained-simply.jpg",
+        "images/covers/protect-online-accounts.jpg",
+        "images/covers/safe-online-payments.jpg"
+      ]
+    },
+    {
+      "path": "guide-gulf-recipes.html",
+      "title": "دليل الوصفات الخليجية | دليلك",
+      "description": "أرز وبهارات ومقبلات ومشروبات مع خطوات واضحة وملاحظات سلامة.",
+      "canonical": "https://sbdh1285.github.io/dalilak/guide-gulf-recipes.html",
+      "h1": "دليل الوصفات الخليجية",
+      "links": [
+        "#main-content",
+        "about.html",
+        "authors/editorial-team.html",
+        "category/home-tips.html",
+        "category/knowledge.html",
+        "category/recipes.html",
+        "category/tech.html",
+        "contact.html",
+        "disclaimer.html",
+        "editorial-policy.html",
+        "guide-safe-cleaning.html",
+        "index.html",
+        "posts/chicken-kabsa.html",
+        "posts/gulf-rice-spices-guide.html",
+        "posts/lemon-mint-drink.html",
+        "posts/qishta-basbousa.html",
+        "posts/samosa-cheese-dough.html",
+        "privacy-policy.html",
+        "sitemap.html",
+        "terms.html"
+      ],
+      "images": [
+        "images/covers/chicken-kabsa.jpg",
+        "images/covers/gulf-rice-spices-guide.jpg",
+        "images/new-lemon-mint-drink.jpg",
+        "images/new-qishta-basbousa.jpg",
+        "images/new-samosa-cheese-dough.jpg"
+      ]
+    },
+    {
+      "path": "guide-safe-cleaning.html",
+      "title": "دليل التنظيف الآمن | دليلك",
+      "description": "خطة منظمة للتنظيف والمنتجات والتهوية ومنع الخلطات الخطرة.",
+      "canonical": "https://sbdh1285.github.io/dalilak/guide-safe-cleaning.html",
+      "h1": "دليل التنظيف الآمن",
+      "links": [
+        "#main-content",
+        "about.html",
+        "authors/editorial-team.html",
+        "category/home-tips.html",
+        "category/knowledge.html",
+        "category/recipes.html",
+        "category/tech.html",
+        "contact.html",
+        "disclaimer.html",
+        "editorial-policy.html",
+        "guide-safe-cleaning.html",
+        "index.html",
+        "posts/cleaning-products-never-mix.html",
+        "posts/eliminate-bad-smells.html",
+        "posts/laundry-guide-tips.html",
+        "posts/natural-cleaning-recipes.html",
+        "posts/natural-insect-repellents.html",
+        "posts/quick-kitchen-cleaning.html",
+        "privacy-policy.html",
+        "sitemap.html",
+        "terms.html"
+      ],
+      "images": [
+        "images/covers/cleaning-products-never-mix.jpg",
+        "images/covers/eliminate-bad-smells.jpg",
+        "images/covers/natural-cleaning-recipes.jpg",
+        "images/new-laundry-guide-tips.jpg",
+        "images/new-natural-insect-repellents.jpg",
+        "images/new-quick-kitchen-cleaning.jpg"
+      ]
+    },
+    {
+      "path": "guide-smartphone.html",
+      "title": "دليل اختيار واستخدام الهاتف | دليلك",
+      "description": "الشراء الجديد والمستعمل والتطبيقات والبيانات وحماية الهاتف.",
+      "canonical": "https://sbdh1285.github.io/dalilak/guide-smartphone.html",
+      "h1": "دليل اختيار واستخدام الهاتف",
+      "links": [
+        "#main-content",
+        "about.html",
+        "authors/editorial-team.html",
+        "category/home-tips.html",
+        "category/knowledge.html",
+        "category/recipes.html",
+        "category/tech.html",
+        "contact.html",
+        "disclaimer.html",
+        "editorial-policy.html",
+        "guide-safe-cleaning.html",
+        "index.html",
+        "posts/choose-smartphone-budget.html",
+        "posts/essential-android-apps.html",
+        "posts/protect-online-accounts.html",
+        "posts/save-mobile-data.html",
+        "posts/used-smartphone-checklist.html",
+        "privacy-policy.html",
+        "sitemap.html",
+        "terms.html"
+      ],
+      "images": [
+        "images/covers/choose-smartphone-budget.jpg",
+        "images/covers/essential-android-apps.jpg",
+        "images/covers/protect-online-accounts.jpg",
+        "images/covers/used-smartphone-checklist.jpg",
+        "images/new-save-mobile-data.jpg"
+      ]
+    },
+    {
+      "path": "index.html",
+      "title": "دليلك | نصائح ووصفات ومعلومات عربية مفيدة",
+      "description": "محتوى عربي واضح في المنزل والطعام والمعرفة والتقنية، يُكتب ويُراجع بعناية ليمنحك فائدة عملية دون تعقيد.",
+      "canonical": "https://sbdh1285.github.io/dalilak/",
+      "h1": "أفكار مفيدة لحياة يومية أسهل",
+      "links": [
+        "#main-content",
+        "about.html",
+        "authors/editorial-team.html",
+        "category/home-tips.html",
+        "category/knowledge.html",
+        "category/recipes.html",
+        "category/tech.html",
+        "contact.html",
+        "disclaimer.html",
+        "editorial-policy.html",
+        "guide-account-security.html",
+        "guide-gulf-recipes.html",
+        "guide-safe-cleaning.html",
+        "guide-smartphone.html",
+        "index.html",
+        "posts/account-recovery-plan.html",
+        "posts/cleaning-products-never-mix.html",
+        "posts/gulf-rice-spices-guide.html",
+        "posts/laundry-guide-tips.html",
+        "posts/lemon-mint-drink.html",
+        "posts/natural-insect-repellents.html",
+        "posts/qishta-basbousa.html",
+        "posts/quick-kitchen-cleaning.html",
+        "posts/samosa-cheese-dough.html",
+        "posts/save-mobile-data.html",
+        "posts/speed-up-slow-computer.html",
+        "posts/used-smartphone-checklist.html",
+        "privacy-policy.html",
+        "sitemap.html",
+        "terms.html"
+      ],
+      "images": [
+        "images/covers/account-recovery-plan.jpg",
+        "images/covers/cleaning-products-never-mix.jpg",
+        "images/covers/gulf-rice-spices-guide.jpg",
+        "images/covers/used-smartphone-checklist.jpg",
+        "images/hero-editorial.jpg",
+        "images/new-laundry-guide-tips.jpg",
+        "images/new-lemon-mint-drink.jpg",
+        "images/new-natural-insect-repellents.jpg",
+        "images/new-qishta-basbousa.jpg",
+        "images/new-quick-kitchen-cleaning.jpg",
+        "images/new-samosa-cheese-dough.jpg",
+        "images/new-save-mobile-data.jpg",
+        "images/new-speed-up-slow-computer.jpg"
+      ]
+    },
+    {
+      "path": "posts/account-recovery-plan.html",
+      "title": "خطة استرداد الحسابات قبل الاختراق: ورقة عمل عملية | دليلك",
+      "description": "خطة عملية لتجهيز بريد الاسترداد ورموز النسخ الاحتياطية والأجهزة الموثوقة وترتيب الحسابات قبل فقد الهاتف أو التعرض للاختراق.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/account-recovery-plan.html",
+      "h1": "خطة استرداد الحسابات قبل الاختراق: ورقة عمل عملية",
+      "links": [
+        "#backup",
+        "#conclusion",
+        "#drill",
+        "#incident",
+        "#inventory",
+        "#loss",
+        "#main-content",
+        "#privacy",
+        "#quick",
+        "#schedule",
+        "#shared",
+        "#worksheet",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/protect-online-accounts.html",
+        "../posts/safe-online-payments.html",
+        "../posts/used-smartphone-checklist.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://www.cisa.gov/secure-our-world/use-strong-passwords",
+        "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf"
+      ],
+      "images": [
+        "../images/covers/account-recovery-plan.jpg"
+      ]
+    },
+    {
+      "path": "posts/age-of-earth.html",
+      "title": "كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة | دليلك",
+      "description": "كم عمر الأرض؟ كيف قدر العلماء عمر الأرض بـ 4.54 مليار سنة؟ رحلة عبر الزمن الجيولوجي: نشأة الأرض، الحياة الأولى، الديناصورات، والإنسان.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/age-of-earth.html",
+      "h1": "كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/chicken-kabsa.html",
+        "../posts/coffee-story-yemen.html",
+        "../posts/why-we-need-sleep.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://naturalhistory.si.edu/education/teaching-resources/anthropology-and-social-studies/age-earth",
+        "https://pubs.usgs.gov/gip/geotime/age.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fage-of-earth.html&text=%D9%83%D9%85%20%D9%8A%D8%A8%D9%84%D8%BA%20%D8%B9%D9%85%D8%B1%20%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%D8%9F%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%B9%D8%A8%D8%B1%204.5%20%D9%85%D9%84%D9%8A%D8%A7%D8%B1%20%D8%B3%D9%86%D8%A9",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fage-of-earth.html&text=%D9%83%D9%85%20%D9%8A%D8%A8%D9%84%D8%BA%20%D8%B9%D9%85%D8%B1%20%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%D8%9F%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%B9%D8%A8%D8%B1%204.5%20%D9%85%D9%84%D9%8A%D8%A7%D8%B1%20%D8%B3%D9%86%D8%A9",
+        "https://wa.me/?text=%D9%83%D9%85%20%D9%8A%D8%A8%D9%84%D8%BA%20%D8%B9%D9%85%D8%B1%20%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%D8%9F%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%B9%D8%A8%D8%B1%204.5%20%D9%85%D9%84%D9%8A%D8%A7%D8%B1%20%D8%B3%D9%86%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fage-of-earth.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fage-of-earth.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/chicken-kabsa.jpg",
+        "../images/covers/coffee-story-yemen.jpg",
+        "../images/covers/why-we-need-sleep.jpg"
+      ]
+    },
+    {
+      "path": "posts/ai-explained-simply.html",
+      "title": "الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟ | دليلك",
+      "description": "شرح مبسط ودقيق للذكاء الاصطناعي: التدريب والاستدلال والذكاء التوليدي والأخطاء والخصوصية وكيفية استخدام الأدوات بوعي.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/ai-explained-simply.html",
+      "h1": "الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#seo-flow",
+        "#seo-quick",
+        "#seo-safe",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/chicken-kabsa.html",
+        "../posts/choose-smartphone-budget.html",
+        "../posts/protect-online-accounts.html",
+        "../posts/speed-up-slow-computer.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://oecd.ai/en/ai-principles",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fai-explained-simply.html&text=%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D8%A8%D8%A8%D8%B3%D8%A7%D8%B7%D8%A9%3A%20%D9%85%D8%A7%20%D9%87%D9%88%20%D9%88%D9%83%D9%8A%D9%81%20%D9%8A%D8%B9%D9%85%D9%84%D8%9F",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fai-explained-simply.html&text=%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D8%A8%D8%A8%D8%B3%D8%A7%D8%B7%D8%A9%3A%20%D9%85%D8%A7%20%D9%87%D9%88%20%D9%88%D9%83%D9%8A%D9%81%20%D9%8A%D8%B9%D9%85%D9%84%D8%9F",
+        "https://wa.me/?text=%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D8%A8%D8%A8%D8%B3%D8%A7%D8%B7%D8%A9%3A%20%D9%85%D8%A7%20%D9%87%D9%88%20%D9%88%D9%83%D9%8A%D9%81%20%D9%8A%D8%B9%D9%85%D9%84%D8%9F%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fai-explained-simply.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fai-explained-simply.html",
+        "https://www.nist.gov/itl/ai-risk-management-framework"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/chicken-kabsa.jpg",
+        "../images/covers/choose-smartphone-budget.jpg",
+        "../images/covers/protect-online-accounts.jpg",
+        "../images/new-speed-up-slow-computer.jpg"
+      ]
+    },
+    {
+      "path": "posts/amazing-animal-facts.html",
+      "title": "عجائب مملكة الحيوان: حقائق تدهش الكبار قبل الصغار | دليلك",
+      "description": "حقائق مدهشة عن مملكة الحيوان: الأخطبوط والحوت الأزرق والحرباء والنمل — قدرات غريبة وعجيبة تثير الدهشة للكبار والصغار.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/amazing-animal-facts.html",
+      "h1": "عجائب مملكة الحيوان: حقائق تدهش الكبار قبل الصغار",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/chicken-kabsa.html",
+        "../posts/coffee-story-yemen.html",
+        "../posts/why-we-need-sleep.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://nationalzoo.si.edu/animals",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-animal-facts.html&text=%D8%B9%D8%AC%D8%A7%D8%A6%D8%A8%20%D9%85%D9%85%D9%84%D9%83%D8%A9%20%D8%A7%D9%84%D8%AD%D9%8A%D9%88%D8%A7%D9%86%3A%20%D8%AD%D9%82%D8%A7%D8%A6%D9%82%20%D8%AA%D8%AF%D9%87%D8%B4%20%D8%A7%D9%84%D9%83%D8%A8%D8%A7%D8%B1%20%D9%82%D8%A8%D9%84%20%D8%A7%D9%84%D8%B5%D8%BA%D8%A7%D8%B1",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-animal-facts.html&text=%D8%B9%D8%AC%D8%A7%D8%A6%D8%A8%20%D9%85%D9%85%D9%84%D9%83%D8%A9%20%D8%A7%D9%84%D8%AD%D9%8A%D9%88%D8%A7%D9%86%3A%20%D8%AD%D9%82%D8%A7%D8%A6%D9%82%20%D8%AA%D8%AF%D9%87%D8%B4%20%D8%A7%D9%84%D9%83%D8%A8%D8%A7%D8%B1%20%D9%82%D8%A8%D9%84%20%D8%A7%D9%84%D8%B5%D8%BA%D8%A7%D8%B1",
+        "https://wa.me/?text=%D8%B9%D8%AC%D8%A7%D8%A6%D8%A8%20%D9%85%D9%85%D9%84%D9%83%D8%A9%20%D8%A7%D9%84%D8%AD%D9%8A%D9%88%D8%A7%D9%86%3A%20%D8%AD%D9%82%D8%A7%D8%A6%D9%82%20%D8%AA%D8%AF%D9%87%D8%B4%20%D8%A7%D9%84%D9%83%D8%A8%D8%A7%D8%B1%20%D9%82%D8%A8%D9%84%20%D8%A7%D9%84%D8%B5%D8%BA%D8%A7%D8%B1%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-animal-facts.html",
+        "https://www.britannica.com/animal/animal",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-animal-facts.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/chicken-kabsa.jpg",
+        "../images/covers/coffee-story-yemen.jpg",
+        "../images/covers/why-we-need-sleep.jpg"
+      ]
+    },
+    {
+      "path": "posts/amazing-human-body-facts.html",
+      "title": "حقائق مبسطة عن جسم الإنسان: القلب والعظام والجلد والدماغ | دليلك",
+      "description": "حقائق مدهشة وممتعة عن جسم الإنسان: القلب، العظام، الجلد، الدماغ، والمعدة — معلومات علمية مبسطة تثير الدهشة.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/amazing-human-body-facts.html",
+      "h1": "حقائق مبسطة عن جسم الإنسان: القلب والعظام والجلد والدماغ",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/chicken-kabsa.html",
+        "../posts/coffee-story-yemen.html",
+        "../posts/why-we-need-sleep.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://medlineplus.gov/anatomy.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-human-body-facts.html&text=%D8%AD%D9%82%D8%A7%D8%A6%D9%82%20%D9%85%D8%AF%D9%87%D8%B4%D8%A9%20%D8%B9%D9%86%20%D8%AC%D8%B3%D9%85%20%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86%20%D9%84%D9%85%20%D8%AA%D9%83%D9%86%20%D8%AA%D8%B9%D8%B1%D9%81%D9%87%D8%A7",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-human-body-facts.html&text=%D8%AD%D9%82%D8%A7%D8%A6%D9%82%20%D9%85%D8%AF%D9%87%D8%B4%D8%A9%20%D8%B9%D9%86%20%D8%AC%D8%B3%D9%85%20%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86%20%D9%84%D9%85%20%D8%AA%D9%83%D9%86%20%D8%AA%D8%B9%D8%B1%D9%81%D9%87%D8%A7",
+        "https://wa.me/?text=%D8%AD%D9%82%D8%A7%D8%A6%D9%82%20%D9%85%D8%AF%D9%87%D8%B4%D8%A9%20%D8%B9%D9%86%20%D8%AC%D8%B3%D9%85%20%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86%20%D9%84%D9%85%20%D8%AA%D9%83%D9%86%20%D8%AA%D8%B9%D8%B1%D9%81%D9%87%D8%A7%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-human-body-facts.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-human-body-facts.html",
+        "https://www.ncbi.nlm.nih.gov/books/NBK607445/"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/chicken-kabsa.jpg",
+        "../images/covers/coffee-story-yemen.jpg",
+        "../images/covers/why-we-need-sleep.jpg"
+      ]
+    },
+    {
+      "path": "posts/amazing-water-facts.html",
+      "title": "حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا | دليلك",
+      "description": "حقائق مدهشة عن الماء: نسبة الماء في جسم الإنسان، الماء الصالح للشرب، دورة الماء، ولماذا الماء ضروري للحياة — معلومات مبسطة.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/amazing-water-facts.html",
+      "h1": "حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#sec-7",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/chicken-kabsa.html",
+        "../posts/coffee-story-yemen.html",
+        "../posts/why-we-need-sleep.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-water-facts.html&text=%D8%AD%D9%82%D8%A7%D8%A6%D9%82%20%D9%85%D8%AF%D9%87%D8%B4%D8%A9%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D8%A7%D8%A1%3A%20%D8%B3%D8%A7%D8%A6%D9%84%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A7%D9%84%D8%B0%D9%8A%20%D9%8A%D8%AD%D9%8A%D8%B7%20%D8%A8%D9%86%D8%A7",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-water-facts.html&text=%D8%AD%D9%82%D8%A7%D8%A6%D9%82%20%D9%85%D8%AF%D9%87%D8%B4%D8%A9%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D8%A7%D8%A1%3A%20%D8%B3%D8%A7%D8%A6%D9%84%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A7%D9%84%D8%B0%D9%8A%20%D9%8A%D8%AD%D9%8A%D8%B7%20%D8%A8%D9%86%D8%A7",
+        "https://wa.me/?text=%D8%AD%D9%82%D8%A7%D8%A6%D9%82%20%D9%85%D8%AF%D9%87%D8%B4%D8%A9%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D8%A7%D8%A1%3A%20%D8%B3%D8%A7%D8%A6%D9%84%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A7%D9%84%D8%B0%D9%8A%20%D9%8A%D8%AD%D9%8A%D8%B7%20%D8%A8%D9%86%D8%A7%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-water-facts.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-water-facts.html",
+        "https://www.usgs.gov/special-topics/water-science-school",
+        "https://www.who.int/news-room/fact-sheets/detail/drinking-water"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/chicken-kabsa.jpg",
+        "../images/covers/coffee-story-yemen.jpg",
+        "../images/covers/why-we-need-sleep.jpg"
+      ]
+    },
+    {
+      "path": "posts/chicken-kabsa.html",
+      "title": "كبسة الدجاج السعودية: طريقة منزلية خطوة بخطوة | دليلك",
+      "description": "طريقة منزلية واضحة لكبسة الدجاج بالأرز البسمتي: المقادير، ضبط المرق، نضج الدجاج، حل مشكلات الأرز وخيارات التقديم.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/chicken-kabsa.html",
+      "h1": "كبسة الدجاج السعودية: طريقة منزلية خطوة بخطوة",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#seo-quick",
+        "#seo-serve",
+        "#seo-table",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/fruit-salad-recipe.html",
+        "../posts/lentil-soup-recipe.html",
+        "../posts/orange-cake-no-oven.html",
+        "../posts/samosa-cheese-dough.html",
+        "../posts/zaatar-manakeesh.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchicken-kabsa.html&text=%D9%83%D8%A8%D8%B3%D8%A9%20%D8%A7%D9%84%D8%AF%D8%AC%D8%A7%D8%AC%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%3A%20%D8%A7%D9%84%D9%88%D8%B5%D9%81%D8%A9%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchicken-kabsa.html&text=%D9%83%D8%A8%D8%B3%D8%A9%20%D8%A7%D9%84%D8%AF%D8%AC%D8%A7%D8%AC%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%3A%20%D8%A7%D9%84%D9%88%D8%B5%D9%81%D8%A9%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9",
+        "https://wa.me/?text=%D9%83%D8%A8%D8%B3%D8%A9%20%D8%A7%D9%84%D8%AF%D8%AC%D8%A7%D8%AC%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%3A%20%D8%A7%D9%84%D9%88%D8%B5%D9%81%D8%A9%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchicken-kabsa.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchicken-kabsa.html",
+        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/chicken-kabsa.jpg",
+        "../images/covers/lentil-soup-recipe.jpg",
+        "../images/covers/orange-cake-no-oven.jpg",
+        "../images/covers/zaatar-manakeesh.jpg"
+      ]
+    },
+    {
+      "path": "posts/choose-smartphone-budget.html",
+      "title": "كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين | دليلك",
+      "description": "دليل عملي لاختيار هاتف يناسب الميزانية حسب الاستخدام والتحديثات والبطارية والتخزين والكاميرا، مع قائمة فحص قبل الشراء.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/choose-smartphone-budget.html",
+      "h1": "كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#sec-7",
+        "#seo-check",
+        "#seo-quick",
+        "#seo-table",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/essential-android-apps.html",
+        "../posts/protect-online-accounts.html",
+        "../posts/save-mobile-data.html",
+        "../posts/speed-up-slow-computer.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://consumer.ftc.gov/articles/how-secure-your-voice-assistant-and-protect-your-privacy",
+        "https://support.google.com/android/answer/7664692",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchoose-smartphone-budget.html&text=%D9%83%D9%8A%D9%81%20%D8%AA%D8%AE%D8%AA%D8%A7%D8%B1%20%D9%87%D8%A7%D8%AA%D9%81%D9%8B%D8%A7%20%D8%B0%D9%83%D9%8A%D9%8B%D8%A7%20%D9%8A%D9%86%D8%A7%D8%B3%D8%A8%20%D9%85%D9%8A%D8%B2%D8%A7%D9%86%D9%8A%D8%AA%D9%83%D8%9F%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchoose-smartphone-budget.html&text=%D9%83%D9%8A%D9%81%20%D8%AA%D8%AE%D8%AA%D8%A7%D8%B1%20%D9%87%D8%A7%D8%AA%D9%81%D9%8B%D8%A7%20%D8%B0%D9%83%D9%8A%D9%8B%D8%A7%20%D9%8A%D9%86%D8%A7%D8%B3%D8%A8%20%D9%85%D9%8A%D8%B2%D8%A7%D9%86%D9%8A%D8%AA%D9%83%D8%9F%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86",
+        "https://wa.me/?text=%D9%83%D9%8A%D9%81%20%D8%AA%D8%AE%D8%AA%D8%A7%D8%B1%20%D9%87%D8%A7%D8%AA%D9%81%D9%8B%D8%A7%20%D8%B0%D9%83%D9%8A%D9%8B%D8%A7%20%D9%8A%D9%86%D8%A7%D8%B3%D8%A8%20%D9%85%D9%8A%D8%B2%D8%A7%D9%86%D9%8A%D8%AA%D9%83%D8%9F%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchoose-smartphone-budget.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchoose-smartphone-budget.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/choose-smartphone-budget.jpg",
+        "../images/covers/protect-online-accounts.jpg",
+        "../images/new-speed-up-slow-computer.jpg"
+      ]
+    },
+    {
+      "path": "posts/cleaning-products-never-mix.html",
+      "title": "مواد تنظيف لا تخلطها معًا: جدول سلامة منزلي | دليلك",
+      "description": "جدول عملي يوضح خلطات التنظيف الخطرة، طريقة قراءة الملصق، التهوية، التخزين، وما يجب فعله عند التعرض للأبخرة.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/cleaning-products-never-mix.html",
+      "h1": "مواد تنظيف لا تخلطها معًا: جدول سلامة منزلي",
+      "links": [
+        "#children",
+        "#conclusion",
+        "#faq",
+        "#incident",
+        "#label",
+        "#main-content",
+        "#quick",
+        "#room-plan",
+        "#table",
+        "#why",
+        "#worksheet",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/laundry-guide-tips.html",
+        "../posts/natural-cleaning-recipes.html",
+        "../posts/quick-kitchen-cleaning.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://www.cdc.gov/natural-disasters/safety/how-to-safely-clean-and-sanitize-with-bleach.html",
+        "https://www.cdc.gov/niosh/docs/2012-126/pdfs/2012-126.pdf"
+      ],
+      "images": [
+        "../images/covers/cleaning-products-never-mix.jpg"
+      ]
+    },
+    {
+      "path": "posts/coffee-story-yemen.html",
+      "title": "قصة القهوة: رحلتها من اليمن إلى العالم | دليلك",
+      "description": "تاريخ القهوة في اليمن: من أصل البن في إثيوبيا إلى زراعته وتجارته في اليمن ودور ميناء المخا في انتشار القهوة عالميًا.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/coffee-story-yemen.html",
+      "h1": "قصة القهوة: رحلتها من اليمن إلى العالم",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#seo-quick",
+        "#seo-timeline",
+        "#seo-yemen",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/galaxies-and-stars.html",
+        "../posts/why-we-need-sleep.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fcoffee-story-yemen.html&text=%D9%82%D8%B5%D8%A9%20%D8%A7%D9%84%D9%82%D9%87%D9%88%D8%A9%3A%20%D8%B1%D8%AD%D9%84%D8%AA%D9%87%D8%A7%20%D9%85%D9%86%20%D8%A7%D9%84%D9%8A%D9%85%D9%86%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fcoffee-story-yemen.html&text=%D9%82%D8%B5%D8%A9%20%D8%A7%D9%84%D9%82%D9%87%D9%88%D8%A9%3A%20%D8%B1%D8%AD%D9%84%D8%AA%D9%87%D8%A7%20%D9%85%D9%86%20%D8%A7%D9%84%D9%8A%D9%85%D9%86%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85",
+        "https://wa.me/?text=%D9%82%D8%B5%D8%A9%20%D8%A7%D9%84%D9%82%D9%87%D9%88%D8%A9%3A%20%D8%B1%D8%AD%D9%84%D8%AA%D9%87%D8%A7%20%D9%85%D9%86%20%D8%A7%D9%84%D9%8A%D9%85%D9%86%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fcoffee-story-yemen.html",
+        "https://www.britannica.com/topic/coffee",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fcoffee-story-yemen.html",
+        "https://www.ico.org/documents/icc-105-14e-statement-yemen.pdf"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/coffee-story-yemen.jpg",
+        "../images/covers/why-we-need-sleep.jpg"
+      ]
+    },
+    {
+      "path": "posts/eliminate-bad-smells.html",
+      "title": "كيف تتخلص من الروائح الكريهة في المنزل: دليل عملي | دليلك",
+      "description": "طرق عملية لتقليل الروائح الكريهة في المنزل: تحديد المصدر، تنظيف المطبخ والحمام، تحسين التهوية، ومتى تحتاج إلى فني.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/eliminate-bad-smells.html",
+      "h1": "كيف تتخلص من الروائح الكريهة في المنزل: دليل عملي",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/natural-cleaning-recipes.html",
+        "../posts/save-electricity-bill.html",
+        "../posts/tidy-home-in-15-minutes.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Feliminate-bad-smells.html&text=%D9%83%D9%8A%D9%81%20%D8%AA%D8%AA%D8%AE%D9%84%D8%B5%20%D9%85%D9%86%20%D8%A7%D9%84%D8%B1%D9%88%D8%A7%D8%A6%D8%AD%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%87%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%86%D8%B2%D9%84%D9%83%20%D9%86%D9%87%D8%A7%D8%A6%D9%8A%D9%8B%D8%A7",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Feliminate-bad-smells.html&text=%D9%83%D9%8A%D9%81%20%D8%AA%D8%AA%D8%AE%D9%84%D8%B5%20%D9%85%D9%86%20%D8%A7%D9%84%D8%B1%D9%88%D8%A7%D8%A6%D8%AD%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%87%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%86%D8%B2%D9%84%D9%83%20%D9%86%D9%87%D8%A7%D8%A6%D9%8A%D9%8B%D8%A7",
+        "https://wa.me/?text=%D9%83%D9%8A%D9%81%20%D8%AA%D8%AA%D8%AE%D9%84%D8%B5%20%D9%85%D9%86%20%D8%A7%D9%84%D8%B1%D9%88%D8%A7%D8%A6%D8%AD%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%87%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%86%D8%B2%D9%84%D9%83%20%D9%86%D9%87%D8%A7%D8%A6%D9%8A%D9%8B%D8%A7%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Feliminate-bad-smells.html",
+        "https://www.cdc.gov/mold-health/about/index.html",
+        "https://www.epa.gov/indoor-air-quality-iaq",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Feliminate-bad-smells.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/eliminate-bad-smells.jpg",
+        "../images/covers/natural-cleaning-recipes.jpg",
+        "../images/covers/save-electricity-bill.jpg",
+        "../images/covers/tidy-home-in-15-minutes.jpg"
+      ]
+    },
+    {
+      "path": "posts/essential-android-apps.html",
+      "title": "أفضل تطبيقات أندرويد المجانية: 10 تطبيقات لا غنى عنها | دليلك",
+      "description": "أفضل 10 تطبيقات أندرويد مجانية: إدارة الملفات، حماية الخصوصية، تطبيقات الإنتاجية، التصوير، والتطبيقات التي تستحق التجربة فعلًا.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/essential-android-apps.html",
+      "h1": "أفضل تطبيقات أندرويد المجانية: 10 تطبيقات لا غنى عنها",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-10",
+        "#sec-11",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#sec-7",
+        "#sec-8",
+        "#sec-9",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/choose-smartphone-budget.html",
+        "../posts/protect-online-accounts.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://support.google.com/googleplay/answer/2812853",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fessential-android-apps.html&text=%D8%A3%D9%81%D8%B6%D9%84%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%A3%D9%86%D8%AF%D8%B1%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%3A%2010%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D9%84%D8%A7%20%D8%BA%D9%86%D9%89%20%D8%B9%D9%86%D9%87%D8%A7",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fessential-android-apps.html&text=%D8%A3%D9%81%D8%B6%D9%84%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%A3%D9%86%D8%AF%D8%B1%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%3A%2010%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D9%84%D8%A7%20%D8%BA%D9%86%D9%89%20%D8%B9%D9%86%D9%87%D8%A7",
+        "https://wa.me/?text=%D8%A3%D9%81%D8%B6%D9%84%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%A3%D9%86%D8%AF%D8%B1%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%3A%2010%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D9%84%D8%A7%20%D8%BA%D9%86%D9%89%20%D8%B9%D9%86%D9%87%D8%A7%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fessential-android-apps.html",
+        "https://www.android.com/safety/",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fessential-android-apps.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/choose-smartphone-budget.jpg",
+        "../images/covers/essential-android-apps.jpg",
+        "../images/covers/protect-online-accounts.jpg"
+      ]
+    },
+    {
+      "path": "posts/fruit-salad-recipe.html",
+      "title": "سلطة الفواكه المنعشة: طبق صحي ولذيذ في 10 دقائق | دليلك",
+      "description": "وصفة سلطة الفواكه المنعشة: اختيار الفواكه الموسمية، تقطيع وتحضير صحيح، صوص العسل والليمون والنعناع، وأفكار تقديم مميزة.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/fruit-salad-recipe.html",
+      "h1": "سلطة الفواكه المنعشة: طبق صحي ولذيذ في 10 دقائق",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/lentil-soup-recipe.html",
+        "../posts/orange-cake-no-oven.html",
+        "../posts/zaatar-manakeesh.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ffruit-salad-recipe.html&text=%D8%B3%D9%84%D8%B7%D8%A9%20%D8%A7%D9%84%D9%81%D9%88%D8%A7%D9%83%D9%87%20%D8%A7%D9%84%D9%85%D9%86%D8%B9%D8%B4%D8%A9%3A%20%D8%B7%D8%A8%D9%82%20%D8%B5%D8%AD%D9%8A%20%D9%88%D9%84%D8%B0%D9%8A%D8%B0%20%D9%81%D9%8A%2010%20%D8%AF%D9%82%D8%A7%D8%A6%D9%82",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ffruit-salad-recipe.html&text=%D8%B3%D9%84%D8%B7%D8%A9%20%D8%A7%D9%84%D9%81%D9%88%D8%A7%D9%83%D9%87%20%D8%A7%D9%84%D9%85%D9%86%D8%B9%D8%B4%D8%A9%3A%20%D8%B7%D8%A8%D9%82%20%D8%B5%D8%AD%D9%8A%20%D9%88%D9%84%D8%B0%D9%8A%D8%B0%20%D9%81%D9%8A%2010%20%D8%AF%D9%82%D8%A7%D8%A6%D9%82",
+        "https://wa.me/?text=%D8%B3%D9%84%D8%B7%D8%A9%20%D8%A7%D9%84%D9%81%D9%88%D8%A7%D9%83%D9%87%20%D8%A7%D9%84%D9%85%D9%86%D8%B9%D8%B4%D8%A9%3A%20%D8%B7%D8%A8%D9%82%20%D8%B5%D8%AD%D9%8A%20%D9%88%D9%84%D8%B0%D9%8A%D8%B0%20%D9%81%D9%8A%2010%20%D8%AF%D9%82%D8%A7%D8%A6%D9%82%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ffruit-salad-recipe.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ffruit-salad-recipe.html",
+        "https://www.fda.gov/food/people-risk-foodborne-illness/cleaning-food-safety-moms-be"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/fruit-salad-recipe.jpg",
+        "../images/covers/lentil-soup-recipe.jpg",
+        "../images/covers/orange-cake-no-oven.jpg",
+        "../images/covers/zaatar-manakeesh.jpg"
+      ]
+    },
+    {
+      "path": "posts/galaxies-and-stars.html",
+      "title": "عجائب الكون: رحلة بين المجرات والنجوم | دليلك",
+      "description": "رحلة في عجائب الكون: المجرات والنجوم، مجرة درب التبانة، حجم الكون، الثقوب السوداء، والنجوم النيوترونية — معلومات مبسطة وممتعة.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/galaxies-and-stars.html",
+      "h1": "عجائب الكون: رحلة بين المجرات والنجوم",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/coffee-story-yemen.html",
+        "../posts/why-we-need-sleep.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://science.nasa.gov/universe/",
+        "https://spaceplace.nasa.gov/galaxy/en/",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fgalaxies-and-stars.html&text=%D8%B9%D8%AC%D8%A7%D8%A6%D8%A8%20%D8%A7%D9%84%D9%83%D9%88%D9%86%3A%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D9%8A%D9%86%20%D8%A7%D9%84%D9%85%D8%AC%D8%B1%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D9%86%D8%AC%D9%88%D9%85",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fgalaxies-and-stars.html&text=%D8%B9%D8%AC%D8%A7%D8%A6%D8%A8%20%D8%A7%D9%84%D9%83%D9%88%D9%86%3A%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D9%8A%D9%86%20%D8%A7%D9%84%D9%85%D8%AC%D8%B1%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D9%86%D8%AC%D9%88%D9%85",
+        "https://wa.me/?text=%D8%B9%D8%AC%D8%A7%D8%A6%D8%A8%20%D8%A7%D9%84%D9%83%D9%88%D9%86%3A%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D9%8A%D9%86%20%D8%A7%D9%84%D9%85%D8%AC%D8%B1%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D9%86%D8%AC%D9%88%D9%85%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fgalaxies-and-stars.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fgalaxies-and-stars.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/coffee-story-yemen.jpg",
+        "../images/covers/galaxies-and-stars.jpg",
+        "../images/covers/why-we-need-sleep.jpg"
+      ]
+    },
+    {
+      "path": "posts/gulf-rice-spices-guide.html",
+      "title": "دليل بهارات الأرز الخليجي: الكبسة والمندي والمجبوس | دليلك",
+      "description": "مرجع عملي يوضح الفروق العامة بين بهارات الكبسة والمندي والمجبوس وطريقة بناء خلطة متوازنة وتخزينها وتعديلها دون ادعاء وصفة واحدة أصلية.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/gulf-rice-spices-guide.html",
+      "h1": "دليل بهارات الأرز الخليجي: الكبسة والمندي والمجبوس",
+      "links": [
+        "#base",
+        "#compare",
+        "#conclusion",
+        "#log",
+        "#lومي",
+        "#main-content",
+        "#quick",
+        "#ratio",
+        "#ready",
+        "#safety",
+        "#storage",
+        "#variations",
+        "#whole",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/chicken-kabsa.html",
+        "../posts/samosa-cheese-dough.html",
+        "../posts/zaatar-manakeesh.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html"
+      ],
+      "images": [
+        "../images/covers/gulf-rice-spices-guide.jpg"
+      ]
+    },
+    {
+      "path": "posts/laundry-guide-tips.html",
+      "title": "غسيل الملابس بذكاء: دليلك الكامل لملابس نظيفة تدوم | دليلك",
+      "description": "دليل غسيل الملابس الصحيح: فرز الملابس، درجات حرارة الغسيل، اختيار المسحوق، إزالة البقع قبل الغسيل، والتجفيف السليم.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/laundry-guide-tips.html",
+      "h1": "غسيل الملابس بذكاء: دليلك الكامل لملابس نظيفة تدوم",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/eliminate-bad-smells.html",
+        "../posts/natural-cleaning-recipes.html",
+        "../posts/tidy-home-in-15-minutes.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flaundry-guide-tips.html&text=%D8%BA%D8%B3%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D9%84%D8%A7%D8%A8%D8%B3%20%D8%A8%D8%B0%D9%83%D8%A7%D8%A1%3A%20%D8%AF%D9%84%D9%8A%D9%84%D9%83%20%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%20%D9%84%D9%85%D9%84%D8%A7%D8%A8%D8%B3%20%D9%86%D8%B8%D9%8A%D9%81%D8%A9%20%D8%AA%D8%AF%D9%88%D9%85",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flaundry-guide-tips.html&text=%D8%BA%D8%B3%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D9%84%D8%A7%D8%A8%D8%B3%20%D8%A8%D8%B0%D9%83%D8%A7%D8%A1%3A%20%D8%AF%D9%84%D9%8A%D9%84%D9%83%20%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%20%D9%84%D9%85%D9%84%D8%A7%D8%A8%D8%B3%20%D9%86%D8%B8%D9%8A%D9%81%D8%A9%20%D8%AA%D8%AF%D9%88%D9%85",
+        "https://wa.me/?text=%D8%BA%D8%B3%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D9%84%D8%A7%D8%A8%D8%B3%20%D8%A8%D8%B0%D9%83%D8%A7%D8%A1%3A%20%D8%AF%D9%84%D9%8A%D9%84%D9%83%20%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%20%D9%84%D9%85%D9%84%D8%A7%D8%A8%D8%B3%20%D9%86%D8%B8%D9%8A%D9%81%D8%A9%20%D8%AA%D8%AF%D9%88%D9%85%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flaundry-guide-tips.html",
+        "https://www.energystar.gov/products/clothes_washers",
+        "https://www.epa.gov/saferchoice",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flaundry-guide-tips.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/eliminate-bad-smells.jpg",
+        "../images/covers/natural-cleaning-recipes.jpg",
+        "../images/covers/tidy-home-in-15-minutes.jpg",
+        "../images/new-laundry-guide-tips.jpg"
+      ]
+    },
+    {
+      "path": "posts/lemon-mint-drink.html",
+      "title": "عصير الليمون بالنعناع المثلج: مشروب الصيف المثالي | دليلك",
+      "description": "طريقة عمل عصير الليمون بالنعناع المثلج في البيت: مكونات بسيطة، نسبة السكر المثالية، نعناع طازج، وأفكار تقديم أنيقة للضيافة.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/lemon-mint-drink.html",
+      "h1": "عصير الليمون بالنعناع المثلج: مشروب الصيف المثالي",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/lentil-soup-recipe.html",
+        "../posts/orange-cake-no-oven.html",
+        "../posts/zaatar-manakeesh.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flemon-mint-drink.html&text=%D8%B9%D8%B5%D9%8A%D8%B1%20%D8%A7%D9%84%D9%84%D9%8A%D9%85%D9%88%D9%86%20%D8%A8%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9%20%D8%A7%D9%84%D9%85%D8%AB%D9%84%D8%AC%3A%20%D9%85%D8%B4%D8%B1%D9%88%D8%A8%20%D8%A7%D9%84%D8%B5%D9%8A%D9%81%20%D8%A7%D9%84%D9%85%D8%AB%D8%A7%D9%84%D9%8A",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flemon-mint-drink.html&text=%D8%B9%D8%B5%D9%8A%D8%B1%20%D8%A7%D9%84%D9%84%D9%8A%D9%85%D9%88%D9%86%20%D8%A8%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9%20%D8%A7%D9%84%D9%85%D8%AB%D9%84%D8%AC%3A%20%D9%85%D8%B4%D8%B1%D9%88%D8%A8%20%D8%A7%D9%84%D8%B5%D9%8A%D9%81%20%D8%A7%D9%84%D9%85%D8%AB%D8%A7%D9%84%D9%8A",
+        "https://wa.me/?text=%D8%B9%D8%B5%D9%8A%D8%B1%20%D8%A7%D9%84%D9%84%D9%8A%D9%85%D9%88%D9%86%20%D8%A8%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9%20%D8%A7%D9%84%D9%85%D8%AB%D9%84%D8%AC%3A%20%D9%85%D8%B4%D8%B1%D9%88%D8%A8%20%D8%A7%D9%84%D8%B5%D9%8A%D9%81%20%D8%A7%D9%84%D9%85%D8%AB%D8%A7%D9%84%D9%8A%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flemon-mint-drink.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flemon-mint-drink.html",
+        "https://www.fda.gov/food/people-risk-foodborne-illness/cleaning-food-safety-moms-be"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/lentil-soup-recipe.jpg",
+        "../images/covers/orange-cake-no-oven.jpg",
+        "../images/covers/zaatar-manakeesh.jpg",
+        "../images/new-lemon-mint-drink.jpg"
+      ]
+    },
+    {
+      "path": "posts/lentil-soup-recipe.html",
+      "title": "شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة | دليلك",
+      "description": "وصفة شوربة العدس التقليدية خطوة بخطوة: المكونات، طريقة التحضير، أسرار القوام الكريمي والنكهة، وأخطاء شائعة يجب تجنبها.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/lentil-soup-recipe.html",
+      "h1": "شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/fruit-salad-recipe.html",
+        "../posts/orange-cake-no-oven.html",
+        "../posts/zaatar-manakeesh.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flentil-soup-recipe.html&text=%D8%B4%D9%88%D8%B1%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D8%AF%D8%B3%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%A9%3A%20%D8%A7%D9%84%D9%88%D8%B5%D9%81%D8%A9%20%D8%A7%D9%84%D8%AA%D9%82%D9%84%D9%8A%D8%AF%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flentil-soup-recipe.html&text=%D8%B4%D9%88%D8%B1%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D8%AF%D8%B3%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%A9%3A%20%D8%A7%D9%84%D9%88%D8%B5%D9%81%D8%A9%20%D8%A7%D9%84%D8%AA%D9%82%D9%84%D9%8A%D8%AF%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9",
+        "https://wa.me/?text=%D8%B4%D9%88%D8%B1%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D8%AF%D8%B3%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%A9%3A%20%D8%A7%D9%84%D9%88%D8%B5%D9%81%D8%A9%20%D8%A7%D9%84%D8%AA%D9%82%D9%84%D9%8A%D8%AF%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flentil-soup-recipe.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flentil-soup-recipe.html",
+        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/fruit-salad-recipe.jpg",
+        "../images/covers/lentil-soup-recipe.jpg",
+        "../images/covers/orange-cake-no-oven.jpg",
+        "../images/covers/zaatar-manakeesh.jpg"
+      ]
+    },
+    {
+      "path": "posts/natural-cleaning-recipes.html",
+      "title": "6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك | دليلك",
+      "description": "دليل تنظيف المنزل بمواد بسيطة مع جدول للأسطح واحتياطات السلامة والمواد التي لا يجوز خلطها، والفرق بين التنظيف والتعقيم.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/natural-cleaning-recipes.html",
+      "h1": "6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#sec-7",
+        "#seo-check",
+        "#seo-plan",
+        "#seo-quick",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/eliminate-bad-smells.html",
+        "../posts/laundry-guide-tips.html",
+        "../posts/quick-kitchen-cleaning.html",
+        "../posts/save-electricity-bill.html",
+        "../posts/tidy-home-in-15-minutes.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fnatural-cleaning-recipes.html&text=6%20%D9%88%D8%B5%D9%81%D8%A7%D8%AA%20%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9%20%D8%A8%D9%85%D9%88%D8%A7%D8%AF%20%D9%85%D9%88%D8%AC%D9%88%D8%AF%D8%A9%20%D9%81%D9%8A%20%D9%85%D8%B7%D8%A8%D8%AE%D9%83",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fnatural-cleaning-recipes.html&text=6%20%D9%88%D8%B5%D9%81%D8%A7%D8%AA%20%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9%20%D8%A8%D9%85%D9%88%D8%A7%D8%AF%20%D9%85%D9%88%D8%AC%D9%88%D8%AF%D8%A9%20%D9%81%D9%8A%20%D9%85%D8%B7%D8%A8%D8%AE%D9%83",
+        "https://wa.me/?text=6%20%D9%88%D8%B5%D9%81%D8%A7%D8%AA%20%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9%20%D8%A8%D9%85%D9%88%D8%A7%D8%AF%20%D9%85%D9%88%D8%AC%D9%88%D8%AF%D8%A9%20%D9%81%D9%8A%20%D9%85%D8%B7%D8%A8%D8%AE%D9%83%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fnatural-cleaning-recipes.html",
+        "https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html",
+        "https://www.epa.gov/saferchoice",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fnatural-cleaning-recipes.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/eliminate-bad-smells.jpg",
+        "../images/covers/natural-cleaning-recipes.jpg",
+        "../images/covers/save-electricity-bill.jpg",
+        "../images/covers/tidy-home-in-15-minutes.jpg"
+      ]
+    },
+    {
+      "path": "posts/natural-insect-repellents.html",
+      "title": "الوقاية من حشرات المنزل ومكافحتها بأمان | دليلك",
+      "description": "دليل للوقاية من حشرات المنزل وتقليل مصادرها واستخدام المصائد أو المنتجات المسجلة وفق التعليمات عند الحاجة.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/natural-insect-repellents.html",
+      "h1": "الوقاية من حشرات المنزل ومكافحتها بأمان",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#sec-7",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/eliminate-bad-smells.html",
+        "../posts/natural-cleaning-recipes.html",
+        "../posts/tidy-home-in-15-minutes.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fnatural-insect-repellents.html&text=%D8%B7%D8%B1%D8%AF%20%D8%A7%D9%84%D8%AD%D8%B4%D8%B1%D8%A7%D8%AA%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%20%D8%A8%D8%B7%D8%B1%D9%82%20%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9%20%D9%88%D8%A2%D9%85%D9%86%D8%A9",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fnatural-insect-repellents.html&text=%D8%B7%D8%B1%D8%AF%20%D8%A7%D9%84%D8%AD%D8%B4%D8%B1%D8%A7%D8%AA%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%20%D8%A8%D8%B7%D8%B1%D9%82%20%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9%20%D9%88%D8%A2%D9%85%D9%86%D8%A9",
+        "https://wa.me/?text=%D8%B7%D8%B1%D8%AF%20%D8%A7%D9%84%D8%AD%D8%B4%D8%B1%D8%A7%D8%AA%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%20%D8%A8%D8%B7%D8%B1%D9%82%20%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9%20%D9%88%D8%A2%D9%85%D9%86%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fnatural-insect-repellents.html",
+        "https://www.epa.gov/ipm",
+        "https://www.epa.gov/safepestcontrol",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fnatural-insect-repellents.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/eliminate-bad-smells.jpg",
+        "../images/covers/natural-cleaning-recipes.jpg",
+        "../images/covers/tidy-home-in-15-minutes.jpg",
+        "../images/new-natural-insect-repellents.jpg"
+      ]
+    },
+    {
+      "path": "posts/orange-cake-no-oven.html",
+      "title": "كيكة البرتقال الهشة بدون فرن: طريقة القدر السحرية | دليلك",
+      "description": "طريقة عمل كيكة البرتقال الهشة بدون فرن باستخدام القدر: مكونات بسيطة، خطوات واضحة، ونصائح للحصول على كيك رطب وهش.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/orange-cake-no-oven.html",
+      "h1": "كيكة البرتقال الهشة بدون فرن: طريقة القدر السحرية",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/fruit-salad-recipe.html",
+        "../posts/lentil-soup-recipe.html",
+        "../posts/zaatar-manakeesh.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Forange-cake-no-oven.html&text=%D9%83%D9%8A%D9%83%D8%A9%20%D8%A7%D9%84%D8%A8%D8%B1%D8%AA%D9%82%D8%A7%D9%84%20%D8%A7%D9%84%D9%87%D8%B4%D8%A9%20%D8%A8%D8%AF%D9%88%D9%86%20%D9%81%D8%B1%D9%86%3A%20%D8%B7%D8%B1%D9%8A%D9%82%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D8%B1%20%D8%A7%D9%84%D8%B3%D8%AD%D8%B1%D9%8A%D8%A9",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Forange-cake-no-oven.html&text=%D9%83%D9%8A%D9%83%D8%A9%20%D8%A7%D9%84%D8%A8%D8%B1%D8%AA%D9%82%D8%A7%D9%84%20%D8%A7%D9%84%D9%87%D8%B4%D8%A9%20%D8%A8%D8%AF%D9%88%D9%86%20%D9%81%D8%B1%D9%86%3A%20%D8%B7%D8%B1%D9%8A%D9%82%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D8%B1%20%D8%A7%D9%84%D8%B3%D8%AD%D8%B1%D9%8A%D8%A9",
+        "https://wa.me/?text=%D9%83%D9%8A%D9%83%D8%A9%20%D8%A7%D9%84%D8%A8%D8%B1%D8%AA%D9%82%D8%A7%D9%84%20%D8%A7%D9%84%D9%87%D8%B4%D8%A9%20%D8%A8%D8%AF%D9%88%D9%86%20%D9%81%D8%B1%D9%86%3A%20%D8%B7%D8%B1%D9%8A%D9%82%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D8%B1%20%D8%A7%D9%84%D8%B3%D8%AD%D8%B1%D9%8A%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Forange-cake-no-oven.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Forange-cake-no-oven.html",
+        "https://www.fda.gov/media/114863/download"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/fruit-salad-recipe.jpg",
+        "../images/covers/lentil-soup-recipe.jpg",
+        "../images/covers/orange-cake-no-oven.jpg",
+        "../images/covers/zaatar-manakeesh.jpg"
+      ]
+    },
+    {
+      "path": "posts/organize-fridge-waste.html",
+      "title": "كيف تنظم ثلاجتك وتقلل هدر الطعام | دليلك",
+      "description": "طريقة تنظيم الثلاجة وحفظ الطعام بأمان: توزيع الرفوف، درجة الحرارة، تبريد البقايا، نظام الأولوية وقائمة أسبوعية لتقليل الهدر.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/organize-fridge-waste.html",
+      "h1": "كيف تنظم ثلاجتك وتقلل هدر الطعام",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#seo-plan",
+        "#seo-quick",
+        "#seo-table",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/chicken-kabsa.html",
+        "../posts/eliminate-bad-smells.html",
+        "../posts/fruit-salad-recipe.html",
+        "../posts/natural-cleaning-recipes.html",
+        "../posts/quick-kitchen-cleaning.html",
+        "../posts/tidy-home-in-15-minutes.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Forganize-fridge-waste.html&text=%D9%83%D9%8A%D9%81%20%D8%AA%D9%86%D8%B8%D9%85%20%D8%AB%D9%84%D8%A7%D8%AC%D8%AA%D9%83%20%D9%88%D8%AA%D9%85%D9%86%D8%B9%20%D9%87%D8%AF%D8%B1%20%D8%A7%D9%84%D8%B7%D8%B9%D8%A7%D9%85%20%D9%86%D9%87%D8%A7%D8%A6%D9%8A%D9%8B%D8%A7",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Forganize-fridge-waste.html&text=%D9%83%D9%8A%D9%81%20%D8%AA%D9%86%D8%B8%D9%85%20%D8%AB%D9%84%D8%A7%D8%AC%D8%AA%D9%83%20%D9%88%D8%AA%D9%85%D9%86%D8%B9%20%D9%87%D8%AF%D8%B1%20%D8%A7%D9%84%D8%B7%D8%B9%D8%A7%D9%85%20%D9%86%D9%87%D8%A7%D8%A6%D9%8A%D9%8B%D8%A7",
+        "https://wa.me/?text=%D9%83%D9%8A%D9%81%20%D8%AA%D9%86%D8%B8%D9%85%20%D8%AB%D9%84%D8%A7%D8%AC%D8%AA%D9%83%20%D9%88%D8%AA%D9%85%D9%86%D8%B9%20%D9%87%D8%AF%D8%B1%20%D8%A7%D9%84%D8%B7%D8%B9%D8%A7%D9%85%20%D9%86%D9%87%D8%A7%D8%A6%D9%8A%D9%8B%D8%A7%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Forganize-fridge-waste.html",
+        "https://www.energystar.gov/products/refrigerators",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Forganize-fridge-waste.html",
+        "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/refrigeration"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/eliminate-bad-smells.jpg",
+        "../images/covers/natural-cleaning-recipes.jpg",
+        "../images/covers/organize-fridge-waste.jpg",
+        "../images/covers/tidy-home-in-15-minutes.jpg"
+      ]
+    },
+    {
+      "path": "posts/protect-online-accounts.html",
+      "title": "أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين | دليلك",
+      "description": "دليل حماية الحسابات من الاختراق: كلمات مرور فريدة، مدير كلمات المرور، المصادقة متعددة العوامل، مفاتيح المرور وخطة استرداد الحساب.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/protect-online-accounts.html",
+      "h1": "أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#seo-check",
+        "#seo-plan",
+        "#seo-quick",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/choose-smartphone-budget.html",
+        "../posts/essential-android-apps.html",
+        "../posts/safe-online-payments.html",
+        "../posts/speed-up-slow-computer.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fprotect-online-accounts.html&text=%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A7%D8%AA%20%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20%D8%AD%D8%B3%D8%A7%D8%A8%D8%A7%D8%AA%D9%83%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%A5%D9%86%D8%AA%D8%B1%D9%86%D8%AA%3A%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%20%D9%84%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fprotect-online-accounts.html&text=%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A7%D8%AA%20%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20%D8%AD%D8%B3%D8%A7%D8%A8%D8%A7%D8%AA%D9%83%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%A5%D9%86%D8%AA%D8%B1%D9%86%D8%AA%3A%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%20%D9%84%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86",
+        "https://wa.me/?text=%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A7%D8%AA%20%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20%D8%AD%D8%B3%D8%A7%D8%A8%D8%A7%D8%AA%D9%83%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%A5%D9%86%D8%AA%D8%B1%D9%86%D8%AA%3A%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%20%D9%84%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fprotect-online-accounts.html",
+        "https://www.cisa.gov/MFA",
+        "https://www.cisa.gov/secure-our-world/use-strong-passwords",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fprotect-online-accounts.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/choose-smartphone-budget.jpg",
+        "../images/covers/protect-online-accounts.jpg",
+        "../images/new-speed-up-slow-computer.jpg"
+      ]
+    },
+    {
+      "path": "posts/qishta-basbousa.html",
+      "title": "بسبوسة القشطة: حلى سهل يذوب في الفم | دليلك",
+      "description": "طريقة عمل بسبوسة بالقشطة خطوة بخطوة: المكونات، طريقة التحضير، القطر العطري، ونصائح للحصول على بسبوسة طرية ناجحة.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/qishta-basbousa.html",
+      "h1": "بسبوسة القشطة: حلى سهل يذوب في الفم",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/lentil-soup-recipe.html",
+        "../posts/orange-cake-no-oven.html",
+        "../posts/zaatar-manakeesh.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fqishta-basbousa.html&text=%D8%A8%D8%B3%D8%A8%D9%88%D8%B3%D8%A9%20%D8%A7%D9%84%D9%82%D8%B4%D8%B7%D8%A9%3A%20%D8%AD%D9%84%D9%89%20%D8%B3%D9%87%D9%84%20%D9%8A%D8%B0%D9%88%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%81%D9%85",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fqishta-basbousa.html&text=%D8%A8%D8%B3%D8%A8%D9%88%D8%B3%D8%A9%20%D8%A7%D9%84%D9%82%D8%B4%D8%B7%D8%A9%3A%20%D8%AD%D9%84%D9%89%20%D8%B3%D9%87%D9%84%20%D9%8A%D8%B0%D9%88%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%81%D9%85",
+        "https://wa.me/?text=%D8%A8%D8%B3%D8%A8%D9%88%D8%B3%D8%A9%20%D8%A7%D9%84%D9%82%D8%B4%D8%B7%D8%A9%3A%20%D8%AD%D9%84%D9%89%20%D8%B3%D9%87%D9%84%20%D9%8A%D8%B0%D9%88%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%81%D9%85%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fqishta-basbousa.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fqishta-basbousa.html",
+        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/lentil-soup-recipe.jpg",
+        "../images/covers/orange-cake-no-oven.jpg",
+        "../images/covers/zaatar-manakeesh.jpg",
+        "../images/new-qishta-basbousa.jpg"
+      ]
+    },
+    {
+      "path": "posts/quick-kitchen-cleaning.html",
+      "title": "تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة | دليلك",
+      "description": "خطة تنظيف المطبخ في 30 دقيقة: الترتيب الصحيح للتنظيف، أدوات سريعة، وحيل لتوفير الوقت في المطابخ المزدحمة.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/quick-kitchen-cleaning.html",
+      "h1": "تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/eliminate-bad-smells.html",
+        "../posts/natural-cleaning-recipes.html",
+        "../posts/tidy-home-in-15-minutes.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fquick-kitchen-cleaning.html&text=%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D8%A7%D9%84%D9%85%D8%B7%D8%A8%D8%AE%20%D9%81%D9%8A%2030%20%D8%AF%D9%82%D9%8A%D9%82%D8%A9%3A%20%D8%AE%D8%B7%D8%A9%20%D8%B3%D8%B1%D9%8A%D8%B9%D8%A9%20%D9%84%D9%84%D9%85%D8%B7%D8%A7%D8%A8%D8%AE%20%D8%A7%D9%84%D9%85%D8%B2%D8%AF%D8%AD%D9%85%D8%A9",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fquick-kitchen-cleaning.html&text=%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D8%A7%D9%84%D9%85%D8%B7%D8%A8%D8%AE%20%D9%81%D9%8A%2030%20%D8%AF%D9%82%D9%8A%D9%82%D8%A9%3A%20%D8%AE%D8%B7%D8%A9%20%D8%B3%D8%B1%D9%8A%D8%B9%D8%A9%20%D9%84%D9%84%D9%85%D8%B7%D8%A7%D8%A8%D8%AE%20%D8%A7%D9%84%D9%85%D8%B2%D8%AF%D8%AD%D9%85%D8%A9",
+        "https://wa.me/?text=%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D8%A7%D9%84%D9%85%D8%B7%D8%A8%D8%AE%20%D9%81%D9%8A%2030%20%D8%AF%D9%82%D9%8A%D9%82%D8%A9%3A%20%D8%AE%D8%B7%D8%A9%20%D8%B3%D8%B1%D9%8A%D8%B9%D8%A9%20%D9%84%D9%84%D9%85%D8%B7%D8%A7%D8%A8%D8%AE%20%D8%A7%D9%84%D9%85%D8%B2%D8%AF%D8%AD%D9%85%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fquick-kitchen-cleaning.html",
+        "https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fquick-kitchen-cleaning.html",
+        "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/cleanliness-helps-prevent"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/eliminate-bad-smells.jpg",
+        "../images/covers/natural-cleaning-recipes.jpg",
+        "../images/covers/tidy-home-in-15-minutes.jpg",
+        "../images/new-quick-kitchen-cleaning.jpg"
+      ]
+    },
+    {
+      "path": "posts/safe-online-payments.html",
+      "title": "الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك | دليلك",
+      "description": "دليل الدفع الإلكتروني بأمان: فحص المتجر، حماية البطاقة، تجنب التصيد، التصرف بعد عملية مشبوهة وحفظ أدلة الشراء.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/safe-online-payments.html",
+      "h1": "الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#seo-incident",
+        "#seo-plan",
+        "#seo-quick",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/choose-smartphone-budget.html",
+        "../posts/protect-online-accounts.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://consumer.ftc.gov/articles/online-shopping",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsafe-online-payments.html&text=%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D8%A7%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%20%D8%A8%D8%A3%D9%85%D8%A7%D9%86%3A%20%D8%AF%D9%84%D9%8A%D9%84%D9%83%20%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%20%D9%84%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20%D8%A3%D9%85%D9%88%D8%A7%D9%84%D9%83",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsafe-online-payments.html&text=%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D8%A7%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%20%D8%A8%D8%A3%D9%85%D8%A7%D9%86%3A%20%D8%AF%D9%84%D9%8A%D9%84%D9%83%20%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%20%D9%84%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20%D8%A3%D9%85%D9%88%D8%A7%D9%84%D9%83",
+        "https://wa.me/?text=%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D8%A7%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%20%D8%A8%D8%A3%D9%85%D8%A7%D9%86%3A%20%D8%AF%D9%84%D9%8A%D9%84%D9%83%20%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%20%D9%84%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20%D8%A3%D9%85%D9%88%D8%A7%D9%84%D9%83%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsafe-online-payments.html",
+        "https://www.cisa.gov/news-events/news/shop-safely-online-holiday-season-tips-secure-our-world",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsafe-online-payments.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/choose-smartphone-budget.jpg",
+        "../images/covers/protect-online-accounts.jpg",
+        "../images/covers/safe-online-payments.jpg"
+      ]
+    },
+    {
+      "path": "posts/samosa-cheese-dough.html",
+      "title": "سمبوسك الجبن المقرمش: وصفة العجينة الذهبية | دليلك",
+      "description": "طريقة عمل سمبوسك الجبن المقرمش: عجينة ذهبية هشة، حشوة الجبن الذائب، القلي والفرن، ونصائح لتجنب التسريب.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/samosa-cheese-dough.html",
+      "h1": "سمبوسك الجبن المقرمش: وصفة العجينة الذهبية",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#sec-7",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/lentil-soup-recipe.html",
+        "../posts/orange-cake-no-oven.html",
+        "../posts/zaatar-manakeesh.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsamosa-cheese-dough.html&text=%D8%B3%D9%85%D8%A8%D9%88%D8%B3%D9%83%20%D8%A7%D9%84%D8%AC%D8%A8%D9%86%20%D8%A7%D9%84%D9%85%D9%82%D8%B1%D9%85%D8%B4%3A%20%D9%88%D8%B5%D9%81%D8%A9%20%D8%A7%D9%84%D8%B9%D8%AC%D9%8A%D9%86%D8%A9%20%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsamosa-cheese-dough.html&text=%D8%B3%D9%85%D8%A8%D9%88%D8%B3%D9%83%20%D8%A7%D9%84%D8%AC%D8%A8%D9%86%20%D8%A7%D9%84%D9%85%D9%82%D8%B1%D9%85%D8%B4%3A%20%D9%88%D8%B5%D9%81%D8%A9%20%D8%A7%D9%84%D8%B9%D8%AC%D9%8A%D9%86%D8%A9%20%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9",
+        "https://wa.me/?text=%D8%B3%D9%85%D8%A8%D9%88%D8%B3%D9%83%20%D8%A7%D9%84%D8%AC%D8%A8%D9%86%20%D8%A7%D9%84%D9%85%D9%82%D8%B1%D9%85%D8%B4%3A%20%D9%88%D8%B5%D9%81%D8%A9%20%D8%A7%D9%84%D8%B9%D8%AC%D9%8A%D9%86%D8%A9%20%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsamosa-cheese-dough.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsamosa-cheese-dough.html",
+        "https://www.fda.gov/media/114863/download"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/lentil-soup-recipe.jpg",
+        "../images/covers/orange-cake-no-oven.jpg",
+        "../images/covers/zaatar-manakeesh.jpg",
+        "../images/new-samosa-cheese-dough.jpg"
+      ]
+    },
+    {
+      "path": "posts/save-electricity-bill.html",
+      "title": "10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك | دليلك",
+      "description": "خطوات عملية لتقليل استهلاك الكهرباء في المنزل عبر قياس الاستهلاك وضبط التكييف والإضاءة والغسيل والأجهزة دون وعود توفير مبالغ فيها.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/save-electricity-bill.html",
+      "h1": "10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-10",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#sec-7",
+        "#sec-8",
+        "#sec-9",
+        "#seo-plan",
+        "#seo-quick",
+        "#seo-table",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/eliminate-bad-smells.html",
+        "../posts/laundry-guide-tips.html",
+        "../posts/natural-cleaning-recipes.html",
+        "../posts/organize-fridge-waste.html",
+        "../posts/tidy-home-in-15-minutes.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsave-electricity-bill.html&text=10%20%D8%B7%D8%B1%D9%82%20%D8%B0%D9%83%D9%8A%D8%A9%20%D9%84%D8%AA%D8%AE%D9%81%D9%8A%D8%B6%20%D9%81%D8%A7%D8%AA%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A1%20%D8%AF%D9%88%D9%86%20%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%B9%D8%A7%D8%AF%D8%A7%D8%AA%D9%83",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsave-electricity-bill.html&text=10%20%D8%B7%D8%B1%D9%82%20%D8%B0%D9%83%D9%8A%D8%A9%20%D9%84%D8%AA%D8%AE%D9%81%D9%8A%D8%B6%20%D9%81%D8%A7%D8%AA%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A1%20%D8%AF%D9%88%D9%86%20%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%B9%D8%A7%D8%AF%D8%A7%D8%AA%D9%83",
+        "https://wa.me/?text=10%20%D8%B7%D8%B1%D9%82%20%D8%B0%D9%83%D9%8A%D8%A9%20%D9%84%D8%AA%D8%AE%D9%81%D9%8A%D8%B6%20%D9%81%D8%A7%D8%AA%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A1%20%D8%AF%D9%88%D9%86%20%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%B9%D8%A7%D8%AF%D8%A7%D8%AA%D9%83%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsave-electricity-bill.html",
+        "https://www.energystar.gov/saveathome",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsave-electricity-bill.html",
+        "https://www.iea.org/topics/energy-efficiency"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/eliminate-bad-smells.jpg",
+        "../images/covers/natural-cleaning-recipes.jpg",
+        "../images/covers/save-electricity-bill.jpg",
+        "../images/covers/tidy-home-in-15-minutes.jpg"
+      ]
+    },
+    {
+      "path": "posts/save-mobile-data.html",
+      "title": "توفير بيانات الجوال: 8 حيل عملية توفر لك الكثير | دليلك",
+      "description": "8 حيل عملية لتوفير بيانات الجوال: معرفة التطبيقات الشرهة، إيقاف التحديثات التلقائية، تحميل الخرائط مسبقًا، وضغط الفيديو.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/save-mobile-data.html",
+      "h1": "توفير بيانات الجوال: 8 حيل عملية توفر لك الكثير",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#sec-7",
+        "#sec-8",
+        "#sec-9",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/choose-smartphone-budget.html",
+        "../posts/protect-online-accounts.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://support.google.com/android/answer/9458407",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsave-mobile-data.html&text=%D8%AA%D9%88%D9%81%D9%8A%D8%B1%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%84%3A%208%20%D8%AD%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D8%AA%D9%88%D9%81%D8%B1%20%D9%84%D9%83%20%D8%A7%D9%84%D9%83%D8%AB%D9%8A%D8%B1",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsave-mobile-data.html&text=%D8%AA%D9%88%D9%81%D9%8A%D8%B1%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%84%3A%208%20%D8%AD%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D8%AA%D9%88%D9%81%D8%B1%20%D9%84%D9%83%20%D8%A7%D9%84%D9%83%D8%AB%D9%8A%D8%B1",
+        "https://wa.me/?text=%D8%AA%D9%88%D9%81%D9%8A%D8%B1%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%84%3A%208%20%D8%AD%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D8%AA%D9%88%D9%81%D8%B1%20%D9%84%D9%83%20%D8%A7%D9%84%D9%83%D8%AB%D9%8A%D8%B1%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsave-mobile-data.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsave-mobile-data.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/choose-smartphone-budget.jpg",
+        "../images/covers/protect-online-accounts.jpg",
+        "../images/new-save-mobile-data.jpg"
+      ]
+    },
+    {
+      "path": "posts/speed-up-slow-computer.html",
+      "title": "تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة | دليلك",
+      "description": "7 خطوات مجانية لتسريع الكمبيوتر البطيء: إعادة التشغيل، برامج بدء التشغيل، تنظيف القرص، البرامج الضارة، والترقية الذكية.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/speed-up-slow-computer.html",
+      "h1": "تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#sec-7",
+        "#sec-8",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/choose-smartphone-budget.html",
+        "../posts/protect-online-accounts.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://support.microsoft.com/windows/free-up-drive-space-in-windows-85529ccb-c365-490d-b548-831022bc9b32",
+        "https://support.microsoft.com/windows/tips-to-improve-pc-performance-in-windows-b3b3ef5b-5953-fb6a-2528-4bbed82fba96",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fspeed-up-slow-computer.html&text=%D8%AA%D8%B3%D8%B1%D9%8A%D8%B9%20%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%20%D8%A7%D9%84%D8%A8%D8%B7%D9%8A%D8%A1%3A%207%20%D8%AE%D8%B7%D9%88%D8%A7%D8%AA%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%88%D9%81%D8%B9%D8%A7%D9%84%D8%A9",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fspeed-up-slow-computer.html&text=%D8%AA%D8%B3%D8%B1%D9%8A%D8%B9%20%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%20%D8%A7%D9%84%D8%A8%D8%B7%D9%8A%D8%A1%3A%207%20%D8%AE%D8%B7%D9%88%D8%A7%D8%AA%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%88%D9%81%D8%B9%D8%A7%D9%84%D8%A9",
+        "https://wa.me/?text=%D8%AA%D8%B3%D8%B1%D9%8A%D8%B9%20%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%20%D8%A7%D9%84%D8%A8%D8%B7%D9%8A%D8%A1%3A%207%20%D8%AE%D8%B7%D9%88%D8%A7%D8%AA%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%88%D9%81%D8%B9%D8%A7%D9%84%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fspeed-up-slow-computer.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fspeed-up-slow-computer.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/choose-smartphone-budget.jpg",
+        "../images/covers/protect-online-accounts.jpg",
+        "../images/new-speed-up-slow-computer.jpg"
+      ]
+    },
+    {
+      "path": "posts/tidy-home-in-15-minutes.html",
+      "title": "ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية | دليلك",
+      "description": "خطة عملية لترتيب المنزل في 15 دقيقة يوميًا فقط: جدول أسبوعي، قواعد ذهبية، وأدوات تساعدك على الحفاظ على بيت مرتب دائمًا.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/tidy-home-in-15-minutes.html",
+      "h1": "ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/eliminate-bad-smells.html",
+        "../posts/natural-cleaning-recipes.html",
+        "../posts/save-electricity-bill.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ftidy-home-in-15-minutes.html&text=%D8%AA%D8%B1%D8%AA%D9%8A%D8%A8%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%20%D9%81%D9%8A%2015%20%D8%AF%D9%82%D9%8A%D9%82%D8%A9%20%D9%8A%D9%88%D9%85%D9%8A%D9%8B%D8%A7%3A%20%D8%AE%D8%B7%D8%A9%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%85%D8%AC%D8%B1%D9%91%D8%A8%D8%A9",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ftidy-home-in-15-minutes.html&text=%D8%AA%D8%B1%D8%AA%D9%8A%D8%A8%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%20%D9%81%D9%8A%2015%20%D8%AF%D9%82%D9%8A%D9%82%D8%A9%20%D9%8A%D9%88%D9%85%D9%8A%D9%8B%D8%A7%3A%20%D8%AE%D8%B7%D8%A9%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%85%D8%AC%D8%B1%D9%91%D8%A8%D8%A9",
+        "https://wa.me/?text=%D8%AA%D8%B1%D8%AA%D9%8A%D8%A8%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%20%D9%81%D9%8A%2015%20%D8%AF%D9%82%D9%8A%D9%82%D8%A9%20%D9%8A%D9%88%D9%85%D9%8A%D9%8B%D8%A7%3A%20%D8%AE%D8%B7%D8%A9%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%85%D8%AC%D8%B1%D9%91%D8%A8%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ftidy-home-in-15-minutes.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ftidy-home-in-15-minutes.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/eliminate-bad-smells.jpg",
+        "../images/covers/natural-cleaning-recipes.jpg",
+        "../images/covers/save-electricity-bill.jpg",
+        "../images/covers/tidy-home-in-15-minutes.jpg"
+      ]
+    },
+    {
+      "path": "posts/used-smartphone-checklist.html",
+      "title": "شراء هاتف مستعمل: قائمة فحص قبل الدفع | دليلك",
+      "description": "قائمة فحص عملية للهاتف المستعمل تشمل الملكية وقفل التنشيط والتحديثات والبطارية والشاشة والكاميرا والشبكة وإعادة الضبط الآمنة.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/used-smartphone-checklist.html",
+      "h1": "شراء هاتف مستعمل: قائمة فحص قبل الدفع",
+      "links": [
+        "#after",
+        "#battery",
+        "#conclusion",
+        "#deal",
+        "#hardware",
+        "#main-content",
+        "#ownership",
+        "#price",
+        "#quick",
+        "#receipt",
+        "#repair",
+        "#software",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/choose-smartphone-budget.html",
+        "../posts/protect-online-accounts.html",
+        "../posts/save-mobile-data.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://support.google.com/android/answer/7680439",
+        "https://support.google.com/pixelphone/answer/4596836"
+      ],
+      "images": [
+        "../images/covers/used-smartphone-checklist.jpg"
+      ]
+    },
+    {
+      "path": "posts/why-we-need-sleep.html",
+      "title": "لماذا نحتاج إلى النوم؟ أهمية النوم لصحتك وعقلك | دليلك",
+      "description": "لماذا نحتاج النوم؟ مراحل النوم، فوائده للذاكرة والمناعة، مخاطر الحرمان من النوم، ونصائح علمية لنوم أفضل وأعمق.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/why-we-need-sleep.html",
+      "h1": "لماذا نحتاج إلى النوم؟ أهمية النوم لصحتك وعقلك",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#support-check",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/coffee-story-yemen.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fwhy-we-need-sleep.html&text=%D9%84%D9%85%D8%A7%D8%B0%D8%A7%20%D9%86%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D9%86%D9%88%D9%85%D8%9F%20%D8%A3%D9%87%D9%85%D9%8A%D8%A9%20%D8%A7%D9%84%D9%86%D9%88%D9%85%20%D9%84%D8%B5%D8%AD%D8%AA%D9%83%20%D9%88%D8%B9%D9%82%D9%84%D9%83",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fwhy-we-need-sleep.html&text=%D9%84%D9%85%D8%A7%D8%B0%D8%A7%20%D9%86%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D9%86%D9%88%D9%85%D8%9F%20%D8%A3%D9%87%D9%85%D9%8A%D8%A9%20%D8%A7%D9%84%D9%86%D9%88%D9%85%20%D9%84%D8%B5%D8%AD%D8%AA%D9%83%20%D9%88%D8%B9%D9%82%D9%84%D9%83",
+        "https://wa.me/?text=%D9%84%D9%85%D8%A7%D8%B0%D8%A7%20%D9%86%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D9%86%D9%88%D9%85%D8%9F%20%D8%A3%D9%87%D9%85%D9%8A%D8%A9%20%D8%A7%D9%84%D9%86%D9%88%D9%85%20%D9%84%D8%B5%D8%AD%D8%AA%D9%83%20%D9%88%D8%B9%D9%82%D9%84%D9%83%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fwhy-we-need-sleep.html",
+        "https://www.cdc.gov/sleep/about/index.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fwhy-we-need-sleep.html",
+        "https://www.nhlbi.nih.gov/health/sleep-deprivation"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/coffee-story-yemen.jpg",
+        "../images/covers/why-we-need-sleep.jpg"
+      ]
+    },
+    {
+      "path": "posts/zaatar-manakeesh.html",
+      "title": "مناقيش الزعتر: وصفة بيتية سهلة واقتصادية خطوة بخطوة | دليلك",
+      "description": "طريقة مناقيش الزعتر في البيت بمقادير موزونة: عجينة طرية، تخمير صحيح، خلطة زعتر متوازنة وخبز على حرارة مرتفعة.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/zaatar-manakeesh.html",
+      "h1": "مناقيش الزعتر: وصفة بيتية سهلة واقتصادية خطوة بخطوة",
+      "links": [
+        "#main-content",
+        "#sec-0",
+        "#sec-1",
+        "#sec-2",
+        "#sec-3",
+        "#sec-4",
+        "#sec-5",
+        "#sec-6",
+        "#seo-quick",
+        "#seo-store",
+        "#seo-table",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/age-of-earth.html",
+        "../posts/ai-explained-simply.html",
+        "../posts/amazing-animal-facts.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/amazing-water-facts.html",
+        "../posts/fruit-salad-recipe.html",
+        "../posts/lemon-mint-drink.html",
+        "../posts/lentil-soup-recipe.html",
+        "../posts/orange-cake-no-oven.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fzaatar-manakeesh.html&text=%D9%85%D9%86%D8%A7%D9%82%D9%8A%D8%B4%20%D8%A7%D9%84%D8%B2%D8%B9%D8%AA%D8%B1%3A%20%D9%88%D8%B5%D9%81%D8%A9%20%D8%A8%D9%8A%D8%AA%D9%8A%D8%A9%20%D8%B3%D9%87%D9%84%D8%A9%20%D9%88%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9",
+        "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fzaatar-manakeesh.html&text=%D9%85%D9%86%D8%A7%D9%82%D9%8A%D8%B4%20%D8%A7%D9%84%D8%B2%D8%B9%D8%AA%D8%B1%3A%20%D9%88%D8%B5%D9%81%D8%A9%20%D8%A8%D9%8A%D8%AA%D9%8A%D8%A9%20%D8%B3%D9%87%D9%84%D8%A9%20%D9%88%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9",
+        "https://wa.me/?text=%D9%85%D9%86%D8%A7%D9%82%D9%8A%D8%B4%20%D8%A7%D9%84%D8%B2%D8%B9%D8%AA%D8%B1%3A%20%D9%88%D8%B5%D9%81%D8%A9%20%D8%A8%D9%8A%D8%AA%D9%8A%D8%A9%20%D8%B3%D9%87%D9%84%D8%A9%20%D9%88%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fzaatar-manakeesh.html",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fzaatar-manakeesh.html"
+      ],
+      "images": [
+        "../images/covers/age-of-earth.jpg",
+        "../images/covers/ai-explained-simply.jpg",
+        "../images/covers/amazing-animal-facts.jpg",
+        "../images/covers/amazing-human-body-facts.jpg",
+        "../images/covers/amazing-water-facts.jpg",
+        "../images/covers/fruit-salad-recipe.jpg",
+        "../images/covers/lentil-soup-recipe.jpg",
+        "../images/covers/orange-cake-no-oven.jpg",
+        "../images/covers/zaatar-manakeesh.jpg"
+      ]
+    },
+    {
+      "path": "privacy-policy.html",
+      "title": "سياسة الخصوصية | دليلك",
+      "description": "سياسة خصوصية دليلك الحالية: الاستضافة والتخزين المحلي وحالة التواصل والتحليلات والإعلانات.",
+      "canonical": "https://sbdh1285.github.io/dalilak/privacy-policy.html",
+      "h1": "سياسة الخصوصية",
+      "links": [
+        "#main-content",
+        "about.html",
+        "authors/editorial-team.html",
+        "category/home-tips.html",
+        "category/knowledge.html",
+        "category/recipes.html",
+        "category/tech.html",
+        "contact.html",
+        "disclaimer.html",
+        "editorial-policy.html",
+        "guide-safe-cleaning.html",
+        "index.html",
+        "privacy-policy.html",
+        "sitemap.html",
+        "terms.html"
+      ],
+      "images": []
+    },
+    {
+      "path": "search.html",
+      "title": "بحث | دليلك",
+      "description": "ابحث في كل مقالات موقع دليلك.",
+      "canonical": "https://sbdh1285.github.io/dalilak/search.html",
+      "h1": "بحث في دليلك",
+      "links": [
+        "#main-content",
+        "about.html",
+        "authors/editorial-team.html",
+        "category/home-tips.html",
+        "category/knowledge.html",
+        "category/recipes.html",
+        "category/tech.html",
+        "contact.html",
+        "disclaimer.html",
+        "editorial-policy.html",
+        "guide-safe-cleaning.html",
+        "index.html",
+        "privacy-policy.html",
+        "sitemap.html",
+        "terms.html"
+      ],
+      "images": []
+    },
+    {
+      "path": "sitemap.html",
+      "title": "خريطة الموقع | دليلك",
+      "description": "دليل صفحات وأقسام موقع دليلك.",
+      "canonical": "https://sbdh1285.github.io/dalilak/sitemap.html",
+      "h1": "خريطة الموقع",
+      "links": [
+        "#main-content",
+        "about.html",
+        "authors/editorial-team.html",
+        "category/home-tips.html",
+        "category/knowledge.html",
+        "category/recipes.html",
+        "category/tech.html",
+        "contact.html",
+        "disclaimer.html",
+        "editorial-policy.html",
+        "guide-account-security.html",
+        "guide-gulf-recipes.html",
+        "guide-safe-cleaning.html",
+        "guide-smartphone.html",
+        "index.html",
+        "posts/account-recovery-plan.html",
+        "posts/age-of-earth.html",
+        "posts/ai-explained-simply.html",
+        "posts/amazing-animal-facts.html",
+        "posts/amazing-human-body-facts.html",
+        "posts/amazing-water-facts.html",
+        "posts/chicken-kabsa.html",
+        "posts/choose-smartphone-budget.html",
+        "posts/cleaning-products-never-mix.html",
+        "posts/coffee-story-yemen.html",
+        "posts/eliminate-bad-smells.html",
+        "posts/essential-android-apps.html",
+        "posts/fruit-salad-recipe.html",
+        "posts/galaxies-and-stars.html",
+        "posts/gulf-rice-spices-guide.html",
+        "posts/laundry-guide-tips.html",
+        "posts/lemon-mint-drink.html",
+        "posts/lentil-soup-recipe.html",
+        "posts/natural-cleaning-recipes.html",
+        "posts/natural-insect-repellents.html",
+        "posts/orange-cake-no-oven.html",
+        "posts/organize-fridge-waste.html",
+        "posts/protect-online-accounts.html",
+        "posts/qishta-basbousa.html",
+        "posts/quick-kitchen-cleaning.html",
+        "posts/safe-online-payments.html",
+        "posts/samosa-cheese-dough.html",
+        "posts/save-electricity-bill.html",
+        "posts/save-mobile-data.html",
+        "posts/speed-up-slow-computer.html",
+        "posts/tidy-home-in-15-minutes.html",
+        "posts/used-smartphone-checklist.html",
+        "posts/why-we-need-sleep.html",
+        "posts/zaatar-manakeesh.html",
+        "privacy-policy.html",
+        "sitemap.html",
+        "terms.html"
+      ],
+      "images": []
+    },
+    {
+      "path": "terms.html",
+      "title": "شروط الاستخدام | دليلك",
+      "description": "شروط استخدام موقع دليلك: حقوق الملكية، استخدام المحتوى، وإخلاء المسؤولية.",
+      "canonical": "https://sbdh1285.github.io/dalilak/terms.html",
+      "h1": "شروط الاستخدام",
+      "links": [
+        "#main-content",
+        "about.html",
+        "authors/editorial-team.html",
+        "category/home-tips.html",
+        "category/knowledge.html",
+        "category/recipes.html",
+        "category/tech.html",
+        "contact.html",
+        "disclaimer.html",
+        "editorial-policy.html",
+        "guide-safe-cleaning.html",
+        "index.html",
+        "privacy-policy.html",
+        "sitemap.html",
+        "terms.html"
+      ],
+      "images": []
+    },
+    {
+      "path": "thanks.html",
+      "title": "شكرًا لتواصلك | دليلك",
+      "description": "تم استلام رسالة التواصل المرسلة إلى فريق دليلك.",
+      "canonical": "https://sbdh1285.github.io/dalilak/thanks.html",
+      "h1": "شكرًا لتواصلك",
+      "links": [
+        "#main-content",
+        "about.html",
+        "authors/editorial-team.html",
+        "category/home-tips.html",
+        "category/knowledge.html",
+        "category/recipes.html",
+        "category/tech.html",
+        "contact.html",
+        "disclaimer.html",
+        "editorial-policy.html",
+        "guide-safe-cleaning.html",
+        "index.html",
+        "privacy-policy.html",
+        "sitemap.html",
+        "terms.html"
+      ],
+      "images": []
+    }
+  ]
+}

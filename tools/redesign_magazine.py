@@ -3,6 +3,7 @@
 from __future__ import annotations
 import html
 import json
+import math
 import re
 from pathlib import Path
 
@@ -76,8 +77,11 @@ def article_records()->dict[str,dict]:
             if obj.get("@type")=="Article":data=obj;break
         if not data:continue
         desc_match=re.search(r'<meta name="description" content="([^"]+)">',text)
-        mins_match=re.search(r'(\d+) دقائق(?: قراءة)?',text)
-        reading_minutes=max(1,int(mins_match.group(1))) if mins_match else 3
+        body_start=text.find('<div class="art-body">')
+        body_ends=[x for x in (text.find('<!-- CLUSTER-LINKS-START -->',body_start),text.find('<section class="cluster-links"',body_start),text.find('<section class="sources"',body_start),text.find('<div class="share">',body_start)) if x>body_start]
+        body_end=min(body_ends) if body_ends else len(text)
+        word_count=len(re.sub(r'<[^>]+>',' ',text[body_start:body_end]).split())
+        reading_minutes=max(2,math.ceil(word_count/180))
         custom_cover=ROOT/'images'/'covers'/f'{path.stem}.jpg'
         fallback=COVERS.get(path.stem,(f"images/og-{path.stem}.png",data["headline"]))
         configured=ARTICLE_IMAGES.get(path.stem)
@@ -138,6 +142,12 @@ def inject_shell(path:Path,text:str)->str:
     p=prefix_for(path)
     preload=f'<link rel="preload" href="{p}fonts/ibm-plex-arabic-700.ttf" as="font" type="font/ttf" crossorigin>'
     if 'ibm-plex-arabic-700.ttf' not in text:text=text.replace('</head>',preload+'\n</head>')
+    if '<meta property="og:title"' not in text:
+        title_match=re.search(r'<title>(.*?)</title>',text,re.S);desc_match=re.search(r'<meta name="description" content="([^"]+)"',text);canonical_match=re.search(r'<link rel="canonical" href="([^"]+)"',text)
+        if title_match and desc_match and canonical_match:
+            social_title=re.sub(r'\s*\|\s*دليلك\s*$','',title_match.group(1));desc=desc_match.group(1);url=canonical_match.group(1);image=f'{BASE}/images/og-default.png'
+            tags=f'<meta property="og:type" content="website"><meta property="og:title" content="{html.escape(social_title,quote=True)}"><meta property="og:description" content="{html.escape(desc,quote=True)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{image}"><meta property="og:site_name" content="دليلك"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{html.escape(social_title,quote=True)}"><meta name="twitter:description" content="{html.escape(desc,quote=True)}"><meta name="twitter:image" content="{image}">'
+            text=text.replace('</head>',tags+'\n</head>')
     return text
 
 def article_card(a:dict,prefix:str="",lead:bool=False)->str:

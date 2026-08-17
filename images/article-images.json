@@ -1,63 +1,63 @@
 {
   "account-recovery-plan": {
     "path": "images/covers/account-recovery-plan.jpg",
-    "alt": "رسم تحريري لقفل رقمي يرمز إلى استرداد الحسابات"
+    "alt": "مفتاح ورموز احتياطية حول قفل رقمي لاسترداد الحسابات"
   },
   "age-of-earth": {
-    "path": "images/og-age-of-earth.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة»"
+    "path": "images/covers/age-of-earth.jpg",
+    "alt": "كوكب الأرض مع طبقات صخرية ومدار زمني"
   },
   "ai-explained-simply": {
-    "path": "images/og-ai-explained-simply.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟»"
+    "path": "images/covers/ai-explained-simply.jpg",
+    "alt": "شريحة ذكاء اصطناعي محاطة بعقد شبكة مترابطة"
   },
   "amazing-animal-facts": {
-    "path": "images/og-amazing-animal-facts.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «عجائب مملكة الحيوان: حقائق تدهش الكبار قبل الصغار»"
+    "path": "images/covers/amazing-animal-facts.jpg",
+    "alt": "حوت وأخطبوط وآثار أقدام ترمز إلى تنوع الحيوانات"
   },
   "amazing-human-body-facts": {
-    "path": "images/og-amazing-human-body-facts.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «حقائق مبسطة عن جسم الإنسان: القلب والعظام والجلد والدماغ»"
+    "path": "images/covers/amazing-human-body-facts.jpg",
+    "alt": "قلب ودماغ وعظام ضمن رسم تشريحي مبسط"
   },
   "amazing-water-facts": {
-    "path": "images/og-amazing-water-facts.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا»"
+    "path": "images/covers/amazing-water-facts.jpg",
+    "alt": "قطرات ماء وأمواج ودورة مائية مبسطة"
   },
   "chicken-kabsa": {
-    "path": "images/og-chicken-kabsa.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «كبسة الدجاج السعودية: طريقة منزلية خطوة بخطوة»"
+    "path": "images/covers/chicken-kabsa.jpg",
+    "alt": "طبق أرز بسمتي ودجاج وبهارات خليجية"
   },
   "choose-smartphone-budget": {
-    "path": "images/og-choose-smartphone-budget.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين»"
+    "path": "images/covers/choose-smartphone-budget.jpg",
+    "alt": "ثلاثة هواتف مع علامات مقارنة واختيار"
   },
   "cleaning-products-never-mix": {
     "path": "images/covers/cleaning-products-never-mix.jpg",
-    "alt": "رسم تحريري لعبوة تنظيف يرمز إلى سلامة استخدام المنظفات"
+    "alt": "عبوتا تنظيف منفصلتان مع علامة منع الخلط"
   },
   "coffee-story-yemen": {
-    "path": "images/og-coffee-story-yemen.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «قصة القهوة: رحلتها من اليمن إلى العالم»"
+    "path": "images/covers/coffee-story-yemen.jpg",
+    "alt": "فنجان قهوة وحبوب ومدرجات جبلية ترمز إلى اليمن"
   },
   "eliminate-bad-smells": {
-    "path": "images/og-eliminate-bad-smells.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «كيف تتخلص من الروائح الكريهة في المنزل: دليل عملي»"
+    "path": "images/covers/eliminate-bad-smells.jpg",
+    "alt": "نافذة مفتوحة وتيارات هواء تزيل مصدر الرائحة"
   },
   "essential-android-apps": {
-    "path": "images/og-essential-android-apps.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «أفضل تطبيقات أندرويد المجانية: 10 تطبيقات لا غنى عنها»"
+    "path": "images/covers/essential-android-apps.jpg",
+    "alt": "هاتف يعرض شبكة تطبيقات متنوعة بلا شعارات"
   },
   "fruit-salad-recipe": {
-    "path": "images/og-fruit-salad-recipe.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «سلطة الفواكه المنعشة: طبق صحي ولذيذ في 10 دقائق»"
+    "path": "images/covers/fruit-salad-recipe.jpg",
+    "alt": "وعاء فواكه ملونة مع تفاح وبرتقال وعنب"
   },
   "galaxies-and-stars": {
-    "path": "images/og-galaxies-and-stars.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «عجائب الكون: رحلة بين المجرات والنجوم»"
+    "path": "images/covers/galaxies-and-stars.jpg",
+    "alt": "مجرة حلزونية ونجوم وكواكب في فضاء عميق"
   },
   "gulf-rice-spices-guide": {
     "path": "images/covers/gulf-rice-spices-guide.jpg",
-    "alt": "رسم تحريري لطبق وبهارات يرمز إلى بهارات الأرز الخليجي"
+    "alt": "أوعية بهارات وقرفة وهيل ولومي مجفف"
   },
   "laundry-guide-tips": {
     "path": "images/new-laundry-guide-tips.jpg",
@@ -68,28 +68,28 @@
     "alt": "كأس عصير ليمون ونعناع مثلج مع شرائح ليمون وأوراق نعناع"
   },
   "lentil-soup-recipe": {
-    "path": "images/og-lentil-soup-recipe.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة»"
+    "path": "images/covers/lentil-soup-recipe.jpg",
+    "alt": "وعاء شوربة عدس ساخنة مع ليمون وكمون"
   },
   "natural-cleaning-recipes": {
-    "path": "images/og-natural-cleaning-recipes.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك»"
+    "path": "images/covers/natural-cleaning-recipes.jpg",
+    "alt": "ليمون وعبوة تنظيف وفرشاة للأسطح المنزلية"
   },
   "natural-insect-repellents": {
     "path": "images/new-natural-insect-repellents.jpg",
     "alt": "نباتات ريحان ونعناع قرب نافذة منزلية مزودة بشبك"
   },
   "orange-cake-no-oven": {
-    "path": "images/og-orange-cake-no-oven.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «كيكة البرتقال الهشة بدون فرن: طريقة القدر السحرية»"
+    "path": "images/covers/orange-cake-no-oven.jpg",
+    "alt": "قطعة كيكة برتقال وقدر طهي وشرائح برتقال"
   },
   "organize-fridge-waste": {
-    "path": "images/og-organize-fridge-waste.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «كيف تنظم ثلاجتك وتقلل هدر الطعام»"
+    "path": "images/covers/organize-fridge-waste.jpg",
+    "alt": "ثلاجة مفتوحة برفوف مرتبة وعلب طعام واضحة"
   },
   "protect-online-accounts": {
-    "path": "images/og-protect-online-accounts.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين»"
+    "path": "images/covers/protect-online-accounts.jpg",
+    "alt": "درع وقفل ومفتاح مرور لحماية الحسابات"
   },
   "qishta-basbousa": {
     "path": "images/new-qishta-basbousa.jpg",
@@ -100,16 +100,16 @@
     "alt": "مطبخ مرتب مع أدوات تنظيف مناسبة للأسطح"
   },
   "safe-online-payments": {
-    "path": "images/og-safe-online-payments.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك»"
+    "path": "images/covers/safe-online-payments.jpg",
+    "alt": "بطاقة دفع داخل درع مع علامة تحقق"
   },
   "samosa-cheese-dough": {
     "path": "images/new-samosa-cheese-dough.jpg",
     "alt": "سمبوسك جبن ذهبي مقرمش مقدم على طبق خزفي"
   },
   "save-electricity-bill": {
-    "path": "images/og-save-electricity-bill.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «10 طرق ذكية لتخفيض فاتورة الكهرباء دون تغيير عاداتك»"
+    "path": "images/covers/save-electricity-bill.jpg",
+    "alt": "مصباح LED ومكيف وعداد استهلاك منزلي"
   },
   "save-mobile-data": {
     "path": "images/new-save-mobile-data.jpg",
@@ -120,19 +120,19 @@
     "alt": "حاسوب مكتبي في مساحة عمل تقنية مرتبة"
   },
   "tidy-home-in-15-minutes": {
-    "path": "images/og-tidy-home-in-15-minutes.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية»"
+    "path": "images/covers/tidy-home-in-15-minutes.jpg",
+    "alt": "غرفة مرتبة مع رف وسلة ومؤقت"
   },
   "used-smartphone-checklist": {
     "path": "images/covers/used-smartphone-checklist.jpg",
-    "alt": "رسم تحريري لهاتف ذكي يرمز إلى فحص الهاتف المستعمل"
+    "alt": "هاتف تحت عدسة فحص مع بطارية وعلامة تحقق"
   },
   "why-we-need-sleep": {
-    "path": "images/og-why-we-need-sleep.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «لماذا نحتاج إلى النوم؟ أهمية النوم لصحتك وعقلك»"
+    "path": "images/covers/why-we-need-sleep.jpg",
+    "alt": "سرير وهلال ونجوم في غرفة هادئة"
   },
   "zaatar-manakeesh": {
-    "path": "images/og-zaatar-manakeesh.png",
-    "alt": "غلاف ملون يتضمن عنوان مقال «مناقيش الزعتر: وصفة بيتية سهلة واقتصادية خطوة بخطوة»"
+    "path": "images/covers/zaatar-manakeesh.jpg",
+    "alt": "مناقيش زعتر دائرية مع زيت زيتون وأوراق زعتر"
   }
 }

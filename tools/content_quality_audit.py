@@ -33,6 +33,15 @@ for p in sorted((ROOT/'posts').glob('*.html')):
  elif not author.get('name') or not author.get('url'):issues.append('بيانات الكاتب ناقصة')
  if slug in RISK and not sources:issues.append('المصادر مطلوبة لهذا الموضوع')
  if not cover or not (ROOT/cover.group(1).replace('../','')).exists():issues.append('غلاف مفقود')
+ # تطابق جدول المحتويات وترتيب الخلاصة
+ clean=lambda value:re.sub(r'<.*?>','',value).strip()
+ headings=[(anchor,clean(title)) for anchor,title in re.findall(r'<h2 id="([^"]+)">(.*?)</h2>',t[start:end],re.S)]
+ toc_match=re.search(r'<nav class="toc" aria-label="جدول محتويات المقال">.*?<ul>(.*?)</ul></nav>',t,re.S)
+ toc=[(anchor,clean(title)) for anchor,title in re.findall(r'href="#([^"]+)">(.*?)</a>',toc_match.group(1),re.S)] if toc_match else []
+ if toc!=headings:issues.append('جدول المحتويات لا يطابق عناوين H2')
+ if not headings or headings[-1][1]!='الخلاصة':issues.append('آخر قسم رئيسي ليس الخلاصة')
+ unexpected=[clean(x) for x in re.findall(r'<h2(?! id=)[^>]*>(.*?)</h2>',t,re.S) if clean(x) not in {'المصادر والمراجع','أكمل القراءة في هذا الموضوع','مقالات ذات صلة'}]
+ if unexpected:issues.append('عناوين خارج بنية المقال: '+', '.join(unexpected))
  if issues:errors.append((slug,issues))
  rows.append((slug,words,h2,'نعم' if sources else 'غير مطلوبة/لا توجد','؛ '.join(issues) or 'اجتاز'))
 # تشابه مقالات باستخدام مقاطع من خمس كلمات
