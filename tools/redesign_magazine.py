@@ -3,6 +3,7 @@
 from __future__ import annotations
 import html
 import json
+import math
 import re
 from pathlib import Path
 
@@ -74,7 +75,11 @@ def article_records()->dict[str,dict]:
             if obj.get("@type")=="Article":data=obj;break
         if not data:continue
         desc_match=re.search(r'<meta name="description" content="([^"]+)">',text)
-        mins_match=re.search(r'(\d+) دقائق(?: قراءة)?',text)
+        body_start=text.find('<div class="art-body">')
+        body_ends=[x for x in (text.find('<!-- CLUSTER-LINKS-START -->',body_start),text.find('<section class="cluster-links"',body_start),text.find('<section class="sources"',body_start),text.find('<div class="share">',body_start)) if x>body_start]
+        body_end=min(body_ends) if body_ends else len(text)
+        word_count=len(re.sub(r'<[^>]+>',' ',text[body_start:body_end]).split())
+        reading_minutes=max(2,math.ceil(word_count/200))
         custom_cover=ROOT/'images'/'covers'/f'{path.stem}.jpg'
         fallback=COVERS.get(path.stem,(f"images/og-{path.stem}.png",data["headline"]))
         cover_path=f'images/covers/{path.stem}.jpg' if custom_cover.exists() else fallback[0]
@@ -83,7 +88,7 @@ def article_records()->dict[str,dict]:
             "slug":path.stem,"title":data["headline"],"category":data["articleSection"],
             "description":html.unescape(desc_match.group(1)) if desc_match else "",
             "published":data["datePublished"],"modified":data.get("dateModified",data["datePublished"]),
-            "minutes":max(1,int(mins_match.group(1))) if mins_match else 3,
+            "minutes":reading_minutes,
             "image":cover_path,"imageAlt":cover_alt
         }
     return records
@@ -197,6 +202,8 @@ def redesign_category(path:Path,records:dict[str,dict])->None:
     names={x["slug"]:x["name"] for x in CONFIG["categories"]}; name=names[slug]; desc=CAT_DESCRIPTIONS[name]
     intro=f'''<div class="wrap category-wrap"><div class="crumb"><a href="../index.html">الرئيسية</a><span>/</span><span>{name}</span></div><div class="category-intro"><div><span class="section-kicker">قسم دليلك</span><h1>{name}</h1><p>{desc}</p></div><span class="category-count">{sum(1 for x in records.values() if x['category']==name)} مقالات متاحة</span></div><div class="grid">'''
     text=re.sub(r'<div class="wrap" style="padding-top:38px">.*?<div class="grid">',intro,text,count=1,flags=re.S)
+    article_count=sum(1 for x in records.values() if x['category']==name)
+    text=re.sub(r'<span class="category-count">\d+ مقالات متاحة</span>',f'<span class="category-count">{article_count} مقالات متاحة</span>',text,count=1)
     grid_start=text.index('<div class="grid">',text.index('category-wrap'))+len('<div class="grid">')
     collection_start=text.index('<script type="application/ld+json">',grid_start)
     wrap_close=text.rfind('</div>',grid_start,collection_start)
