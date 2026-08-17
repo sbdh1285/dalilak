@@ -102,7 +102,7 @@ def header(path:Path)->str:
     return f'''<div class="topline"><div class="wrap"><span>{CONFIG['shortDescription']}</span><a href="{p}editorial-policy.html">كيف نكتب ونراجع المحتوى؟</a></div></div>
 <header class="site-header"><div class="wrap hbar">
 {logo(p)}
-<nav id="nav" aria-label="التنقل الرئيسي">{nav}</nav>
+<nav id="nav" aria-label="التنقل الرئيسي"><div class="mobile-nav-head"><span><strong>قائمة دليلك</strong><small>اختر القسم الذي تريد تصفحه</small></span><button id="navClose" type="button" aria-label="إغلاق القائمة">×</button></div>{nav}</nav>
 <div class="h-actions"><div class="search-box"><input class="icon-btn" id="searchInput" type="search" aria-label="البحث في مقالات دليلك" autocomplete="off" placeholder="ابحث في دليلك"><div class="search-res" id="searchRes" role="status" aria-live="polite"></div></div><button class="icon-btn" id="themeBtn" type="button" aria-label="تفعيل الوضع الليلي" aria-pressed="false">◐</button><button class="icon-btn burger" id="burger" type="button" aria-label="فتح القائمة" aria-controls="nav" aria-expanded="false">{MENU_ICON}<span>القائمة</span></button></div>
 </div></header><button class="nav-scrim" id="navScrim" type="button" aria-label="إغلاق القائمة" hidden></button>'''
 

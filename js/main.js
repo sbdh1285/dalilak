@@ -9,6 +9,7 @@
   var themeButton = document.getElementById('themeBtn');
   var burger = document.getElementById('burger');
   var navigation = document.getElementById('nav');
+  var navClose = document.getElementById('navClose');
   var scrim = document.getElementById('navScrim');
 
   function escapeHtml(value) {
@@ -83,6 +84,7 @@
     if (open) { var first = navigation.querySelector('a'); if (first) first.focus(); }
   }
   if (burger && navigation) burger.addEventListener('click', function () { setMenu(!navigation.classList.contains('open')); });
+  if (navClose) navClose.addEventListener('click', function () { setMenu(false); burger.focus(); });
   if (scrim) scrim.addEventListener('click', function () { setMenu(false); burger.focus(); });
   if (navigation) navigation.addEventListener('click', function (event) { if (event.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', function (event) {
