@@ -22,24 +22,19 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="manifest" href="manifest.json">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"من نحن","description":"تعرف على موقع دليلك: رسالتنا، قيمنا، ولماذا نكتب المحتوى العربي المفيد.","url":"https://sbdh1285.github.io/dalilak/about.html","inLanguage":"ar","publisher":{"@type":"Organization","name":"دليلك","url":"https://sbdh1285.github.io/dalilak"}}</script>
-<link rel="stylesheet" href="/dalilak/css/style.css?v=6">
+<link rel="stylesheet" href="/dalilak/css/style.css?v=8">
+<link rel="preload" href="fonts/ibm-plex-arabic-700.ttf" as="font" type="font/ttf" crossorigin>
 </head>
 <body>
 <a class="skip-link" href="#main-content">تجاوز إلى المحتوى</a>
 <div id="progress"></div>
 
-<header><div class="wrap hbar">
-  <a class="logo" href="index.html"><span class="logo-ic">📘</span> دليلك</a>
-  <nav id="nav" aria-label="التنقل الرئيسي"><a href="index.html">الرئيسية</a><a href="category/home-tips.html">نصائح منزلية</a><a href="category/recipes.html">وصفات لذيذة</a><a href="category/knowledge.html">معلومات عامة</a><a href="category/tech.html">تكنولوجيا</a><a href="about.html" class="on">من نحن</a><a href="contact.html">اتصل بنا</a></nav>
-  <div class="h-actions">
-    <div class="search-box">
-      <input class="icon-btn" id="searchInput" type="search" aria-label="البحث في مقالات دليلك" autocomplete="off" placeholder="ابحث…" style="width:150px;text-align:right;padding:0 12px;font-family:inherit">
-      <div class="search-res" id="searchRes" role="status" aria-live="polite"></div>
-    </div>
-    <button class="icon-btn" id="themeBtn" type="button" aria-label="تفعيل الوضع الليلي" aria-pressed="false">🌙</button>
-    <button class="icon-btn burger" id="burger" type="button" aria-label="فتح القائمة" aria-controls="nav" aria-expanded="false">☰</button>
-  </div>
-</div></header>
+<div class="topline"><div class="wrap"><span>مجلة عربية عصرية لأفكار عملية ومعرفة موثوقة</span><a href="editorial-policy.html">كيف نكتب ونراجع المحتوى؟</a></div></div>
+<header class="site-header"><div class="wrap hbar">
+<a class="logo" href="index.html" aria-label="دليلك — الصفحة الرئيسية"><span class="logo-ic"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7.5c4.2-1 7.8-.2 11 2.3v16c-3.2-2.5-6.8-3.3-11-2.3zm22 0c-4.2-1-7.8-.2-11 2.3v16c3.2-2.5 6.8-3.3 11-2.3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M16 9.8v16" stroke="currentColor" stroke-width="2"/></svg></span><span class="logo-copy"><strong>دليلك</strong><small>مجلة عربية للمعرفة والحياة</small></span></a>
+<nav id="nav" aria-label="التنقل الرئيسي"><a href="index.html">الرئيسية</a><a href="category/home-tips.html">نصائح منزلية</a><a href="category/recipes.html">وصفات لذيذة</a><a href="category/knowledge.html">معلومات عامة</a><a href="category/tech.html">تكنولوجيا</a><a href="about.html" class="on" aria-current="page">من نحن</a><a href="contact.html">اتصل بنا</a></nav>
+<div class="h-actions"><div class="search-box"><input class="icon-btn" id="searchInput" type="search" aria-label="البحث في مقالات دليلك" autocomplete="off" placeholder="ابحث في دليلك"><div class="search-res" id="searchRes" role="status" aria-live="polite"></div></div><button class="icon-btn" id="themeBtn" type="button" aria-label="تفعيل الوضع الليلي" aria-pressed="false">◐</button><button class="icon-btn burger" id="burger" type="button" aria-label="فتح القائمة" aria-controls="nav" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>القائمة</span></button></div>
+</div></header><button class="nav-scrim" id="navScrim" type="button" aria-label="إغلاق القائمة" hidden></button>
 <main id="main-content">
 <div class="page">
   <h1>من نحن</h1>
@@ -55,24 +50,21 @@
   </ul>
   <h2>ماذا تجد في دليلك؟</h2>
   <ul>
-    <li>🏠 <b>نصائح منزلية:</b> ترتيب، تنظيف ذكي، وتوفير في فاتورة الكهرباء.</li>
-    <li>🍽 <b>وصفات لذيذة:</b> أطباق عربية أصيلة بخطوات واضحة ومكونات متوفرة.</li>
-    <li>💡 <b>معلومات عامة:</b> حقائق ممتعة تثري معرفتك بأسلوب شيق.</li>
-    <li>📱 <b>تكنولوجيا:</b> شروحات مبسطة تساعدك على مواكبة العصر الرقمي.</li>
+    <li><b>نصائح منزلية:</b> ترتيب، تنظيف ذكي، وتوفير في فاتورة الكهرباء.</li>
+    <li><b>وصفات لذيذة:</b> أطباق عربية أصيلة بخطوات واضحة ومكونات متوفرة.</li>
+    <li><b>معلومات عامة:</b> حقائق ممتعة تثري معرفتك بأسلوب شيق.</li>
+    <li><b>تكنولوجيا:</b> شروحات مبسطة تساعدك على مواكبة العصر الرقمي.</li>
   </ul>
   <h2>تواصل معنا</h2>
   <p>نحب سماع آرائك واقتراحاتك! إذا كان لديك موضوع تود أن نكتب عنه، أو ملاحظة على أي مقال، فلا تتردد في <a href="contact.html">مراسلتنا</a>.</p>
 </div></main>
 
-<footer><div class="wrap">
-  <div class="fgrid">
-    <div><div class="logo-ic" style="width:44px;height:44px;font-size:1.3rem">📘</div><h4 style="margin:10px 0 8px">دليلك</h4><p>دليلك اليومي لمحتوى عربي عملي ومفيد، مكتوب بوضوح ويُراجع ويُحدّث عند الحاجة.</p></div>
-    <div><h4>الأقسام</h4><a href="category/home-tips.html">نصائح منزلية</a><a href="category/recipes.html">وصفات لذيذة</a><a href="category/knowledge.html">معلومات عامة</a><a href="category/tech.html">تكنولوجيا</a></div>
-    <div><h4>روابط مهمة</h4><a href="about.html">من نحن</a><a href="contact.html">اتصل بنا</a><a href="privacy-policy.html">سياسة الخصوصية</a><a href="terms.html">شروط الاستخدام</a><a href="disclaimer.html">إخلاء المسؤولية</a><a href="editorial-policy.html">سياسة التحرير</a><a href="authors/editorial-team.html">فريق التحرير</a><a href="sitemap.html">خريطة الموقع</a></div>
-    <div><h4>تواصل معنا</h4><p><a href="mailto:contact@dalilak.com">contact@dalilak.com</a></p><p>نرحب بالتصحيحات والملاحظات واقتراحات المواضيع.</p></div>
-  </div>
-  <div class="f-bottom"><span>© 2026 دليلك — جميع الحقوق محفوظة.</span><span>محتوى عربي مفيد ومراجع</span></div>
-</div></footer>
+<footer><div class="wrap"><div class="fgrid">
+<div class="footer-brand"><a class="logo" href="index.html" aria-label="دليلك — الصفحة الرئيسية"><span class="logo-ic"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7.5c4.2-1 7.8-.2 11 2.3v16c-3.2-2.5-6.8-3.3-11-2.3zm22 0c-4.2-1-7.8-.2-11 2.3v16c3.2-2.5 6.8-3.3 11-2.3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M16 9.8v16" stroke="currentColor" stroke-width="2"/></svg></span><span class="logo-copy"><strong>دليلك</strong><small>مجلة عربية للمعرفة والحياة</small></span></a><p>محتوى عربي واضح في المنزل والطعام والمعرفة والتقنية، يُكتب ويُراجع بعناية ليمنحك فائدة عملية دون تعقيد.</p></div>
+<div><h4>الأقسام</h4><a href="category/home-tips.html">نصائح منزلية</a><a href="category/recipes.html">وصفات لذيذة</a><a href="category/knowledge.html">معلومات عامة</a><a href="category/tech.html">تكنولوجيا</a></div>
+<div><h4>عن دليلك</h4><a href="about.html">من نحن</a><a href="authors/editorial-team.html">فريق التحرير</a><a href="editorial-policy.html">سياسة التحرير</a><a href="contact.html">اتصل بنا</a><a href="sitemap.html">خريطة الموقع</a></div>
+<div><h4>السياسات والتواصل</h4><a href="privacy-policy.html">سياسة الخصوصية</a><a href="terms.html">شروط الاستخدام</a><a href="disclaimer.html">إخلاء المسؤولية</a><a href="mailto:contact@dalilak.com">contact@dalilak.com</a></div>
+</div><div class="f-bottom"><span>© 2026 دليلك — جميع الحقوق محفوظة.</span><span>محتوى عربي يُكتب ويُراجع بعناية</span></div></div></footer>
 <button id="toTop" type="button" title="العودة للأعلى">↑</button>
 <div id="toast">تم نسخ الرابط</div>
 

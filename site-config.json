@@ -1,0 +1,26 @@
+{
+  "siteName": "دليلك",
+  "shortDescription": "مجلة عربية عصرية لأفكار عملية ومعرفة موثوقة",
+  "tagline": "أفكار مفيدة لحياة يومية أسهل",
+  "description": "محتوى عربي واضح في المنزل والطعام والمعرفة والتقنية، يُكتب ويُراجع بعناية ليمنحك فائدة عملية دون تعقيد.",
+  "baseUrl": "https://sbdh1285.github.io/dalilak",
+  "email": "contact@dalilak.com",
+  "authorName": "فريق تحرير دليلك",
+  "heroImage": "images/hero-editorial.jpg",
+  "featuredArticle": "lemon-mint-drink",
+  "theme": {
+    "primary": "#124E4A",
+    "primaryDark": "#0B3533",
+    "accent": "#D97732",
+    "background": "#F7F5F0",
+    "surface": "#FFFFFF",
+    "text": "#202725",
+    "muted": "#68716E"
+  },
+  "categories": [
+    {"slug": "home-tips", "name": "نصائح منزلية", "description": "حلول عملية لبيت أكثر ترتيبًا وراحة وكفاءة."},
+    {"slug": "recipes", "name": "وصفات لذيذة", "description": "وصفات واضحة بمكونات متاحة وخطوات قابلة للتطبيق."},
+    {"slug": "knowledge", "name": "معلومات عامة", "description": "معرفة مبسطة توسّع فضولك وتجيب عن أسئلتك."},
+    {"slug": "tech", "name": "تكنولوجيا", "description": "تقنية مفهومة تساعدك على الاختيار والاستخدام الآمن."}
+  ]
+}

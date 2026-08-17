@@ -44,7 +44,7 @@ class Parser(HTMLParser):
         if self._in_title:
             self.title += data
 
-html_files = sorted(ROOT.rglob("*.html"))
+html_files = sorted(path for path in ROOT.rglob("*.html") if "node_modules" not in path.parts and "qa" not in path.parts)
 for path in html_files:
     text = path.read_text(encoding="utf-8")
     parser = Parser()

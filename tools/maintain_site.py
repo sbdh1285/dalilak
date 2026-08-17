@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import json
 import re
+import subprocess
+import sys
 from datetime import date
 from pathlib import Path
 from urllib.parse import quote
@@ -451,7 +453,7 @@ def update_index_and_css() -> None:
 .author-page{margin:22px 0}.author-page h2{margin-top:0}
 @media(max-width:640px){.form-grid{grid-template-columns:1fr}.search-box #searchInput{width:116px!important}}
 '''
-    if '/* ===== الوصول والنماذج والمصادر ===== */' not in text:
+    if 'MAGAZINE DESIGN' not in text and '/* ===== الوصول والنماذج والمصادر ===== */' not in text:
         text += additions
     write(css, text)
 
@@ -479,6 +481,8 @@ def update_sitemaps() -> None:
 
 
 def update_readme() -> None:
+    if (ROOT / "site-config.json").exists():
+        return
     text = '''# دليلك
 
 موقع محتوى عربي ثابت منشور عبر GitHub Pages، يضم نصائح منزلية ووصفات ومعلومات عامة وشروحات تقنية.
@@ -544,7 +548,7 @@ def main() -> None:
         fix_post(item["path"], categories)
 
     for path in sorted(ROOT.rglob("*.html")):
-        if path.parent.name == "posts":
+        if "node_modules" in path.parts or "qa" in path.parts or path.parent.name == "posts":
             continue
         fix_general_page(path)
 
@@ -558,9 +562,14 @@ def main() -> None:
 
     # وحّد إصدار CSS بعد التعديل.
     for path in ROOT.rglob("*.html"):
+        if "node_modules" in path.parts or "qa" in path.parts:
+            continue
         text = read(path).replace('css/style.css?v=5', 'css/style.css?v=6')
         write(path, text)
 
+    redesign = ROOT / "tools" / "redesign_magazine.py"
+    if redesign.exists():
+        subprocess.run([sys.executable, str(redesign)], check=True)
     print(f"تمت صيانة {len(articles)} مقالًا وتحديث فهرس البحث والصفحات المشتركة.")
 
 
