@@ -12,6 +12,8 @@ BASE = CONFIG["baseUrl"].rstrip("/")
 MONTHS = {1:"يناير",2:"فبراير",3:"مارس",4:"أبريل",5:"مايو",6:"يونيو",7:"يوليو",8:"أغسطس",9:"سبتمبر",10:"أكتوبر",11:"نوفمبر",12:"ديسمبر"}
 CAT_PATHS = {"نصائح منزلية":"home-tips","وصفات لذيذة":"recipes","معلومات عامة":"knowledge","تكنولوجيا":"tech"}
 CAT_DESCRIPTIONS = {item["name"]:item["description"] for item in CONFIG["categories"]}
+COVER_ALTS_PATH=ROOT/'images'/'covers'/'cover-alts.json'
+COVER_ALTS=json.loads(COVER_ALTS_PATH.read_text(encoding='utf-8')) if COVER_ALTS_PATH.exists() else {}
 COVERS = {
     "lemon-mint-drink":("images/new-lemon-mint-drink.jpg","كأس عصير ليمون ونعناع مثلج على طاولة مضاءة طبيعيًا"),
     "fruit-salad-recipe":("images/new-lemon-mint-drink.jpg","ليمون ونعناع طازجان بتنسيق صيفي منعش"),
@@ -73,13 +75,16 @@ def article_records()->dict[str,dict]:
         if not data:continue
         desc_match=re.search(r'<meta name="description" content="([^"]+)">',text)
         mins_match=re.search(r'(\d+) دقائق(?: قراءة)?',text)
+        custom_cover=ROOT/'images'/'covers'/f'{path.stem}.jpg'
+        fallback=COVERS.get(path.stem,(f"images/og-{path.stem}.png",data["headline"]))
+        cover_path=f'images/covers/{path.stem}.jpg' if custom_cover.exists() else fallback[0]
+        cover_alt=COVER_ALTS.get(path.stem,fallback[1])
         records[path.stem]={
             "slug":path.stem,"title":data["headline"],"category":data["articleSection"],
             "description":html.unescape(desc_match.group(1)) if desc_match else "",
             "published":data["datePublished"],"modified":data.get("dateModified",data["datePublished"]),
             "minutes":max(1,int(mins_match.group(1))) if mins_match else 3,
-            "image":COVERS.get(path.stem,(f"images/og-{path.stem}.png",data["headline"]))[0],
-            "imageAlt":COVERS.get(path.stem,(f"images/og-{path.stem}.png",data["headline"]))[1]
+            "image":cover_path,"imageAlt":cover_alt
         }
     return records
 
@@ -108,11 +113,13 @@ def header(path:Path)->str:
 
 def footer(path:Path)->str:
     p=prefix_for(path)
+    contact=CONFIG.get('contact',{});contact_ready=bool(contact.get('enabled') and CONFIG.get('email'))
+    contact_html=f'<a href="mailto:{CONFIG["email"]}">{CONFIG["email"]}</a>' if contact_ready else '<span class="footer-contact-pending">البريد الرسمي قيد التجهيز</span>'
     return f'''<footer><div class="wrap"><div class="fgrid">
 <div class="footer-brand">{logo(p)}<p>{CONFIG['description']}</p></div>
 <div><h4>الأقسام</h4><a href="{p}category/home-tips.html">نصائح منزلية</a><a href="{p}category/recipes.html">وصفات لذيذة</a><a href="{p}category/knowledge.html">معلومات عامة</a><a href="{p}category/tech.html">تكنولوجيا</a></div>
-<div><h4>عن دليلك</h4><a href="{p}about.html">من نحن</a><a href="{p}authors/editorial-team.html">فريق التحرير</a><a href="{p}editorial-policy.html">سياسة التحرير</a><a href="{p}contact.html">اتصل بنا</a><a href="{p}sitemap.html">خريطة الموقع</a></div>
-<div><h4>السياسات والتواصل</h4><a href="{p}privacy-policy.html">سياسة الخصوصية</a><a href="{p}terms.html">شروط الاستخدام</a><a href="{p}disclaimer.html">إخلاء المسؤولية</a><a href="mailto:{CONFIG['email']}">{CONFIG['email']}</a></div>
+<div><h4>عن دليلك</h4><a href="{p}about.html">من نحن</a><a href="{p}guide-safe-cleaning.html">أدلة دليلك</a><a href="{p}authors/editorial-team.html">فريق التحرير</a><a href="{p}editorial-policy.html">سياسة التحرير</a><a href="{p}contact.html">اتصل بنا</a><a href="{p}sitemap.html">خريطة الموقع</a></div>
+<div><h4>السياسات والتواصل</h4><a href="{p}privacy-policy.html">سياسة الخصوصية</a><a href="{p}terms.html">شروط الاستخدام</a><a href="{p}disclaimer.html">إخلاء المسؤولية</a>{contact_html}</div>
 </div><div class="f-bottom"><span>© 2026 دليلك — جميع الحقوق محفوظة.</span><span>محتوى عربي يُكتب ويُراجع بعناية</span></div></div></footer>'''
 
 def inject_shell(path:Path,text:str)->str:
@@ -142,7 +149,8 @@ def home_main(records:dict[str,dict],old:str)->str:
     cats="".join(f'''<a class="cat-card" href="category/{c['slug']}.html"><div class="cat-ic">{ICONS[c['slug']]}</div><h3>{c['name']}</h3><p>{c['description']}</p><span class="cnt">استكشف القسم ←</span></a>''' for c in CONFIG['categories'])
     latest_html=article_card(latest[0],lead=True)+f'<div class="story-stack">{"".join(story_row(x) for x in latest[1:5])}</div>'
     more="".join(more_story(x) for x in latest[5:11])
-    organization={"@context":"https://schema.org","@type":"Organization","name":CONFIG['siteName'],"url":BASE,"description":CONFIG['description'],"email":CONFIG['email']}
+    organization={"@context":"https://schema.org","@type":"Organization","name":CONFIG['siteName'],"url":BASE,"description":CONFIG['description']}
+    if CONFIG.get('contact',{}).get('enabled') and CONFIG.get('email'):organization['email']=CONFIG['email']
     faq_items=[
         ("ما هو موقع دليلك؟","مجلة عربية تقدم محتوى عمليًا في النصائح المنزلية والوصفات والمعرفة والتكنولوجيا بلغة واضحة وتصميم مريح."),
         ("هل المحتوى مجاني؟","نعم، جميع المقالات متاحة للقراءة دون تسجيل أو اشتراك."),
@@ -156,6 +164,7 @@ def home_main(records:dict[str,dict],old:str)->str:
 <section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">تصفّح حسب اهتمامك</span><h2>أقسام دليلك</h2></div></div><div class="cats">{cats}</div></div></section>
 <section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">نُشر حديثًا</span><h2>أحدث المقالات</h2></div><a href="sitemap.html">جميع المقالات ←</a></div><div class="magazine-latest">{latest_html}</div></div></section>
 <section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">مختارات إضافية</span><h2>للقراءة بعد ذلك</h2></div></div><div class="more-grid">{more}</div></div></section>
+<section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">مسارات عملية</span><h2>أدلة دليلك</h2></div><a href="sitemap.html">كل الأدلة والمقالات ←</a></div><div class="guide-feature-grid"><a href="guide-safe-cleaning.html"><span>01</span><h3>دليل التنظيف الآمن</h3><p>المنتجات والتهوية ومنع الخلطات الخطرة.</p></a><a href="guide-account-security.html"><span>02</span><h3>دليل حماية الحسابات</h3><p>المنع والاسترداد والدفع الآمن.</p></a><a href="guide-gulf-recipes.html"><span>03</span><h3>دليل الوصفات الخليجية</h3><p>الأرز والبهارات والمقبلات والمشروبات.</p></a><a href="guide-smartphone.html"><span>04</span><h3>دليل الهاتف</h3><p>الاختيار والفحص والحماية والاستخدام.</p></a></div></div></section>
 <section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">عن الموقع</span><h2>أسئلة شائعة</h2></div></div><div class="faq"><details open><summary>ما هو موقع دليلك؟</summary><p>مجلة عربية تقدم محتوى عمليًا في النصائح المنزلية والوصفات والمعرفة والتكنولوجيا بلغة واضحة وتصميم مريح.</p></details><details><summary>هل المحتوى مجاني؟</summary><p>نعم، جميع المقالات متاحة للقراءة دون تسجيل أو اشتراك.</p></details><details><summary>كيف يُراجع المحتوى؟</summary><p>نراجع وضوح المقال ومصادر الادعاءات القابلة للتحقق، ونحدّث المحتوى عند اكتشاف خطأ أو تغير المعلومة.</p></details><details><summary>هل يمكن اقتراح موضوع أو إرسال تصحيح؟</summary><p>نعم، نستقبل الاقتراحات والتصحيحات الموثقة عبر صفحة اتصل بنا.</p></details></div></div></section>
 <section class="sec"><div class="wrap"><div class="trust-panel"><div><h2>الثقة تبدأ بالوضوح</h2><p>تعرّف على طريقة اختيار الموضوعات ومراجعة المعلومات والتعامل مع التصحيحات في سياسة التحرير.</p></div><a class="btn" href="editorial-policy.html">اقرأ سياسة التحرير</a></div></div></section>
 {jsonlds}</main>'''
@@ -188,7 +197,12 @@ def redesign_category(path:Path,records:dict[str,dict])->None:
     names={x["slug"]:x["name"] for x in CONFIG["categories"]}; name=names[slug]; desc=CAT_DESCRIPTIONS[name]
     intro=f'''<div class="wrap category-wrap"><div class="crumb"><a href="../index.html">الرئيسية</a><span>/</span><span>{name}</span></div><div class="category-intro"><div><span class="section-kicker">قسم دليلك</span><h1>{name}</h1><p>{desc}</p></div><span class="category-count">{sum(1 for x in records.values() if x['category']==name)} مقالات متاحة</span></div><div class="grid">'''
     text=re.sub(r'<div class="wrap" style="padding-top:38px">.*?<div class="grid">',intro,text,count=1,flags=re.S)
-    text=normalize_cards(text,records,"../")
+    grid_start=text.index('<div class="grid">',text.index('category-wrap'))+len('<div class="grid">')
+    collection_start=text.index('<script type="application/ld+json">',grid_start)
+    wrap_close=text.rfind('</div>',grid_start,collection_start)
+    grid_close=text.rfind('</div>',grid_start,wrap_close)
+    category_articles=sorted((a for a in records.values() if a['category']==name),key=lambda a:a['published'],reverse=True)
+    text=text[:grid_start]+''.join(article_card(a,prefix='../') for a in category_articles)+text[grid_close:]
     category_covers={'home-tips':'images/new-quick-kitchen-cleaning.jpg','recipes':'images/new-lemon-mint-drink.jpg','knowledge':'images/hero-editorial.jpg','tech':'images/new-speed-up-slow-computer.jpg'}
     cover_url=f'{BASE}/{category_covers[slug]}'
     text=re.sub(r'<meta property="og:image" content="[^"]+">',f'<meta property="og:image" content="{cover_url}">',text,count=1)

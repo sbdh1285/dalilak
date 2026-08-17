@@ -11,7 +11,8 @@ from pathlib import Path
 from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = "https://sbdh1285.github.io/dalilak"
+SITE_CONFIG = json.loads((ROOT / "site-config.json").read_text(encoding="utf-8")) if (ROOT / "site-config.json").exists() else {}
+BASE = SITE_CONFIG.get("baseUrl", "https://sbdh1285.github.io/dalilak").rstrip("/")
 TODAY = "2026-08-17"
 
 CATEGORY_ICONS = {
@@ -36,7 +37,7 @@ SOURCES = {
     ],
     "amazing-human-body-facts": [
         ("MedlinePlus — تشريح جسم الإنسان", "https://medlineplus.gov/anatomy.html"),
-        ("المكتبة الوطنية للطب (NLM) — أجهزة وأعضاء جسم الإنسان", "https://toxtutor.nlm.nih.gov/08-003.html"),
+        ("المكتبة الوطنية للطب (NCBI) — أجهزة وأعضاء جسم الإنسان", "https://www.ncbi.nlm.nih.gov/books/NBK607445/"),
     ],
     "amazing-water-facts": [
         ("هيئة المسح الجيولوجي الأمريكية — علوم المياه", "https://www.usgs.gov/special-topics/water-science-school"),
@@ -79,7 +80,7 @@ SOURCES = {
         ("Microsoft Support — تحرير مساحة القرص", "https://support.microsoft.com/windows/free-up-drive-space-in-windows-85529ccb-c365-490d-b548-831022bc9b32"),
     ],
     "save-electricity-bill": [
-        ("وزارة الطاقة الأمريكية — دليل توفير الطاقة", "https://www.energy.gov/energysaver/articles/energy-saver-guide"),
+        ("ENERGY STAR — توفير الطاقة في المنزل", "https://www.energystar.gov/saveathome"),
         ("وكالة الطاقة الدولية — كفاءة الطاقة", "https://www.iea.org/topics/energy-efficiency"),
     ],
     "organize-fridge-waste": [
@@ -101,6 +102,43 @@ SOURCES = {
     "quick-kitchen-cleaning": [
         ("مراكز مكافحة الأمراض — تنظيف المنزل وتعقيمه", "https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html"),
         ("وزارة الزراعة الأمريكية — نظافة المطبخ وسلامة الغذاء", "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/cleanliness-helps-prevent"),
+    ],
+    "eliminate-bad-smells": [
+        ("وكالة حماية البيئة — جودة الهواء داخل المنزل", "https://www.epa.gov/indoor-air-quality-iaq"),
+        ("مراكز مكافحة الأمراض — العفن والصحة", "https://www.cdc.gov/mold-health/about/index.html"),
+    ],
+    "fruit-salad-recipe": [
+        ("إدارة الغذاء والدواء — غسل الفواكه والخضروات", "https://www.fda.gov/food/people-risk-foodborne-illness/cleaning-food-safety-moms-be"),
+    ],
+    "lemon-mint-drink": [
+        ("إدارة الغذاء والدواء — إرشادات تنظيف المنتجات الطازجة", "https://www.fda.gov/food/people-risk-foodborne-illness/cleaning-food-safety-moms-be"),
+    ],
+    "lentil-soup-recipe": [
+        ("وزارة الزراعة الأمريكية — دليل سلامة الطعام في المطبخ", "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"),
+    ],
+    "orange-cake-no-oven": [
+        ("إدارة الغذاء والدواء — سلامة الطعام في المطبخ", "https://www.fda.gov/media/114863/download"),
+    ],
+    "qishta-basbousa": [
+        ("وزارة الزراعة الأمريكية — دليل سلامة الطعام في المطبخ", "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"),
+    ],
+    "samosa-cheese-dough": [
+        ("إدارة الغذاء والدواء — سلامة الطعام في المطبخ", "https://www.fda.gov/media/114863/download"),
+    ],
+    "chicken-kabsa": [
+        ("وزارة الزراعة الأمريكية — دليل سلامة الطعام في المطبخ", "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"),
+    ],
+    "cleaning-products-never-mix": [
+        ("مراكز مكافحة الأمراض — الاستخدام الآمن لمبيّض الكلور", "https://www.cdc.gov/natural-disasters/safety/how-to-safely-clean-and-sanitize-with-bleach.html"),
+        ("المعهد الوطني للسلامة والصحة المهنية — مواد التنظيف", "https://www.cdc.gov/niosh/docs/2012-126/pdfs/2012-126.pdf"),
+    ],
+    "account-recovery-plan": [
+        ("CISA — المصادقة المقاومة للتصيد", "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf"),
+        ("CISA — كلمات المرور القوية", "https://www.cisa.gov/secure-our-world/use-strong-passwords"),
+    ],
+    "used-smartphone-checklist": [
+        ("Android Help — التحقق من إصدار النظام والتحديث الأمني", "https://support.google.com/android/answer/7680439"),
+        ("Google Pixel Help — الاستعداد لإعادة ضبط المصنع", "https://support.google.com/pixelphone/answer/4596836"),
     ],
 }
 
@@ -386,7 +424,7 @@ def update_contact() -> None:
   <p class="form-note">بإرسال النموذج توافق على معالجة البيانات اللازمة للرد وفق <a href="privacy-policy.html">سياسة الخصوصية</a>. لا ترسل معلومات حساسة.</p>
   <button class="btn btn-a" type="submit">إرسال الرسالة</button>
 </form>'''
-    if '<form class="contact-form"' not in text:
+    if '<form class="contact-form' not in text:
         text = text.replace('  <h2>اقتراحات المواضيع</h2>', form + '\n  <h2>اقتراحات المواضيع</h2>')
     write(path, text)
 
@@ -416,9 +454,10 @@ def update_legal_pages() -> None:
 def update_manifest() -> None:
     path = ROOT / "manifest.json"
     data = json.loads(read(path))
-    data["start_url"] = "/dalilak/"
-    data["scope"] = "/dalilak/"
-    data["id"] = "/dalilak/"
+    base_path = "/" if SITE_CONFIG.get("customDomain") else "/dalilak/"
+    data["start_url"] = base_path
+    data["scope"] = base_path
+    data["id"] = base_path
     write(path, json.dumps(data, ensure_ascii=False, indent=2) + "\n")
 
 

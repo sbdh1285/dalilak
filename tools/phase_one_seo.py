@@ -9,7 +9,8 @@ import sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-BASE='https://sbdh1285.github.io/dalilak'
+SITE_CONFIG=json.loads((ROOT/'site-config.json').read_text(encoding='utf-8'))
+BASE=SITE_CONFIG.get('baseUrl','https://sbdh1285.github.io/dalilak').rstrip('/')
 TODAY='2026-08-17'
 AUTHOR_URL=f'{BASE}/authors/editorial-team.html'
 
@@ -227,13 +228,16 @@ def set_noindex()->None:
 
 def improve_author_page()->None:
     path=ROOT/'authors/editorial-team.html';text=read(path)
-    profile={"@context":"https://schema.org","@type":"ProfilePage","name":"فريق تحرير دليلك","url":f"{BASE}/authors/editorial-team.html","dateModified":TODAY,"mainEntity":{"@type":"Organization","name":"فريق تحرير دليلك","url":f"{BASE}/authors/editorial-team.html","email":"contact@dalilak.com","description":"الجهة التحريرية المسؤولة عن إعداد ومراجعة محتوى موقع دليلك."}}
+    contact_ready=bool(SITE_CONFIG.get('contact',{}).get('enabled') and SITE_CONFIG.get('email'))
+    profile={"@context":"https://schema.org","@type":"ProfilePage","name":"فريق تحرير دليلك","url":f"{BASE}/authors/editorial-team.html","dateModified":TODAY,"mainEntity":{"@type":"Organization","name":"فريق تحرير دليلك","url":f"{BASE}/authors/editorial-team.html","description":"الجهة التحريرية المسؤولة عن إعداد ومراجعة محتوى موقع دليلك."}}
+    if contact_ready:profile['mainEntity']['email']=SITE_CONFIG['email']
+    correction_contact=f' أو البريد <a href="mailto:{SITE_CONFIG["email"]}">{SITE_CONFIG["email"]}</a>' if contact_ready else ''
     main=f'''<main id="main-content"><div class="page"><h1>فريق تحرير دليلك</h1><p class="sub">الجهة التحريرية المسؤولة عن المحتوى المنشور</p>
 <div class="transparency-box"><strong>بيان شفافية</strong><p>«فريق تحرير دليلك» اسم تحريري للموقع وليس ادعاءً بوجود اعتماد طبي أو قانوني أو أكاديمي. المسؤولية النهائية عن النشر والتصحيح تقع على إدارة الموقع، وسيُذكر اسم أي مختص واعتماده بوضوح إذا شارك مستقبلًا في مراجعة مادة تخصصية.</p></div>
 <h2>كيف نُعد المحتوى؟</h2><ol><li><strong>تحديد حاجة القارئ:</strong> نختار سؤالًا عمليًا ونحدد ما يحتاجه القارئ لإنجاز هدفه.</li><li><strong>جمع المصادر:</strong> نعطي الأولوية للمصادر الرسمية والمؤسسات المعروفة والوثائق الأصلية.</li><li><strong>الصياغة والتنظيم:</strong> نحول المعلومات إلى خطوات وجداول وأمثلة عربية واضحة دون نسخ النصوص.</li><li><strong>التحقق:</strong> نراجع الأرقام والادعاءات القابلة للتحقق ونربط المصادر المهمة بالمقال.</li><li><strong>التحديث:</strong> نحدّث المقال عند تغير المعلومات أو وصول تصحيح موثق.</li></ol>
 <h2>استخدام الأدوات الرقمية والذكاء الاصطناعي</h2><p>قد تُستخدم أدوات رقمية، بما فيها أدوات مساعدة بالذكاء الاصطناعي، في البحث الأولي والتنظيم والصياغة. لا نعامل مخرجات الأدوات كمصدر، ولا ينبغي نشر ادعاء قابل للتحقق اعتمادًا عليها وحدها؛ المرجع هو المصدر المرتبط والمراجعة التحريرية قبل الاعتماد.</p>
 <h2>حدود الخبرة</h2><p>المحتوى للتثقيف العام. في موضوعات الصحة والسلامة والمال والأمن الرقمي نوضح الحدود ونرجع إلى الجهات الرسمية قدر الإمكان، ولا يحل المحتوى محل الطبيب أو الفني أو الجهة المالية أو القانونية المختصة.</p>
-<h2>التصحيحات</h2><p>إذا وجدت خطأ، أرسل رابط الصفحة والعبارة ومصدر التصحيح عبر <a href="../contact.html">صفحة الاتصال</a> أو البريد <a href="mailto:contact@dalilak.com">contact@dalilak.com</a>. نراجع البلاغ ونحدّث تاريخ المقال إذا كان التغيير جوهريًا.</p>
+<h2>التصحيحات</h2><p>إذا وجدت خطأ، أرسل رابط الصفحة والعبارة ومصدر التصحيح عبر <a href="../contact.html">صفحة الاتصال</a>{correction_contact}. نراجع البلاغ ونحدّث تاريخ المقال إذا كان التغيير جوهريًا.</p>
 <p class="page-updated">آخر تحديث لهذه الصفحة: 17 أغسطس 2026</p></div>
 <script type="application/ld+json">{json.dumps(profile,ensure_ascii=False,separators=(',',':'))}</script></main>'''
     text=re.sub(r'<main id="main-content">.*?</main>',main,text,count=1,flags=re.S)

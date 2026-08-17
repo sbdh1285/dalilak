@@ -3,35 +3,277 @@
   "siteFocus": "مجلة عربية عملية للمنزل والطعام والمعرفة الرقمية والمعلومات المبسطة",
   "strategy": "بناء عناقيد مترابطة والتركيز على نية البحث والقيمة الأصلية بدل كثافة الكلمات المفتاحية",
   "articles": [
-    {"slug":"natural-cleaning-recipes","targetQuery":"طرق تنظيف المنزل بمواد طبيعية بأمان","cluster":"التنظيف الآمن","intent":"informational","role":"cornerstone","priority":1},
-    {"slug":"organize-fridge-waste","targetQuery":"طريقة تنظيم الثلاجة ومنع هدر الطعام","cluster":"تنظيم وحفظ الطعام","intent":"informational","role":"cornerstone","priority":1},
-    {"slug":"save-electricity-bill","targetQuery":"طرق تقليل استهلاك الكهرباء في المنزل","cluster":"توفير الطاقة","intent":"informational","role":"cornerstone","priority":1},
-    {"slug":"protect-online-accounts","targetQuery":"كيفية حماية حساباتي من الاختراق","cluster":"الأمان الرقمي","intent":"informational","role":"cornerstone","priority":1},
-    {"slug":"safe-online-payments","targetQuery":"كيفية الدفع الإلكتروني بأمان","cluster":"الأمان الرقمي","intent":"informational","role":"cornerstone","priority":1},
-    {"slug":"choose-smartphone-budget","targetQuery":"كيف أختار هاتف مناسب لميزانيتي","cluster":"اختيار الأجهزة","intent":"commercial-investigation","role":"cornerstone","priority":1},
-    {"slug":"ai-explained-simply","targetQuery":"ما هو الذكاء الاصطناعي وكيف يعمل","cluster":"التقنية للمبتدئين","intent":"informational","role":"cornerstone","priority":1},
-    {"slug":"chicken-kabsa","targetQuery":"طريقة عمل كبسة الدجاج السعودية","cluster":"وصفات خليجية","intent":"recipe","role":"cornerstone","priority":1},
-    {"slug":"zaatar-manakeesh","targetQuery":"طريقة عمل مناقيش الزعتر في البيت","cluster":"مخبوزات عربية","intent":"recipe","role":"cornerstone","priority":1},
-    {"slug":"coffee-story-yemen","targetQuery":"تاريخ القهوة في اليمن وميناء المخا","cluster":"المعرفة اليمنية","intent":"informational","role":"cornerstone","priority":1},
-    {"slug":"laundry-guide-tips","targetQuery":"طريقة غسل الملابس والمحافظة على ألوانها","cluster":"التنظيف الآمن","intent":"informational","role":"supporting","priority":2},
-    {"slug":"quick-kitchen-cleaning","targetQuery":"طريقة تنظيف المطبخ بسرعة","cluster":"التنظيف الآمن","intent":"informational","role":"supporting","priority":2},
-    {"slug":"eliminate-bad-smells","targetQuery":"إزالة الروائح الكريهة من المنزل","cluster":"التنظيف الآمن","intent":"informational","role":"supporting","priority":2},
-    {"slug":"tidy-home-in-15-minutes","targetQuery":"جدول ترتيب المنزل يوميا","cluster":"تنظيم المنزل","intent":"informational","role":"supporting","priority":2},
-    {"slug":"natural-insect-repellents","targetQuery":"طرق الوقاية من حشرات المنزل بأمان","cluster":"سلامة المنزل","intent":"informational","role":"supporting","priority":2},
-    {"slug":"save-mobile-data","targetQuery":"كيفية تقليل استهلاك بيانات الهاتف","cluster":"استخدام الهاتف","intent":"informational","role":"supporting","priority":2},
-    {"slug":"speed-up-slow-computer","targetQuery":"كيفية تسريع الكمبيوتر البطيء","cluster":"صيانة الأجهزة","intent":"informational","role":"supporting","priority":2},
-    {"slug":"essential-android-apps","targetQuery":"تطبيقات أندرويد مفيدة وآمنة","cluster":"استخدام الهاتف","intent":"commercial-investigation","role":"supporting","priority":3},
-    {"slug":"lemon-mint-drink","targetQuery":"طريقة عصير الليمون بالنعناع","cluster":"مشروبات منزلية","intent":"recipe","role":"supporting","priority":2},
-    {"slug":"lentil-soup-recipe","targetQuery":"طريقة شوربة العدس العربية","cluster":"وصفات اقتصادية","intent":"recipe","role":"supporting","priority":2},
-    {"slug":"orange-cake-no-oven","targetQuery":"طريقة كيكة البرتقال بدون فرن","cluster":"حلويات منزلية","intent":"recipe","role":"supporting","priority":2},
-    {"slug":"fruit-salad-recipe","targetQuery":"طريقة سلطة الفواكه وصوص العسل","cluster":"وصفات سريعة","intent":"recipe","role":"supporting","priority":3},
-    {"slug":"qishta-basbousa","targetQuery":"طريقة بسبوسة القشطة","cluster":"حلويات عربية","intent":"recipe","role":"supporting","priority":2},
-    {"slug":"samosa-cheese-dough","targetQuery":"طريقة سمبوسك الجبن بالعجينة المنزلية","cluster":"مخبوزات عربية","intent":"recipe","role":"supporting","priority":2},
-    {"slug":"age-of-earth","targetQuery":"كم عمر الأرض وكيف عرف العلماء","cluster":"علوم مبسطة","intent":"informational","role":"supporting","priority":2},
-    {"slug":"galaxies-and-stars","targetQuery":"ما هي المجرات والنجوم شرح مبسط","cluster":"علوم مبسطة","intent":"informational","role":"supporting","priority":3},
-    {"slug":"amazing-water-facts","targetQuery":"معلومات علمية عن الماء","cluster":"علوم مبسطة","intent":"informational","role":"supporting","priority":3},
-    {"slug":"amazing-human-body-facts","targetQuery":"حقائق علمية عن جسم الإنسان","cluster":"علوم مبسطة","intent":"informational","role":"supporting","priority":3},
-    {"slug":"amazing-animal-facts","targetQuery":"حقائق موثوقة عن الحيوانات","cluster":"علوم مبسطة","intent":"informational","role":"supporting","priority":3},
-    {"slug":"why-we-need-sleep","targetQuery":"لماذا نحتاج إلى النوم","cluster":"الصحة العامة المبسطة","intent":"informational","role":"supporting","priority":2}
+    {
+      "slug": "natural-cleaning-recipes",
+      "targetQuery": "طرق تنظيف المنزل بمواد طبيعية بأمان",
+      "cluster": "التنظيف الآمن",
+      "intent": "informational",
+      "role": "cornerstone",
+      "priority": 1
+    },
+    {
+      "slug": "organize-fridge-waste",
+      "targetQuery": "طريقة تنظيم الثلاجة ومنع هدر الطعام",
+      "cluster": "تنظيم وحفظ الطعام",
+      "intent": "informational",
+      "role": "cornerstone",
+      "priority": 1
+    },
+    {
+      "slug": "save-electricity-bill",
+      "targetQuery": "طرق تقليل استهلاك الكهرباء في المنزل",
+      "cluster": "توفير الطاقة",
+      "intent": "informational",
+      "role": "cornerstone",
+      "priority": 1
+    },
+    {
+      "slug": "protect-online-accounts",
+      "targetQuery": "كيفية حماية حساباتي من الاختراق",
+      "cluster": "الأمان الرقمي",
+      "intent": "informational",
+      "role": "cornerstone",
+      "priority": 1
+    },
+    {
+      "slug": "safe-online-payments",
+      "targetQuery": "كيفية الدفع الإلكتروني بأمان",
+      "cluster": "الأمان الرقمي",
+      "intent": "informational",
+      "role": "cornerstone",
+      "priority": 1
+    },
+    {
+      "slug": "choose-smartphone-budget",
+      "targetQuery": "كيف أختار هاتف مناسب لميزانيتي",
+      "cluster": "اختيار الأجهزة",
+      "intent": "commercial-investigation",
+      "role": "cornerstone",
+      "priority": 1
+    },
+    {
+      "slug": "ai-explained-simply",
+      "targetQuery": "ما هو الذكاء الاصطناعي وكيف يعمل",
+      "cluster": "التقنية للمبتدئين",
+      "intent": "informational",
+      "role": "cornerstone",
+      "priority": 1
+    },
+    {
+      "slug": "chicken-kabsa",
+      "targetQuery": "طريقة عمل كبسة الدجاج السعودية",
+      "cluster": "وصفات خليجية",
+      "intent": "recipe",
+      "role": "cornerstone",
+      "priority": 1
+    },
+    {
+      "slug": "zaatar-manakeesh",
+      "targetQuery": "طريقة عمل مناقيش الزعتر في البيت",
+      "cluster": "مخبوزات عربية",
+      "intent": "recipe",
+      "role": "cornerstone",
+      "priority": 1
+    },
+    {
+      "slug": "coffee-story-yemen",
+      "targetQuery": "تاريخ القهوة في اليمن وميناء المخا",
+      "cluster": "المعرفة اليمنية",
+      "intent": "informational",
+      "role": "cornerstone",
+      "priority": 1
+    },
+    {
+      "slug": "laundry-guide-tips",
+      "targetQuery": "طريقة غسل الملابس والمحافظة على ألوانها",
+      "cluster": "التنظيف الآمن",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "quick-kitchen-cleaning",
+      "targetQuery": "طريقة تنظيف المطبخ بسرعة",
+      "cluster": "التنظيف الآمن",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "eliminate-bad-smells",
+      "targetQuery": "إزالة الروائح الكريهة من المنزل",
+      "cluster": "التنظيف الآمن",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "tidy-home-in-15-minutes",
+      "targetQuery": "جدول ترتيب المنزل يوميا",
+      "cluster": "تنظيم المنزل",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "natural-insect-repellents",
+      "targetQuery": "طرق الوقاية من حشرات المنزل بأمان",
+      "cluster": "سلامة المنزل",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "save-mobile-data",
+      "targetQuery": "كيفية تقليل استهلاك بيانات الهاتف",
+      "cluster": "استخدام الهاتف",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "speed-up-slow-computer",
+      "targetQuery": "كيفية تسريع الكمبيوتر البطيء",
+      "cluster": "صيانة الأجهزة",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "essential-android-apps",
+      "targetQuery": "تطبيقات أندرويد مفيدة وآمنة",
+      "cluster": "استخدام الهاتف",
+      "intent": "commercial-investigation",
+      "role": "supporting",
+      "priority": 3
+    },
+    {
+      "slug": "lemon-mint-drink",
+      "targetQuery": "طريقة عصير الليمون بالنعناع",
+      "cluster": "مشروبات منزلية",
+      "intent": "recipe",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "lentil-soup-recipe",
+      "targetQuery": "طريقة شوربة العدس العربية",
+      "cluster": "وصفات اقتصادية",
+      "intent": "recipe",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "orange-cake-no-oven",
+      "targetQuery": "طريقة كيكة البرتقال بدون فرن",
+      "cluster": "حلويات منزلية",
+      "intent": "recipe",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "fruit-salad-recipe",
+      "targetQuery": "طريقة سلطة الفواكه وصوص العسل",
+      "cluster": "وصفات سريعة",
+      "intent": "recipe",
+      "role": "supporting",
+      "priority": 3
+    },
+    {
+      "slug": "qishta-basbousa",
+      "targetQuery": "طريقة بسبوسة القشطة",
+      "cluster": "حلويات عربية",
+      "intent": "recipe",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "samosa-cheese-dough",
+      "targetQuery": "طريقة سمبوسك الجبن بالعجينة المنزلية",
+      "cluster": "مخبوزات عربية",
+      "intent": "recipe",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "age-of-earth",
+      "targetQuery": "كم عمر الأرض وكيف عرف العلماء",
+      "cluster": "علوم مبسطة",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "galaxies-and-stars",
+      "targetQuery": "ما هي المجرات والنجوم شرح مبسط",
+      "cluster": "علوم مبسطة",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 3
+    },
+    {
+      "slug": "amazing-water-facts",
+      "targetQuery": "معلومات علمية عن الماء",
+      "cluster": "علوم مبسطة",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 3
+    },
+    {
+      "slug": "amazing-human-body-facts",
+      "targetQuery": "حقائق علمية عن جسم الإنسان",
+      "cluster": "علوم مبسطة",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 3
+    },
+    {
+      "slug": "amazing-animal-facts",
+      "targetQuery": "حقائق موثوقة عن الحيوانات",
+      "cluster": "علوم مبسطة",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 3
+    },
+    {
+      "slug": "why-we-need-sleep",
+      "targetQuery": "لماذا نحتاج إلى النوم",
+      "cluster": "الصحة العامة المبسطة",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "cleaning-products-never-mix",
+      "targetQuery": "مواد تنظيف لا تخلطها معًا",
+      "cluster": "التنظيف الآمن",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 1
+    },
+    {
+      "slug": "account-recovery-plan",
+      "targetQuery": "خطة استرداد الحسابات قبل الاختراق",
+      "cluster": "الأمان الرقمي",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 1
+    },
+    {
+      "slug": "used-smartphone-checklist",
+      "targetQuery": "فحص الهاتف المستعمل قبل الشراء",
+      "cluster": "اختيار الأجهزة",
+      "intent": "commercial-investigation",
+      "role": "supporting",
+      "priority": 1
+    },
+    {
+      "slug": "gulf-rice-spices-guide",
+      "targetQuery": "بهارات الكبسة والمندي والمجبوس",
+      "cluster": "وصفات خليجية",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 2
+    }
   ]
 }

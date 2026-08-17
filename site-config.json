@@ -18,9 +18,33 @@
     "muted": "#68716E"
   },
   "categories": [
-    {"slug": "home-tips", "name": "نصائح منزلية", "description": "حلول عملية لبيت أكثر ترتيبًا وراحة وكفاءة."},
-    {"slug": "recipes", "name": "وصفات لذيذة", "description": "وصفات واضحة بمكونات متاحة وخطوات قابلة للتطبيق."},
-    {"slug": "knowledge", "name": "معلومات عامة", "description": "معرفة مبسطة توسّع فضولك وتجيب عن أسئلتك."},
-    {"slug": "tech", "name": "تكنولوجيا", "description": "تقنية مفهومة تساعدك على الاختيار والاستخدام الآمن."}
-  ]
+    {
+      "slug": "home-tips",
+      "name": "نصائح منزلية",
+      "description": "حلول عملية لبيت أكثر ترتيبًا وراحة وكفاءة."
+    },
+    {
+      "slug": "recipes",
+      "name": "وصفات لذيذة",
+      "description": "وصفات واضحة بمكونات متاحة وخطوات قابلة للتطبيق."
+    },
+    {
+      "slug": "knowledge",
+      "name": "معلومات عامة",
+      "description": "معرفة مبسطة توسّع فضولك وتجيب عن أسئلتك."
+    },
+    {
+      "slug": "tech",
+      "name": "تكنولوجيا",
+      "description": "تقنية مفهومة تساعدك على الاختيار والاستخدام الآمن."
+    }
+  ],
+  "customDomain": "",
+  "contact": {
+    "enabled": false,
+    "provider": "formsubmit",
+    "recipient": "",
+    "verified": false,
+    "statusMessage": "سيُفعّل نموذج التواصل بعد ربط الدومين والبريد الرسمي."
+  }
 }

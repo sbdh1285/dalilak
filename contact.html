@@ -41,22 +41,16 @@
   <p class="sub">نسعد بتواصلك معنا في أي وقت</p>
   <p>نرحب بجميع ملاحظاتك واستفساراتك واقتراحاتك. فريقنا يقرأ كل رسالة، ويسعى للرد في أقرب وقت ممكن (عادة خلال 24-48 ساعة).</p>
   <div class="box">
-    <p><b>البريد الإلكتروني:</b> <a href="mailto:contact@dalilak.com">contact@dalilak.com</a></p>
+    <p><b>البريد الإلكتروني:</b> سيُعلن بعد ربط الدومين.</p>
     <p><b>⏰ أوقات الاستجابة:</b> طوال أيام الأسبوع</p>
   </div>
-<h2>أرسل رسالة</h2>
-<form class="contact-form" action="https://formsubmit.co/contact@dalilak.com" method="POST">
-  <input type="hidden" name="_subject" value="رسالة جديدة من موقع دليلك">
-  <input type="hidden" name="_next" value="https://sbdh1285.github.io/dalilak/thanks.html">
-  <input type="hidden" name="_captcha" value="true">
-  <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-  <div class="form-grid"><div><label for="contact-name">الاسم</label><input id="contact-name" name="name" type="text" autocomplete="name" required></div><div><label for="contact-email">البريد الإلكتروني</label><input id="contact-email" name="email" type="email" autocomplete="email" required></div></div>
-  <label for="contact-topic">الموضوع</label><select id="contact-topic" name="topic" required><option value="">اختر الموضوع</option><option>اقتراح مقال</option><option>تصحيح محتوى</option><option>استفسار عام</option><option>إعلان أو شراكة</option></select>
-  <label for="contact-message">الرسالة</label><textarea id="contact-message" name="message" rows="7" minlength="10" required></textarea>
-  <p class="form-note">بإرسال النموذج توافق على معالجة البيانات اللازمة للرد وفق <a href="privacy-policy.html">سياسة الخصوصية</a>. لا ترسل معلومات حساسة.</p>
-  <button class="btn btn-a" type="submit">إرسال الرسالة</button>
-</form>
-  <h2>اقتراحات المواضيع</h2>
+<h2>أرسل رسالة</h2><div class="contact-status" id="contact-status"><strong>التواصل قيد التجهيز</strong><p>سيُفعّل النموذج والبريد الرسمي بعد ربط الدومين. النموذج معطل الآن حتى لا تُفقد الرسائل.</p></div>
+<form class="contact-form contact-form-disabled" action="#" method="post" aria-describedby="contact-status">
+<input type="hidden" name="_subject" value="رسالة جديدة من موقع دليلك"><input type="hidden" name="_next" value="https://sbdh1285.github.io/dalilak/thanks.html"><input type="hidden" name="_captcha" value="true"><input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="form-grid"><div><label for="contact-name">الاسم</label><input id="contact-name" name="name" type="text" autocomplete="name" required disabled></div><div><label for="contact-email">البريد الإلكتروني</label><input id="contact-email" name="email" type="email" autocomplete="email" required disabled></div></div>
+<label for="contact-topic">الموضوع</label><select id="contact-topic" name="topic" required disabled><option value="">اختر الموضوع</option><option>اقتراح مقال</option><option>تصحيح محتوى</option><option>استفسار عام</option></select><label for="contact-message">الرسالة</label><textarea id="contact-message" name="message" rows="7" minlength="10" required disabled></textarea>
+<p class="form-note">سيُتاح الإرسال بعد ربط البريد الرسمي. لا ترسل معلومات حساسة.</p><button class="btn btn-a" type="submit" disabled>إرسال الرسالة</button></form>
+<h2>اقتراحات المواضيع</h2>
   <p>هل لديك فكرة لمقال تود قراءته؟ أخبرنا بها! نختار مواضيعنا بناءً على احتياجات قرائنا واقتراحاتهم، وقد يكون اقتراحك هو عنوان مقالنا القادم.</p>
   <h2>الإعلانات والشراكات</h2>
   <p>للاستفسارات المتعلقة بالإعلانات والشراكات، يرجى مراسلتنا على البريد الإلكتروني أعلاه مع ذكر «إعلانات» في عنوان الرسالة.</p>
@@ -65,8 +59,8 @@
 <footer><div class="wrap"><div class="fgrid">
 <div class="footer-brand"><a class="logo" href="index.html" aria-label="دليلك — الصفحة الرئيسية"><span class="logo-ic"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7.5c4.2-1 7.8-.2 11 2.3v16c-3.2-2.5-6.8-3.3-11-2.3zm22 0c-4.2-1-7.8-.2-11 2.3v16c3.2-2.5 6.8-3.3 11-2.3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M16 9.8v16" stroke="currentColor" stroke-width="2"/></svg></span><span class="logo-copy"><strong>دليلك</strong><small>مجلة عربية للمعرفة والحياة</small></span></a><p>محتوى عربي واضح في المنزل والطعام والمعرفة والتقنية، يُكتب ويُراجع بعناية ليمنحك فائدة عملية دون تعقيد.</p></div>
 <div><h4>الأقسام</h4><a href="category/home-tips.html">نصائح منزلية</a><a href="category/recipes.html">وصفات لذيذة</a><a href="category/knowledge.html">معلومات عامة</a><a href="category/tech.html">تكنولوجيا</a></div>
-<div><h4>عن دليلك</h4><a href="about.html">من نحن</a><a href="authors/editorial-team.html">فريق التحرير</a><a href="editorial-policy.html">سياسة التحرير</a><a href="contact.html">اتصل بنا</a><a href="sitemap.html">خريطة الموقع</a></div>
-<div><h4>السياسات والتواصل</h4><a href="privacy-policy.html">سياسة الخصوصية</a><a href="terms.html">شروط الاستخدام</a><a href="disclaimer.html">إخلاء المسؤولية</a><a href="mailto:contact@dalilak.com">contact@dalilak.com</a></div>
+<div><h4>عن دليلك</h4><a href="about.html">من نحن</a><a href="guide-safe-cleaning.html">أدلة دليلك</a><a href="authors/editorial-team.html">فريق التحرير</a><a href="editorial-policy.html">سياسة التحرير</a><a href="contact.html">اتصل بنا</a><a href="sitemap.html">خريطة الموقع</a></div>
+<div><h4>السياسات والتواصل</h4><a href="privacy-policy.html">سياسة الخصوصية</a><a href="terms.html">شروط الاستخدام</a><a href="disclaimer.html">إخلاء المسؤولية</a><span class="footer-contact-pending">البريد الرسمي قيد التجهيز</span></div>
 </div><div class="f-bottom"><span>© 2026 دليلك — جميع الحقوق محفوظة.</span><span>محتوى عربي يُكتب ويُراجع بعناية</span></div></div></footer>
 <button id="toTop" type="button" title="العودة للأعلى">↑</button>
 <div id="toast">تم نسخ الرابط</div>

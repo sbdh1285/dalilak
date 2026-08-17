@@ -1,0 +1,250 @@
+#!/usr/bin/env python3
+"""حزمة ما قبل الدومين: مراجعة المحتوى الداعم، مقالات وأدلة جديدة، وتجهيز التواصل."""
+from __future__ import annotations
+import html, json, re, subprocess, sys
+from datetime import datetime, timezone
+from email.utils import format_datetime
+from pathlib import Path
+from xml.sax.saxutils import escape
+
+ROOT=Path(__file__).resolve().parents[1]
+SITE_CONFIG=json.loads((ROOT/'site-config.json').read_text(encoding='utf-8'))
+BASE=SITE_CONFIG.get('baseUrl','https://sbdh1285.github.io/dalilak').rstrip('/')
+TODAY='2026-08-17'
+CATEGORY_PATH={'نصائح منزلية':'home-tips','وصفات لذيذة':'recipes','معلومات عامة':'knowledge','تكنولوجيا':'tech'}
+
+SUPPORTING={
+'age-of-earth':'''<div class="accuracy-note"><strong>ملاحظة دقة</strong><p>العمر المقبول علميًا للأرض يقارب 4.54 مليار سنة، ويُستدل عليه خصوصًا بالتأريخ الإشعاعي للنيازك والمعادن القديمة. الأرقام الجيولوجية تقريبية ولها هوامش عدم يقين، لذلك نستخدم «نحو» عند عرض الأحداث البعيدة.</p></div><h2 id="support-check">كيف تقرأ الخط الزمني؟</h2><ul class="check-list"><li>ميّز بين عمر الأرض وعمر أقدم صخورها؛ إعادة تدوير القشرة تمحو كثيرًا من السجل المبكر.</li><li>لا يعني «الانفجار الكامبري» ظهور الحياة فجأة من العدم، بل تنوعًا ملحوظًا في السجل الأحفوري.</li><li>التأريخ الإشعاعي يعتمد على نظائر متعددة وقياسات متقاطعة، لا على عينة واحدة.</li></ul>''',
+'amazing-animal-facts':'''<div class="accuracy-note"><strong>قبل مشاركة أي حقيقة</strong><p>حقائق الحيوانات تنتشر كثيرًا بصياغات مبالغ فيها. راجع اسم النوع والسياق والمصدر؛ القدرة المسجلة لنوع واحد لا تنطبق تلقائيًا على كل أفراد الفصيلة.</p></div><h2 id="support-check">اختبار سريع للمعلومة</h2><ul class="check-list"><li>هل يذكر المصدر نوع الحيوان بدل كلمة عامة؟</li><li>هل الرقم قياس علمي أم تشبيه صحفي؟</li><li>هل السلوك طبيعي أم لوحظ في الأسر فقط؟</li><li>هل توجد استثناءات مرتبطة بالعمر أو البيئة؟</li></ul>''',
+'amazing-human-body-facts':'''<div class="accuracy-note"><strong>تنبيه علمي</strong><p>التشبيهات مثل «العظم أصلب من الخرسانة» أو «المعدة تذيب المعدن» تبسط خصائص مختلفة ولا تصلح كمقارنة هندسية أو طبية دقيقة. الأرقام الحيوية تختلف باختلاف العمر والحجم والنشاط والحالة الصحية.</p></div><h2 id="support-check">كيف تتعامل مع الأرقام الصحية؟</h2><p>اعتبرها نطاقات تعليمية لا تشخيصًا. إذا كان السؤال متعلقًا بأعراض أو نبض أو نوم أو هضم، فالمرجع المناسب هو مختص صحي يعرف حالتك، وليس قائمة حقائق عامة.</p>''',
+'amazing-water-facts':'''<div class="accuracy-note"><strong>الخلاصة العلمية</strong><p>معظم ماء الأرض مالح، وجزء كبير من الماء العذب محجوز في الجليد أو تحت الأرض. نسبة الماء المتاحة للاستخدام تتغير بحسب تعريف «المتاح» والمنطقة والبنية التحتية؛ لذلك تجنب تحويل رقم عالمي واحد إلى وصف لوضع كل بلد.</p></div><h2 id="support-check">ماء الشرب ليس مجرد كمية</h2><p>سلامة الماء ترتبط بالمصدر والمعالجة والتخزين. لا يمكن الحكم على صلاحية الماء من اللون أو الرائحة وحدهما، وعند الشك اتبع تعليمات الجهة المحلية المسؤولة عن المياه والصحة.</p>''',
+'laundry-guide-tips':'''<div class="accuracy-note"><strong>قاعدة الغسيل الآمن</strong><p>ملصق العناية وتعليمات الغسالة والمنظف مقدمة على أي حيلة عامة. اختبر معالجة البقع في جزء مخفي، ولا تخلط مبيّض الكلور مع الخل أو الأمونيا أو منظفات أخرى.</p></div><h2 id="support-check">قائمة قبل تشغيل الغسالة</h2><ul class="check-list"><li>أفرغ الجيوب وأغلق السحابات واقلب القطع الداكنة.</li><li>افصل القطع التي تنزف ألوانها أو تحتاج دورة لطيفة.</li><li>استخدم مقدار المنظف وفق عسر الماء وحجم الحمولة.</li><li>لا تحشر الحوض؛ الحركة جزء من عملية التنظيف.</li></ul>''',
+'lemon-mint-drink':'''<div class="accuracy-note"><strong>ضبط الوصفة</strong><p>حموضة الليمون وحجمه يختلفان، لذلك ابدأ بسكر أقل ثم عدّل بعد إضافة الماء. اغسل الليمون والنعناع تحت ماء جارٍ ولا تستخدم الصابون على المنتجات الطازجة.</p></div><h2 id="support-check">مقياس قابل للتعديل</h2><p>لكل كوب: ابدأ بنحو ربع كوب عصير ليمون وثلاثة أرباع كوب ماء، ثم عدّل. إذا حضّرته مسبقًا، أضف النعناع والثلج قرب التقديم حتى لا تضعف النكهة أو يخف المشروب.</p>''',
+'lentil-soup-recipe':'''<div class="accuracy-note"><strong>ملاحظة على العدس</strong><p>العدس الأحمر أو الأصفر المجروش لا يحتاج عادة إلى نقع طويل، لكن غسله وفحصه مهمان. زمن الطهي يتغير حسب نوع العدس وعمره وقوة النار.</p></div><h2 id="support-check">ضبط القوام والحفظ</h2><p>أضف الماء تدريجيًا بعد الخلط إذا أصبحت الشوربة كثيفة. برّد البقايا سريعًا في علب غير عميقة، ولا تعتمد على الرائحة وحدها للحكم على السلامة.</p>''',
+'orange-cake-no-oven':'''<div class="accuracy-note"><strong>سلامة طريقة القدر</strong><p>استخدم قدرًا سميكًا مناسبًا للموقد وغطاءً ثابتًا، وأبعد المقبض عن الحافة. لا تضع وعاءً غير مصمم للحرارة المباشرة، ولا تترك القدر دون مراقبة.</p></div><h2 id="support-check">قبل قلب الكيكة</h2><ul class="check-list"><li>يخرج العود مع فتات رطبة قليلة لا عجين سائل.</li><li>ترتد الحافة قليلًا عند لمسها برفق.</li><li>تُترك 10 إلى 15 دقيقة قبل الفك لتقليل التمزق.</li></ul>''',
+'fruit-salad-recipe':'''<div class="accuracy-note"><strong>سلامة المنتجات الطازجة</strong><p>اغسل الفواكه تحت ماء جارٍ قبل التقطيع حتى لو ستزيل القشرة، ولا تستخدم الصابون أو المبيّض. احفظ الفواكه المقطعة مبردة وقدّمها في وعاء نظيف.</p></div><h2 id="support-check">اختيار التركيبة</h2><p>استخدم قاعدة 2+1: نوعان ثابتان نسبيًا مثل التفاح والعنب، ونوع طري يضاف أخيرًا مثل الموز أو الفراولة. الصوص اختياري؛ الفاكهة الناضجة قد لا تحتاج إلى عسل إضافي.</p>''',
+'galaxies-and-stars':'''<div class="accuracy-note"><strong>ملاحظة فلكية</strong><p>تقديرات أعداد النجوم والمجرات تتغير مع تحسن الرصد، ولا يمكن عد كل الكون مباشرة. كما أن رؤية جسم بعيد تعني رؤيته كما كان في الماضي لأن الضوء يحتاج وقتًا للوصول.</p></div><h2 id="support-check">ثلاثة مفاهيم لا تخلط بينها</h2><ul class="check-list"><li>النظام الشمسي جزء صغير من مجرة درب التبانة.</li><li>السنة الضوئية وحدة مسافة وليست مدة زمنية للاستخدام اليومي.</li><li>النجوم التي تبدو متجاورة في السماء قد تكون متباعدة جدًا في العمق.</li></ul>''',
+'natural-insect-repellents':'''<div class="accuracy-note"><strong>حدود الطرق الطبيعية</strong><p>رائحة نبات أو زيت لا تعني حماية موثوقة في كل الظروف، وبعض الزيوت قد تهيج الجلد أو تضر الحيوانات الأليفة. الأولوية لمنع الدخول وإزالة الطعام والماء وإصلاح الشقوق، ثم استخدام منتج مسجل وفق ملصقه عند الحاجة.</p></div><h2 id="support-check">متى تطلب مختصًا؟</h2><p>عند الاشتباه في النمل الأبيض أو بق الفراش، أو وجود قوارض، أو استمرار الإصابة بعد إزالة مصادرها، أو إذا كان الاستخدام الآمن للمبيد غير واضح.</p>''',
+'essential-android-apps':'''<div class="accuracy-note"><strong>القائمة تتغير</strong><p>توفر التطبيق وسعره وإعلاناته وصلاحياته قد تتغير بعد نشر المقال. افحص صفحة المتجر والمطور وتاريخ التحديث والمراجعات الحديثة قبل التثبيت.</p></div><h2 id="support-check">اختبار الصلاحيات</h2><p>اسأل: هل الصلاحية ضرورية للوظيفة الأساسية؟ ارفض الوصول غير الضروري، وراجع الصلاحيات بعد التحديث، واحذف التطبيق الذي لا تستخدمه بدل تركه يعمل في الخلفية.</p>''',
+'qishta-basbousa':'''<div class="accuracy-note"><strong>ضبط القشطة والقطر</strong><p>برّد القشطة قبل وضعها بين الطبقات لتبقى أكثر تماسكًا، وأضف القطر تدريجيًا بدل سكبه كله إذا كنت تفضل قوامًا أقل حلاوة. احفظ الحلوى التي تحتوي على قشطة مبردة.</p></div><h2 id="support-check">علامات النضج</h2><p>تكون الحواف ذهبية والوسط متماسكًا دون جفاف. تختلف المدة باختلاف الصينية والفرن، لذلك راقب اللون والقوام ولا تعتمد على الدقائق وحدها.</p>''',
+'quick-kitchen-cleaning':'''<div class="accuracy-note"><strong>التنظيف ليس التعقيم</strong><p>إزالة الدهون والأوساخ خطوة أساسية، أما التعقيم أو التطهير فله منتج ومدة تماس وتعليمات محددة. لا تخلط المنتجات لتسريع العمل، ولا تنظف موقدًا أو فرنًا ساخنًا.</p></div><h2 id="support-check">ترتيب يقلل إعادة العمل</h2><ol><li>أبعد الطعام والأدوات النظيفة.</li><li>نظف من الأعلى إلى الأسفل ومن الأقل اتساخًا إلى الأكثر.</li><li>استخدم قطعة منفصلة لمناطق الطعام والأرضية.</li><li>جفف الأسطح وأعد الأدوات بعد اكتمال العمل.</li></ol>''',
+'samosa-cheese-dough':'''<div class="accuracy-note"><strong>منع تسرب الحشوة</strong><p>صفِّ الجبن الرطب واترك حافة نظيفة حول الحشوة واضغط الإغلاق دون هواء محبوس. البيض ليس ضروريًا دائمًا، خصوصًا إذا كانت الحشوة متماسكة.</p></div><h2 id="support-check">القلي أو الفرن</h2><p>في القلي حافظ على حرارة مستقرة ولا تملأ القدر. للفرن ادهن السطح قليلًا واقلب القطع عند الحاجة. اترك الحشوة تبرد قبل التشكيل.</p>''',
+'save-mobile-data':'''<div class="accuracy-note"><strong>تختلف أسماء الإعدادات</strong><p>المسارات المذكورة قد تختلف حسب إصدار أندرويد وواجهة الشركة أو iOS. راجع صفحة استهلاك البيانات في جهازك وحدد التطبيقات الفعلية الأعلى استهلاكًا قبل تعطيل وظائف تحتاجها.</p></div><h2 id="support-check">تجربة أسبوع واحد</h2><p>سجل استهلاك البداية، فعّل توفير البيانات للتطبيقات غير الضرورية، حمّل الخرائط والموسيقى عبر Wi‑Fi، ثم قارن الاستهلاك بعد سبعة أيام. لا تخفض جودة كل شيء إن لم يكن هو مصدر الاستهلاك.</p>''',
+'speed-up-slow-computer':'''<div class="accuracy-note"><strong>قبل الحذف أو الترقية</strong><p>أنشئ نسخة احتياطية وتأكد من مساحة القرص وتحديث النظام وافحص البرامج الضارة بأداة موثوقة. لا تستخدم «منظفات سجل» مجهولة ولا تحذف ملفات نظام يدويًا.</p></div><h2 id="support-check">حدد عنق الزجاجة</h2><p>راقب استخدام المعالج والذاكرة والقرص أثناء البطء. إذا امتلأت الذاكرة فإغلاق البرامج أو زيادتها قد يساعد؛ وإذا ظل القرص التقليدي مشغولًا باستمرار فقد تكون ترقية SSD مفيدة بعد التأكد من التوافق.</p>''',
+'tidy-home-in-15-minutes':'''<div class="accuracy-note"><strong>خطة مرنة لا اختبار كمال</strong><p>مدة 15 دقيقة أداة لبدء الحركة وليست وعدًا بترتيب كل منزل. عدّلها حسب المساحة والقدرة والوقت، وتوقف عند وجود ألم أو خطر سقوط أو حمل ثقيل.</p></div><h2 id="support-check">اختر نتيجة واحدة</h2><p>في كل جلسة حدد نتيجة قابلة للرؤية: سطح واحد، درج واحد، أو جمع الملابس فقط. تصوير المنطقة قبل وبعد لنفسك يساعد على تقييم النظام، لكن لا يلزم نشر الصور أو ادعاء تجربة لم تحدث.</p>''',
+'why-we-need-sleep':'''<div class="accuracy-note"><strong>النوم يختلف بين الأشخاص</strong><p>الاحتياج يتأثر بالعمر والحالة الصحية والعمل. النصائح العامة لا تعالج الأرق المزمن أو انقطاع النفس أو النعاس الشديد نهارًا؛ هذه علامات تستحق استشارة مختص.</p></div><h2 id="support-check">سجل بسيط لمدة أسبوعين</h2><p>دوّن وقت النوم والاستيقاظ والقيلولة والكافيين والنعاس النهاري. السجل لا يشخّص، لكنه يساعدك والطبيب على رؤية النمط بدل الاعتماد على ليلة واحدة.</p>''',
+'eliminate-bad-smells':'''<div class="accuracy-note"><strong>ابدأ بالمصدر لا بالعطر</strong><p>التعطير قد يخفي الرائحة ولا يحل سببها. افحص القمامة والرطوبة والمصارف والأقمشة والأجهزة. رائحة الغاز أو الاحتراق أو المذيب القوية حالة مختلفة: غادر المكان واتبع تعليمات الطوارئ المحلية ولا تحاول تغطيتها.</p></div><h2 id="support-check">متى تحتاج فنيًا؟</h2><p>إذا عادت رائحة الصرف بعد التنظيف، أو ظهرت رطوبة وعفن متكرر، أو كانت الرائحة كهربائية أو مرتبطة بجهاز، أوقف المصدر إن كان ذلك آمنًا واستعن بمتخصص مناسب.</p>'''
+}
+
+TITLE_RENAMES={
+'حقائق مدهشة عن جسم الإنسان لم تكن تعرفها':'حقائق مبسطة عن جسم الإنسان: القلب والعظام والجلد والدماغ',
+'طرد الحشرات من المنزل بطرق طبيعية وآمنة':'الوقاية من حشرات المنزل ومكافحتها بأمان'}
+TEXT_FIXES={
+'بدون أي مواد كيميائية.':'دون الحاجة إلى منظف متخصص في هذه المهمة.',
+'خمس عشرة دقيقة كل يوم تحقق نتائج أفضل من خمس ساعات مرة كل شهر، لأنك بهذه الطريقة تمنع الفوضى من التراكم أصلًا.':'خمس عشرة دقيقة يوميًا قد تكون أسهل للاستمرار من جلسة طويلة متباعدة، وتساعد على منع تراكم بعض الفوضى.',
+'يمكنك تحضير مناقيش أفضل من المخبز، وبجزء بسيط من التكلفة.':'يمكنك تحضير مناقيش منزلية وضبط سماكتها وخلطتها حسب ذوقك.',
+'طرق طبيعية لطرد الحشرات من المنزل: النمل، الصراصير، الناموس، والذباب — حلول آمنة بدون مبيدات كيميائية مع الوقاية.':'دليل للوقاية من حشرات المنزل وتقليل مصادرها واستخدام المصائد أو المنتجات المسجلة وفق التعليمات عند الحاجة.',
+'غسلة كاملة أفضل من نصفين.':'شغّل حمولة مناسبة لسعة الغسالة دون حشو زائد لتجنب دورات صغيرة متكررة.'}
+FULL_BODY={
+'amazing-human-body-facts':'''<div class="accuracy-note"><strong>تنبيه علمي</strong><p>الأرقام التالية تقريبية وتختلف بين الأشخاص. التشبيهات الشائعة بين العظم والخرسانة أو الدماغ والكمبيوتر لا تقيس الخصائص نفسها، لذلك نوضح الوظيفة بدل استخدام مقارنات مثيرة وغير دقيقة.</p></div>
+<h2 id="sec-0">القلب: مضخة تتكيف مع نشاطك</h2><p>معدل النبض وكمية الدم التي يضخها القلب يتغيران مع العمر والنشاط واللياقة والحالة الصحية. الرقم الشائع «نحو مئة ألف نبضة يوميًا» تقدير تقريبي لشخص بمتوسط نبض معين، وليس رقمًا ثابتًا للجميع. استمرار خفقان غير معتاد أو ألم أو ضيق تنفس يحتاج تقييمًا طبيًا.</p>
+<h2 id="sec-1">العظام: نسيج حي يتجدد</h2><p>العظم ليس مادة صلبة خاملة؛ إنه نسيج حي يعاد تشكيله باستمرار ويخزن معادن ويحمي أعضاء ويساعد على الحركة وصنع خلايا الدم في النخاع. لدى البالغ عادة نحو 206 عظام، لكن العدد قد يختلف قليلًا بسبب اختلافات تشريحية أو التحام بعض العظام.</p>
+<h2 id="sec-2">الجلد: حاجز منظم ومعقد</h2><p>الجلد أكبر أعضاء الجسم من حيث المساحة، ويعمل حاجزًا ضد البيئة ويساعد على تنظيم الحرارة والإحساس. تتجدد خلاياه بمعدلات تختلف بين الطبقات والأشخاص؛ لا يعني ذلك أن الجسم يستبدل «جلدًا كاملًا» في يوم محدد، كما أن غبار المنزل خليط من ألياف وتربة وجزيئات متعددة وليس خلايا جلد فقط.</p>
+<h2 id="sec-3">الدماغ: شبكة عصبية لا آلة حسابية بسيطة</h2><p>تقدّر أبحاث تشريحية عدد الخلايا العصبية في الدماغ البشري بنحو 86 مليارًا، وتتصل عبر شبكات شديدة التعقيد. لكن مقارنة الدماغ بحاسوب أو بعدد نجوم المجرة تشبيه تعليمي لا قياس علمي مباشر. النوم والتغذية والحركة والصحة العامة كلها تؤثر في الأداء المعرفي.</p>
+<h2 id="sec-4">المعدة: حمض وحاجز واقٍ</h2><p>تفرز المعدة حمضًا وإنزيمات للمساعدة في الهضم، وتحمي بطانتها طبقة من المخاط والبيكربونات وآليات خلوية. عبارة «الحمض يذيب المعدن» لا تشرح ما يحدث داخل الجسم؛ تركيز الحمض والوقت ونوع المادة عوامل أساسية. الألم المستمر أو النزيف أو القيء المتكرر ليس موضوع تجربة منزلية ويحتاج رعاية طبية.</p>
+<h2 id="sec-5">حقائق عملية بدل الأرقام المدهشة</h2><ul><li>العضلات والعظام والمفاصل تعمل كنظام واحد للحركة.</li><li>الجلد يحتاج حماية من الشمس والعناية المناسبة للحالة.</li><li>الدماغ يستهلك قدرًا ملحوظًا من طاقة الجسم رغم صغر كتلته.</li><li>الجهاز الدوري ينقل الأكسجين والمواد الغذائية ويزيل نواتج الاستقلاب.</li><li>الاختلاف الطبيعي واسع؛ لا تشخّص نفسك بمقارنة رقم واحد بقائمة على الإنترنت.</li></ul>
+<h2 id="sec-6">الخلاصة</h2><p>قيمة معرفة الجسم ليست في جمع أرقام مثيرة، بل في فهم أن الأعضاء أنظمة مترابطة ومتغيرة. استخدم المصادر الطبية للتعلم العام، واستشر مختصًا عندما يتعلق السؤال بأعراض أو علاج.</p>''',
+'natural-insect-repellents':'''<div class="accuracy-note"><strong>الخلاصة</strong><p>لا توجد وصفة منزلية واحدة تضمن طرد كل الحشرات. ابدأ بمنع الطعام والماء والمخابئ، وسد نقاط الدخول، وحدد نوع الآفة. عند الحاجة استخدم مصيدة أو منتجًا مسجلًا وفق ملصقه، واطلب مختصًا للإصابات الكبيرة أو الآفات التي يصعب تشخيصها.</p></div>
+<h2 id="sec-0">الوقاية أولًا</h2><ul><li>احفظ الطعام والحبوب في علب محكمة ونظف الفتات والانسكابات.</li><li>أصلح تسربات الماء وجفف المناطق الرطبة.</li><li>سد الشقوق حول الأنابيب والأبواب وثبت شبك النوافذ.</li><li>أخرج القمامة ونظف الحاوية ولا تترك طعام الحيوانات مكشوفًا.</li></ul>
+<h2 id="sec-1">النمل: أزل المصدر والمسار</h2><p>نظف مسار النمل بالماء والمنظف المناسب للسطح، ثم ابحث عن نقطة الدخول وسدها. القرفة والروائح قد تغيّر المسار مؤقتًا لكنها لا تعالج مستعمرة داخل الجدار. استخدم طعمًا مسجلًا وفق التعليمات إذا استمرت المشكلة، وبعيدًا عن الأطفال والحيوانات.</p>
+<h2 id="sec-2">الصراصير: لا تصنع طعومًا مكشوفة</h2><p>ركز على الرطوبة والفتات والشقوق، واستخدم مصائد للمراقبة. لا تخلط حمض البوريك والسكر في أغطية مكشوفة؛ قد يتعرض له طفل أو حيوان. إذا استخدمت منتج حمض البوريك أو طعمًا، فليكن منتجًا مسجلًا وبالمكان والجرعة المكتوبين على الملصق.</p>
+<h2 id="sec-3">البعوض: امنع التكاثر واللدغ</h2><p>أفرغ الماء الراكد ونظف الأوعية وثبت الشبك. المروحة قد تقلل اقتراب البعوض في مساحة محدودة، لكنها ليست حماية كاملة. للحماية الشخصية استخدم طاردًا مسجلًا ومناسبًا للعمر والحالة وفق تعليمات الجهة الصحية في بلدك. الزيوت العطرية قد تهيج الجلد أو تضر بعض الحيوانات.</p>
+<h2 id="sec-4">الذباب: النظافة والمصائد المناسبة</h2><p>غط القمامة ونظف المواد العضوية والرطوبة. استخدم مصيدة تجارية أو بسيطة في مكان لا يلوث الطعام، ولا تعتمد على أكياس الماء المعلقة؛ لا يوجد أساس موثوق يجعلها حلًا ثابتًا.</p>
+<h2 id="sec-5">العناكب والسمك الفضي</h2><p>قلل الحشرات الأخرى والرطوبة والفوضى وسد الشقوق. انقل العنكبوت للخارج إذا كان ذلك آمنًا، ولا تلمس نوعًا لا تعرفه. السمك الفضي يرتبط غالبًا بالرطوبة والورق؛ خفض الرطوبة والتخزين الجاف أهم من الروائح المنزلية.</p>
+<h2 id="sec-6">استخدام المبيدات</h2><p>اختر منتجًا مسجلًا لنوع الآفة والمكان، واتبع الملصق بشأن التهوية والإبعاد ومدة الانتظار. لا تضاعف الجرعة ولا تنقل المنتج إلى عبوة أخرى. استعن بمختص عند بق الفراش أو النمل الأبيض أو القوارض أو تكرار الإصابة.</p>
+<h2 id="sec-7">الخلاصة</h2><p>المكافحة الآمنة عملية: تشخيص، إزالة مصادر، منع دخول، مراقبة، ثم تدخل محدد عند الحاجة. كلمة «طبيعي» لا تضمن الفعالية أو السلامة.</p>'''}
+
+NEW_ARTICLES={
+'cleaning-products-never-mix':{
+ 'title':'مواد تنظيف لا تخلطها معًا: جدول سلامة منزلي','category':'نصائح منزلية','description':'جدول عملي يوضح خلطات التنظيف الخطرة، طريقة قراءة الملصق، التهوية، التخزين، وما يجب فعله عند التعرض للأبخرة.','minutes':6,
+ 'body':'''<div class="quick-answer"><h2 id="quick">الخلاصة السريعة</h2><p>لا تخلط مبيّض الكلور مع الأمونيا أو الخل أو الأحماض أو أي منظف آخر. لا تخلط منتجين لمجرد أن كليهما مخصص للتنظيف. استخدم منتجًا واحدًا وفق ملصقه، وهوِّ المكان، واحفظ العبوة الأصلية بعيدة عن الأطفال. عند ظهور سعال شديد أو ضيق تنفس أو حرقان، غادر إلى هواء نقي واتصل بالطوارئ أو مركز السموم المحلي.</p></div>
+<h2 id="why">لماذا الخلط خطر؟</h2><p>منتجات التنظيف صممت لتعمل بتركيبة محددة. جمعها قد يطلق أبخرة مهيجة أو سامة أو يولد حرارة وتناثرًا. لا يمكن معرفة أمان الخلطة من الرائحة أو اللون، ولا تجعل كمية الماء الخلط آمنًا.</p>
+<h2 id="table">جدول «لا تخلط»</h2><div class="table-wrap"><table class="seo-table"><thead><tr><th>المنتج الأول</th><th>لا تخلطه مع</th><th>البديل الآمن</th></tr></thead><tbody><tr><td>مبيّض الكلور</td><td>الأمونيا، الخل، منظف المرحاض، الكحول، أو أي منظف آخر</td><td>استخدمه وحده وبالتخفيف المكتوب على الملصق</td></tr><tr><td>منظف المرحاض الحمضي</td><td>مبيّض الكلور أو منظف آخر</td><td>اشطف وفق التعليمات وانتظر قبل منتج مختلف</td></tr><tr><td>مزيل الانسداد</td><td>أي مزيل أو منظف ثانٍ</td><td>اتبع الملصق أو استخدم فني سباكة</td></tr><tr><td>بيروكسيد الهيدروجين</td><td>الخل في الوعاء نفسه</td><td>لا تصنع خلطات؛ استخدم منتجًا واحدًا مناسبًا</td></tr></tbody></table></div>
+<h2 id="label">كيف تقرأ الملصق؟</h2><ul class="check-list"><li>حدد المادة الفعالة والتحذيرات ومعدات الحماية.</li><li>اتبع نسبة التخفيف ومدة بقاء السطح رطبًا.</li><li>لا تنقل المنتج إلى عبوة مشروبات ولا تنزع الاسم.</li><li>لا تستخدم منتجًا صناعيًا داخل المنزل دون تعليمات صريحة.</li></ul>
+<h2 id="incident">إذا حدث خلط بالخطأ</h2><ol><li>لا تضف مادة ثالثة ولا تحاول «معادلة» الخليط.</li><li>ابتعد عن المكان إلى هواء نقي دون تعريض نفسك للأبخرة.</li><li>اتصل بالطوارئ أو مركز السموم المحلي واذكر أسماء المنتجات.</li><li>إذا لامس الجلد أو العين، اتبع تعليمات الملصق والجهة الطبية.</li></ol>
+<h2 id="worksheet">بطاقة قبل التنظيف</h2><p>اكتب: السطح، نوع الاتساخ، المنتج المختار، التخفيف، مدة التماس، والتهوية. إذا لم تجد هذه المعلومات على العبوة فلا ترتجل خلطة.</p>''',
+ 'sources':[('CDC — الاستخدام الآمن لمبيّض الكلور','https://www.cdc.gov/natural-disasters/safety/how-to-safely-clean-and-sanitize-with-bleach.html'),('NIOSH — حماية مستخدمي مواد التنظيف','https://www.cdc.gov/niosh/docs/2012-126/pdfs/2012-126.pdf')],
+ 'related':['natural-cleaning-recipes','quick-kitchen-cleaning','laundry-guide-tips']},
+'account-recovery-plan':{
+ 'title':'خطة استرداد الحسابات قبل الاختراق: ورقة عمل عملية','category':'تكنولوجيا','description':'خطة عملية لتجهيز بريد الاسترداد ورموز النسخ الاحتياطية والأجهزة الموثوقة وترتيب الحسابات قبل فقد الهاتف أو التعرض للاختراق.','minutes':7,
+ 'body':'''<div class="quick-answer"><h2 id="quick">الخلاصة السريعة</h2><p>لا تنتظر فقد الحساب لتكتشف أن رقم الهاتف قديم أو أن رموز الاسترداد داخل الهاتف المفقود. ابدأ بالبريد الرئيسي، فعّل وسيلة مصادقة قوية، خزّن رموز النسخ الاحتياطية خارج الجهاز، وحدّث قنوات الاسترداد. لا ترسل الرموز أو كلمات المرور لأي شخص يدعي أنه الدعم.</p></div>
+<h2 id="inventory">1. جرد الحسابات المهمة</h2><div class="table-wrap"><table class="seo-table"><thead><tr><th>الأولوية</th><th>أمثلة</th><th>ما يجب تسجيله</th></tr></thead><tbody><tr><td>حرجة</td><td>البريد، البنك، مدير كلمات المرور</td><td>طريقة الدخول، الاسترداد، MFA، مكان الرموز</td></tr><tr><td>عالية</td><td>التواصل والعمل والتخزين</td><td>البريد البديل والأجهزة والجلسات</td></tr><tr><td>عادية</td><td>التسوق والترفيه</td><td>وسيلة الدفع والاشتراك وخيار الحذف</td></tr></tbody></table></div>
+<h2 id="backup">2. افصل عوامل الاسترداد</h2><p>إذا كان الهاتف هو كلمة المرور وتطبيق المصادقة والبريد الاحتياطي ومكان الرموز في الوقت نفسه، ففقده يعطل كل شيء. احتفظ بنسخة مشفرة أو ورقية في مكان آمن منفصل، وفق حساسية حساباتك.</p>
+<h2 id="drill">3. نفذ اختبارًا دون تسجيل الخروج</h2><ul class="check-list"><li>تحقق أن البريد والرقم البديلين لك ويمكن الوصول إليهما.</li><li>تأكد أن رموز النسخ الاحتياطية حديثة ولم تُستخدم.</li><li>راجع الأجهزة والجلسات واحذف القديم.</li><li>سجل رابط الدعم الرسمي، لا رقمًا من إعلان أو رسالة.</li><li>لا تختبر الاسترداد بإغلاق حسابك الرئيسي أو حذف وسيلة تعمل.</li></ul>
+<h2 id="incident">4. عند الاشتباه بالاختراق</h2><ol><li>استخدم جهازًا موثوقًا وادخل من العنوان الرسمي.</li><li>غيّر كلمة المرور وأغلق الجلسات غير المعروفة.</li><li>راجع قواعد تحويل البريد وبيانات الاسترداد.</li><li>احفظ الأدلة وأبلغ البنك أو جهة العمل إذا تأثرت بياناتها.</li></ol>
+<h2 id="worksheet">ورقة العمل</h2><p>أنشئ جدولًا خاصًا لا يحتوي كلمات المرور نفسها: اسم الحساب، أهميته، وسيلة MFA، تاريخ مراجعة الاسترداد، ومكان النسخة الاحتياطية. راجعه كل ستة أشهر أو بعد تغيير الهاتف.</p>''',
+ 'sources':[('CISA — المصادقة المقاومة للتصيد','https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf'),('CISA — كلمات المرور القوية','https://www.cisa.gov/secure-our-world/use-strong-passwords')],
+ 'related':['protect-online-accounts','safe-online-payments','used-smartphone-checklist']},
+'used-smartphone-checklist':{
+ 'title':'شراء هاتف مستعمل: قائمة فحص قبل الدفع','category':'تكنولوجيا','description':'قائمة فحص عملية للهاتف المستعمل تشمل الملكية وقفل التنشيط والتحديثات والبطارية والشاشة والكاميرا والشبكة وإعادة الضبط الآمنة.','minutes':8,
+ 'body':'''<div class="quick-answer"><h2 id="quick">الخلاصة السريعة</h2><p>لا تدفع قبل التأكد من ملكية البائع وإزالة حسابه وقفل التنشيط أمامك. افحص رقم الجهاز وفق القنوات الرسمية المتاحة في بلدك، وتحقق من آخر تحديث أمني ودعم الشركة، ثم اختبر الشاشة والبطارية والكاميرا والمكالمات والشحن. لا تشتر جهازًا مقفلًا على وعد بإمكانية تجاوز الحماية لاحقًا.</p></div>
+<h2 id="ownership">أولًا: الملكية وقفل التنشيط</h2><ul class="check-list"><li>اطلب فاتورة أو دليل ملكية معقولًا وتطابق وصف الجهاز.</li><li>دع البائع يزيل حسابه من الإعدادات بالطريقة الرسمية.</li><li>أعد تشغيل الإعداد حتى تتأكد أنه لا يطلب حساب المالك السابق.</li><li>لا تتعلم أو تستخدم طرق تجاوز FRP أو Activation Lock؛ قد يكون الجهاز مسروقًا أو غير قابل للاستخدام.</li></ul>
+<h2 id="hardware">ثانيًا: اختبار العتاد</h2><div class="table-wrap"><table class="seo-table"><thead><tr><th>الجزء</th><th>اختبار سريع</th><th>علامة خطر</th></tr></thead><tbody><tr><td>الشاشة</td><td>خلفيات فاتحة وداكنة ولمس كل الحواف</td><td>بقع، وميض، لمس وهمي</td></tr><tr><td>البطارية</td><td>حالة البطارية إن توفرت وتجربة شحن</td><td>سخونة أو انتفاخ أو هبوط سريع</td></tr><tr><td>الكاميرا</td><td>كل العدسات والفيديو والتركيز</td><td>اهتزاز أو ضباب داخلي</td></tr><tr><td>الصوت والشبكة</td><td>مكالمة، سماعتان، Wi‑Fi وBluetooth</td><td>انقطاع أو ميكروفون ضعيف</td></tr><tr><td>المنافذ</td><td>شاحن موثوق وكابل بيانات</td><td>حركة شديدة أو شحن متقطع</td></tr></tbody></table></div>
+<h2 id="software">ثالثًا: النظام والتحديثات</h2><p>افتح صفحة إصدار النظام والتحديث الأمني، ثم تحقق من سياسة دعم الطراز لدى الشركة. الجهاز الرخيص الذي انتهت تحديثاته قد لا يكون صفقة مناسبة للحسابات الحساسة.</p>
+<h2 id="deal">رابعًا: توثيق الصفقة</h2><p>سجل الطراز والسعة واللون والرقم التسلسلي أو IMEI وفق قوانين بلدك، والسعر وحالة العيوب والملحقات. استخدم وسيلة دفع موثقة وتجنب التحويل المسبق لبائع مجهول.</p>
+<h2 id="after">بعد الشراء</h2><ol><li>أجر إعادة ضبط من الإعدادات بعد إزالة حساب البائع.</li><li>ثبّت التحديثات قبل استعادة بياناتك.</li><li>فعّل قفل الشاشة والنسخ الاحتياطي وميزة العثور على الجهاز.</li><li>راقب البطارية والحرارة خلال فترة الإرجاع إن وجدت.</li></ol>''',
+ 'sources':[('Android Help — فحص إصدار النظام والتحديث الأمني','https://support.google.com/android/answer/7680439'),('Google Pixel Help — إعادة ضبط المصنع','https://support.google.com/pixelphone/answer/4596836')],
+ 'related':['choose-smartphone-budget','protect-online-accounts','save-mobile-data']},
+'gulf-rice-spices-guide':{
+ 'title':'دليل بهارات الأرز الخليجي: الكبسة والمندي والمجبوس','category':'وصفات لذيذة','description':'مرجع عملي يوضح الفروق العامة بين بهارات الكبسة والمندي والمجبوس وطريقة بناء خلطة متوازنة وتخزينها وتعديلها دون ادعاء وصفة واحدة أصلية.','minutes':7,
+ 'body':'''<div class="quick-answer"><h2 id="quick">الخلاصة السريعة</h2><p>لا توجد خلطة واحدة تمثل كل بيت أو منطقة. الكبسة تميل إلى دفء القرفة والهيل والطماطم، والمندي يعتمد كثيرًا على نكهة الدخان وطريقة الطهي، والمجبوس يستخدم بهارات عطرية وقد يدخل فيه الليمون المجفف. ابدأ بخلطة صغيرة وسجل النسب التي تناسب أرزك ومرقك.</p></div>
+<h2 id="compare">مقارنة عملية</h2><div class="table-wrap"><table class="seo-table"><thead><tr><th>الطبق</th><th>ملامح شائعة</th><th>ما يصنع الفرق فعلًا</th></tr></thead><tbody><tr><td>الكبسة</td><td>هيل، قرفة، قرنفل، كمون وكزبرة مع طماطم</td><td>تحمير البصل والدجاج وضبط المرق</td></tr><tr><td>المندي</td><td>بهارات أخف نسبيًا مع حضور الدخان</td><td>طريقة الطهي والدخان الآمن لا كثرة البهارات</td></tr><tr><td>المجبوس</td><td>بهارات عطرية وليمون مجفف في وصفات كثيرة</td><td>توازن اللومي والمرق وعدم المرارة</td></tr></tbody></table></div>
+<h2 id="base">خلطة بداية قابلة للتعديل</h2><p>لكل ملعقتين من الكزبرة المطحونة استخدم ملعقة كمون، ونصف ملعقة فلفل أسود، وكميات صغيرة من القرفة والهيل والقرنفل. هذه نقطة انطلاق وليست معيارًا أصيلًا. حضّر كمية تكفي تجربة واحدة قبل مضاعفتها.</p>
+<h2 id="whole">متى تستخدم البهارات الصحيحة؟</h2><p>الهيل والقرفة وورق الغار والقرنفل يمكن تحميصها برفق مع البصل ثم إزالتها أو تركها حسب الوصفة. البهارات المطحونة تحترق أسرع؛ أضفها مع سائل أو طماطم بعد تحمير الأساس.</p>
+<h2 id="lومي">التعامل مع اللومي</h2><p>اثقب الليمون المجفف أو اكسره حسب شدة النكهة المطلوبة. البذور والطبقة الداخلية قد تزيد المرارة عند الطهي الطويل، لذا ابدأ بكمية قليلة وذق المرق.</p>
+<h2 id="storage">التخزين والتوثيق</h2><ul class="check-list"><li>احفظ الخلطة بعيدًا عن الضوء والحرارة والرطوبة.</li><li>اكتب تاريخ الطحن ومكونات الخلطة.</li><li>حضّر كميات صغيرة لأن الرائحة تضعف مع الوقت.</li><li>سجل نوع الأرز وكمية المرق والخلطة بعد كل طبخة؛ هذا هو طريقك لوصفة ثابتة.</li></ul>
+<h2 id="safety">ملاحظة حساسية وسلامة</h2><p>تحقق من مكونات الخلطات الجاهزة والملح ومسببات الحساسية. إذا استخدمت دخانًا للمندي فاعتمد طريقة مطبخية آمنة وتهوية مناسبة، ولا تشعل الفحم في مساحة مغلقة.</p>''',
+ 'sources':[], 'related':['chicken-kabsa','zaatar-manakeesh','samosa-cheese-dough']}
+}
+
+GUIDES={
+'guide-safe-cleaning':('دليل التنظيف الآمن','خطة منظمة للتنظيف والمنتجات والتهوية ومنع الخلطات الخطرة.','نصائح منزلية',['cleaning-products-never-mix','natural-cleaning-recipes','quick-kitchen-cleaning','laundry-guide-tips','eliminate-bad-smells','natural-insect-repellents']),
+'guide-account-security':('دليل حماية الحسابات','منع الاختراق والاسترداد والدفع الإلكتروني الآمن بخطوات قابلة للتطبيق.','تكنولوجيا',['account-recovery-plan','protect-online-accounts','safe-online-payments','ai-explained-simply']),
+'guide-gulf-recipes':('دليل الوصفات الخليجية','أرز وبهارات ومقبلات ومشروبات مع خطوات واضحة وملاحظات سلامة.','وصفات لذيذة',['gulf-rice-spices-guide','chicken-kabsa','samosa-cheese-dough','lemon-mint-drink','qishta-basbousa']),
+'guide-smartphone':('دليل اختيار واستخدام الهاتف','الشراء الجديد والمستعمل والتطبيقات والبيانات وحماية الهاتف.','تكنولوجيا',['used-smartphone-checklist','choose-smartphone-budget','essential-android-apps','save-mobile-data','protect-online-accounts'])}
+
+
+def read(p):return Path(p).read_text(encoding='utf-8')
+def write(p,t):Path(p).parent.mkdir(parents=True,exist_ok=True);Path(p).write_text(t,encoding='utf-8')
+
+def article_json(text):
+ for raw in re.findall(r'<script type="application/ld\+json">(.*?)</script>',text,re.S):
+  x=json.loads(raw)
+  if x.get('@type')=='Article':return x
+
+def source_html(items):
+ if not items:return ''
+ links=''.join(f'<li><a href="{u}" target="_blank" rel="noopener noreferrer">{n}</a></li>' for n,u in items)
+ return f'<section class="sources" aria-labelledby="sources-title"><h2 id="sources-title">المصادر والمراجع</h2><p>رُوجعت المعلومات القابلة للتحقق بالاستناد إلى المصادر التالية.</p><ul>{links}</ul></section>'
+
+def related_html(slugs,titles):
+ return '<section class="cluster-links" aria-labelledby="cluster-links-title"><h2 id="cluster-links-title">أكمل القراءة في هذا الموضوع</h2><ul>'+''.join(f'<li><a href="../posts/{s}.html">{titles.get(s,s)}</a></li>' for s in slugs)+'</ul></section>'
+
+def article_page(slug,d):
+ cat_slug=CATEGORY_PATH[d['category']];url=f'{BASE}/posts/{slug}.html';title=html.escape(d['title']);desc=html.escape(d['description'],quote=True)
+ article={'@context':'https://schema.org','@type':'Article','headline':d['title'],'description':d['description'],'datePublished':TODAY,'dateModified':TODAY,'inLanguage':'ar','image':f'{BASE}/images/covers/{slug}.jpg','author':{'@type':'Organization','name':'فريق تحرير دليلك','url':f'{BASE}/authors/editorial-team.html'},'publisher':{'@type':'Organization','name':'دليلك','url':BASE},'mainEntityOfPage':{'@type':'WebPage','@id':url},'articleSection':d['category']}
+ crumbs={'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'الرئيسية','item':BASE+'/'},{'@type':'ListItem','position':2,'name':d['category'],'item':f'{BASE}/category/{cat_slug}.html'},{'@type':'ListItem','position':3,'name':d['title'],'item':url}]}
+ headings=re.findall(r'<h2 id="([^"]+)">(.*?)</h2>',d['body'],re.S);toc=''.join(f'<li><a href="#{i}">{re.sub("<.*?>","",h)}</a></li>' for i,h in headings)
+ return f'''<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>{title} | دليلك</title><meta name="description" content="{desc}"><link rel="canonical" href="{url}"><meta property="og:type" content="article"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}/images/covers/{slug}.jpg"><meta property="og:site_name" content="دليلك"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{desc}"><meta name="twitter:image" content="{BASE}/images/covers/{slug}.jpg"><meta name="robots" content="index, follow"><meta name="theme-color" content="#124e4a"><link rel="icon" href="../favicon.svg"><link rel="manifest" href="../manifest.json"><link rel="stylesheet" href="/dalilak/css/style.css?v=8"></head><body><a class="skip-link" href="#main-content">تجاوز إلى المحتوى</a><div id="progress"></div><header></header><main id="main-content"><div class="layout"><div class="art"><div class="crumb"><a href="../index.html">الرئيسية</a> ← <a href="../category/{cat_slug}.html">{d['category']}</a> ← <span>{title}</span></div><h1>{title}</h1><div class="art-meta"><span>فريق تحرير دليلك</span><span>{TODAY}</span><span>{d['minutes']} دقائق قراءة</span></div><img class="art-img" src="../images/covers/{slug}.jpg" alt="رسم تحريري يرمز إلى {title}" width="1200" height="630"><nav class="toc" aria-label="جدول محتويات المقال"><b>محتويات المقال</b><ul>{toc}</ul></nav><div class="art-body">{d['body']}</div>{source_html(d['sources'])}<div class="share"><b>شارك المقال:</b><button type="button" class="sh-cp" onclick="copyLink()">نسخ الرابط</button></div><div class="author"><div class="author-av">د</div><div><b><a href="../authors/editorial-team.html" rel="author">فريق تحرير دليلك</a></b><p>محتوى عملي يُراجع ويُحدّث عند الحاجة.</p></div></div></div><aside class="side"><div class="widget"><h3>ضمن هذا الموضوع</h3><p>استخدم الروابط المرتبطة في نهاية المقال لمتابعة الدليل.</p></div></aside></div><script type="application/ld+json">{json.dumps(article,ensure_ascii=False,separators=(',',':'))}</script><script type="application/ld+json">{json.dumps(crumbs,ensure_ascii=False,separators=(',',':'))}</script></main><footer></footer><button id="toTop" type="button" title="العودة للأعلى">↑</button><div id="toast">تم نسخ الرابط</div><script src="../js/main.js?v=1" defer></script></body></html>'''
+
+def create_new_articles():
+ for slug,d in NEW_ARTICLES.items():write(ROOT/'posts'/f'{slug}.html',article_page(slug,d))
+
+def apply_accuracy_rewrites():
+ for path in ROOT.rglob('*.html'):
+  if 'node_modules' in path.parts:continue
+  text=read(path)
+  for old,new in TITLE_RENAMES.items():text=text.replace(old,new)
+  for old,new in TEXT_FIXES.items():text=text.replace(old,new)
+  write(path,text)
+ for slug,body in FULL_BODY.items():
+  path=ROOT/'posts'/f'{slug}.html';text=read(path);start=text.index('<div class="art-body">');end=text.find('<section class="sources"',start)
+  if end<0:end=text.find('<div class="share">',start)
+  text=text[:start]+'<div class="art-body">'+body+'</div>\n'+text[end:];write(path,text)
+
+def enhance_supporting():
+ for slug,module in SUPPORTING.items():
+  p=ROOT/'posts'/f'{slug}.html';t=read(p)
+  t=re.sub(r'<!-- SUPPORT-REVIEW-START -->.*?<!-- SUPPORT-REVIEW-END -->\s*','',t,flags=re.S)
+  if slug not in FULL_BODY:t=t.replace('<div class="art-body">','<div class="art-body"><!-- SUPPORT-REVIEW-START -->'+module+'<!-- SUPPORT-REVIEW-END -->',1)
+  # تحديث تاريخ Article فقط
+  def fix(m):
+   x=json.loads(m.group(1));
+   if x.get('@type')=='Article':x['dateModified']=TODAY
+   return '<script type="application/ld+json">'+json.dumps(x,ensure_ascii=False,separators=(',',':'))+'</script>'
+  t=re.sub(r'<script type="application/ld\+json">(.*?)</script>',fix,t,flags=re.S)
+  start=t.index('<div class="art-body">');end=t.find('<section class="sources"',start)
+  if end<0:end=t.find('<div class="share">',start)
+  headings=re.findall(r'<h2 id="([^"]+)">(.*?)</h2>',t[start:end],re.S)
+  if headings:
+   items=''.join(f'<li><a href="#{anchor}">{re.sub("<.*?>","",title)}</a></li>' for anchor,title in headings)
+   toc=f'<nav class="toc" aria-label="جدول محتويات المقال"><b>محتويات المقال</b><ul>{items}</ul></nav>'
+   t=re.sub(r'<nav class="toc" aria-label="جدول محتويات المقال">.*?</nav>',toc,t,count=1,flags=re.S)
+  write(p,t)
+
+def guide_page(slug,title,desc,category,article_slugs,records):
+ url=f'{BASE}/{slug}.html';items=[]
+ for s in article_slugs:
+  a=records[s];items.append(f'<a class="guide-story" href="posts/{s}.html"><img src="{a["image"]}" alt="{html.escape(a["alt"])}" width="400" height="240" loading="lazy"><div><span>{a["category"]}</span><h2>{a["title"]}</h2><p>{a["description"]}</p></div></a>')
+ schema={'@context':'https://schema.org','@type':'CollectionPage','name':title,'description':desc,'url':url,'inLanguage':'ar','mainEntity':{'@type':'ItemList','itemListElement':[{'@type':'ListItem','position':i+1,'url':f'{BASE}/posts/{s}.html','name':records[s]['title']} for i,s in enumerate(article_slugs)]}}
+ return f'''<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>{title} | دليلك</title><meta name="description" content="{desc}"><link rel="canonical" href="{url}"><meta property="og:type" content="website"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}/images/og-default.png"><meta name="robots" content="index, follow"><meta name="theme-color" content="#124e4a"><link rel="icon" href="favicon.svg"><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="/dalilak/css/style.css?v=8"></head><body><a class="skip-link" href="#main-content">تجاوز إلى المحتوى</a><div id="progress"></div><header></header><main id="main-content"><div class="guide-page"><div class="crumb"><a href="index.html">الرئيسية</a><span>/</span><span>أدلة دليلك</span></div><header class="guide-hero"><span class="section-kicker">دليل موضوعي</span><h1>{title}</h1><p>{desc}</p></header><div class="guide-steps"><strong>كيف تستخدم الدليل؟</strong><ol><li>ابدأ بالمقال الأقرب لمشكلتك الحالية.</li><li>طبّق قائمة التحقق وسجل النتيجة.</li><li>انتقل للمقال التالي عند الحاجة بدل تغيير أشياء كثيرة دفعة واحدة.</li></ol></div><div class="guide-grid">{''.join(items)}</div></div><script type="application/ld+json">{json.dumps(schema,ensure_ascii=False,separators=(',',':'))}</script></main><footer></footer><button id="toTop" type="button" title="العودة للأعلى">↑</button><script src="js/main.js?v=1" defer></script></body></html>'''
+
+def records():
+ alts_path=ROOT/'images'/'covers'/'cover-alts.json';alts=json.loads(read(alts_path)) if alts_path.exists() else {}
+ out={}
+ for p in (ROOT/'posts').glob('*.html'):
+  t=read(p);a=article_json(t);m=re.search(r'<meta name="description" content="([^"]+)">',t)
+  out[p.stem]={'title':a['headline'],'category':a['articleSection'],'description':html.unescape(m.group(1)) if m else a.get('description',''),'image':f'images/covers/{p.stem}.jpg','alt':alts.get(p.stem,a['headline']),'date':a['datePublished'],'modified':a.get('dateModified',a['datePublished'])}
+ return out
+
+def create_guides():
+ r=records()
+ for slug,(title,desc,cat,slugs) in GUIDES.items():write(ROOT/f'{slug}.html',guide_page(slug,title,desc,cat,slugs,r))
+
+def update_sitemaps_feed():
+ r=records();static=['','about.html','contact.html','privacy-policy.html','terms.html','disclaimer.html','editorial-policy.html','authors/editorial-team.html','sitemap.html','category/home-tips.html','category/recipes.html','category/knowledge.html','category/tech.html',*[f'{s}.html' for s in GUIDES]]
+ lines=['<?xml version="1.0" encoding="UTF-8"?>','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+ for u in static:lines.append(f'  <url><loc>{BASE}/{u}</loc><lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq><priority>{"1.0" if not u else "0.7"}</priority></url>')
+ for s,a in sorted(r.items(),key=lambda x:x[1]['date'],reverse=True):lines.append(f'  <url><loc>{BASE}/posts/{s}.html</loc><lastmod>{a["modified"]}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>')
+ lines.append('</urlset>');write(ROOT/'sitemap.xml','\n'.join(lines))
+ # خريطة HTML واضحة حسب القسم
+ groups=''.join('<section><h2>'+cat+'</h2><ul>'+''.join(f'<li><a href="posts/{s}.html">{a["title"]}</a></li>' for s,a in r.items() if a['category']==cat)+'</ul></section>' for cat in CATEGORY_PATH)
+ p=ROOT/'sitemap.html';t=read(p);t=re.sub(r'<main id="main-content">.*?</main>',f'<main id="main-content"><div class="page sitemap-page"><h1>خريطة الموقع</h1><p class="sub">جميع الأدلة والمقالات المنشورة في دليلك.</p><h2>أدلة دليلك</h2><ul>'+''.join(f'<li><a href="{s}.html">{v[0]}</a></li>' for s,v in GUIDES.items())+f'</ul>{groups}</div></main>',t,count=1,flags=re.S);write(p,t)
+ # RSS أحدث 20
+ ordered=sorted(r.items(),key=lambda x:x[1]['date'],reverse=True)[:20];items=[]
+ for s,a in ordered:
+  pub=format_datetime(datetime.fromisoformat(a['date']).replace(tzinfo=timezone.utc))
+  items.append(f'<item><title>{escape(a["title"])}</title><link>{BASE}/posts/{s}.html</link><guid>{BASE}/posts/{s}.html</guid><pubDate>{pub}</pubDate><description>{escape(a["description"])}</description></item>')
+ feed=f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>دليلك</title><link>{BASE}</link><description>أحدث مقالات دليلك</description><language>ar</language>{"".join(items)}</channel></rss>';write(ROOT/'feed.xml',feed)
+
+def contact_pending():
+ if SITE_CONFIG.get('contact',{}).get('enabled'):return
+ p=ROOT/'contact.html';t=read(p)
+ block=f'''<h2>أرسل رسالة</h2><div class="contact-status" id="contact-status"><strong>التواصل قيد التجهيز</strong><p>سيُفعّل النموذج والبريد الرسمي بعد ربط الدومين. النموذج معطل الآن حتى لا تُفقد الرسائل.</p></div>
+<form class="contact-form contact-form-disabled" action="#" method="post" aria-describedby="contact-status">
+<input type="hidden" name="_subject" value="رسالة جديدة من موقع دليلك"><input type="hidden" name="_next" value="{BASE}/thanks.html"><input type="hidden" name="_captcha" value="true"><input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="form-grid"><div><label for="contact-name">الاسم</label><input id="contact-name" name="name" type="text" autocomplete="name" required disabled></div><div><label for="contact-email">البريد الإلكتروني</label><input id="contact-email" name="email" type="email" autocomplete="email" required disabled></div></div>
+<label for="contact-topic">الموضوع</label><select id="contact-topic" name="topic" required disabled><option value="">اختر الموضوع</option><option>اقتراح مقال</option><option>تصحيح محتوى</option><option>استفسار عام</option></select><label for="contact-message">الرسالة</label><textarea id="contact-message" name="message" rows="7" minlength="10" required disabled></textarea>
+<p class="form-note">سيُتاح الإرسال بعد ربط البريد الرسمي. لا ترسل معلومات حساسة.</p><button class="btn btn-a" type="submit" disabled>إرسال الرسالة</button></form>
+'''
+ t=re.sub(r'<h2>أرسل رسالة</h2>.*?(?=<h2>اقتراحات المواضيع</h2>)',block,t,count=1,flags=re.S)
+ t=re.sub(r'<p><b>البريد الإلكتروني:</b>.*?</p>','<p><b>البريد الإلكتروني:</b> سيُعلن بعد ربط الدومين.</p>',t,count=1)
+ write(p,t)
+
+def write_report():
+ report=f'''# حزمة تطوير المحتوى قبل الدومين\n\n**التاريخ:** 17 أغسطس 2026\n\n## المنجز\n\n- مراجعة المقالات الداعمة العشرين وإضافة ملاحظات دقة وقوائم عملية.\n- إعادة كتابة مقالي جسم الإنسان ومكافحة الحشرات لإزالة الادعاءات المبالغ فيها.\n- توثيق 31 مقالًا بمصادر رسمية أو مرجعية.\n- إنشاء 34 غلافًا تحريريًا مستقلًا بلا نصوص أو تدرجات.\n- نشر أربعة مقالات عملية جديدة: سلامة مواد التنظيف، استرداد الحسابات، فحص الهاتف المستعمل، وبهارات الأرز الخليجي.\n- إنشاء أربعة أدلة موضوعية تربط المقالات في عناقيد واضحة.\n- تعطيل نموذج التواصل مؤقتًا مع إعداد أداة ربط الدومين والبريد.\n- التأكد من عدم إضافة كود AdSense، والإبقاء على ads.txt كقالب معلّق فقط.\n\n## المقالات الجديدة\n\n{chr(10).join('- `'+s+'`: '+d['title'] for s,d in NEW_ARTICLES.items())}\n\n## صفحات العناقيد\n\n{chr(10).join('- `'+s+'.html`: '+d[0] for s,d in GUIDES.items())}\n\n## أداة الدومين\n\nبعد شراء الدومين وإنشاء البريد:\n\n```bash\npython3 tools/configure_domain.py --domain example.com --email contact@example.com --enable-contact\n```\n\nلا تستخدم `--enable-contact` قبل إنشاء البريد والتأكد من استقبال الرسائل.\n'''
+ write(ROOT/'docs/pre-domain-content.md',report)
+
+def add_new_to_plan():
+ p=ROOT/'seo-content-plan.json';d=json.loads(read(p));known={x['slug'] for x in d['articles']};extra=[
+ {'slug':'cleaning-products-never-mix','targetQuery':'مواد تنظيف لا تخلطها معًا','cluster':'التنظيف الآمن','intent':'informational','role':'supporting','priority':1},
+ {'slug':'account-recovery-plan','targetQuery':'خطة استرداد الحسابات قبل الاختراق','cluster':'الأمان الرقمي','intent':'informational','role':'supporting','priority':1},
+ {'slug':'used-smartphone-checklist','targetQuery':'فحص الهاتف المستعمل قبل الشراء','cluster':'اختيار الأجهزة','intent':'commercial-investigation','role':'supporting','priority':1},
+ {'slug':'gulf-rice-spices-guide','targetQuery':'بهارات الكبسة والمندي والمجبوس','cluster':'وصفات خليجية','intent':'informational','role':'supporting','priority':2}]
+ d['articles'].extend(x for x in extra if x['slug'] not in known);d['updated']=TODAY;write(p,json.dumps(d,ensure_ascii=False,indent=2)+'\n')
+
+def main():
+ create_new_articles();apply_accuracy_rewrites()
+ subprocess.run([sys.executable,str(ROOT/'tools'/'generate_editorial_covers.py')],check=True)
+ subprocess.run([sys.executable,str(ROOT/'tools'/'maintain_site.py')],check=True)
+ enhance_supporting()
+ # إعادة إضافة المصادر والربط للمقالات الجديدة بعد الصيانة
+ titles={s:a['title'] for s,a in records().items()}
+ for slug,d in NEW_ARTICLES.items():
+  p=ROOT/'posts'/f'{slug}.html';t=read(p);insert=t.find('<div class="share">');block=related_html(d['related'],titles);t=t[:insert]+block+t[insert:];write(p,t)
+ subprocess.run([sys.executable,str(ROOT/'tools'/'generate_editorial_covers.py')],check=True)
+ subprocess.run([sys.executable,str(ROOT/'tools'/'redesign_magazine.py')],check=True)
+ create_guides();subprocess.run([sys.executable,str(ROOT/'tools'/'redesign_magazine.py')],check=True)
+ update_sitemaps_feed();contact_pending();add_new_to_plan();write_report()
+ print('اكتملت حزمة ما قبل الدومين: مراجعة 20 مقالًا، 4 مقالات جديدة، 4 أدلة، أغلفة مستقلة، وتجهيز التواصل.')
+if __name__=='__main__':main()

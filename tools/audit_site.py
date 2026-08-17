@@ -88,18 +88,27 @@ for path in html_files:
             errors.append(f"{rel}: JSON-LD رقم {index} غير صالح: {exc}")
 
 search = json.loads((ROOT / "search-index.json").read_text(encoding="utf-8"))
-if len(search) != 30:
-    errors.append(f"فهرس البحث يحتوي {len(search)} عنصرًا بدل 30")
+posts = list((ROOT / "posts").glob("*.html"))
+if len(search) != len(posts):
+    errors.append(f"فهرس البحث يحتوي {len(search)} عنصرًا بينما عدد المقالات {len(posts)}")
 if len({item["s"] for item in search}) != len(search):
     errors.append("فهرس البحث يحتوي slugs مكررة")
 category_counts = {category: sum(item["c"] == category for item in search) for category in {item["c"] for item in search}}
-expected = {"نصائح منزلية": 8, "وصفات لذيذة": 8, "معلومات عامة": 7, "تكنولوجيا": 7}
+expected = {}
+for post in posts:
+    article = None
+    for raw in re.findall(r'<script type="application/ld\+json">(.*?)</script>', post.read_text(encoding="utf-8"), re.S):
+        data = json.loads(raw)
+        if data.get("@type") == "Article": article = data; break
+    if article: expected[article["articleSection"]] = expected.get(article["articleSection"], 0) + 1
 if category_counts != expected:
-    errors.append(f"توزيع التصنيفات غير صحيح: {category_counts}")
+    errors.append(f"توزيع التصنيفات غير صحيح: {category_counts} والمتوقع {expected}")
 
 manifest = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
-if manifest.get("start_url") != "/dalilak/" or manifest.get("scope") != "/dalilak/":
-    errors.append("إعداد manifest لمسار GitHub Pages غير صحيح")
+site_config = json.loads((ROOT / "site-config.json").read_text(encoding="utf-8")) if (ROOT / "site-config.json").exists() else {}
+expected_base_path = "/" if site_config.get("customDomain") else "/dalilak/"
+if manifest.get("start_url") != expected_base_path or manifest.get("scope") != expected_base_path:
+    errors.append("إعداد manifest لمسار النشر غير صحيح")
 
 posts = list((ROOT / "posts").glob("*.html"))
 source_count = sum('class="sources"' in p.read_text(encoding="utf-8") for p in posts)
