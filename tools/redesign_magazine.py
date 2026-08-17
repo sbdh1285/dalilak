@@ -3,7 +3,6 @@
 from __future__ import annotations
 import html
 import json
-import math
 import re
 from pathlib import Path
 
@@ -13,6 +12,8 @@ BASE = CONFIG["baseUrl"].rstrip("/")
 MONTHS = {1:"يناير",2:"فبراير",3:"مارس",4:"أبريل",5:"مايو",6:"يونيو",7:"يوليو",8:"أغسطس",9:"سبتمبر",10:"أكتوبر",11:"نوفمبر",12:"ديسمبر"}
 CAT_PATHS = {"نصائح منزلية":"home-tips","وصفات لذيذة":"recipes","معلومات عامة":"knowledge","تكنولوجيا":"tech"}
 CAT_DESCRIPTIONS = {item["name"]:item["description"] for item in CONFIG["categories"]}
+ARTICLE_IMAGES_PATH=ROOT/'images'/'article-images.json'
+ARTICLE_IMAGES=json.loads(ARTICLE_IMAGES_PATH.read_text(encoding='utf-8')) if ARTICLE_IMAGES_PATH.exists() else {}
 COVER_ALTS_PATH=ROOT/'images'/'covers'/'cover-alts.json'
 COVER_ALTS=json.loads(COVER_ALTS_PATH.read_text(encoding='utf-8')) if COVER_ALTS_PATH.exists() else {}
 COVERS = {
@@ -75,15 +76,16 @@ def article_records()->dict[str,dict]:
             if obj.get("@type")=="Article":data=obj;break
         if not data:continue
         desc_match=re.search(r'<meta name="description" content="([^"]+)">',text)
-        body_start=text.find('<div class="art-body">')
-        body_ends=[x for x in (text.find('<!-- CLUSTER-LINKS-START -->',body_start),text.find('<section class="cluster-links"',body_start),text.find('<section class="sources"',body_start),text.find('<div class="share">',body_start)) if x>body_start]
-        body_end=min(body_ends) if body_ends else len(text)
-        word_count=len(re.sub(r'<[^>]+>',' ',text[body_start:body_end]).split())
-        reading_minutes=max(2,math.ceil(word_count/200))
+        mins_match=re.search(r'(\d+) دقائق(?: قراءة)?',text)
+        reading_minutes=max(1,int(mins_match.group(1))) if mins_match else 3
         custom_cover=ROOT/'images'/'covers'/f'{path.stem}.jpg'
         fallback=COVERS.get(path.stem,(f"images/og-{path.stem}.png",data["headline"]))
-        cover_path=f'images/covers/{path.stem}.jpg' if custom_cover.exists() else fallback[0]
-        cover_alt=COVER_ALTS.get(path.stem,fallback[1])
+        configured=ARTICLE_IMAGES.get(path.stem)
+        if configured:
+            cover_path=configured['path'];cover_alt=configured['alt']
+        else:
+            cover_path=f'images/covers/{path.stem}.jpg' if custom_cover.exists() else fallback[0]
+            cover_alt=COVER_ALTS.get(path.stem,fallback[1])
         records[path.stem]={
             "slug":path.stem,"title":data["headline"],"category":data["articleSection"],
             "description":html.unescape(desc_match.group(1)) if desc_match else "",
@@ -143,10 +145,10 @@ def article_card(a:dict,prefix:str="",lead:bool=False)->str:
     return f'''<article class="{cls}"><a href="{prefix}posts/{a['slug']}.html"><img class="card-img" src="{prefix}{a['image']}" alt="{html.escape(a['imageAlt'])}" loading="{'eager' if lead else 'lazy'}" width="1200" height="630"></a><div class="card-body"><span class="cat-chip">{a['category']}</span><h3><a href="{prefix}posts/{a['slug']}.html">{a['title']}</a></h3><p>{a['description']}</p><div class="card-meta"><time datetime="{a['published']}">{fmt_date(a['published'])}</time><span>{a['minutes']} دقائق قراءة</span></div></div></article>'''
 
 def story_row(a:dict,prefix:str="")->str:
-    return f'''<a class="story-row" href="{prefix}posts/{a['slug']}.html"><img src="{prefix}{a['image']}" alt="" loading="lazy" width="240" height="160"><div><span class="cat-chip">{a['category']}</span><h3>{a['title']}</h3><span class="story-meta">{fmt_date(a['published'])} · {a['minutes']} دقائق</span></div></a>'''
+    return f'''<a class="story-row" href="{prefix}posts/{a['slug']}.html"><img src="{prefix}{a['image']}" alt="" loading="lazy" width="240" height="126"><div><span class="cat-chip">{a['category']}</span><h3>{a['title']}</h3><span class="story-meta">{fmt_date(a['published'])} · {a['minutes']} دقائق</span></div></a>'''
 
 def more_story(a:dict,prefix:str="")->str:
-    return f'''<a class="more-story" href="{prefix}posts/{a['slug']}.html"><img src="{prefix}{a['image']}" alt="" loading="lazy" width="320" height="210"><div><span class="cat-chip">{a['category']}</span><h3>{a['title']}</h3><p>{a['description']}</p></div></a>'''
+    return f'''<a class="more-story" href="{prefix}posts/{a['slug']}.html"><img src="{prefix}{a['image']}" alt="" loading="lazy" width="320" height="168"><div><span class="cat-chip">{a['category']}</span><h3>{a['title']}</h3><p>{a['description']}</p></div></a>'''
 
 def home_main(records:dict[str,dict],old:str)->str:
     ordered=sorted(records.values(),key=lambda x:x['published'],reverse=True)
@@ -243,7 +245,7 @@ def redesign_post(path:Path,records:dict[str,dict])->None:
         block=match.group(0); slug_match=re.search(r'href="\.\./posts/([^"/]+)\.html"',block)
         if not slug_match or slug_match.group(1) not in records:return block
         item=records[slug_match.group(1)]
-        return re.sub(r'<img class="pop-thumb"[^>]+>',f'<img class="pop-thumb" src="../{item["image"]}" alt="{html.escape(item["imageAlt"])}" loading="lazy" width="120" height="120">',block,count=1)
+        return re.sub(r'<img class="pop-thumb"[^>]+>',f'<img class="pop-thumb" src="../{item["image"]}" alt="{html.escape(item["imageAlt"])}" loading="lazy" width="120" height="63">',block,count=1)
     text=re.sub(r'<div class="pop-item">.*?</div></div>',fix_pop_cover,text,flags=re.S)
     text=text.replace('<meta property="og:type" content="website">','<meta property="og:type" content="article">',1)
     text=inject_shell(path,text)

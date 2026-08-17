@@ -44,9 +44,11 @@ for a,b in itertools.combinations(shingles,2):
 for ref,slugs in cover_refs.items():
  if len(slugs)>1:errors.append((ref,[f'غلاف مشترك: {slugs}']))
 hashes=collections.defaultdict(list)
-for p in (ROOT/'images'/'covers').glob('*.jpg'):hashes[hashlib.sha256(p.read_bytes()).hexdigest()].append(p.name)
+for ref,slugs in cover_refs.items():
+ image_path=ROOT/ref.replace('../','')
+ if image_path.exists():hashes[hashlib.sha256(image_path.read_bytes()).hexdigest()].extend(slugs)
 for files in hashes.values():
- if len(files)>1:errors.append(('covers',[f'ملفات صور متطابقة: {files}']))
+ if len(files)>1:errors.append(('covers',[f'ملفات صور متطابقة لمقالات مختلفة: {files}']))
 # اتساق العدد
 search=json.loads((ROOT/'search-index.json').read_text(encoding='utf-8'))
 if len(search)!=len(rows):errors.append(('count',[f'فهرس البحث {len(search)} والمقالات {len(rows)}']))

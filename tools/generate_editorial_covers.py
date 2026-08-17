@@ -23,8 +23,8 @@ def icon_kind(slug,title,cat):
  for keys,kind in [
   (('clean','smell','insect','kitchen'), 'clean'),(('laundry',),'laundry'),(('fridge',),'fridge'),(('electric',),'bulb'),
   (('account','payment','recovery'), 'lock'),(('smartphone','mobile','android','used-phone'), 'phone'),(('computer','ai-'), 'laptop'),
-  (('sleep',),'moon'),(('water',),'water'),(('animal',),'paw'),(('earth','galax'), 'orbit'),(('coffee',),'coffee'),
-  (('kabsa','soup','cake','salad','basbousa','samosa','manakeesh','drink','spices'), 'food')]:
+  (('sleep',),'moon'),(('water',),'water'),(('animal',),'paw'),(('earth','galax'), 'orbit'),(('coffee',),'coffee'),(('spices',),'spices'),
+  (('kabsa','soup','cake','salad','basbousa','samosa','manakeesh','drink'), 'food')]:
   if any(k in s for k in keys):return kind
  return 'food' if cat=='وصفات لذيذة' else 'book'
 
@@ -56,6 +56,10 @@ def draw_icon(d,kind,cx,cy,s,color,accent):
   d.ellipse((cx-s*.18,cy-s*.18,cx+s*.18,cy+s*.18),fill=accent);d.ellipse((cx-s*.55,cy-s*.3,cx+s*.55,cy+s*.3),outline=color,width=w);d.ellipse((cx-s*.32,cy-s*.55,cx+s*.32,cy+s*.55),outline=color,width=w);d.ellipse((cx+s*.4,cy-s*.12,cx+s*.52,cy),fill=color)
  elif kind=='coffee':
   d.rounded_rectangle((cx-s*.42,cy-s*.18,cx+s*.24,cy+s*.38),radius=s*.08,fill=color);d.arc((cx+s*.08,cy-s*.06,cx+s*.55,cy+s*.3),270,90,fill=color,width=w*2);d.arc((cx-s*.22,cy-s*.58,cx,cy-s*.12),180,355,fill=accent,width=w)
+ elif kind=='spices':
+  for ox,rr in [(-.32,.28),(0,.31),(.34,.25)]:
+   x=cx+s*ox;d.ellipse((x-s*rr,cy-s*.02,x+s*rr,cy+s*.34),fill=color);d.ellipse((x-s*rr*.82,cy-s*.06,x+s*rr*.82,cy+s*.16),fill=accent)
+  d.line((cx-s*.5,cy-s*.38,cx+s*.48,cy-s*.14),fill=color,width=w*2);d.line((cx-s*.45,cy-s*.47,cx+s*.42,cy-s*.24),fill=accent,width=w)
  elif kind=='food':
   d.ellipse((cx-s*.56,cy-s*.35,cx+s*.56,cy+s*.45),fill=color);d.ellipse((cx-s*.42,cy-s*.24,cx+s*.42,cy+s*.32),fill=accent);d.ellipse((cx-s*.17,cy-s*.1,cx+s*.04,cy+s*.11),fill=color);d.ellipse((cx+s*.1,cy-s*.14,cx+s*.32,cy+s*.06),fill=color)
  else:
@@ -80,7 +84,7 @@ def main():
  alts={}
  for path in sorted((ROOT/'posts').glob('*.html')):
   x=data(path)
-  if x:alts[path.stem]=make(path.stem,x['headline'],x['articleSection'])
+  if x and not (ROOT/'images'/f'og-{path.stem}.png').exists():alts[path.stem]=make(path.stem,x['headline'],x['articleSection'])
  (OUT/'cover-alts.json').write_text(json.dumps(alts,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
  print(f'تم إنشاء {len(alts)} غلافًا تحريريًا مستقلًا.')
 if __name__=='__main__':main()
