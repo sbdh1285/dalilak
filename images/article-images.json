@@ -1,138 +1,138 @@
 {
-  "account-recovery-plan": {
-    "path": "images/covers/account-recovery-plan.jpg",
-    "alt": "مفتاح ورموز احتياطية حول قفل رقمي لاسترداد الحسابات"
-  },
-  "age-of-earth": {
-    "path": "images/covers/age-of-earth.jpg",
-    "alt": "كوكب الأرض مع طبقات صخرية ومدار زمني"
-  },
-  "ai-explained-simply": {
-    "path": "images/covers/ai-explained-simply.jpg",
-    "alt": "شريحة ذكاء اصطناعي محاطة بعقد شبكة مترابطة"
-  },
-  "amazing-animal-facts": {
-    "path": "images/covers/amazing-animal-facts.jpg",
-    "alt": "حوت وأخطبوط وآثار أقدام ترمز إلى تنوع الحيوانات"
-  },
-  "amazing-human-body-facts": {
-    "path": "images/covers/amazing-human-body-facts.jpg",
-    "alt": "قلب ودماغ وعظام ضمن رسم تشريحي مبسط"
-  },
-  "amazing-water-facts": {
-    "path": "images/covers/amazing-water-facts.jpg",
-    "alt": "قطرات ماء وأمواج ودورة مائية مبسطة"
-  },
-  "chicken-kabsa": {
-    "path": "images/covers/chicken-kabsa.jpg",
-    "alt": "طبق أرز بسمتي ودجاج وبهارات خليجية"
-  },
-  "choose-smartphone-budget": {
-    "path": "images/covers/choose-smartphone-budget.jpg",
-    "alt": "ثلاثة هواتف مع علامات مقارنة واختيار"
-  },
-  "cleaning-products-never-mix": {
-    "path": "images/covers/cleaning-products-never-mix.jpg",
-    "alt": "عبوتا تنظيف منفصلتان مع علامة منع الخلط"
-  },
-  "coffee-story-yemen": {
-    "path": "images/covers/coffee-story-yemen.jpg",
-    "alt": "فنجان قهوة وحبوب ومدرجات جبلية ترمز إلى اليمن"
-  },
-  "eliminate-bad-smells": {
-    "path": "images/covers/eliminate-bad-smells.jpg",
-    "alt": "نافذة مفتوحة وتيارات هواء تزيل مصدر الرائحة"
-  },
-  "essential-android-apps": {
-    "path": "images/covers/essential-android-apps.jpg",
-    "alt": "هاتف يعرض شبكة تطبيقات متنوعة بلا شعارات"
-  },
-  "fruit-salad-recipe": {
-    "path": "images/covers/fruit-salad-recipe.jpg",
-    "alt": "وعاء فواكه ملونة مع تفاح وبرتقال وعنب"
-  },
-  "galaxies-and-stars": {
-    "path": "images/covers/galaxies-and-stars.jpg",
-    "alt": "مجرة حلزونية ونجوم وكواكب في فضاء عميق"
-  },
-  "gulf-rice-spices-guide": {
-    "path": "images/covers/gulf-rice-spices-guide.jpg",
-    "alt": "أوعية بهارات وقرفة وهيل ولومي مجفف"
-  },
-  "laundry-guide-tips": {
-    "path": "images/new-laundry-guide-tips.jpg",
-    "alt": "ملابس قطنية مطوية بعناية بجوار سلة غسيل"
-  },
   "lemon-mint-drink": {
     "path": "images/new-lemon-mint-drink.jpg",
     "alt": "كأس عصير ليمون ونعناع مثلج مع شرائح ليمون وأوراق نعناع"
-  },
-  "lentil-soup-recipe": {
-    "path": "images/covers/lentil-soup-recipe.jpg",
-    "alt": "وعاء شوربة عدس ساخنة مع ليمون وكمون"
-  },
-  "natural-cleaning-recipes": {
-    "path": "images/covers/natural-cleaning-recipes.jpg",
-    "alt": "ليمون وعبوة تنظيف وفرشاة للأسطح المنزلية"
-  },
-  "natural-insect-repellents": {
-    "path": "images/new-natural-insect-repellents.jpg",
-    "alt": "نباتات ريحان ونعناع قرب نافذة منزلية مزودة بشبك"
-  },
-  "orange-cake-no-oven": {
-    "path": "images/covers/orange-cake-no-oven.jpg",
-    "alt": "قطعة كيكة برتقال وقدر طهي وشرائح برتقال"
-  },
-  "organize-fridge-waste": {
-    "path": "images/covers/organize-fridge-waste.jpg",
-    "alt": "ثلاجة مفتوحة برفوف مرتبة وعلب طعام واضحة"
-  },
-  "protect-online-accounts": {
-    "path": "images/covers/protect-online-accounts.jpg",
-    "alt": "درع وقفل ومفتاح مرور لحماية الحسابات"
-  },
-  "qishta-basbousa": {
-    "path": "images/new-qishta-basbousa.jpg",
-    "alt": "قطع بسبوسة بالقشطة واللوز على طبق تقديم"
-  },
-  "quick-kitchen-cleaning": {
-    "path": "images/new-quick-kitchen-cleaning.jpg",
-    "alt": "مطبخ مرتب مع أدوات تنظيف مناسبة للأسطح"
-  },
-  "safe-online-payments": {
-    "path": "images/covers/safe-online-payments.jpg",
-    "alt": "بطاقة دفع داخل درع مع علامة تحقق"
   },
   "samosa-cheese-dough": {
     "path": "images/new-samosa-cheese-dough.jpg",
     "alt": "سمبوسك جبن ذهبي مقرمش مقدم على طبق خزفي"
   },
-  "save-electricity-bill": {
-    "path": "images/covers/save-electricity-bill.jpg",
-    "alt": "مصباح LED ومكيف وعداد استهلاك منزلي"
+  "laundry-guide-tips": {
+    "path": "images/new-laundry-guide-tips.jpg",
+    "alt": "ملابس قطنية مطوية بعناية بجوار سلة غسيل"
   },
-  "save-mobile-data": {
-    "path": "images/new-save-mobile-data.jpg",
-    "alt": "هاتف ذكي بجوار جهاز اتصال على مكتب"
+  "qishta-basbousa": {
+    "path": "images/new-qishta-basbousa.jpg",
+    "alt": "قطع بسبوسة بالقشطة واللوز على طبق تقديم"
+  },
+  "natural-insect-repellents": {
+    "path": "images/new-natural-insect-repellents.jpg",
+    "alt": "نباتات ريحان ونعناع قرب نافذة منزلية مزودة بشبك"
   },
   "speed-up-slow-computer": {
     "path": "images/new-speed-up-slow-computer.jpg",
     "alt": "حاسوب مكتبي في مساحة عمل تقنية مرتبة"
   },
+  "save-mobile-data": {
+    "path": "images/new-save-mobile-data.jpg",
+    "alt": "هاتف ذكي بجوار جهاز اتصال على مكتب"
+  },
+  "quick-kitchen-cleaning": {
+    "path": "images/new-quick-kitchen-cleaning.jpg",
+    "alt": "مطبخ مرتب مع أدوات تنظيف مناسبة للأسطح"
+  },
+  "account-recovery-plan": {
+    "path": "images/editorial/account-recovery-plan.jpg",
+    "alt": "يد ترتب رموز استرداد ومفتاح أمان بجوار حاسوب"
+  },
+  "age-of-earth": {
+    "path": "images/editorial/age-of-earth.jpg",
+    "alt": "باحثة جيولوجيا تفحص طبقات صخرية قديمة بجوار مجسم للأرض"
+  },
+  "ai-explained-simply": {
+    "path": "images/editorial/ai-explained-simply.jpg",
+    "alt": "محطة حاسوب تعرض شبكة بيانات مترابطة ترمز إلى الذكاء الاصطناعي"
+  },
+  "amazing-animal-facts": {
+    "path": "images/editorial/amazing-animal-facts.jpg",
+    "alt": "مكتب باحث حياة برية يضم منظارًا وآثار حيوانات وصورًا ميدانية"
+  },
+  "amazing-human-body-facts": {
+    "path": "images/editorial/amazing-human-body-facts.jpg",
+    "alt": "نماذج تشريحية للقلب والدماغ مع سماعة طبية على مكتب"
+  },
+  "amazing-water-facts": {
+    "path": "images/editorial/amazing-water-facts.jpg",
+    "alt": "عينات ماء وأدوات قياس مخبرية بجوار مجرى طبيعي"
+  },
+  "chicken-kabsa": {
+    "path": "images/editorial/chicken-kabsa.jpg",
+    "alt": "طبق كبسة دجاج سعودي مع أرز بسمتي وبهارات وتزيين"
+  },
+  "choose-smartphone-budget": {
+    "path": "images/editorial/choose-smartphone-budget.jpg",
+    "alt": "ثلاثة هواتف مختلفة موضوعة للمقارنة قبل الشراء"
+  },
+  "cleaning-products-never-mix": {
+    "path": "images/editorial/cleaning-products-never-mix.jpg",
+    "alt": "عبوتا تنظيف منفصلتان مع قفازات على سطح مطبخ"
+  },
+  "coffee-story-yemen": {
+    "path": "images/editorial/coffee-story-yemen.jpg",
+    "alt": "قهوة وحبوب ومصب نحاسي أمام مدرجات جبلية يمنية"
+  },
+  "eliminate-bad-smells": {
+    "path": "images/editorial/eliminate-bad-smells.jpg",
+    "alt": "مطبخ نظيف بنافذة مفتوحة وتهوية طبيعية"
+  },
+  "essential-android-apps": {
+    "path": "images/editorial/essential-android-apps.jpg",
+    "alt": "هاتف ذكي يعرض تطبيقات متنوعة بلا شعارات تجارية"
+  },
+  "fruit-salad-recipe": {
+    "path": "images/editorial/fruit-salad-recipe.jpg",
+    "alt": "وعاء سلطة فواكه طازجة مع صوص عسل وليمون"
+  },
+  "galaxies-and-stars": {
+    "path": "images/editorial/galaxies-and-stars.jpg",
+    "alt": "تلسكوب يرصد مجرة درب التبانة في سماء ليلية صافية"
+  },
+  "gulf-rice-spices-guide": {
+    "path": "images/editorial/gulf-rice-spices-guide.jpg",
+    "alt": "أوعية بهارات خليجية تضم الهيل والقرفة والقرنفل واللومي حول الأرز"
+  },
+  "lentil-soup-recipe": {
+    "path": "images/editorial/lentil-soup-recipe.jpg",
+    "alt": "وعاء شوربة عدس كريمية مع ليمون وكمون وخبز"
+  },
+  "natural-cleaning-recipes": {
+    "path": "images/editorial/natural-cleaning-recipes.jpg",
+    "alt": "ليمون وبيكربونات وخل وفرشاة للتنظيف المنزلي"
+  },
+  "orange-cake-no-oven": {
+    "path": "images/editorial/orange-cake-no-oven.jpg",
+    "alt": "كيكة برتقال بجوار قدر طهي وثمار برتقال"
+  },
+  "organize-fridge-waste": {
+    "path": "images/editorial/organize-fridge-waste.jpg",
+    "alt": "ثلاجة مفتوحة مرتبة بعلب طعام وخضروات وألبان"
+  },
+  "protect-online-accounts": {
+    "path": "images/editorial/protect-online-accounts.jpg",
+    "alt": "هاتف يعرض مصادقة متعددة العوامل بجوار حاسوب ومفتاح أمان"
+  },
+  "safe-online-payments": {
+    "path": "images/editorial/safe-online-payments.jpg",
+    "alt": "بطاقة مصرفية وهاتف يعرض تأكيد عملية دفع إلكترونية"
+  },
+  "save-electricity-bill": {
+    "path": "images/editorial/save-electricity-bill.jpg",
+    "alt": "مصباح موفر وعداد استهلاك وجهاز تحكم بالتكييف"
+  },
   "tidy-home-in-15-minutes": {
-    "path": "images/covers/tidy-home-in-15-minutes.jpg",
-    "alt": "غرفة مرتبة مع رف وسلة ومؤقت"
+    "path": "images/editorial/tidy-home-in-15-minutes.jpg",
+    "alt": "غرفة معيشة مرتبة مع سلة تنظيم ومؤقت منزلي"
   },
   "used-smartphone-checklist": {
-    "path": "images/covers/used-smartphone-checklist.jpg",
-    "alt": "هاتف تحت عدسة فحص مع بطارية وعلامة تحقق"
+    "path": "images/editorial/used-smartphone-checklist.jpg",
+    "alt": "يدان تفحصان هاتفًا مستعملًا بجوار قائمة تحقق وكابل شحن"
   },
   "why-we-need-sleep": {
-    "path": "images/covers/why-we-need-sleep.jpg",
-    "alt": "سرير وهلال ونجوم في غرفة هادئة"
+    "path": "images/editorial/why-we-need-sleep.jpg",
+    "alt": "غرفة نوم هادئة بإضاءة قمرية وسرير مرتب"
   },
   "zaatar-manakeesh": {
-    "path": "images/covers/zaatar-manakeesh.jpg",
-    "alt": "مناقيش زعتر دائرية مع زيت زيتون وأوراق زعتر"
+    "path": "images/editorial/zaatar-manakeesh.jpg",
+    "alt": "مناقيش زعتر طازجة مع زيت زيتون وأوراق زعتر"
   }
 }
