@@ -1,0 +1,179 @@
+{
+  "articles": {
+    "lemon-mint-drink": {
+      "480": "images/responsive/articles/lemon-mint-drink-480.webp",
+      "800": "images/responsive/articles/lemon-mint-drink-800.webp",
+      "1200": "images/responsive/articles/lemon-mint-drink-1200.webp"
+    },
+    "samosa-cheese-dough": {
+      "480": "images/responsive/articles/samosa-cheese-dough-480.webp",
+      "800": "images/responsive/articles/samosa-cheese-dough-800.webp",
+      "1200": "images/responsive/articles/samosa-cheese-dough-1200.webp"
+    },
+    "laundry-guide-tips": {
+      "480": "images/responsive/articles/laundry-guide-tips-480.webp",
+      "800": "images/responsive/articles/laundry-guide-tips-800.webp",
+      "1200": "images/responsive/articles/laundry-guide-tips-1200.webp"
+    },
+    "qishta-basbousa": {
+      "480": "images/responsive/articles/qishta-basbousa-480.webp",
+      "800": "images/responsive/articles/qishta-basbousa-800.webp",
+      "1200": "images/responsive/articles/qishta-basbousa-1200.webp"
+    },
+    "natural-insect-repellents": {
+      "480": "images/responsive/articles/natural-insect-repellents-480.webp",
+      "800": "images/responsive/articles/natural-insect-repellents-800.webp",
+      "1200": "images/responsive/articles/natural-insect-repellents-1200.webp"
+    },
+    "speed-up-slow-computer": {
+      "480": "images/responsive/articles/speed-up-slow-computer-480.webp",
+      "800": "images/responsive/articles/speed-up-slow-computer-800.webp",
+      "1200": "images/responsive/articles/speed-up-slow-computer-1200.webp"
+    },
+    "save-mobile-data": {
+      "480": "images/responsive/articles/save-mobile-data-480.webp",
+      "800": "images/responsive/articles/save-mobile-data-800.webp",
+      "1200": "images/responsive/articles/save-mobile-data-1200.webp"
+    },
+    "quick-kitchen-cleaning": {
+      "480": "images/responsive/articles/quick-kitchen-cleaning-480.webp",
+      "800": "images/responsive/articles/quick-kitchen-cleaning-800.webp",
+      "1200": "images/responsive/articles/quick-kitchen-cleaning-1200.webp"
+    },
+    "account-recovery-plan": {
+      "480": "images/responsive/articles/account-recovery-plan-480.webp",
+      "800": "images/responsive/articles/account-recovery-plan-800.webp",
+      "1200": "images/responsive/articles/account-recovery-plan-1200.webp"
+    },
+    "age-of-earth": {
+      "480": "images/responsive/articles/age-of-earth-480.webp",
+      "800": "images/responsive/articles/age-of-earth-800.webp",
+      "1200": "images/responsive/articles/age-of-earth-1200.webp"
+    },
+    "ai-explained-simply": {
+      "480": "images/responsive/articles/ai-explained-simply-480.webp",
+      "800": "images/responsive/articles/ai-explained-simply-800.webp",
+      "1200": "images/responsive/articles/ai-explained-simply-1200.webp"
+    },
+    "amazing-animal-facts": {
+      "480": "images/responsive/articles/amazing-animal-facts-480.webp",
+      "800": "images/responsive/articles/amazing-animal-facts-800.webp",
+      "1200": "images/responsive/articles/amazing-animal-facts-1200.webp"
+    },
+    "amazing-human-body-facts": {
+      "480": "images/responsive/articles/amazing-human-body-facts-480.webp",
+      "800": "images/responsive/articles/amazing-human-body-facts-800.webp",
+      "1200": "images/responsive/articles/amazing-human-body-facts-1200.webp"
+    },
+    "amazing-water-facts": {
+      "480": "images/responsive/articles/amazing-water-facts-480.webp",
+      "800": "images/responsive/articles/amazing-water-facts-800.webp",
+      "1200": "images/responsive/articles/amazing-water-facts-1200.webp"
+    },
+    "chicken-kabsa": {
+      "480": "images/responsive/articles/chicken-kabsa-480.webp",
+      "800": "images/responsive/articles/chicken-kabsa-800.webp",
+      "1200": "images/responsive/articles/chicken-kabsa-1200.webp"
+    },
+    "choose-smartphone-budget": {
+      "480": "images/responsive/articles/choose-smartphone-budget-480.webp",
+      "800": "images/responsive/articles/choose-smartphone-budget-800.webp",
+      "1200": "images/responsive/articles/choose-smartphone-budget-1200.webp"
+    },
+    "cleaning-products-never-mix": {
+      "480": "images/responsive/articles/cleaning-products-never-mix-480.webp",
+      "800": "images/responsive/articles/cleaning-products-never-mix-800.webp",
+      "1200": "images/responsive/articles/cleaning-products-never-mix-1200.webp"
+    },
+    "coffee-story-yemen": {
+      "480": "images/responsive/articles/coffee-story-yemen-480.webp",
+      "800": "images/responsive/articles/coffee-story-yemen-800.webp",
+      "1200": "images/responsive/articles/coffee-story-yemen-1200.webp"
+    },
+    "eliminate-bad-smells": {
+      "480": "images/responsive/articles/eliminate-bad-smells-480.webp",
+      "800": "images/responsive/articles/eliminate-bad-smells-800.webp",
+      "1200": "images/responsive/articles/eliminate-bad-smells-1200.webp"
+    },
+    "essential-android-apps": {
+      "480": "images/responsive/articles/essential-android-apps-480.webp",
+      "800": "images/responsive/articles/essential-android-apps-800.webp",
+      "1200": "images/responsive/articles/essential-android-apps-1200.webp"
+    },
+    "fruit-salad-recipe": {
+      "480": "images/responsive/articles/fruit-salad-recipe-480.webp",
+      "800": "images/responsive/articles/fruit-salad-recipe-800.webp",
+      "1200": "images/responsive/articles/fruit-salad-recipe-1200.webp"
+    },
+    "galaxies-and-stars": {
+      "480": "images/responsive/articles/galaxies-and-stars-480.webp",
+      "800": "images/responsive/articles/galaxies-and-stars-800.webp",
+      "1200": "images/responsive/articles/galaxies-and-stars-1200.webp"
+    },
+    "gulf-rice-spices-guide": {
+      "480": "images/responsive/articles/gulf-rice-spices-guide-480.webp",
+      "800": "images/responsive/articles/gulf-rice-spices-guide-800.webp",
+      "1200": "images/responsive/articles/gulf-rice-spices-guide-1200.webp"
+    },
+    "lentil-soup-recipe": {
+      "480": "images/responsive/articles/lentil-soup-recipe-480.webp",
+      "800": "images/responsive/articles/lentil-soup-recipe-800.webp",
+      "1200": "images/responsive/articles/lentil-soup-recipe-1200.webp"
+    },
+    "natural-cleaning-recipes": {
+      "480": "images/responsive/articles/natural-cleaning-recipes-480.webp",
+      "800": "images/responsive/articles/natural-cleaning-recipes-800.webp",
+      "1200": "images/responsive/articles/natural-cleaning-recipes-1200.webp"
+    },
+    "orange-cake-no-oven": {
+      "480": "images/responsive/articles/orange-cake-no-oven-480.webp",
+      "800": "images/responsive/articles/orange-cake-no-oven-800.webp",
+      "1200": "images/responsive/articles/orange-cake-no-oven-1200.webp"
+    },
+    "organize-fridge-waste": {
+      "480": "images/responsive/articles/organize-fridge-waste-480.webp",
+      "800": "images/responsive/articles/organize-fridge-waste-800.webp",
+      "1200": "images/responsive/articles/organize-fridge-waste-1200.webp"
+    },
+    "protect-online-accounts": {
+      "480": "images/responsive/articles/protect-online-accounts-480.webp",
+      "800": "images/responsive/articles/protect-online-accounts-800.webp",
+      "1200": "images/responsive/articles/protect-online-accounts-1200.webp"
+    },
+    "safe-online-payments": {
+      "480": "images/responsive/articles/safe-online-payments-480.webp",
+      "800": "images/responsive/articles/safe-online-payments-800.webp",
+      "1200": "images/responsive/articles/safe-online-payments-1200.webp"
+    },
+    "save-electricity-bill": {
+      "480": "images/responsive/articles/save-electricity-bill-480.webp",
+      "800": "images/responsive/articles/save-electricity-bill-800.webp",
+      "1200": "images/responsive/articles/save-electricity-bill-1200.webp"
+    },
+    "tidy-home-in-15-minutes": {
+      "480": "images/responsive/articles/tidy-home-in-15-minutes-480.webp",
+      "800": "images/responsive/articles/tidy-home-in-15-minutes-800.webp",
+      "1200": "images/responsive/articles/tidy-home-in-15-minutes-1200.webp"
+    },
+    "used-smartphone-checklist": {
+      "480": "images/responsive/articles/used-smartphone-checklist-480.webp",
+      "800": "images/responsive/articles/used-smartphone-checklist-800.webp",
+      "1200": "images/responsive/articles/used-smartphone-checklist-1200.webp"
+    },
+    "why-we-need-sleep": {
+      "480": "images/responsive/articles/why-we-need-sleep-480.webp",
+      "800": "images/responsive/articles/why-we-need-sleep-800.webp",
+      "1200": "images/responsive/articles/why-we-need-sleep-1200.webp"
+    },
+    "zaatar-manakeesh": {
+      "480": "images/responsive/articles/zaatar-manakeesh-480.webp",
+      "800": "images/responsive/articles/zaatar-manakeesh-800.webp",
+      "1200": "images/responsive/articles/zaatar-manakeesh-1200.webp"
+    }
+  },
+  "hero": {
+    "640": "images/responsive/hero-640.webp",
+    "960": "images/responsive/hero-960.webp",
+    "1440": "images/responsive/hero-1440.webp"
+  }
+}

@@ -27,6 +27,8 @@ class Parser(HTMLParser):
             value = data.get("href") or data.get("src")
             if value:
                 self.refs.append(value)
+        if tag == "source" and data.get("srcset"):
+            self.refs.extend(item.strip().split()[0] for item in data["srcset"].split(",") if item.strip())
         if tag == "h1":
             self.h1 += 1
         if tag == "title":

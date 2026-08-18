@@ -150,15 +150,21 @@ def inject_shell(path:Path,text:str)->str:
             text=text.replace('</head>',tags+'\n</head>')
     return text
 
+def responsive_picture(a:dict,prefix:str,img_class:str,loading:str='lazy',sizes:str='(max-width: 640px) 100vw, 33vw',priority:bool=False,picture_class:str='')->str:
+    slug=a['slug'];srcset=', '.join(f'{prefix}images/responsive/articles/{slug}-{w}.webp {w}w' for w in (480,800,1200));attrs=' fetchpriority="high"' if priority else ''
+    return f'<picture class="{picture_class}"><source type="image/webp" srcset="{srcset}" sizes="{sizes}"><img class="{img_class}" src="{prefix}{a["image"]}" alt="{html.escape(a["imageAlt"],quote=True)}" loading="{loading}" decoding="async" width="1200" height="630"{attrs}></picture>'
+
 def article_card(a:dict,prefix:str="",lead:bool=False)->str:
-    cls="card lead-card" if lead else "card"
-    return f'''<article class="{cls}"><a href="{prefix}posts/{a['slug']}.html"><img class="card-img" src="{prefix}{a['image']}" alt="{html.escape(a['imageAlt'])}" loading="{'eager' if lead else 'lazy'}" decoding="async" width="1200" height="630"></a><div class="card-body"><span class="cat-chip">{a['category']}</span><h3><a href="{prefix}posts/{a['slug']}.html">{a['title']}</a></h3><p>{a['description']}</p><div class="card-meta"><time datetime="{a['published']}">{fmt_date(a['published'])}</time><span>{a['minutes']} دقائق قراءة</span></div></div></article>'''
+    cls="card lead-card" if lead else "card";picture=responsive_picture(a,prefix,'card-img','eager' if lead else 'lazy','(max-width: 640px) calc(100vw - 28px), (max-width: 900px) 50vw, 33vw',lead,'card-picture')
+    return f'''<article class="{cls}"><a href="{prefix}posts/{a['slug']}.html">{picture}</a><div class="card-body"><span class="cat-chip">{a['category']}</span><h3><a href="{prefix}posts/{a['slug']}.html">{a['title']}</a></h3><p>{a['description']}</p><div class="card-meta"><time datetime="{a['published']}">{fmt_date(a['published'])}</time><span>{a['minutes']} دقائق قراءة</span></div></div></article>'''
 
 def story_row(a:dict,prefix:str="")->str:
-    return f'''<a class="story-row" href="{prefix}posts/{a['slug']}.html"><img src="{prefix}{a['image']}" alt="" loading="lazy" decoding="async" width="240" height="126"><div><span class="cat-chip">{a['category']}</span><h3>{a['title']}</h3><span class="story-meta">{fmt_date(a['published'])} · {a['minutes']} دقائق</span></div></a>'''
+    picture=responsive_picture(a,prefix,'story-img','lazy','128px',False,'story-picture')
+    return f'''<a class="story-row" href="{prefix}posts/{a['slug']}.html">{picture}<div><span class="cat-chip">{a['category']}</span><h3>{a['title']}</h3><span class="story-meta">{fmt_date(a['published'])} · {a['minutes']} دقائق</span></div></a>'''
 
 def more_story(a:dict,prefix:str="")->str:
-    return f'''<a class="more-story" href="{prefix}posts/{a['slug']}.html"><img src="{prefix}{a['image']}" alt="" loading="lazy" decoding="async" width="320" height="168"><div><span class="cat-chip">{a['category']}</span><h3>{a['title']}</h3><p>{a['description']}</p></div></a>'''
+    picture=responsive_picture(a,prefix,'more-img','lazy','(max-width: 640px) 125px, 172px',False,'more-picture')
+    return f'''<a class="more-story" href="{prefix}posts/{a['slug']}.html">{picture}<div><span class="cat-chip">{a['category']}</span><h3>{a['title']}</h3><p>{a['description']}</p></div></a>'''
 
 def home_main(records:dict[str,dict],old:str)->str:
     ordered=sorted(records.values(),key=lambda x:x['published'],reverse=True)
@@ -166,6 +172,8 @@ def home_main(records:dict[str,dict],old:str)->str:
     cats="".join(f'''<a class="cat-card" href="category/{c['slug']}.html"><div class="cat-ic">{ICONS[c['slug']]}</div><h3>{c['name']}</h3><p>{c['description']}</p><span class="cnt">استكشف القسم ←</span></a>''' for c in CONFIG['categories'])
     latest_html=article_card(latest[0],lead=True)+f'<div class="story-stack">{"".join(story_row(x) for x in latest[1:5])}</div>'
     more="".join(more_story(x) for x in latest[5:11])
+    hero_picture='<picture class="hero-picture"><source type="image/webp" srcset="images/responsive/hero-640.webp 640w, images/responsive/hero-960.webp 960w, images/responsive/hero-1440.webp 1440w" sizes="(max-width: 880px) 100vw, 55vw"><img src="'+CONFIG['heroImage']+'" alt="مكتب هادئ يضم كتبًا ودفترًا وأدوات ترمز إلى المعرفة والحياة اليومية" width="1440" height="900" fetchpriority="high" decoding="async"></picture>'
+    featured_picture=responsive_picture(feat,'','featured-img','eager','(max-width: 880px) 100vw, 60vw',True,'featured-picture')
     organization={"@context":"https://schema.org","@type":"Organization","name":CONFIG['siteName'],"url":BASE,"description":CONFIG['description']}
     if CONFIG.get('contact',{}).get('enabled') and CONFIG.get('email'):organization['email']=CONFIG['email']
     faq_items=[
@@ -176,8 +184,8 @@ def home_main(records:dict[str,dict],old:str)->str:
     faq={"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq_items]}
     jsonlds='\n'.join('<script type="application/ld+json">'+json.dumps(x,ensure_ascii=False,separators=(',',':'))+'</script>' for x in (organization,faq))
     return f'''<main id="main-content">
-<section class="home-hero"><div class="wrap"><div class="hero-grid"><div class="hero-copy"><span class="eyebrow">مجلة عربية عصرية</span><h1>{CONFIG['tagline']}</h1><p>{CONFIG['description']}</p><div class="cta-row"><a class="btn btn-a" href="category/home-tips.html">ابدأ القراءة</a><a class="btn btn-b" href="about.html">تعرّف على دليلك</a></div></div><div class="hero-media"><img src="{CONFIG['heroImage']}" alt="مكتب هادئ يضم كتبًا ودفترًا وأدوات ترمز إلى المعرفة والحياة اليومية" width="1440" height="900" fetchpriority="high" decoding="async"></div></div><div class="value-strip"><div class="value-item"><strong>محتوى واضح</strong><span>لغة مباشرة دون تعقيد</span></div><div class="value-item"><strong>أقسام متنوعة</strong><span>المنزل والطعام والمعرفة والتقنية</span></div><div class="value-item"><strong>قراءة مريحة</strong><span>تصميم عربي يركز على المحتوى</span></div><div class="value-item"><strong>تحديثات مستمرة</strong><span>مراجعة وتصحيح عند الحاجة</span></div></div></div></section>
-<section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">اختيار التحرير</span><h2>مقال مميز</h2></div></div><a class="featured" href="posts/{feat['slug']}.html"><img src="{feat['image']}" alt="{html.escape(feat['imageAlt'])}" width="1200" height="630" decoding="async"><div class="f-body"><span class="f-tag">{feat['category']}</span><h2>{feat['title']}</h2><p>{feat['description']}</p><span class="read-link">اقرأ المقال ←</span></div></a></div></section>
+<section class="home-hero"><div class="wrap"><div class="hero-grid"><div class="hero-copy"><span class="eyebrow">مجلة عربية عصرية</span><h1>{CONFIG['tagline']}</h1><p>{CONFIG['description']}</p><div class="cta-row"><a class="btn btn-a" href="category/home-tips.html">ابدأ القراءة</a><a class="btn btn-b" href="about.html">تعرّف على دليلك</a></div></div><div class="hero-media">{hero_picture}</div></div><div class="value-strip"><div class="value-item"><strong>محتوى واضح</strong><span>لغة مباشرة دون تعقيد</span></div><div class="value-item"><strong>أقسام متنوعة</strong><span>المنزل والطعام والمعرفة والتقنية</span></div><div class="value-item"><strong>قراءة مريحة</strong><span>تصميم عربي يركز على المحتوى</span></div><div class="value-item"><strong>تحديثات مستمرة</strong><span>مراجعة وتصحيح عند الحاجة</span></div></div></div></section>
+<section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">اختيار التحرير</span><h2>مقال مميز</h2></div></div><a class="featured" href="posts/{feat['slug']}.html">{featured_picture}<div class="f-body"><span class="f-tag">{feat['category']}</span><h2>{feat['title']}</h2><p>{feat['description']}</p><span class="read-link">اقرأ المقال ←</span></div></a></div></section>
 <section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">تصفّح حسب اهتمامك</span><h2>أقسام دليلك</h2></div></div><div class="cats">{cats}</div></div></section>
 <section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">نُشر حديثًا</span><h2>أحدث المقالات</h2></div><a href="sitemap.html">جميع المقالات ←</a></div><div class="magazine-latest">{latest_html}</div></div></section>
 <section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">مختارات إضافية</span><h2>للقراءة بعد ذلك</h2></div></div><div class="more-grid">{more}</div></div></section>
@@ -233,7 +241,8 @@ def redesign_post(path:Path,records:dict[str,dict])->None:
     text=read(path); a=records[path.stem]; cat_slug=CAT_PATHS[a['category']]
     text=normalize_cards(text,records,"../")
     text=re.sub(r'<div class="art-meta">.*?</div>',f'''<div class="art-meta"><span>بقلم <a href="../authors/editorial-team.html" rel="author">{CONFIG['authorName']}</a></span><span>نُشر <time datetime="{a['published']}">{fmt_date(a['published'])}</time></span><span>حُدّث <time datetime="{a['modified']}">{fmt_date(a['modified'])}</time></span><span>{a['minutes']} دقائق قراءة</span></div>''',text,count=1,flags=re.S)
-    text=re.sub(r'<img class="art-img"[^>]+>',f'<img class="art-img" src="../{a["image"]}" alt="{html.escape(a["imageAlt"])}" width="1200" height="630" fetchpriority="high" decoding="async">',text,count=1)
+    art_picture=responsive_picture(a,'../','art-img','eager','(max-width: 960px) calc(100vw - 40px), 800px',True,'art-picture')
+    text=re.sub(r'(?:<picture class="art-picture">.*?</picture>|<img class="art-img"[^>]+>)',art_picture,text,count=1,flags=re.S)
     cover_url=f'{BASE}/{a["image"]}'
     text=re.sub(r'<meta property="og:image" content="[^"]+">',f'<meta property="og:image" content="{cover_url}">',text,count=1)
     text=re.sub(r'<meta name="twitter:image" content="[^"]+">',f'<meta name="twitter:image" content="{cover_url}">',text,count=1)
@@ -254,8 +263,8 @@ def redesign_post(path:Path,records:dict[str,dict])->None:
     def fix_pop_cover(match:re.Match)->str:
         block=match.group(0); slug_match=re.search(r'href="\.\./posts/([^"/]+)\.html"',block)
         if not slug_match or slug_match.group(1) not in records:return block
-        item=records[slug_match.group(1)]
-        return re.sub(r'<img class="pop-thumb"[^>]+>',f'<img class="pop-thumb" src="../{item["image"]}" alt="{html.escape(item["imageAlt"])}" loading="lazy" decoding="async" width="120" height="63">',block,count=1)
+        item=records[slug_match.group(1)];picture=responsive_picture(item,'../','pop-thumb','lazy','78px',False,'pop-picture')
+        return re.sub(r'(?:<picture class="pop-picture">.*?</picture>|<img class="pop-thumb"[^>]+>)',picture,block,count=1,flags=re.S)
     text=re.sub(r'<div class="pop-item">.*?</div></div>',fix_pop_cover,text,flags=re.S)
     text=text.replace('<meta property="og:type" content="website">','<meta property="og:type" content="article">',1)
     text=inject_shell(path,text)
