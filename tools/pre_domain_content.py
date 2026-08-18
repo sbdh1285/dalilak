@@ -333,5 +333,6 @@ def main():
  create_guides();subprocess.run([sys.executable,str(ROOT/'tools'/'redesign_magazine.py')],check=True)
  update_sitemaps_feed();contact_pending();update_privacy();add_new_to_plan();write_report()
  subprocess.run([sys.executable,str(ROOT/'tools'/'content_quality_audit.py')],check=True)
+ subprocess.run([sys.executable,str(ROOT/'tools'/'reading_time_audit.py')],check=True)
  print('اكتملت حزمة ما قبل الدومين: مراجعة 20 مقالًا، 4 مقالات جديدة، 4 أدلة، أغلفة مستقلة، وتجهيز التواصل.')
 if __name__=='__main__':main()

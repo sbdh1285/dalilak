@@ -32,7 +32,7 @@ for p in ROOT.rglob('*'):
   except UnicodeDecodeError:continue
   if re.search(r'adsbygoogle|ca-pub-[0-9]|pagead2\.googlesyndication',t):errors.append((str(p.relative_to(ROOT)),'كود إعلاني قبل الأوان'))
 # شغّل الفحوص المتخصصة
-for script in ('content_quality_audit.py','audit_site.py'):
+for script in ('content_quality_audit.py','reading_time_audit.py','audit_site.py'):
  result=subprocess.run([sys.executable,str(ROOT/'tools'/script)],capture_output=True,text=True)
  if result.returncode:errors.append((script,result.stdout+result.stderr))
 summary={'pages':len(pages),'articles':len(posts),'sources':sum('class="sources"' in p.read_text(encoding='utf-8') for p in posts),'mappedImages':len(json.loads((ROOT/'images'/'article-images.json').read_text(encoding='utf-8'))),'sitemapUrls':len(ET.parse(ROOT/'sitemap.xml').getroot()),'forms':forms,'publishedEmails':len(mailtos),'errors':len(errors)}

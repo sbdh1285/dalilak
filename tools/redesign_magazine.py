@@ -68,6 +68,20 @@ def fmt_date(value:str)->str:
         year,month,day=map(int,value[:10].split("-"));return f"{day} {MONTHS[month]} {year}"
     except Exception:return value
 
+def count_readable_words(fragment:str)->int:
+    fragment=re.sub(r'<!--.*?-->',' ',fragment,flags=re.S)
+    visible=re.sub(r'<[^>]+>',' ',fragment)
+    return len(re.findall(r'[\w\u0600-\u06FF]+',html.unescape(visible),re.UNICODE))
+
+def calculate_reading_minutes(fragment:str)->int:
+    return max(2,math.ceil(count_readable_words(fragment)/180))
+
+def reading_time_label(minutes:int)->str:
+    if minutes==1:return 'دقيقة واحدة'
+    if minutes==2:return 'دقيقتان'
+    if 3<=minutes<=10:return f'{minutes} دقائق'
+    return f'{minutes} دقيقة'
+
 def article_records()->dict[str,dict]:
     records={}
     for path in sorted((ROOT/"posts").glob("*.html")):
@@ -80,8 +94,7 @@ def article_records()->dict[str,dict]:
         body_start=text.find('<div class="art-body">')
         body_ends=[x for x in (text.find('<!-- CLUSTER-LINKS-START -->',body_start),text.find('<section class="cluster-links"',body_start),text.find('<section class="sources"',body_start),text.find('<div class="share">',body_start)) if x>body_start]
         body_end=min(body_ends) if body_ends else len(text)
-        word_count=len(re.sub(r'<[^>]+>',' ',text[body_start:body_end]).split())
-        reading_minutes=max(2,math.ceil(word_count/180))
+        reading_minutes=calculate_reading_minutes(text[body_start:body_end])
         custom_cover=ROOT/'images'/'covers'/f'{path.stem}.jpg'
         fallback=COVERS.get(path.stem,(f"images/og-{path.stem}.png",data["headline"]))
         configured=ARTICLE_IMAGES.get(path.stem)
@@ -156,11 +169,11 @@ def responsive_picture(a:dict,prefix:str,img_class:str,loading:str='lazy',sizes:
 
 def article_card(a:dict,prefix:str="",lead:bool=False)->str:
     cls="card lead-card" if lead else "card";picture=responsive_picture(a,prefix,'card-img','eager' if lead else 'lazy','(max-width: 640px) calc(100vw - 28px), (max-width: 900px) 50vw, 33vw',lead,'card-picture')
-    return f'''<article class="{cls}"><a href="{prefix}posts/{a['slug']}.html">{picture}</a><div class="card-body"><span class="cat-chip">{a['category']}</span><h3><a href="{prefix}posts/{a['slug']}.html">{a['title']}</a></h3><p>{a['description']}</p><div class="card-meta"><time datetime="{a['published']}">{fmt_date(a['published'])}</time><span>{a['minutes']} دقائق قراءة</span></div></div></article>'''
+    return f'''<article class="{cls}"><a href="{prefix}posts/{a['slug']}.html">{picture}</a><div class="card-body"><span class="cat-chip">{a['category']}</span><h3><a href="{prefix}posts/{a['slug']}.html">{a['title']}</a></h3><p>{a['description']}</p><div class="card-meta"><time datetime="{a['published']}">{fmt_date(a['published'])}</time><span>{reading_time_label(a['minutes'])} قراءة</span></div></div></article>'''
 
 def story_row(a:dict,prefix:str="")->str:
     picture=responsive_picture(a,prefix,'story-img','lazy','128px',False,'story-picture')
-    return f'''<a class="story-row" href="{prefix}posts/{a['slug']}.html">{picture}<div><span class="cat-chip">{a['category']}</span><h3>{a['title']}</h3><span class="story-meta">{fmt_date(a['published'])} · {a['minutes']} دقائق</span></div></a>'''
+    return f'''<a class="story-row" href="{prefix}posts/{a['slug']}.html">{picture}<div><span class="cat-chip">{a['category']}</span><h3>{a['title']}</h3><span class="story-meta">{fmt_date(a['published'])} · {reading_time_label(a['minutes'])}</span></div></a>'''
 
 def more_story(a:dict,prefix:str="")->str:
     picture=responsive_picture(a,prefix,'more-img','lazy','(max-width: 640px) 125px, 172px',False,'more-picture')
@@ -240,7 +253,7 @@ def redesign_category(path:Path,records:dict[str,dict])->None:
 def redesign_post(path:Path,records:dict[str,dict])->None:
     text=read(path); a=records[path.stem]; cat_slug=CAT_PATHS[a['category']]
     text=normalize_cards(text,records,"../")
-    text=re.sub(r'<div class="art-meta">.*?</div>',f'''<div class="art-meta"><span>بقلم <a href="../authors/editorial-team.html" rel="author">{CONFIG['authorName']}</a></span><span>نُشر <time datetime="{a['published']}">{fmt_date(a['published'])}</time></span><span>حُدّث <time datetime="{a['modified']}">{fmt_date(a['modified'])}</time></span><span>{a['minutes']} دقائق قراءة</span></div>''',text,count=1,flags=re.S)
+    text=re.sub(r'<div class="art-meta">.*?</div>',f'''<div class="art-meta"><span>بقلم <a href="../authors/editorial-team.html" rel="author">{CONFIG['authorName']}</a></span><span>نُشر <time datetime="{a['published']}">{fmt_date(a['published'])}</time></span><span>حُدّث <time datetime="{a['modified']}">{fmt_date(a['modified'])}</time></span><span>{reading_time_label(a['minutes'])} قراءة</span></div>''',text,count=1,flags=re.S)
     art_picture=responsive_picture(a,'../','art-img','eager','(max-width: 960px) calc(100vw - 40px), 800px',True,'art-picture')
     text=re.sub(r'(?:<picture class="art-picture">.*?</picture>|<img class="art-img"[^>]+>)',art_picture,text,count=1,flags=re.S)
     cover_url=f'{BASE}/{a["image"]}'
