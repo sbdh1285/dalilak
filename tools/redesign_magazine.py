@@ -73,8 +73,11 @@ def count_readable_words(fragment:str)->int:
     visible=re.sub(r'<[^>]+>',' ',fragment)
     return len(re.findall(r'[\w\u0600-\u06FF]+',html.unescape(visible),re.UNICODE))
 
+ARABIC_READING_WORDS_PER_MINUTE=143
+
 def calculate_reading_minutes(fragment:str)->int:
-    return max(2,math.ceil(count_readable_words(fragment)/180))
+    words=count_readable_words(fragment)
+    return max(2,math.floor(words/ARABIC_READING_WORDS_PER_MINUTE+0.5))
 
 def reading_time_label(minutes:int)->str:
     if minutes==1:return 'دقيقة واحدة'
