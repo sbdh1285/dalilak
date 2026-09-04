@@ -141,7 +141,10 @@ def header(path:Path)->str:
 def footer(path:Path)->str:
     p=prefix_for(path)
     contact=CONFIG.get('contact',{});contact_ready=bool(contact.get('enabled') and CONFIG.get('email'))
-    contact_html=f'<a href="mailto:{CONFIG["email"]}">{CONFIG["email"]}</a>' if contact_ready else '<span class="footer-contact-pending">البريد الرسمي قيد التجهيز</span>'
+    contact_html=(
+        f'<p class="footer-email"><span>البريد الإلكتروني</span><a href="mailto:{CONFIG["email"]}">{CONFIG["email"]}</a></p>'
+        if contact_ready else ''
+    )
     return f'''<footer><div class="wrap"><div class="fgrid">
 <div class="footer-brand">{logo(p)}<p>{CONFIG['description']}</p></div>
 <div><h4>الأقسام</h4><a href="{p}category/home-tips.html">نصائح منزلية</a><a href="{p}category/recipes.html">وصفات لذيذة</a><a href="{p}category/knowledge.html">معلومات عامة</a><a href="{p}category/tech.html">تكنولوجيا</a></div>
@@ -153,7 +156,7 @@ def inject_shell(path:Path,text:str)->str:
     text=re.sub(r'<div class="topline">.*?</div></div>\s*','',text,count=1,flags=re.S)
     text=re.sub(r'<header.*?</header>(?:<button class="nav-scrim".*?</button>)?',header(path),text,count=1,flags=re.S)
     text=re.sub(r'<footer>.*?</footer>',footer(path),text,count=1,flags=re.S)
-    text=text.replace('css/style.css?v=6','css/style.css?v=8').replace('css/style.css?v=7','css/style.css?v=8')
+    text=text.replace('css/style.css?v=6','css/style.css?v=11').replace('css/style.css?v=7','css/style.css?v=11').replace('css/style.css?v=10','css/style.css?v=11')
     text=text.replace('<meta name="theme-color" content="#0f766e">','<meta name="theme-color" content="#124e4a">')
     p=prefix_for(path)
     preload=f'<link rel="preload" href="{p}fonts/ibm-plex-arabic-700.ttf" as="font" type="font/ttf" crossorigin>'

@@ -136,6 +136,9 @@ SOURCES = {
         ("CISA — المصادقة المقاومة للتصيد", "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf"),
         ("CISA — كلمات المرور القوية", "https://www.cisa.gov/secure-our-world/use-strong-passwords"),
     ],
+    "gulf-rice-spices-guide": [
+        ("وزارة الزراعة الأمريكية — سلامة الطعام في المطبخ", "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"),
+    ],
     "used-smartphone-checklist": [
         ("Android Help — التحقق من إصدار النظام والتحديث الأمني", "https://support.google.com/android/answer/7680439"),
         ("Google Pixel Help — الاستعداد لإعادة ضبط المصنع", "https://support.google.com/pixelphone/answer/4596836"),
@@ -234,7 +237,7 @@ def update_jsonld(text: str) -> str:
         except json.JSONDecodeError:
             return match.group(0)
         if data.get("@type") == "Article":
-            data["dateModified"] = TODAY
+            pass  # لا تُستبدل تواريخ المراجعة دفعة واحدة
             data["author"] = {
                 "@type": "Organization",
                 "name": "فريق تحرير دليلك",
@@ -242,7 +245,10 @@ def update_jsonld(text: str) -> str:
             }
         if data.get("@type") == "Organization" and data.get("name") == "دليلك":
             data["url"] = BASE
-            data["email"] = "contact@dalilak.com"
+            if SITE_CONFIG.get("contact", {}).get("enabled") and SITE_CONFIG.get("email"):
+                data["email"] = SITE_CONFIG["email"]
+            else:
+                data.pop("email", None)
         return match.group(1) + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + match.group(3)
     return pattern.sub(replace, text)
 
@@ -302,12 +308,19 @@ def fix_post(path: Path, categories: dict[str, str]) -> None:
 
 
 def root_link_block(prefix: str = "") -> str:
+    email = (SITE_CONFIG.get("email") or "").strip()
+    ready = bool(SITE_CONFIG.get("contact", {}).get("enabled") and email)
+    contact_bit = (
+        f'<p><a href="mailto:{email}">{email}</a></p><p>نرحب بالتصحيحات والملاحظات واقتراحات المواضيع.</p>'
+        if ready
+        else '<p>البريد يُنشر في صفحة اتصل بنا عندما يعمل.</p>'
+    )
     return f'''<footer><div class="wrap">
   <div class="fgrid">
     <div><div class="logo-ic" style="width:44px;height:44px;font-size:1.3rem">📘</div><h4 style="margin:10px 0 8px">دليلك</h4><p>دليلك اليومي لمحتوى عربي عملي ومفيد، مكتوب بوضوح ويُراجع ويُحدّث عند الحاجة.</p></div>
     <div><h4>الأقسام</h4><a href="{prefix}category/home-tips.html">نصائح منزلية</a><a href="{prefix}category/recipes.html">وصفات لذيذة</a><a href="{prefix}category/knowledge.html">معلومات عامة</a><a href="{prefix}category/tech.html">تكنولوجيا</a></div>
     <div><h4>روابط مهمة</h4><a href="{prefix}about.html">من نحن</a><a href="{prefix}contact.html">اتصل بنا</a><a href="{prefix}privacy-policy.html">سياسة الخصوصية</a><a href="{prefix}terms.html">شروط الاستخدام</a><a href="{prefix}disclaimer.html">إخلاء المسؤولية</a><a href="{prefix}editorial-policy.html">سياسة التحرير</a><a href="{prefix}authors/editorial-team.html">فريق التحرير</a><a href="{prefix}sitemap.html">خريطة الموقع</a></div>
-    <div><h4>تواصل معنا</h4><p><a href="mailto:contact@dalilak.com">contact@dalilak.com</a></p><p>نرحب بالتصحيحات والملاحظات واقتراحات المواضيع.</p></div>
+    <div><h4>تواصل معنا</h4>{contact_bit}</div>
   </div>
   <div class="f-bottom"><span>© 2026 دليلك — جميع الحقوق محفوظة.</span><span>محتوى عربي مفيد ومراجع</span></div>
 </div></footer>'''
@@ -397,7 +410,7 @@ def create_trust_pages() -> None:
         '''<p class="sub">الجهة التحريرية المسؤولة عن محتوى الموقع</p>
 <div class="author author-page"><div class="author-av">✍</div><div><h2>من نحن؟</h2><p>فريق تحرير دليلك هو الاسم التحريري المستخدم للمقالات المنشورة في الموقع. نعمل على تقديم شروحات ونصائح ووصفات ومعلومات عامة بلغة عربية واضحة.</p></div></div>
 <h2>مسؤولياتنا</h2><ul><li>مراجعة بنية المقال ووضوحه قبل النشر.</li><li>الرجوع إلى مصادر موثوقة في الموضوعات القابلة للتحقق.</li><li>إضافة تنبيهات السلامة وحدود الاستخدام عند الحاجة.</li><li>تصحيح الأخطاء وتحديث المحتوى القديم.</li></ul>
-<h2>تواصل مع الفريق</h2><p>يمكنك إرسال تصحيح موثق أو اقتراح موضوع عبر <a href="../contact.html">صفحة اتصل بنا</a> أو البريد <a href="mailto:contact@dalilak.com">contact@dalilak.com</a>.</p>
+<h2>تواصل مع الفريق</h2><p>يمكنك إرسال تصحيح موثق أو اقتراح موضوع عبر <a href="../contact.html">صفحة اتصل بنا</a>.</p>
 <p class="transparency-note"><strong>ملاحظة شفافية:</strong> هذه الصفحة تعرّف بالجهة التحريرية للموقع ولا تدّعي وجود اعتماد مهني طبي أو قانوني. يُذكر اسم المختص واعتماده بوضوح إذا شارك مستقبلًا في مراجعة محتوى تخصصي.</p>''',
         nested=True,
     )
@@ -410,10 +423,13 @@ def create_trust_pages() -> None:
 
 
 def update_contact() -> None:
+    if not (SITE_CONFIG.get('contact', {}).get('enabled') and SITE_CONFIG.get('email')):
+        return
     path = ROOT / "contact.html"
     text = read(path)
+    email = SITE_CONFIG["email"].strip()
     form = f'''<h2>أرسل رسالة</h2>
-<form class="contact-form" action="https://formsubmit.co/contact@dalilak.com" method="POST">
+<form class="contact-form" action="https://formsubmit.co/{email}" method="POST">
   <input type="hidden" name="_subject" value="رسالة جديدة من موقع دليلك">
   <input type="hidden" name="_next" value="{BASE}/thanks.html">
   <input type="hidden" name="_captcha" value="true">
