@@ -4,11 +4,11 @@
 **النتيجة:** اجتاز
 
 ## الملخص
-- pages: 54
-- articles: 34
-- sources: 31
-- mappedImages: 34
-- sitemapUrls: 51
+- pages: 61
+- articles: 41
+- sources: 36
+- mappedImages: 41
+- sitemapUrls: 58
 - forms: 1
 - publishedEmails: 1
 - errors: 0
