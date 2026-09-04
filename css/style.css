@@ -314,3 +314,14 @@ footer p{font-size:.86rem;line-height:1.85}
 .art-body h3{font-size:1.12rem;margin:22px 0 8px}
 .guide-note{color:var(--muted);max-width:760px;margin:0 0 22px;font-size:1.02rem}
 .page .box p{margin-bottom:8px}
+
+.art-body h3{font-size:1.12rem;margin:22px 0 8px}
+.guide-note{color:var(--muted);max-width:760px;margin:0 0 22px;font-size:1.02rem}
+.page .box p{margin-bottom:8px}
+.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 24px;margin:6px 0 28px}
+.contact-card .contact-label{font-size:.78rem;color:var(--muted);margin:0 0 6px}
+.contact-card .contact-email{font-family:var(--title);font-size:clamp(1.15rem,2.4vw,1.45rem);line-height:1.55;margin:0 0 10px;word-break:break-all}
+.contact-card .contact-email a{color:var(--primary);font-weight:700}
+.footer-email{display:block;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+.footer-email span{display:block;font-size:.75rem;color:var(--muted);margin-bottom:3px}
+.footer-email a{font-weight:700;word-break:break-all}

@@ -38,7 +38,7 @@ def write(path: Path, text: str) -> None:
 def css_for(path: Path) -> str:
     nested = path.parent != ROOT
     prefix = "../" if nested else ""
-    return f'{prefix}css/style.css?v=10'
+    return f'{prefix}css/style.css?v=11'
 
 
 def rebuild_toc(body: str) -> str:
@@ -197,6 +197,12 @@ def replace_main(path: Path, main_html: str, title: str, desc: str) -> None:
                 data["email"] = CFG["email"]
             else:
                 data.pop("email", None)
+        pub = data.get("publisher")
+        if isinstance(pub, dict) and pub.get("name") == "دليلك":
+            if CFG.get("contact", {}).get("enabled") and CFG.get("email"):
+                pub["email"] = CFG["email"]
+            else:
+                pub.pop("email", None)
         return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "</script>"
 
     text = re.sub(r'<script type="application/ld\+json">(.*?)</script>', fix_json, text, flags=re.S)
@@ -221,7 +227,7 @@ def update_static_pages() -> None:
 <h2>ما الذي لا ندّعيه؟</h2>
 <p>لسنا جهة طبية أو قانونية أو مالية. المحتوى تثقيفي عام. السلامة المنزلية والأمن الرقمي يُرجع فيهما إلى الملصق والجهة الرسمية المختصة.</p>
 <h2>التصحيحات</h2>
-<p>إن وجدت خطأ، استخدم <a href="contact.html">صفحة الاتصال</a> مع رابط المقال والعبارة ومصدر التصحيح. نحدّث تاريخ المراجعة عند التغيير الجوهري.</p>
+<p>إن وجدت خطأ، راسلنا من <a href="contact.html">صفحة الاتصال</a> أو على البريد الظاهر هناك، مع رابط المقال والعبارة ومصدر التصحيح. نحدّث تاريخ المراجعة عند التغيير الجوهري.</p>
 """,
     )
     replace_main(ROOT / "about.html", about, "من نحن", "تعرّف على مجلة دليلك: منهج الكتابة والمراجعة وحدود المحتوى وكيف تُرسل تصحيحًا.")
@@ -230,9 +236,12 @@ def update_static_pages() -> None:
     contact_on = bool(CFG.get("contact", {}).get("enabled") and email)
     if contact_on:
         contact_inner = f"""
-<p>راسلنا للتصحيح أو اقتراح موضوع أو استفسار عام. العنوان الحالي: <a href="mailto:{email}">{email}</a>. هذا بريد Gmail يعمل لاستقبال الرسائل؛ ليس عنوانًا على دومين خاص بعد.</p>
-<div class="contact-status" id="contact-status"><strong>النموذج جاهز</strong><p>يصل الإرسال إلى البريد نفسه عبر FormSubmit. عند أول رسالة قد تصلك رسالة تأكيد في الوارد أو الرسائل غير المرغوب فيها؛ أكّدها حتى تُسلَّم الرسائل التالية مباشرة.</p></div>
-<h2>أرسل رسالة</h2>
+<div class="contact-card">
+<p class="contact-label">البريد الإلكتروني الرسمي</p>
+<p class="contact-email"><a href="mailto:{email}">{email}</a></p>
+<p>للاستفسار وتصحيح المحتوى واقتراح موضوع راسل هذا البريد، أو أرسل من النموذج أدناه.</p>
+</div>
+<h2>نموذج الرسالة</h2>
 <form class="contact-form" action="https://formsubmit.co/{email}" method="POST">
 <input type="hidden" name="_subject" value="رسالة جديدة من موقع دليلك">
 <input type="hidden" name="_next" value="{BASE}/thanks.html">
@@ -265,8 +274,8 @@ def update_static_pages() -> None:
 <h2>الإعلانات والشراكات</h2>
 <p>يمكن مراسلتنا على البريد نفسه. أي تعاون مستقبلي سيُوسم في الصفحة المعنية. لا نضمن قبول برامج إعلانية.</p>
 """
-        contact = page_main("اتصل بنا", "بريد منشور ونموذج يصل إلى نفس العنوان", contact_inner)
-        replace_main(ROOT / "contact.html", contact, "اتصل بنا", f"تواصل مع دليلك عبر النموذج أو البريد {email} للتصحيح واقتراح الموضوع.")
+        contact = page_main("اتصل بنا", "البريد الإلكتروني الرسمي ونموذج الرسائل", contact_inner)
+        replace_main(ROOT / "contact.html", contact, "اتصل بنا", f"تواصل مع مجلة دليلك عبر البريد {email} أو نموذج الاتصال.")
     else:
         contact_inner = """
 <p>نريد قناة تواصل تعمل فعليًا. لذلك لا نعرض بريدًا غير موجود ولا نموذجًا يضيع الرسائل. عند تفعيل البريد سيظهر العنوان والنموذج هنا، وتُحدَّث <a href="privacy-policy.html">سياسة الخصوصية</a> قبل جمع أي بيانات.</p>
@@ -298,14 +307,14 @@ def update_static_pages() -> None:
 <h2>2. التخزين المحلي</h2>
 <p>نحفظ اختيار الوضع النهاري أو الليلي في المتصفح عبر التخزين المحلي. لا نستخدم حاليًا ملفات تعريف ارتباط خاصة بنا لتتبع الزائرين.</p>
 <h2>3. التواصل</h2>
-<p>إن كان النموذج مفعّلًا نجمع الاسم وبريد الرد والموضوع ونص الرسالة للرد عليك فقط. تُرسل البيانات عبر FormSubmit إلى بريد الموقع المنشور في صفحة الاتصال. لا ترسل كلمات مرور أو بيانات مالية. يمكنك الكتابة مباشرة إلى البريد الظاهر بدل النموذج. تفاصيل الحالة في <a href="contact.html">اتصل بنا</a>.</p>
+<p>عند استخدام نموذج الاتصال نجمع الاسم وبريد الرد والموضوع ونص الرسالة لغرض الرد فقط. تُسلَّم الرسالة إلى بريد الموقع المنشور في <a href="contact.html">اتصل بنا</a>. يمكنك الكتابة إلى ذلك البريد مباشرة. لا ترسل كلمات مرور أو بيانات مالية.</p>
 <h2>4. التحليلات والإعلانات</h2>
 <p>لا يوجد كود Google AdSense ولا معرف ناشر حقيقي ولا أداة تحليلات إعلانية مفعّلة. ملف ads.txt قالب معلّق فقط.</p>
 <p>إذا قُبل الموقع لاحقًا في برنامج إعلانات أو أضفنا قياس زيارات، فسنحدّث هذه السياسة قبل التشغيل، ونوضح ملفات تعريف الارتباط والإعلانات المخصصة، ونوفّر آلية موافقة حيث يلزم القانون. Google قد تستخدم بيانات لعرض إعلانات وفق سياساتها عند التفعيل فقط.</p>
 <h2>5. الروابط الخارجية</h2>
 <p>بعض المقالات تربط مصادر رسمية. سياسة الموقع الخارجي تنطبق بعد مغادرتك.</p>
 <h2>6. حقوقك</h2>
-<p>لطلب استفسار خصوصية استخدم <a href="contact.html">اتصل بنا</a> أو البريد المنشور هناك إن وُجد.</p>
+<p>لطلب استفسار خصوصية استخدم <a href="contact.html">اتصل بنا</a> أو البريد الإلكتروني الرسمي الظاهر في تلك الصفحة.</p>
 <h2>7. التحديث</h2>
 <p>أي تغيير جوهري في جمع البيانات أو الإعلانات سيظهر بتاريخ جديد في أعلى هذه الصفحة.</p>
 """,
@@ -324,7 +333,7 @@ def update_static_pages() -> None:
 <h2>3. لا نصيحة متخصصة</h2>
 <p>لا يغني المحتوى عن الطبيب أو الفني أو المستشار القانوني أو المالي. اتبع ملصقات المنتجات والتعليمات الرسمية.</p>
 <h2>4. سلوك الزائر</h2>
-<p>يُحظر إساءة استخدام النماذج عند تفعيلها، أو محاولة تعطيل الموقع، أو إرسال محتوى مخالف للقانون.</p>
+<p>يُحظر إساءة استخدام النماذج، أو محاولة تعطيل الموقع، أو إرسال محتوى مخالف للقانون.</p>
 <h2>5. الإعلانات</h2>
 <p>قد تظهر إعلانات لاحقًا. وجود إعلان لا يعني تأييد المنتج. القبول في برامج الإعلانات قرار الجهة المزودة ولا يُضمن.</p>
 <h2>6. المسؤولية</h2>
@@ -448,10 +457,11 @@ def patch_tools() -> None:
 
     redesign = ROOT / "tools" / "redesign_magazine.py"
     r = read(redesign)
-    r = r.replace("css/style.css?v=8", "css/style.css?v=10")
-    r = r.replace("css/style.css?v=9", "css/style.css?v=10")
+    r = r.replace("css/style.css?v=8", "css/style.css?v=11")
+    r = r.replace("css/style.css?v=9", "css/style.css?v=11")
+    r = r.replace("css/style.css?v=10", "css/style.css?v=11")
     if "dalilak/css/style.css" in r:
-        r = r.replace("/dalilak/css/style.css?v=10", "css/style.css?v=10")
+        r = r.replace("/dalilak/css/style.css?v=11", "css/style.css?v=11")
     write(redesign, r)
 
     phase = ROOT / "tools" / "phase_one_seo.py"
@@ -488,9 +498,16 @@ def add_css() -> None:
 .art-body h3{font-size:1.12rem;margin:22px 0 8px}
 .guide-note{color:var(--muted);max-width:760px;margin:0 0 22px;font-size:1.02rem}
 .page .box p{margin-bottom:8px}
+.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 24px;margin:6px 0 28px}
+.contact-card .contact-label{font-size:.78rem;color:var(--muted);margin:0 0 6px}
+.contact-card .contact-email{font-family:var(--title);font-size:clamp(1.15rem,2.4vw,1.45rem);line-height:1.55;margin:0 0 10px;word-break:break-all}
+.contact-card .contact-email a{color:var(--primary);font-weight:700}
+.footer-email{display:block;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+.footer-email span{display:block;font-size:.75rem;color:var(--muted);margin-bottom:3px}
+.footer-email a{font-weight:700;word-break:break-all}
 """
     text = read(css)
-    if ".guide-note{" not in text:
+    if ".contact-card{" not in text:
         write(css, text + extra)
 
 
