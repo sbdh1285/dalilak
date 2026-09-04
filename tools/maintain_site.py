@@ -136,6 +136,9 @@ SOURCES = {
         ("CISA — المصادقة المقاومة للتصيد", "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf"),
         ("CISA — كلمات المرور القوية", "https://www.cisa.gov/secure-our-world/use-strong-passwords"),
     ],
+    "gulf-rice-spices-guide": [
+        ("وزارة الزراعة الأمريكية — سلامة الطعام في المطبخ", "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"),
+    ],
     "used-smartphone-checklist": [
         ("Android Help — التحقق من إصدار النظام والتحديث الأمني", "https://support.google.com/android/answer/7680439"),
         ("Google Pixel Help — الاستعداد لإعادة ضبط المصنع", "https://support.google.com/pixelphone/answer/4596836"),
@@ -234,7 +237,7 @@ def update_jsonld(text: str) -> str:
         except json.JSONDecodeError:
             return match.group(0)
         if data.get("@type") == "Article":
-            data["dateModified"] = TODAY
+            pass  # لا تُستبدل تواريخ المراجعة دفعة واحدة
             data["author"] = {
                 "@type": "Organization",
                 "name": "فريق تحرير دليلك",
@@ -242,7 +245,7 @@ def update_jsonld(text: str) -> str:
             }
         if data.get("@type") == "Organization" and data.get("name") == "دليلك":
             data["url"] = BASE
-            data["email"] = "contact@dalilak.com"
+            data.pop('email', None)
         return match.group(1) + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + match.group(3)
     return pattern.sub(replace, text)
 
@@ -410,6 +413,8 @@ def create_trust_pages() -> None:
 
 
 def update_contact() -> None:
+    if not (SITE_CONFIG.get('contact', {}).get('enabled') and SITE_CONFIG.get('email')):
+        return
     path = ROOT / "contact.html"
     text = read(path)
     form = f'''<h2>أرسل رسالة</h2>

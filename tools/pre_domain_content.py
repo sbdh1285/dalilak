@@ -213,7 +213,9 @@ def apply_accuracy_rewrites():
   for old,new in TEXT_FIXES.items():text=text.replace(old,new)
   write(path,text)
  for slug,body in FULL_BODY.items():
-  path=ROOT/'posts'/f'{slug}.html';text=read(path);start=text.index('<div class="art-body">');end=text.find('<section class="sources"',start)
+  path=ROOT/'posts'/f'{slug}.html';text=read(path)
+  if 'PROF-2026' in text: continue
+  start=text.index('<div class="art-body">');end=text.find('<section class="sources"',start)
   if end<0:end=text.find('<div class="share">',start)
   text=text[:start]+'<div class="art-body">'+body+'</div>\n'+text[end:];write(path,text)
 

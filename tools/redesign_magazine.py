@@ -153,7 +153,7 @@ def inject_shell(path:Path,text:str)->str:
     text=re.sub(r'<div class="topline">.*?</div></div>\s*','',text,count=1,flags=re.S)
     text=re.sub(r'<header.*?</header>(?:<button class="nav-scrim".*?</button>)?',header(path),text,count=1,flags=re.S)
     text=re.sub(r'<footer>.*?</footer>',footer(path),text,count=1,flags=re.S)
-    text=text.replace('css/style.css?v=6','css/style.css?v=8').replace('css/style.css?v=7','css/style.css?v=8')
+    text=text.replace('css/style.css?v=6','css/style.css?v=10').replace('css/style.css?v=7','css/style.css?v=10')
     text=text.replace('<meta name="theme-color" content="#0f766e">','<meta name="theme-color" content="#124e4a">')
     p=prefix_for(path)
     preload=f'<link rel="preload" href="{p}fonts/ibm-plex-arabic-700.ttf" as="font" type="font/ttf" crossorigin>'

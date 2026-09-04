@@ -178,6 +178,7 @@ def update_meta_and_article(text:str,slug:str)->str:
 
 def enhance_article(slug:str)->None:
     path=ROOT/'posts'/f'{slug}.html';text=read(path)
+    if 'PROF-2026' in text: return
     for old,new in FIXES.get(slug,[]):text=text.replace(old,new)
     text=re.sub(r'<!-- SEO-PHASE1-START -->.*?<!-- SEO-PHASE1-END -->\s*','',text,flags=re.S)
     marker='<div class="art-body">'

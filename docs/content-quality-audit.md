@@ -5,40 +5,40 @@
 
 | المقال | الكلمات | H2 | المصادر | النتيجة |
 |---|---:|---:|---|---|
-| `account-recovery-plan` | 411 | 11 | نعم | اجتاز |
-| `age-of-earth` | 559 | 5 | نعم | اجتاز |
-| `ai-explained-simply` | 654 | 10 | نعم | اجتاز |
-| `amazing-animal-facts` | 500 | 8 | نعم | اجتاز |
-| `amazing-human-body-facts` | 353 | 7 | نعم | اجتاز |
-| `amazing-water-facts` | 528 | 9 | نعم | اجتاز |
-| `chicken-kabsa` | 546 | 7 | نعم | اجتاز |
-| `choose-smartphone-budget` | 607 | 11 | نعم | اجتاز |
-| `cleaning-products-never-mix` | 422 | 10 | نعم | اجتاز |
-| `coffee-story-yemen` | 598 | 10 | نعم | اجتاز |
-| `eliminate-bad-smells` | 416 | 6 | نعم | اجتاز |
-| `essential-android-apps` | 478 | 13 | نعم | اجتاز |
-| `fruit-salad-recipe` | 391 | 7 | نعم | اجتاز |
-| `galaxies-and-stars` | 533 | 7 | نعم | اجتاز |
-| `gulf-rice-spices-guide` | 423 | 12 | غير مطلوبة/لا توجد | اجتاز |
-| `laundry-guide-tips` | 487 | 8 | نعم | اجتاز |
-| `lemon-mint-drink` | 427 | 8 | نعم | اجتاز |
-| `lentil-soup-recipe` | 424 | 6 | نعم | اجتاز |
-| `natural-cleaning-recipes` | 593 | 11 | نعم | اجتاز |
-| `natural-insect-repellents` | 330 | 8 | نعم | اجتاز |
-| `orange-cake-no-oven` | 413 | 7 | نعم | اجتاز |
-| `organize-fridge-waste` | 610 | 9 | نعم | اجتاز |
-| `protect-online-accounts` | 615 | 9 | نعم | اجتاز |
-| `qishta-basbousa` | 395 | 6 | نعم | اجتاز |
-| `quick-kitchen-cleaning` | 410 | 8 | نعم | اجتاز |
-| `safe-online-payments` | 598 | 9 | نعم | اجتاز |
-| `samosa-cheese-dough` | 477 | 9 | نعم | اجتاز |
-| `save-electricity-bill` | 583 | 14 | نعم | اجتاز |
-| `save-mobile-data` | 556 | 11 | نعم | اجتاز |
-| `speed-up-slow-computer` | 504 | 10 | نعم | اجتاز |
-| `tidy-home-in-15-minutes` | 561 | 6 | غير مطلوبة/لا توجد | اجتاز |
-| `used-smartphone-checklist` | 441 | 11 | نعم | اجتاز |
-| `why-we-need-sleep` | 462 | 7 | نعم | اجتاز |
-| `zaatar-manakeesh` | 540 | 10 | غير مطلوبة/لا توجد | اجتاز |
+| `account-recovery-plan` | 456 | 15 | نعم | اجتاز |
+| `age-of-earth` | 502 | 9 | نعم | اجتاز |
+| `ai-explained-simply` | 421 | 10 | نعم | اجتاز |
+| `amazing-animal-facts` | 576 | 10 | نعم | اجتاز |
+| `amazing-human-body-facts` | 741 | 10 | نعم | اجتاز |
+| `amazing-water-facts` | 486 | 9 | نعم | اجتاز |
+| `chicken-kabsa` | 480 | 11 | نعم | اجتاز |
+| `choose-smartphone-budget` | 410 | 11 | نعم | اجتاز |
+| `cleaning-products-never-mix` | 406 | 13 | نعم | اجتاز |
+| `coffee-story-yemen` | 489 | 8 | نعم | اجتاز |
+| `eliminate-bad-smells` | 417 | 11 | نعم | اجتاز |
+| `essential-android-apps` | 355 | 10 | نعم | اجتاز |
+| `fruit-salad-recipe` | 393 | 12 | نعم | اجتاز |
+| `galaxies-and-stars` | 483 | 9 | نعم | اجتاز |
+| `gulf-rice-spices-guide` | 431 | 14 | غير مطلوبة/لا توجد | اجتاز |
+| `laundry-guide-tips` | 467 | 11 | نعم | اجتاز |
+| `lemon-mint-drink` | 398 | 11 | نعم | اجتاز |
+| `lentil-soup-recipe` | 388 | 11 | نعم | اجتاز |
+| `natural-cleaning-recipes` | 406 | 10 | نعم | اجتاز |
+| `natural-insect-repellents` | 412 | 13 | نعم | اجتاز |
+| `orange-cake-no-oven` | 396 | 10 | نعم | اجتاز |
+| `organize-fridge-waste` | 408 | 12 | نعم | اجتاز |
+| `protect-online-accounts` | 408 | 14 | نعم | اجتاز |
+| `qishta-basbousa` | 410 | 11 | نعم | اجتاز |
+| `quick-kitchen-cleaning` | 427 | 12 | نعم | اجتاز |
+| `safe-online-payments` | 343 | 11 | نعم | اجتاز |
+| `samosa-cheese-dough` | 379 | 11 | نعم | اجتاز |
+| `save-electricity-bill` | 400 | 12 | نعم | اجتاز |
+| `save-mobile-data` | 327 | 10 | نعم | اجتاز |
+| `speed-up-slow-computer` | 333 | 9 | نعم | اجتاز |
+| `tidy-home-in-15-minutes` | 383 | 12 | غير مطلوبة/لا توجد | اجتاز |
+| `used-smartphone-checklist` | 358 | 13 | نعم | اجتاز |
+| `why-we-need-sleep` | 495 | 9 | نعم | اجتاز |
+| `zaatar-manakeesh` | 398 | 12 | غير مطلوبة/لا توجد | اجتاز |
 
 ## فحوص إضافية
 - أغلفة مستقلة: 34 من 34.
