@@ -137,11 +137,20 @@ SOURCES = {
         ("CISA — كلمات المرور القوية", "https://www.cisa.gov/secure-our-world/use-strong-passwords"),
     ],
     "gulf-rice-spices-guide": [
-        ("وزارة الزراعة الأمريكية — سلامة الطعام في المطبخ", "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"),
+        ("إدارة الغذاء والدواء الأمريكية (FDA) — جدول تخزين الأطعمة في الثلاجة والفريزر", "https://www.fda.gov/media/74435/download"),
+        ("وزارة الزراعة الأمريكية (USDA FSIS) — دليل سلامة الطعام في المطبخ", "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"),
     ],
     "used-smartphone-checklist": [
         ("Android Help — التحقق من إصدار النظام والتحديث الأمني", "https://support.google.com/android/answer/7680439"),
         ("Google Pixel Help — الاستعداد لإعادة ضبط المصنع", "https://support.google.com/pixelphone/answer/4596836"),
+    ],
+    "tidy-home-in-15-minutes": [
+        ("المعهد الوطني للشيخوخة (NIA) — الوقاية من السقوط وإزالة مخاطر التعثر في المنزل", "https://www.nia.nih.gov/health/falls-and-falls-prevention/falls-and-fractures-older-adults-causes-and-prevention"),
+        ("مراكز مكافحة الأمراض (CDC) — فحص المنزل للوقاية من السقوط", "https://www.cdc.gov/steadi/pdf/check_for_safety_brochure-a.pdf"),
+    ],
+    "zaatar-manakeesh": [
+        ("إدارة الغذاء والدواء الأمريكية (FDA) — سلامة الطعام في المنزل: تنظيف وفصل وطهي وتبريد", "https://www.fda.gov/media/154050/download"),
+        ("وزارة الزراعة الأمريكية (USDA FSIS) — دليل سلامة الطعام في المطبخ", "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"),
     ],
 }
 
