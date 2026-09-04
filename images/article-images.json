@@ -134,5 +134,33 @@
   "zaatar-manakeesh": {
     "path": "images/editorial/zaatar-manakeesh.jpg",
     "alt": "مناقيش زعتر طازجة مع زيت زيتون وأوراق زعتر"
+  },
+  "microwave-steam-clean": {
+    "path": "images/editorial/microwave-steam-clean.jpg",
+    "alt": "بخار يتصاعد من وعاء ماء وليمون داخل ميكروويف مفتوح لتنظيفه بالبخار"
+  },
+  "drain-maintenance-tips": {
+    "path": "images/editorial/drain-maintenance-tips.jpg",
+    "alt": "زجاجة خل وعلبة بيكربونات وقفازات بجوار مصرف مطبخ نظيف"
+  },
+  "arabic-coffee-guide": {
+    "path": "images/editorial/arabic-coffee-guide.jpg",
+    "alt": "دلة قهوة عربية نحاسية تصب في فناجين صغيرة مع هيل وتمر"
+  },
+  "rice-pudding-recipe": {
+    "path": "images/editorial/rice-pudding-recipe.jpg",
+    "alt": "طبق أرز بالحليب الكريمي مزين بالقرفة واللوز مع ملعقة على طاولة خشبية"
+  },
+  "learn-new-skills-guide": {
+    "path": "images/editorial/learn-new-skills-guide.jpg",
+    "alt": "مكتب دراسة منظم بدفتر مفتوح وكتب ونظارة ونبات صغير"
+  },
+  "android-security-settings": {
+    "path": "images/editorial/android-security-settings.jpg",
+    "alt": "هاتف ذكي بشاشة قفل على مكتب مع مفاتيح وبطاقة أمان"
+  },
+  "backup-photos-guide": {
+    "path": "images/editorial/backup-photos-guide.jpg",
+    "alt": "هاتف ذكي وقرص صلب خارجي وألبوم صور على مكتب مضيء"
   }
 }
