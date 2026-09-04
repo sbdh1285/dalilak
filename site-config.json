@@ -4,7 +4,7 @@
   "tagline": "أفكار مفيدة لحياة يومية أسهل",
   "description": "محتوى عربي واضح في المنزل والطعام والمعرفة والتقنية، يُكتب ويُراجع بعناية ليمنحك فائدة عملية دون تعقيد.",
   "baseUrl": "https://sbdh1285.github.io/dalilak",
-  "email": "",
+  "email": "dalilak77505@gmail.com",
   "authorName": "فريق تحرير دليلك",
   "heroImage": "images/hero-editorial.jpg",
   "featuredArticle": "lemon-mint-drink",
@@ -41,10 +41,10 @@
   ],
   "customDomain": "",
   "contact": {
-    "enabled": false,
+    "enabled": true,
     "provider": "formsubmit",
-    "recipient": "",
+    "recipient": "dalilak77505@gmail.com",
     "verified": false,
-    "statusMessage": "سيُفعّل نموذج التواصل بعد ربط الدومين والبريد الرسمي."
+    "statusMessage": "البريد منشور. أكّد أول رسالة من FormSubmit في صندوق الوارد حتى تصل الرسائل التالية مباشرة."
   }
 }

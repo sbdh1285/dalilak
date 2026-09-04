@@ -71,7 +71,10 @@ def patch_jsonld(text: str, slug: str, meta: dict) -> str:
         if data.get("@type") == "Recipe":
             data["dateModified"] = TODAY
         if data.get("@type") == "Organization" and data.get("name") == "دليلك":
-            data.pop("email", None)
+            if CFG.get("contact", {}).get("enabled") and CFG.get("email"):
+                data["email"] = CFG["email"]
+            else:
+                data.pop("email", None)
         return '<script type="application/ld+json">' + json.dumps(
             data, ensure_ascii=False, separators=(",", ":")
         ) + "</script>"
@@ -190,7 +193,10 @@ def replace_main(path: Path, main_html: str, title: str, desc: str) -> None:
             data["name"] = title
             data["description"] = desc
         if data.get("@type") == "Organization":
-            data.pop("email", None)
+            if CFG.get("contact", {}).get("enabled") and CFG.get("email"):
+                data["email"] = CFG["email"]
+            else:
+                data.pop("email", None)
         return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "</script>"
 
     text = re.sub(r'<script type="application/ld\+json">(.*?)</script>', fix_json, text, flags=re.S)
@@ -220,10 +226,52 @@ def update_static_pages() -> None:
     )
     replace_main(ROOT / "about.html", about, "من نحن", "تعرّف على مجلة دليلك: منهج الكتابة والمراجعة وحدود المحتوى وكيف تُرسل تصحيحًا.")
 
-    contact_inner = """
-<p>نريد قناة تواصل تعمل فعليًا. لذلك لا نعرض بريدًا غير موجود ولا نموذجًا يضيع الرسائل. عند ربط الدومين الرسمي وإنشاء البريد سيظهر العنوان والنموذج هنا، وتُحدَّث <a href="privacy-policy.html">سياسة الخصوصية</a> قبل جمع أي بيانات.</p>
+    email = (CFG.get("email") or "").strip()
+    contact_on = bool(CFG.get("contact", {}).get("enabled") and email)
+    if contact_on:
+        contact_inner = f"""
+<p>راسلنا للتصحيح أو اقتراح موضوع أو استفسار عام. العنوان الحالي: <a href="mailto:{email}">{email}</a>. هذا بريد Gmail يعمل لاستقبال الرسائل؛ ليس عنوانًا على دومين خاص بعد.</p>
+<div class="contact-status" id="contact-status"><strong>النموذج جاهز</strong><p>يصل الإرسال إلى البريد نفسه عبر FormSubmit. عند أول رسالة قد تصلك رسالة تأكيد في الوارد أو الرسائل غير المرغوب فيها؛ أكّدها حتى تُسلَّم الرسائل التالية مباشرة.</p></div>
+<h2>أرسل رسالة</h2>
+<form class="contact-form" action="https://formsubmit.co/{email}" method="POST">
+<input type="hidden" name="_subject" value="رسالة جديدة من موقع دليلك">
+<input type="hidden" name="_next" value="{BASE}/thanks.html">
+<input type="hidden" name="_captcha" value="true">
+<input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="form-grid"><div><label for="contact-name">الاسم</label><input id="contact-name" name="name" type="text" autocomplete="name" required></div><div><label for="contact-email">بريدك للرد</label><input id="contact-email" name="email" type="email" autocomplete="email" required></div></div>
+<label for="contact-topic">الموضوع</label>
+<select id="contact-topic" name="topic" required>
+<option value="">اختر الموضوع</option>
+<option>اقتراح مقال</option>
+<option>تصحيح محتوى</option>
+<option>استفسار عام</option>
+<option>إعلان أو شراكة</option>
+</select>
+<label for="contact-message">الرسالة</label>
+<textarea id="contact-message" name="message" rows="7" minlength="10" required></textarea>
+<p class="form-note">بإرسال النموذج توافق على معالجة الاسم وبريدك والرسالة للرد وفق <a href="privacy-policy.html">سياسة الخصوصية</a>. لا ترسل كلمات مرور أو بيانات مالية.</p>
+<button class="btn btn-a" type="submit">إرسال الرسالة</button>
+</form>
+<h2>قالب تصحيح محتوى</h2>
+<p>انسخ العناصر التالية في الرسالة:</p>
+<ul>
+<li>رابط الصفحة.</li>
+<li>الجملة أو الرقم غير الدقيق.</li>
+<li>التصحيح المقترح.</li>
+<li>رابط مصدر رسمي أو علمي إن وجد.</li>
+</ul>
+<h2>اقتراح موضوع</h2>
+<p>اكتب السؤال الذي تريد أن يجيب عنه المقال، والجمهور (مبتدئ أو صاحب تجربة)، وما الذي جربته ولم تجد شرحًا عربيًا واضحًا له. نفضّل المنزل والوصفات والأمن الرقمي البسيط.</p>
+<h2>الإعلانات والشراكات</h2>
+<p>يمكن مراسلتنا على البريد نفسه. أي تعاون مستقبلي سيُوسم في الصفحة المعنية. لا نضمن قبول برامج إعلانية.</p>
+"""
+        contact = page_main("اتصل بنا", "بريد منشور ونموذج يصل إلى نفس العنوان", contact_inner)
+        replace_main(ROOT / "contact.html", contact, "اتصل بنا", f"تواصل مع دليلك عبر النموذج أو البريد {email} للتصحيح واقتراح الموضوع.")
+    else:
+        contact_inner = """
+<p>نريد قناة تواصل تعمل فعليًا. لذلك لا نعرض بريدًا غير موجود ولا نموذجًا يضيع الرسائل. عند تفعيل البريد سيظهر العنوان والنموذج هنا، وتُحدَّث <a href="privacy-policy.html">سياسة الخصوصية</a> قبل جمع أي بيانات.</p>
 <div class="box">
-<p><b>الحالة:</b> قناة البريد قيد التجهيز مع الدومين الرسمي.</p>
+<p><b>الحالة:</b> قناة البريد قيد التجهيز.</p>
 <p><b>ما يمكن تحضيره الآن:</b> نص التصحيح أو اقتراح الموضوع حتى يسهل إرساله فور التفعيل.</p>
 </div>
 <h2>قالب تصحيح محتوى</h2>
@@ -235,12 +283,10 @@ def update_static_pages() -> None:
 <li>رابط مصدر رسمي أو علمي إن وجد.</li>
 </ul>
 <h2>اقتراح موضوع</h2>
-<p>اكتب السؤال الذي تريد أن يجيب عنه المقال، والجمهور (مبتدئ أو صاحب تجربة)، وما الذي جربته ولم تجد شرحًا عربيًا واضحًا له. نفضّل الموضوعات داخل المنزل والوصفات والأمن الرقمي البسيط.</p>
-<h2>الإعلانات والشراكات</h2>
-<p>لا نستقبل طلبات إعلان أو رعاية حتى يعمل البريد الرسمي. أي تعاون مستقبلي سيُوسم بوضوح في الصفحة المعنية.</p>
+<p>اكتب السؤال الذي تريد أن يجيب عنه المقال، والجمهور (مبتدئ أو صاحب تجربة)، وما الذي جربته ولم تجد شرحًا عربيًا واضحًا له.</p>
 """
-    contact = page_main("اتصل بنا", "قناة رسمية تُفعَّل عندما تعمل، لا عنوان للزينة", contact_inner)
-    replace_main(ROOT / "contact.html", contact, "اتصل بنا", "حالة التواصل في دليلك: قالب التصحيح واقتراح الموضوع حتى تفعيل البريد الرسمي.")
+        contact = page_main("اتصل بنا", "قناة رسمية تُفعَّل عندما تعمل، لا عنوان للزينة", contact_inner)
+        replace_main(ROOT / "contact.html", contact, "اتصل بنا", "حالة التواصل في دليلك: قالب التصحيح واقتراح الموضوع حتى تفعيل البريد.")
 
     privacy = page_main(
         "سياسة الخصوصية",
@@ -252,14 +298,14 @@ def update_static_pages() -> None:
 <h2>2. التخزين المحلي</h2>
 <p>نحفظ اختيار الوضع النهاري أو الليلي في المتصفح عبر التخزين المحلي. لا نستخدم حاليًا ملفات تعريف ارتباط خاصة بنا لتتبع الزائرين.</p>
 <h2>3. التواصل</h2>
-<p>لا يوجد نموذج أو بريد منشور يجمع بياناتك الآن. عند التفعيل سنذكر البيانات المطلوبة والغرض منها والجهة المعالجة (مثل خدمة إرسال النماذج) قبل التشغيل.</p>
+<p>إن كان النموذج مفعّلًا نجمع الاسم وبريد الرد والموضوع ونص الرسالة للرد عليك فقط. تُرسل البيانات عبر FormSubmit إلى بريد الموقع المنشور في صفحة الاتصال. لا ترسل كلمات مرور أو بيانات مالية. يمكنك الكتابة مباشرة إلى البريد الظاهر بدل النموذج. تفاصيل الحالة في <a href="contact.html">اتصل بنا</a>.</p>
 <h2>4. التحليلات والإعلانات</h2>
 <p>لا يوجد كود Google AdSense ولا معرف ناشر حقيقي ولا أداة تحليلات إعلانية مفعّلة. ملف ads.txt قالب معلّق فقط.</p>
 <p>إذا قُبل الموقع لاحقًا في برنامج إعلانات أو أضفنا قياس زيارات، فسنحدّث هذه السياسة قبل التشغيل، ونوضح ملفات تعريف الارتباط والإعلانات المخصصة، ونوفّر آلية موافقة حيث يلزم القانون. Google قد تستخدم بيانات لعرض إعلانات وفق سياساتها عند التفعيل فقط.</p>
 <h2>5. الروابط الخارجية</h2>
 <p>بعض المقالات تربط مصادر رسمية. سياسة الموقع الخارجي تنطبق بعد مغادرتك.</p>
 <h2>6. حقوقك</h2>
-<p>عندما تعمل قناة التواصل يمكنك طلب استفسار خصوصية عبر <a href="contact.html">اتصل بنا</a>. لا نعرض عنوانًا غير عامل حتى لا تضيع الرسائل.</p>
+<p>لطلب استفسار خصوصية استخدم <a href="contact.html">اتصل بنا</a> أو البريد المنشور هناك إن وُجد.</p>
 <h2>7. التحديث</h2>
 <p>أي تغيير جوهري في جمع البيانات أو الإعلانات سيظهر بتاريخ جديد في أعلى هذه الصفحة.</p>
 """,
@@ -284,7 +330,7 @@ def update_static_pages() -> None:
 <h2>6. المسؤولية</h2>
 <p>استخدامك على مسؤوليتك. تحقق مستقلًا قبل قرارات مهمة.</p>
 <h2>7. التواصل</h2>
-<p>للاستفسار عن الشروط استخدم <a href="contact.html">صفحة الاتصال</a> بعد تفعيلها.</p>
+<p>للاستفسار عن الشروط استخدم <a href="contact.html">صفحة الاتصال</a>.</p>
 """,
     )
     replace_main(ROOT / "terms.html", terms, "شروط الاستخدام", "شروط استخدام دليلك: طبيعة المحتوى والملكية وحدود المسؤولية والإعلانات.")
@@ -453,8 +499,18 @@ def update_sitemap_dates() -> None:
     text = read(path)
     text = re.sub(r"<lastmod>2026-08-17</lastmod>", f"<lastmod>{TODAY}</lastmod>", text)
     write(path, text)
+    email = (CFG.get("email") or "").strip()
+    contact_on = bool(CFG.get("contact", {}).get("enabled") and email)
     (ROOT / "humans.txt").write_text(
-        "دليلك — مجلة عربية للمعرفة والحياة\nفريق التحرير: فريق تحرير دليلك\nالتواصل: صفحة اتصل بنا حتى تفعيل البريد الرسمي\nاللغة: العربية\n",
+        "دليلك — مجلة عربية للمعرفة والحياة\n"
+        "فريق التحرير: فريق تحرير دليلك\n"
+        f"التواصل: {email if contact_on else 'صفحة اتصل بنا'}\n"
+        "اللغة: العربية\n",
+        encoding="utf-8",
+    )
+    contact_line = f"mailto:{email}" if contact_on else f"{BASE}/contact.html"
+    (ROOT / "security.txt").write_text(
+        f"Contact: {contact_line}\nPreferred-Languages: ar\nExpires: 2027-09-04\n",
         encoding="utf-8",
     )
 

@@ -9,8 +9,8 @@
 - sources: 31
 - mappedImages: 34
 - sitemapUrls: 51
-- forms: 0
-- publishedEmails: 0
+- forms: 1
+- publishedEmails: 1
 - errors: 0
 
 ## الفحوص
