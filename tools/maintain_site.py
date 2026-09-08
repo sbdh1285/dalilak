@@ -23,6 +23,26 @@ CATEGORY_ICONS = {
 }
 
 SOURCES = {
+    "arabic-coffee-guide": [
+        ("اليونسكو — القهوة العربية رمز الكرم (القائمة التمثيلية للتراث الثقافي غير المادي)", "https://ich.unesco.org/en/RL/arabic-coffee-a-symbol-of-generosity-01074"),
+        ("منظمة الأغذية والزراعة (FAO) — البن ومنتجاته", "https://www.fao.org/markets-and-trade/commodities-overview/beverages/coffee/en/"),
+    ],
+    "backup-photos-guide": [
+        ("وكالة الأمن السيبراني وأمن البنية التحتية (CISA) — خيارات النسخ الاحتياطي وقاعدة 3-2-1", "https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf"),
+        ("المعهد الوطني للمعايير والتقنية (NIST) — إدارة مخاطر برامج الفدية والنسخ الاحتياطي", "https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/ransomware"),
+    ],
+    "drain-maintenance-tips": [
+        ("وكالة حماية البيئة الأمريكية (EPA) — أسئلة شائعة عن فيضان المجاري والدهون والزيوت", "https://www.epa.gov/npdes/sanitary-sewer-overflow-sso-frequent-questions"),
+        ("هيئة جودة البيئة في تكساس (TCEQ) — تقليل الدهون والزيوت في مصارف المنزل", "https://www.tceq.texas.gov/assistance/water/wastewater/fog/home_fog.html"),
+    ],
+    "learn-new-skills-guide": [
+        ("معهد علوم التربية الأمريكي (IES) — تنظيم التعليم والدراسة لتحسين التعلم", "https://ies.ed.gov/ncee/wwc/PracticeGuide/1"),
+        ("منظمة الصحة العالمية — النوم والصحة النفسية وأثرهما على التركيز والتعلم", "https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response"),
+    ],
+    "microwave-steam-clean": [
+        ("إدارة الغذاء والدواء الأمريكية (FDA) — سلامة أفران الميكروويف وتنظيفها", "https://www.fda.gov/radiation-emitting-products/resources-you-radiation-emitting-products/microwave-ovens"),
+        ("وزارة الزراعة الأمريكية (FSIS) — الطهي بأفران الميكروويف والأواني الآمنة", "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/cooking-microwave-ovens"),
+    ],
     "age-of-earth": [
         ("هيئة المسح الجيولوجي الأمريكية (USGS) — عمر الأرض", "https://pubs.usgs.gov/gip/geotime/age.html"),
         ("المتحف الوطني للتاريخ الطبيعي — عمر الأرض", "https://naturalhistory.si.edu/education/teaching-resources/anthropology-and-social-studies/age-earth"),
@@ -152,6 +172,13 @@ SOURCES = {
         ("إدارة الغذاء والدواء الأمريكية (FDA) — سلامة الطعام في المنزل: تنظيف وفصل وطهي وتبريد", "https://www.fda.gov/media/154050/download"),
         ("وزارة الزراعة الأمريكية (USDA FSIS) — دليل سلامة الطعام في المطبخ", "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"),
     ],
+    "rice-pudding-recipe": [
+        ("وزارة الزراعة الأمريكية (USDA FSIS) — دليل سلامة الطعام في المطبخ", "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"),
+    ],
+    "android-security-settings": [
+        ("CISA — كلمات المرور القوية", "https://www.cisa.gov/secure-our-world/use-strong-passwords"),
+        ("CISA — المصادقة المقاومة للتصيد", "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf"),
+    ],
 }
 
 
@@ -199,7 +226,7 @@ def remove_common_inline_script(text: str) -> str:
 def add_shared_script(text: str, nested: bool) -> str:
     if "js/main.js" in text:
         return text
-    src = "../js/main.js?v=1" if nested else "js/main.js?v=1"
+    src = "../js/main.js?v=2" if nested else "js/main.js?v=2"
     return text.replace("</body>", f'<script src="{src}" defer></script>\n</body>')
 
 
@@ -286,8 +313,16 @@ def fix_post(path: Path, categories: dict[str, str]) -> None:
     text = update_jsonld(text)
 
     # احذف نسخة المصادر السابقة إن أعيد تشغيل السكربت، ثم أضف النسخة الحالية.
-    text = re.sub(r'<section class="sources".*?</section>\s*', '', text, flags=re.S)
+    # حماية: لا تحذف قسم مصادر موجودًا في الصفحة ما لم يكن للمقال بديل في SOURCES،
+    # وإلا فقدنا مصادر مكتوبة يدويًا عند كل تشغيل (راجع docs/site-review-2026-09-08.md).
+    had_sources = 'class="sources"' in text
     sources = source_section(slug)
+    if had_sources and not sources:
+        raise SystemExit(
+            f"توقف: المقال «{slug}» يحتوي قسم مصادر في الصفحة لكنه غير مُعرّف في SOURCES. "
+            "أضِف مصادره إلى القاموس قبل إعادة التشغيل حتى لا تُحذف."
+        )
+    text = re.sub(r'<section class="sources".*?</section>\s*', '', text, flags=re.S)
     if sources:
         text = text.replace('<div class="share">', sources + '<div class="share">', 1)
 
@@ -364,11 +399,13 @@ def standard_head(title: str, description: str, canonical: str, prefix: str = ""
 <meta name="description" content="{description}">
 <link rel="canonical" href="{canonical}">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#124e4a">
 <link rel="preload" href="{prefix}fonts/tajawal-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="{prefix}favicon.svg">
+<link rel="apple-touch-icon" href="{prefix}images/icons/icon-192.png">
+<meta name="apple-mobile-web-app-title" content="دليلك">
 <link rel="manifest" href="{prefix}manifest.json">
-<link rel="stylesheet" href="{prefix}css/style.css?v=6">
+<link rel="stylesheet" href="{prefix}css/style.css?v=11">
 </head>'''
 
 
@@ -391,7 +428,7 @@ def make_info_page(filename: str, title: str, description: str, body: str, neste
 <main id="main-content"><div class="page"><h1>{title}</h1>{body}</div></main>
 {root_link_block(prefix)}
 <button id="toTop" type="button" aria-label="العودة إلى أعلى الصفحة">↑</button>
-<script src="{prefix}js/main.js?v=1" defer></script>
+<script src="{prefix}js/main.js?v=2" defer></script>
 </body></html>'''
     target = ROOT / ("authors" if nested else "") / filename
     write(target, html)

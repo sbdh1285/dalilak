@@ -40,7 +40,10 @@ for p in sorted((ROOT/'posts').glob('*.html')):
  toc=[(anchor,clean(title)) for anchor,title in re.findall(r'href="#([^"]+)">(.*?)</a>',toc_match.group(1),re.S)] if toc_match else []
  if toc!=headings:issues.append('جدول المحتويات لا يطابق عناوين H2')
  if not headings or headings[-1][1]!='الخلاصة':issues.append('آخر قسم رئيسي ليس الخلاصة')
- unexpected=[clean(x) for x in re.findall(r'<h2(?! id=)[^>]*>(.*?)</h2>',t,re.S) if clean(x) not in {'المصادر والمراجع','أكمل القراءة في هذا الموضوع','مقالات ذات صلة'}]
+ # افحص عناوين المقال فقط (داخل <main>) حتى لا تُحسب عناوين التذييل أو الشريط الجانبي.
+ main_scope=re.search(r'<main\b.*?</main>',t,re.S)
+ scope=main_scope.group(0) if main_scope else t
+ unexpected=[clean(x) for x in re.findall(r'<h2(?! id=)[^>]*>(.*?)</h2>',scope,re.S) if clean(x) not in {'المصادر والمراجع','أكمل القراءة في هذا الموضوع','مقالات ذات صلة'}]
  if unexpected:issues.append('عناوين خارج بنية المقال: '+', '.join(unexpected))
  if issues:errors.append((slug,issues))
  rows.append((slug,words,h2,'نعم' if sources else 'غير مطلوبة/لا توجد','؛ '.join(issues) or 'اجتاز'))

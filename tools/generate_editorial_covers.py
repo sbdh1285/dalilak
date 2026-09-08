@@ -38,6 +38,13 @@ IMAGES={
 'tidy-home-in-15-minutes':('images/editorial/tidy-home-in-15-minutes.jpg','غرفة معيشة مرتبة مع سلة تنظيم ومؤقت منزلي'),
 'used-smartphone-checklist':('images/editorial/used-smartphone-checklist.jpg','يدان تفحصان هاتفًا مستعملًا بجوار قائمة تحقق وكابل شحن'),
 'why-we-need-sleep':('images/editorial/why-we-need-sleep.jpg','غرفة نوم هادئة بإضاءة قمرية وسرير مرتب'),
+'arabic-coffee-guide':('images/editorial/arabic-coffee-guide.jpg','دلة قهوة عربية نحاسية تصب في فناجين صغيرة مع هيل وتمر'),
+'backup-photos-guide':('images/editorial/backup-photos-guide.jpg','هاتف ذكي وقرص صلب خارجي وألبوم صور على مكتب مضيء'),
+'rice-pudding-recipe':('images/editorial/rice-pudding-recipe.jpg','طبق أرز بالحليب الكريمي مزين بالقرفة واللوز مع ملعقة على طاولة خشبية'),
+'drain-maintenance-tips':('images/editorial/drain-maintenance-tips.jpg','زجاجة خل وعلبة بيكربونات وقفازات بجوار مصرف مطبخ نظيف'),
+'android-security-settings':('images/editorial/android-security-settings.jpg','هاتف ذكي بشاشة قفل على مكتب مع مفاتيح وبطاقة أمان'),
+'microwave-steam-clean':('images/editorial/microwave-steam-clean.jpg','بخار يتصاعد من وعاء ماء وليمون داخل ميكروويف مفتوح لتنظيفه بالبخار'),
+'learn-new-skills-guide':('images/editorial/learn-new-skills-guide.jpg','مكتب دراسة منظم بدفتر مفتوح وكتب ونظارة ونبات صغير'),
 'zaatar-manakeesh':('images/editorial/zaatar-manakeesh.jpg','مناقيش زعتر طازجة مع زيت زيتون وأوراق زعتر')}
 def main():
  posts={p.stem for p in (ROOT/'posts').glob('*.html')}

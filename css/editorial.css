@@ -2,6 +2,7 @@
    تستخدم نفس متغيرات الهوية (--primary / --accent / الخطوط) بلا أي تغيير للألوان. */
 
 /* ============ أساسيات تحريرية ============ */
+h2.ed-kicker{font-size:.7rem;margin:0 0 10px}
 .ed-kicker{
   display:inline-block;font-family:var(--title);font-weight:700;
   font-size:.7rem;letter-spacing:.09em;color:var(--muted);
@@ -70,7 +71,7 @@
 .ed-side-item:hover{color:var(--text)}
 .ed-side-num{
   font-family:var(--title);font-size:.95rem;font-weight:700;
-  color:var(--accent);font-variant-numeric:tabular-nums;padding-top:2px;
+  color:var(--accent-ink);font-variant-numeric:tabular-nums;padding-top:2px;
 }
 .ed-side-item .ed-kicker{margin-bottom:5px;font-size:.66rem}
 .ed-side-item h3{

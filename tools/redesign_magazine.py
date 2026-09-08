@@ -3,6 +3,7 @@
 from __future__ import annotations
 import html
 import json
+import urllib.parse
 import math
 import re
 from pathlib import Path
@@ -131,6 +132,8 @@ def header(path:Path)->str:
     p=prefix_for(path); active=active_for(path)
     links=[("home",f"{p}index.html","الرئيسية"),("home-tips",f"{p}category/home-tips.html","نصائح منزلية"),("recipes",f"{p}category/recipes.html","وصفات لذيذة"),("knowledge",f"{p}category/knowledge.html","معلومات عامة"),("tech",f"{p}category/tech.html","تكنولوجيا"),("about",f"{p}about.html","من نحن"),("contact",f"{p}contact.html","اتصل بنا")]
     nav="".join(f'<a href="{url}"'+(' class="on" aria-current="page"' if key==active else '')+f'>{label}</a>' for key,url,label in links)
+    # رابط البحث يظهر داخل القائمة الجانبية للجوال حيث يُخفى صندوق البحث.
+    nav+=f'<a class="nav-search-link" href="{p}search.html">بحث في الموقع</a>' 
     return f'''<div class="topline"><div class="wrap"><span>{CONFIG['shortDescription']}</span><a href="{p}editorial-policy.html">كيف نكتب ونراجع المحتوى؟</a></div></div>
 <header class="site-header"><div class="wrap hbar">
 {logo(p)}
@@ -145,22 +148,41 @@ def footer(path:Path)->str:
         f'<p class="footer-email"><span>البريد الإلكتروني</span><a href="mailto:{CONFIG["email"]}">{CONFIG["email"]}</a></p>'
         if contact_ready else ''
     )
-    return f'''<footer><div class="wrap"><div class="fgrid">
+    return f'''<footer><div class="wrap"><h2 class="sr-only">روابط الموقع</h2><div class="fgrid">
 <div class="footer-brand">{logo(p)}<p>{CONFIG['description']}</p></div>
-<div><h4>الأقسام</h4><a href="{p}category/home-tips.html">نصائح منزلية</a><a href="{p}category/recipes.html">وصفات لذيذة</a><a href="{p}category/knowledge.html">معلومات عامة</a><a href="{p}category/tech.html">تكنولوجيا</a></div>
-<div><h4>عن دليلك</h4><a href="{p}about.html">من نحن</a><a href="{p}guide-safe-cleaning.html">أدلة دليلك</a><a href="{p}authors/editorial-team.html">فريق التحرير</a><a href="{p}editorial-policy.html">سياسة التحرير</a><a href="{p}contact.html">اتصل بنا</a><a href="{p}sitemap.html">خريطة الموقع</a></div>
-<div><h4>السياسات والتواصل</h4><a href="{p}privacy-policy.html">سياسة الخصوصية</a><a href="{p}terms.html">شروط الاستخدام</a><a href="{p}disclaimer.html">إخلاء المسؤولية</a>{contact_html}</div>
+<div><h3>الأقسام</h3><a href="{p}category/home-tips.html">نصائح منزلية</a><a href="{p}category/recipes.html">وصفات لذيذة</a><a href="{p}category/knowledge.html">معلومات عامة</a><a href="{p}category/tech.html">تكنولوجيا</a></div>
+<div><h3>عن دليلك</h3><a href="{p}about.html">من نحن</a><a href="{p}guide-safe-cleaning.html">أدلة دليلك</a><a href="{p}authors/editorial-team.html">فريق التحرير</a><a href="{p}editorial-policy.html">سياسة التحرير</a><a href="{p}contact.html">اتصل بنا</a><a href="{p}search.html">بحث</a><a href="{p}sitemap.html">خريطة الموقع</a></div>
+<div><h3>السياسات والتواصل</h3><a href="{p}privacy-policy.html">سياسة الخصوصية</a><a href="{p}terms.html">شروط الاستخدام</a><a href="{p}disclaimer.html">إخلاء المسؤولية</a>{contact_html}</div>
 </div><div class="f-bottom"><span>© 2026 دليلك — جميع الحقوق محفوظة.</span><span>محتوى عربي يُكتب ويُراجع بعناية</span></div></div></footer>'''
 
 def inject_shell(path:Path,text:str)->str:
     text=re.sub(r'<div class="topline">.*?</div></div>\s*','',text,count=1,flags=re.S)
     text=re.sub(r'<header.*?</header>(?:<button class="nav-scrim".*?</button>)?',header(path),text,count=1,flags=re.S)
     text=re.sub(r'<footer>.*?</footer>',footer(path),text,count=1,flags=re.S)
+    text=text.replace('js/main.js?v=1','js/main.js?v=2')
     text=text.replace('css/style.css?v=6','css/style.css?v=11').replace('css/style.css?v=7','css/style.css?v=11').replace('css/style.css?v=10','css/style.css?v=11')
     text=text.replace('<meta name="theme-color" content="#0f766e">','<meta name="theme-color" content="#124e4a">')
     p=prefix_for(path)
-    preload=f'<link rel="preload" href="{p}fonts/ibm-plex-arabic-700.ttf" as="font" type="font/ttf" crossorigin>'
-    if 'ibm-plex-arabic-700.ttf' not in text:text=text.replace('</head>',preload+'\n</head>')
+    preload=f'<link rel="preload" href="{p}fonts/ibm-plex-arabic-700.woff2" as="font" type="font/woff2" crossorigin>'
+    if 'ibm-plex-arabic-700.woff2' not in text:text=text.replace('</head>',preload+'\n</head>')
+    # اكتشاف RSS من كل صفحة.
+    rss=f'<link rel="alternate" type="application/rss+xml" title="دليلك — أحدث المقالات" href="{p}feed.xml">'
+    if 'application/rss+xml' not in text:text=text.replace('</head>',rss+'\n</head>')
+    # أيقونات التطبيق على iOS واسم الاختصار.
+    if 'apple-touch-icon' not in text:
+        text=text.replace('</head>',f'<link rel="apple-touch-icon" href="{p}images/icons/icon-192.png">'
+                                    f'<meta name="apple-mobile-web-app-title" content="دليلك">\n</head>')
+    # أكمل وسوم تويتر إن كانت og موجودة وtwitter ناقصة (حالة صفحات الأدلة).
+    if '<meta property="og:title"' in text and 'name="twitter:card"' not in text:
+        og_t=re.search(r'<meta property="og:title" content="([^"]*)"',text)
+        og_d=re.search(r'<meta property="og:description" content="([^"]*)"',text)
+        og_i=re.search(r'<meta property="og:image" content="([^"]*)"',text)
+        if og_t and og_d and og_i:
+            tw=(f'<meta name="twitter:card" content="summary_large_image">'
+                f'<meta name="twitter:title" content="{og_t.group(1)}">'
+                f'<meta name="twitter:description" content="{og_d.group(1)}">'
+                f'<meta name="twitter:image" content="{og_i.group(1)}">')
+            text=text.replace(og_i.group(0),og_i.group(0)+tw,1)
     if '<meta property="og:title"' not in text:
         title_match=re.search(r'<title>(.*?)</title>',text,re.S);desc_match=re.search(r'<meta name="description" content="([^"]+)"',text);canonical_match=re.search(r'<link rel="canonical" href="([^"]+)"',text)
         if title_match and desc_match and canonical_match:
@@ -172,6 +194,14 @@ def inject_shell(path:Path,text:str)->str:
 def responsive_picture(a:dict,prefix:str,img_class:str,loading:str='lazy',sizes:str='(max-width: 640px) 100vw, 33vw',priority:bool=False,picture_class:str='')->str:
     slug=a['slug'];srcset=', '.join(f'{prefix}images/responsive/articles/{slug}-{w}.webp {w}w' for w in (480,800,1200));attrs=' fetchpriority="high"' if priority else ''
     return f'<picture class="{picture_class}"><source type="image/webp" srcset="{srcset}" sizes="{sizes}"><img class="{img_class}" src="{prefix}{a["image"]}" alt="{html.escape(a["imageAlt"],quote=True)}" loading="{loading}" decoding="async" width="1200" height="630"{attrs}></picture>'
+
+def responsive_picture_bare(a:dict,prefix:str,sizes:str,loading:str='lazy',priority:bool=False,picture_class:str='')->str:
+    """صورة تحريرية بلا class على الوسم img — تستخدمها واجهة المجلة (ed-*)."""
+    slug=a['slug'];srcset=', '.join(f'{prefix}images/responsive/articles/{slug}-{w}.webp {w}w' for w in (480,800,1200))
+    attrs=' fetchpriority="high"' if priority else ''
+    return (f'<picture class="{picture_class}"><source type="image/webp" srcset="{srcset}" sizes="{sizes}">'
+            f'<img src="{prefix}{a["image"]}" alt="{html.escape(a["imageAlt"],quote=True)}" width="1200" height="630" '
+            f'loading="{loading}"{attrs} decoding="async"></picture>')
 
 def article_card(a:dict,prefix:str="",lead:bool=False)->str:
     cls="card lead-card" if lead else "card";picture=responsive_picture(a,prefix,'card-img','eager' if lead else 'lazy','(max-width: 640px) calc(100vw - 28px), (max-width: 900px) 50vw, 33vw',lead,'card-picture')
@@ -185,14 +215,76 @@ def more_story(a:dict,prefix:str="")->str:
     picture=responsive_picture(a,prefix,'more-img','lazy','(max-width: 640px) 125px, 172px',False,'more-picture')
     return f'''<a class="more-story" href="{prefix}posts/{a['slug']}.html">{picture}<div><span class="cat-chip">{a['category']}</span><h3>{a['title']}</h3><p>{a['description']}</p></div></a>'''
 
+def ed_lead(a:dict)->str:
+    picture=responsive_picture_bare(a,'','(max-width:900px) 100vw, 62vw','eager',True,'ed-lead-pic')
+    return (f'<a class="ed-lead" href="posts/{a["slug"]}.html">{picture}'
+            f'<div class="ed-lead-body"><span class="ed-kicker ed-kicker-accent">{a["category"]}</span>'
+            f'<h1 class="ed-lead-title">{a["title"]}</h1>'
+            f'<p class="ed-lead-dek">{a["description"]}</p>'
+            f'<span class="ed-byline">{CONFIG["authorName"]}<i></i>{fmt_date(a["published"])}<i></i>{reading_time_label(a["minutes"])}</span>'
+            f'</div></a>')
+
+def ed_side_item(a:dict,num:int)->str:
+    return (f'<a class="ed-side-item" href="posts/{a["slug"]}.html">'
+            f'<span class="ed-side-num">{num:02d}</span><div>'
+            f'<span class="ed-kicker">{a["category"]}</span><h3>{a["title"]}</h3>'
+            f'<span class="ed-byline sm">{fmt_date(a["published"])}<i></i>{reading_time_label(a["minutes"])}</span>'
+            f'</div></a>')
+
+def ed_riv(a:dict)->str:
+    picture=responsive_picture_bare(a,'','(max-width:640px) 96px, 148px','lazy',False,'ed-riv-pic')
+    return (f'<a class="ed-riv" href="posts/{a["slug"]}.html">{picture}'
+            f'<div class="ed-riv-body"><span class="ed-kicker">{a["category"]}</span>'
+            f'<h3>{a["title"]}</h3><p>{a["description"]}</p>'
+            f'<span class="ed-byline sm">{fmt_date(a["published"])}<i></i>{reading_time_label(a["minutes"])}</span>'
+            f'</div></a>')
+
+def ed_band(cat:dict,arts:list[dict])->str:
+    lead,rest=arts[0],arts[1:4]
+    picture=responsive_picture_bare(lead,'','(max-width:900px) 100vw, 46vw','lazy',False,'ed-band-pic')
+    lead_html=(f'<a class="ed-band-lead" href="posts/{lead["slug"]}.html">{picture}<div>'
+               f'<h3>{lead["title"]}</h3><p>{lead["description"]}</p>'
+               f'<span class="ed-byline sm">{fmt_date(lead["published"])}<i></i>{reading_time_label(lead["minutes"])}</span>'
+               f'</div></a>')
+    items=''.join(f'<a class="ed-band-item" href="posts/{x["slug"]}.html"><h4>{x["title"]}</h4>'
+                  f'<span class="ed-byline sm">{fmt_date(x["published"])}<i></i>{reading_time_label(x["minutes"])}</span></a>'
+                  for x in rest)
+    return (f'<section class="ed-sec ed-band"><div class="wrap">'
+            f'<div class="ed-sec-h"><h2 class="ed-sec-t">{cat["name"]}</h2>'
+            f'<a class="ed-more" href="category/{cat["slug"]}.html">كل المقالات</a></div>'
+            f'<div class="ed-band-grid">{lead_html}<div class="ed-band-list">{items}</div></div>'
+            f'</div></section>')
+
 def home_main(records:dict[str,dict],old:str)->str:
-    ordered=sorted(records.values(),key=lambda x:x['published'],reverse=True)
-    feat=records[CONFIG['featuredArticle']]; latest=[x for x in ordered if x['slug']!=feat['slug']]
-    cats="".join(f'''<a class="cat-card" href="category/{c['slug']}.html"><div class="cat-ic">{ICONS[c['slug']]}</div><h3>{c['name']}</h3><p>{c['description']}</p><span class="cnt">استكشف القسم ←</span></a>''' for c in CONFIG['categories'])
-    latest_html=article_card(latest[0],lead=True)+f'<div class="story-stack">{"".join(story_row(x) for x in latest[1:5])}</div>'
-    more="".join(more_story(x) for x in latest[5:11])
-    hero_picture='<picture class="hero-picture"><source type="image/webp" srcset="images/responsive/hero-640.webp 640w, images/responsive/hero-960.webp 960w, images/responsive/hero-1440.webp 1440w" sizes="(max-width: 880px) 100vw, 55vw"><img src="'+CONFIG['heroImage']+'" alt="مكتب هادئ يضم كتبًا ودفترًا وأدوات ترمز إلى المعرفة والحياة اليومية" width="1440" height="900" fetchpriority="high" decoding="async"></picture>'
-    featured_picture=responsive_picture(feat,'','featured-img','eager','(max-width: 880px) 100vw, 60vw',True,'featured-picture')
+    # ترتيب حتمي: الأحدث أولًا، ثم الslug أبجديًا لضمان نتيجة ثابتة عند تساوي التاريخ.
+    ordered=sorted(records.values(),key=lambda x:(x['published'],[-ord(c) for c in x['slug']]),reverse=True)
+    # المقال الرئيسي: اختيار التحرير إن حُدّد في site-config.json، وإلا الأحدث تلقائيًا.
+    lead=records[CONFIG['featuredArticle']] if CONFIG.get('featuredArticle') in records else ordered[0]
+    # الهيرو: المقال المميز + أحدث ثلاثة من أقسام مختلفة عنه
+    side=[];seen_cats={lead['category']}
+    for a in ordered:
+        if a['slug']==lead['slug'] or a['category'] in seen_cats:continue
+        side.append(a);seen_cats.add(a['category'])
+        if len(side)==3:break
+    # لو لم تكتمل ثلاثة أقسام مختلفة، أكمل بالأحدث بغض النظر عن القسم.
+    if len(side)<3:
+        for a in ordered:
+            if a['slug']==lead['slug'] or any(s['slug']==a['slug'] for s in side):continue
+            side.append(a)
+            if len(side)==3:break
+    used={lead['slug'],*(s['slug'] for s in side)}
+    river=[a for a in ordered if a['slug'] not in used][:7]
+    strip=''.join(f'<a href="category/{c["slug"]}.html">{c["name"]}</a>' for c in CONFIG['categories'])
+    bands=''
+    for c in CONFIG['categories']:
+        arts=[a for a in ordered if a['category']==c['name']][:4]
+        if len(arts)>=4:bands+=ed_band(c,arts)
+    guides=[('01','guide-safe-cleaning.html','دليل التنظيف الآمن','المنتجات والتهوية ومنع الخلطات الخطرة.'),
+            ('02','guide-account-security.html','دليل حماية الحسابات','المنع والاسترداد والدفع الآمن.'),
+            ('03','guide-gulf-recipes.html','دليل الوصفات الخليجية','الأرز والبهارات والمقبلات والمشروبات.'),
+            ('04','guide-smartphone.html','دليل الهاتف','الاختيار والفحص والحماية والاستخدام.')]
+    guides_html=''.join(f'<a class="ed-guide" href="{h}"><span class="ed-gnum">{n}</span><h3>{t}</h3><p>{d}</p>'
+                        f'<span class="ed-garrow">ابدأ المسار</span></a>' for n,h,t,d in guides)
     organization={"@context":"https://schema.org","@type":"Organization","name":CONFIG['siteName'],"url":BASE,"description":CONFIG['description']}
     if CONFIG.get('contact',{}).get('enabled') and CONFIG.get('email'):organization['email']=CONFIG['email']
     faq_items=[
@@ -201,22 +293,20 @@ def home_main(records:dict[str,dict],old:str)->str:
         ("كيف يُراجع المحتوى؟","نراجع وضوح المقال ومصادر الادعاءات القابلة للتحقق، ونحدّث المحتوى عند اكتشاف خطأ أو تغير المعلومة."),
         ("هل يمكن اقتراح موضوع أو إرسال تصحيح؟","نعم، نستقبل الاقتراحات والتصحيحات الموثقة عبر صفحة اتصل بنا.")]
     faq={"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq_items]}
+    faq_html=''.join(f'<details{" open" if i==0 else ""}><summary>{q}</summary><p>{a}</p></details>' for i,(q,a) in enumerate(faq_items))
     jsonlds='\n'.join('<script type="application/ld+json">'+json.dumps(x,ensure_ascii=False,separators=(',',':'))+'</script>' for x in (organization,faq))
     return f'''<main id="main-content">
-<section class="home-hero"><div class="wrap"><div class="hero-grid"><div class="hero-copy"><span class="eyebrow">مجلة عربية عصرية</span><h1>{CONFIG['tagline']}</h1><p>{CONFIG['description']}</p><div class="cta-row"><a class="btn btn-a" href="category/home-tips.html">ابدأ القراءة</a><a class="btn btn-b" href="about.html">تعرّف على دليلك</a></div></div><div class="hero-media">{hero_picture}</div></div><div class="value-strip"><div class="value-item"><strong>محتوى واضح</strong><span>لغة مباشرة دون تعقيد</span></div><div class="value-item"><strong>أقسام متنوعة</strong><span>المنزل والطعام والمعرفة والتقنية</span></div><div class="value-item"><strong>قراءة مريحة</strong><span>تصميم عربي يركز على المحتوى</span></div><div class="value-item"><strong>تحديثات مستمرة</strong><span>مراجعة وتصحيح عند الحاجة</span></div></div></div></section>
-<section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">اختيار التحرير</span><h2>مقال مميز</h2></div></div><a class="featured" href="posts/{feat['slug']}.html">{featured_picture}<div class="f-body"><span class="f-tag">{feat['category']}</span><h2>{feat['title']}</h2><p>{feat['description']}</p><span class="read-link">اقرأ المقال ←</span></div></a></div></section>
-<section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">تصفّح حسب اهتمامك</span><h2>أقسام دليلك</h2></div></div><div class="cats">{cats}</div></div></section>
-<section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">نُشر حديثًا</span><h2>أحدث المقالات</h2></div><a href="sitemap.html">جميع المقالات ←</a></div><div class="magazine-latest">{latest_html}</div></div></section>
-<section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">مختارات إضافية</span><h2>للقراءة بعد ذلك</h2></div></div><div class="more-grid">{more}</div></div></section>
-<section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">مسارات عملية</span><h2>أدلة دليلك</h2></div><a href="sitemap.html">كل الأدلة والمقالات ←</a></div><div class="guide-feature-grid"><a href="guide-safe-cleaning.html"><span>01</span><h3>دليل التنظيف الآمن</h3><p>المنتجات والتهوية ومنع الخلطات الخطرة.</p></a><a href="guide-account-security.html"><span>02</span><h3>دليل حماية الحسابات</h3><p>المنع والاسترداد والدفع الآمن.</p></a><a href="guide-gulf-recipes.html"><span>03</span><h3>دليل الوصفات الخليجية</h3><p>الأرز والبهارات والمقبلات والمشروبات.</p></a><a href="guide-smartphone.html"><span>04</span><h3>دليل الهاتف</h3><p>الاختيار والفحص والحماية والاستخدام.</p></a></div></div></section>
-<section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">عن الموقع</span><h2>أسئلة شائعة</h2></div></div><div class="faq"><details open><summary>ما هو موقع دليلك؟</summary><p>مجلة عربية تقدم محتوى عمليًا في النصائح المنزلية والوصفات والمعرفة والتكنولوجيا بلغة واضحة وتصميم مريح.</p></details><details><summary>هل المحتوى مجاني؟</summary><p>نعم، جميع المقالات متاحة للقراءة دون تسجيل أو اشتراك.</p></details><details><summary>كيف يُراجع المحتوى؟</summary><p>نراجع وضوح المقال ومصادر الادعاءات القابلة للتحقق، ونحدّث المحتوى عند اكتشاف خطأ أو تغير المعلومة.</p></details><details><summary>هل يمكن اقتراح موضوع أو إرسال تصحيح؟</summary><p>نعم، نستقبل الاقتراحات والتصحيحات الموثقة عبر صفحة اتصل بنا.</p></details></div></div></section>
-<section class="sec"><div class="wrap"><div class="trust-panel"><div><h2>الثقة تبدأ بالوضوح</h2><p>تعرّف على طريقة اختيار الموضوعات ومراجعة المعلومات والتعامل مع التصحيحات في سياسة التحرير.</p></div><a class="btn" href="editorial-policy.html">اقرأ سياسة التحرير</a></div></div></section>
+<section class="ed-hero"><div class="wrap"><div class="ed-hero-grid">{ed_lead(lead)}<div class="ed-hero-side"><div class="ed-side-head"><h2 class="ed-kicker">أبرز ما نُشر</h2></div>{''.join(ed_side_item(a,i+1) for i,a in enumerate(side))}</div></div></div></section><nav class="ed-strip" aria-label="الأقسام"><div class="wrap"><div class="ed-strip-in"><span class="ed-strip-lbl">تصفّح</span>{strip}<a class="ed-strip-all" href="sitemap.html">خريطة الموقع</a></div></div></nav><section class="ed-sec"><div class="wrap"><div class="ed-sec-h"><h2 class="ed-sec-t">أحدث المقالات</h2><a class="ed-more" href="sitemap.html">جميع المقالات</a></div><div class="ed-river">{''.join(ed_riv(a) for a in river)}</div></div></section>{bands}<section class="ed-sec ed-guides-sec"><div class="wrap"><div class="ed-sec-h inv"><h2 class="ed-sec-t">أدلة دليلك</h2><a class="ed-more" href="sitemap.html">كل الأدلة</a></div><div class="ed-guides">{guides_html}</div></div></section><section class="ed-sec"><div class="wrap"><div class="ed-trust"><div><span class="ed-kicker ed-kicker-light">منهجية التحرير</span><h2>الثقة تبدأ بالوضوح</h2><p>نراجع وضوح المقال ومصادر الادعاءات القابلة للتحقق، ونحدّث المحتوى عند اكتشاف خطأ أو تغيّر المعلومة.</p></div><div class="ed-trust-actions"><a class="ed-btn-light" href="editorial-policy.html">سياسة التحرير</a><a class="ed-btn-ghost" href="authors/editorial-team.html">فريق التحرير</a></div></div></div></section><section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">عن الموقع</span><h2>أسئلة شائعة</h2></div></div><div class="faq">{faq_html}</div></div></section>
 {jsonlds}</main>'''
 
 def redesign_home(path:Path,records:dict[str,dict])->None:
     text=read(path); newmain=home_main(records,text)
     text=re.sub(r'<main id="main-content">.*?</main>',newmain,text,count=1,flags=re.S)
     text=inject_shell(path,text)
+    # واجهة المجلة تعتمد على editorial.css — تأكد من ربطه دائمًا بعد style.css.
+    if 'css/editorial.css' not in text:
+        text=text.replace('<link rel="stylesheet" href="css/style.css?v=11">',
+                          '<link rel="stylesheet" href="css/style.css?v=11">\n<link rel="stylesheet" href="css/editorial.css?v=1">',1)
     text=text.replace('<meta property="og:title" content="دليلك | دليلك اليومي لنصائح عملية، وصفات شهية، ومعلومات مفيدة">','<meta property="og:title" content="دليلك | أفكار مفيدة لحياة يومية أسهل">').replace('<meta name="twitter:title" content="دليلك | دليلك اليومي لنصائح عملية، وصفات شهية، ومعلومات مفيدة">','<meta name="twitter:title" content="دليلك | أفكار مفيدة لحياة يومية أسهل">')
     text=re.sub(r'<meta name="description" content="[^"]+">',f'<meta name="description" content="{CONFIG["description"]}">',text,count=1)
     text=re.sub(r'<meta property="og:description" content="[^"]+">',f'<meta property="og:description" content="{CONFIG["description"]}">',text,count=1)
@@ -236,25 +326,48 @@ def normalize_cards(text:str,records:dict[str,dict],prefix:str)->str:
         return article_card(records[sm.group(1)],prefix=prefix)
     return re.sub(r'<article class="card">.*?</article>',repl,text,flags=re.S)
 
+def add_breadcrumbs(text:str,trail:list[tuple[str,str]])->str:
+    """يضيف BreadcrumbList قبل </main> إن لم يكن موجودًا."""
+    if 'BreadcrumbList' in text:return text
+    data={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":i+1,"name":n,"item":u} for i,(n,u) in enumerate(trail)]}
+    tag='<script type="application/ld+json">'+json.dumps(data,ensure_ascii=False,separators=(',',':'))+'</script>'
+    return text.replace('</main>',tag+'</main>',1) if '</main>' in text else text
+
 def redesign_category(path:Path,records:dict[str,dict])->None:
     text=read(path); slug=path.stem
     names={x["slug"]:x["name"] for x in CONFIG["categories"]}; name=names[slug]; desc=CAT_DESCRIPTIONS[name]
-    intro=f'''<div class="wrap category-wrap"><div class="crumb"><a href="../index.html">الرئيسية</a><span>/</span><span>{name}</span></div><div class="category-intro"><div><span class="section-kicker">قسم دليلك</span><h1>{name}</h1><p>{desc}</p></div><span class="category-count">{sum(1 for x in records.values() if x['category']==name)} مقالات متاحة</span></div><div class="grid">'''
+    intro=f'''<div class="wrap category-wrap"><div class="crumb"><a href="../index.html">الرئيسية</a><span>/</span><span>{name}</span></div><div class="category-intro"><div><span class="section-kicker">قسم دليلك</span><h1>{name}</h1><p>{desc}</p></div><span class="category-count">{sum(1 for x in records.values() if x['category']==name)} مقالات متاحة</span></div><h2 class="sr-only">مقالات قسم {name}</h2><div class="grid">'''
     text=re.sub(r'<div class="wrap" style="padding-top:38px">.*?<div class="grid">',intro,text,count=1,flags=re.S)
     article_count=sum(1 for x in records.values() if x['category']==name)
     text=re.sub(r'<span class="category-count">\d+ مقالات متاحة</span>',f'<span class="category-count">{article_count} مقالات متاحة</span>',text,count=1)
+    # عنوان قسم مخفي بصريًا يمنع قفزة h1->h3 في بطاقات المقالات (يعمل حتى لو أُعيد التوليد).
+    if 'sr-only">مقالات قسم' not in text:
+        text=text.replace('</div><div class="grid">',f'</div><h2 class="sr-only">مقالات قسم {name}</h2><div class="grid">',1)
     grid_start=text.index('<div class="grid">',text.index('category-wrap'))+len('<div class="grid">')
     collection_start=text.index('<script type="application/ld+json">',grid_start)
     wrap_close=text.rfind('</div>',grid_start,collection_start)
     grid_close=text.rfind('</div>',grid_start,wrap_close)
     category_articles=sorted((a for a in records.values() if a['category']==name),key=lambda a:a['published'],reverse=True)
     text=text[:grid_start]+''.join(article_card(a,prefix='../') for a in category_articles)+text[grid_close:]
-    category_covers={'home-tips':'images/new-quick-kitchen-cleaning.jpg','recipes':'images/new-lemon-mint-drink.jpg','knowledge':'images/hero-editorial.jpg','tech':'images/new-speed-up-slow-computer.jpg'}
-    cover_url=f'{BASE}/{category_covers[slug]}'
+    # أغلفة أقسام مخصّصة (1200x630) بدل إعادة استخدام صور المقالات.
+    cover_url=f'{BASE}/images/og-{slug}.png'
     text=re.sub(r'<meta property="og:image" content="[^"]+">',f'<meta property="og:image" content="{cover_url}">',text,count=1)
     text=re.sub(r'<meta name="twitter:image" content="[^"]+">',f'<meta name="twitter:image" content="{cover_url}">',text,count=1)
+    text=add_breadcrumbs(text,[("الرئيسية",f"{BASE}/"),(name,f"{BASE}/category/{slug}.html")])
     text=inject_shell(path,text)
     write(path,text)
+
+def share_bar(a:dict)->str:
+    """شريط مشاركة موحّد لكل المقالات (واتساب/تيليجرام/فيسبوك/إكس/نسخ)."""
+    url=f'{BASE}/posts/{a["slug"]}.html'
+    u=urllib.parse.quote(url,safe='');tt=urllib.parse.quote(a['title'],safe='')
+    return ('<div class="share"><b>شارك المقال:</b>'
+        f'<a class="sh-wa" href="https://wa.me/?text={tt}%20{u}" target="_blank" rel="noopener">واتساب</a>'
+        f'<a class="sh-tg" href="https://t.me/share/url?url={u}&text={tt}" target="_blank" rel="noopener">تيليجرام</a>'
+        f'<a class="sh-fb" href="https://www.facebook.com/sharer/sharer.php?u={u}" target="_blank" rel="noopener">فيسبوك</a>'
+        f'<a class="sh-x" href="https://twitter.com/intent/tweet?url={u}&text={tt}" target="_blank" rel="noopener">إكس</a>'
+        '<button type="button" class="sh-cp" onclick="copyLink()">نسخ الرابط</button></div>')
 
 def redesign_post(path:Path,records:dict[str,dict])->None:
     text=read(path); a=records[path.stem]; cat_slug=CAT_PATHS[a['category']]
@@ -273,6 +386,8 @@ def redesign_post(path:Path,records:dict[str,dict])->None:
     text=re.sub(r'<script type="application/ld\+json">(.*?)</script>',fix_article_json,text,flags=re.S)
     if 'class="art-category"' not in text:
         text=text.replace('<h1>'+a['title']+'</h1>',f'<a class="art-category" href="../category/{cat_slug}.html">{a["category"]}</a><h1>{a["title"]}</h1><p class="article-summary">{a["description"]}</p>',1)
+    # وحّد شريط المشاركة في كل المقالات (كان 11 مقالًا بزر نسخ فقط).
+    text=re.sub(r'<div class="share">.*?</div>\s*(?=<div class="author")',share_bar(a),text,count=1,flags=re.S)
     text=text.replace('📑 محتويات المقال','محتويات المقال').replace('🔗 نسخ الرابط','نسخ الرابط').replace('<span class="t-ic">💡</span>','<span class="t-ic">مهم</span>').replace('<div class="author-av">✍</div>','<div class="author-av">د</div>')
     text=re.sub(r'<aside class="side"><nav class="toc".*?</nav>','<aside class="side">',text,count=1,flags=re.S)
     toc_match=re.search(r'<nav class="toc".*?</nav>',text,re.S)

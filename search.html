@@ -22,7 +22,9 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="css/style.css?v=11">
-<link rel="preload" href="fonts/ibm-plex-arabic-700.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts/ibm-plex-arabic-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="alternate" type="application/rss+xml" title="دليلك — أحدث المقالات" href="feed.xml">
+<link rel="apple-touch-icon" href="images/icons/icon-192.png"><meta name="apple-mobile-web-app-title" content="دليلك">
 </head>
 <body>
 <a class="skip-link" href="#main-content">تجاوز إلى المحتوى</a>
@@ -32,7 +34,7 @@
 <div class="topline"><div class="wrap"><span>مجلة عربية عصرية لأفكار عملية ومعرفة موثوقة</span><a href="editorial-policy.html">كيف نكتب ونراجع المحتوى؟</a></div></div>
 <header class="site-header"><div class="wrap hbar">
 <a class="logo" href="index.html" aria-label="دليلك — الصفحة الرئيسية"><span class="logo-ic"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7.5c4.2-1 7.8-.2 11 2.3v16c-3.2-2.5-6.8-3.3-11-2.3zm22 0c-4.2-1-7.8-.2-11 2.3v16c3.2-2.5 6.8-3.3 11-2.3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M16 9.8v16" stroke="currentColor" stroke-width="2"/></svg></span><span class="logo-copy"><strong>دليلك</strong><small>مجلة عربية للمعرفة والحياة</small></span></a>
-<nav id="nav" aria-label="التنقل الرئيسي"><div class="mobile-nav-head"><span><strong>قائمة دليلك</strong><small>اختر القسم الذي تريد تصفحه</small></span><button id="navClose" type="button" aria-label="إغلاق القائمة">×</button></div><a href="index.html">الرئيسية</a><a href="category/home-tips.html">نصائح منزلية</a><a href="category/recipes.html">وصفات لذيذة</a><a href="category/knowledge.html">معلومات عامة</a><a href="category/tech.html">تكنولوجيا</a><a href="about.html">من نحن</a><a href="contact.html">اتصل بنا</a></nav>
+<nav id="nav" aria-label="التنقل الرئيسي"><div class="mobile-nav-head"><span><strong>قائمة دليلك</strong><small>اختر القسم الذي تريد تصفحه</small></span><button id="navClose" type="button" aria-label="إغلاق القائمة">×</button></div><a href="index.html">الرئيسية</a><a href="category/home-tips.html">نصائح منزلية</a><a href="category/recipes.html">وصفات لذيذة</a><a href="category/knowledge.html">معلومات عامة</a><a href="category/tech.html">تكنولوجيا</a><a href="about.html">من نحن</a><a href="contact.html">اتصل بنا</a><a class="nav-search-link" href="search.html">بحث في الموقع</a></nav>
 <div class="h-actions"><div class="search-box"><input class="icon-btn" id="searchInput" type="search" aria-label="البحث في مقالات دليلك" autocomplete="off" placeholder="ابحث في دليلك"><div class="search-res" id="searchRes" role="status" aria-live="polite"></div></div><button class="icon-btn" id="themeBtn" type="button" aria-label="تفعيل الوضع الليلي" aria-pressed="false">◐</button><button class="icon-btn burger" id="burger" type="button" aria-label="فتح القائمة" aria-controls="nav" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>القائمة</span></button></div>
 </div></header><button class="nav-scrim" id="navScrim" type="button" aria-label="إغلاق القائمة" hidden></button>
 <main id="main-content">
@@ -48,22 +50,22 @@
 var box=document.getElementById('pageSearch'),out=document.getElementById('pageResults'),idx=null;
 var base=(location.pathname.indexOf('/posts/')>=0||location.pathname.indexOf('/category/')>=0)?'../':'';
 fetch(base+'search-index.json').then(function(r){return r.json()}).then(function(d){idx=d;var q=new URLSearchParams(location.search).get('q');if(q){box.value=q;run(q.toLowerCase())}}).catch(function(){});
-function run(q){out.innerHTML='';if(!idx||!q||q.length<2){out.innerHTML='<p style="color:var(--mut)">اكتب كلمة من حرفين على الأقل.</p>';return;}
+function run(q){out.innerHTML='';if(!idx||!q||q.length<2){out.innerHTML='<p style="color:var(--muted)">اكتب كلمة من حرفين على الأقل.</p>';return;}
 var h=idx.filter(function(x){return (x.t&&x.t.toLowerCase().indexOf(q)>-1)||(x.c&&x.c.toLowerCase().indexOf(q)>-1)});
-if(!h.length){out.innerHTML='<p style="color:var(--mut)">لا توجد نتائج مطابقة.</p>';return;}
-h.forEach(function(x){var a=document.createElement('a');a.className='card';a.href=base+'posts/'+x.s+'.html';a.innerHTML='<div class="card-body"><span class="cat-chip">'+x.c+'</span><h3>'+x.t+'</h3></div>';out.appendChild(a)});}
+if(!h.length){out.innerHTML='<p style="color:var(--muted)">لا توجد نتائج مطابقة.</p>';return;}
+h.forEach(function(x){var a=document.createElement('a');a.className='card';a.href=base+'posts/'+x.s+'.html';a.innerHTML='<div class="card-body"><span class="cat-chip">'+x.c+'</span><h2 class="search-hit-title">'+x.t+'</h2></div>';out.appendChild(a)});}
 box.addEventListener('input',function(){run(box.value.trim().toLowerCase())});
 })();
 </script>
 </div>
 </main>
-<footer><div class="wrap"><div class="fgrid">
+<footer><div class="wrap"><h2 class="sr-only">روابط الموقع</h2><div class="fgrid">
 <div class="footer-brand"><a class="logo" href="index.html" aria-label="دليلك — الصفحة الرئيسية"><span class="logo-ic"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7.5c4.2-1 7.8-.2 11 2.3v16c-3.2-2.5-6.8-3.3-11-2.3zm22 0c-4.2-1-7.8-.2-11 2.3v16c3.2-2.5 6.8-3.3 11-2.3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M16 9.8v16" stroke="currentColor" stroke-width="2"/></svg></span><span class="logo-copy"><strong>دليلك</strong><small>مجلة عربية للمعرفة والحياة</small></span></a><p>محتوى عربي واضح في المنزل والطعام والمعرفة والتقنية، يُكتب ويُراجع بعناية ليمنحك فائدة عملية دون تعقيد.</p></div>
-<div><h4>الأقسام</h4><a href="category/home-tips.html">نصائح منزلية</a><a href="category/recipes.html">وصفات لذيذة</a><a href="category/knowledge.html">معلومات عامة</a><a href="category/tech.html">تكنولوجيا</a></div>
-<div><h4>عن دليلك</h4><a href="about.html">من نحن</a><a href="guide-safe-cleaning.html">أدلة دليلك</a><a href="authors/editorial-team.html">فريق التحرير</a><a href="editorial-policy.html">سياسة التحرير</a><a href="contact.html">اتصل بنا</a><a href="sitemap.html">خريطة الموقع</a></div>
-<div><h4>السياسات والتواصل</h4><a href="privacy-policy.html">سياسة الخصوصية</a><a href="terms.html">شروط الاستخدام</a><a href="disclaimer.html">إخلاء المسؤولية</a><p class="footer-email"><span>البريد الإلكتروني</span><a href="mailto:dalilak77505@gmail.com">dalilak77505@gmail.com</a></p></div>
+<div><h3>الأقسام</h3><a href="category/home-tips.html">نصائح منزلية</a><a href="category/recipes.html">وصفات لذيذة</a><a href="category/knowledge.html">معلومات عامة</a><a href="category/tech.html">تكنولوجيا</a></div>
+<div><h3>عن دليلك</h3><a href="about.html">من نحن</a><a href="guide-safe-cleaning.html">أدلة دليلك</a><a href="authors/editorial-team.html">فريق التحرير</a><a href="editorial-policy.html">سياسة التحرير</a><a href="contact.html">اتصل بنا</a><a href="search.html">بحث</a><a href="sitemap.html">خريطة الموقع</a></div>
+<div><h3>السياسات والتواصل</h3><a href="privacy-policy.html">سياسة الخصوصية</a><a href="terms.html">شروط الاستخدام</a><a href="disclaimer.html">إخلاء المسؤولية</a><p class="footer-email"><span>البريد الإلكتروني</span><a href="mailto:dalilak77505@gmail.com">dalilak77505@gmail.com</a></p></div>
 </div><div class="f-bottom"><span>© 2026 دليلك — جميع الحقوق محفوظة.</span><span>محتوى عربي يُكتب ويُراجع بعناية</span></div></div></footer>
 
-<script src="js/main.js?v=1" defer></script>
+<script src="js/main.js?v=2" defer></script>
 </body>
 </html>

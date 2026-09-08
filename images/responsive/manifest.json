@@ -165,6 +165,41 @@
       "800": "images/responsive/articles/why-we-need-sleep-800.webp",
       "1200": "images/responsive/articles/why-we-need-sleep-1200.webp"
     },
+    "arabic-coffee-guide": {
+      "480": "images/responsive/articles/arabic-coffee-guide-480.webp",
+      "800": "images/responsive/articles/arabic-coffee-guide-800.webp",
+      "1200": "images/responsive/articles/arabic-coffee-guide-1200.webp"
+    },
+    "backup-photos-guide": {
+      "480": "images/responsive/articles/backup-photos-guide-480.webp",
+      "800": "images/responsive/articles/backup-photos-guide-800.webp",
+      "1200": "images/responsive/articles/backup-photos-guide-1200.webp"
+    },
+    "rice-pudding-recipe": {
+      "480": "images/responsive/articles/rice-pudding-recipe-480.webp",
+      "800": "images/responsive/articles/rice-pudding-recipe-800.webp",
+      "1200": "images/responsive/articles/rice-pudding-recipe-1200.webp"
+    },
+    "drain-maintenance-tips": {
+      "480": "images/responsive/articles/drain-maintenance-tips-480.webp",
+      "800": "images/responsive/articles/drain-maintenance-tips-800.webp",
+      "1200": "images/responsive/articles/drain-maintenance-tips-1200.webp"
+    },
+    "android-security-settings": {
+      "480": "images/responsive/articles/android-security-settings-480.webp",
+      "800": "images/responsive/articles/android-security-settings-800.webp",
+      "1200": "images/responsive/articles/android-security-settings-1200.webp"
+    },
+    "microwave-steam-clean": {
+      "480": "images/responsive/articles/microwave-steam-clean-480.webp",
+      "800": "images/responsive/articles/microwave-steam-clean-800.webp",
+      "1200": "images/responsive/articles/microwave-steam-clean-1200.webp"
+    },
+    "learn-new-skills-guide": {
+      "480": "images/responsive/articles/learn-new-skills-guide-480.webp",
+      "800": "images/responsive/articles/learn-new-skills-guide-800.webp",
+      "1200": "images/responsive/articles/learn-new-skills-guide-1200.webp"
+    },
     "zaatar-manakeesh": {
       "480": "images/responsive/articles/zaatar-manakeesh-480.webp",
       "800": "images/responsive/articles/zaatar-manakeesh-800.webp",

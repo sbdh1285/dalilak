@@ -107,4 +107,61 @@
     if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(location.href).then(showToast).catch(showToast);
     else showToast();
   };
+
+  // ===== نموذج التواصل: تحقق فوري ورسائل خطأ مرتبطة بالحقول =====
+  var cform = document.querySelector('.contact-form');
+  if (cform) {
+    var MSG = {
+      valueMissing: 'هذا الحقل مطلوب.',
+      typeMismatch: 'اكتب بريدًا إلكترونيًا صحيحًا، مثل name@example.com.',
+      tooShort: 'الرسالة قصيرة جدًا؛ اكتب 10 أحرف على الأقل.'
+    };
+    function errorFor(field) {
+      var v = field.validity;
+      if (v.valueMissing) return MSG.valueMissing;
+      if (v.typeMismatch) return MSG.typeMismatch;
+      if (v.tooShort) return MSG.tooShort;
+      return field.validationMessage || 'قيمة غير صالحة.';
+    }
+    function slot(field) {
+      var id = field.id + '-error', el = document.getElementById(id);
+      if (!el) {
+        el = document.createElement('p');
+        el.id = id; el.className = 'field-error'; el.setAttribute('aria-live', 'polite');
+        field.insertAdjacentElement('afterend', el);
+      }
+      return el;
+    }
+    function validate(field, show) {
+      if (!field.willValidate || field.type === 'hidden') return true;
+      var ok = field.checkValidity(), el = slot(field);
+      if (ok) {
+        field.removeAttribute('aria-invalid'); field.classList.remove('is-invalid');
+        el.textContent = ''; el.classList.remove('show');
+      } else if (show) {
+        field.setAttribute('aria-invalid', 'true'); field.classList.add('is-invalid');
+        field.setAttribute('aria-describedby', field.id + '-error');
+        el.textContent = errorFor(field); el.classList.add('show');
+      }
+      return ok;
+    }
+    var fields = Array.prototype.slice.call(cform.querySelectorAll('input:not([type=hidden]):not(.form-honeypot), select, textarea'));
+    fields.forEach(function (f) {
+      f.addEventListener('blur', function () { validate(f, true); });
+      f.addEventListener('input', function () { if (f.classList.contains('is-invalid')) validate(f, true); });
+      f.addEventListener('change', function () { validate(f, true); });
+    });
+    cform.setAttribute('novalidate', 'novalidate');
+    cform.addEventListener('submit', function (e) {
+      var bad = fields.filter(function (f) { return !validate(f, true); });
+      if (bad.length) {
+        e.preventDefault();
+        bad[0].focus();
+        bad[0].scrollIntoView({block:'center', behavior:'smooth'});
+        return;
+      }
+      var btn = cform.querySelector('button[type=submit]');
+      if (btn) { btn.disabled = true; btn.dataset.label = btn.textContent; btn.textContent = 'جارٍ الإرسال…'; }
+    });
+  }
 })();
