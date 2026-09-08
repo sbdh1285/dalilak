@@ -39,7 +39,9 @@ for p in sorted((ROOT/'posts').glob('*.html')):
  toc_match=re.search(r'<nav class="toc" aria-label="جدول محتويات المقال">.*?<ul>(.*?)</ul></nav>',t,re.S)
  toc=[(anchor,clean(title)) for anchor,title in re.findall(r'href="#([^"]+)">(.*?)</a>',toc_match.group(1),re.S)] if toc_match else []
  if toc!=headings:issues.append('جدول المحتويات لا يطابق عناوين H2')
- if not headings or headings[-1][1]!='الخلاصة':issues.append('آخر قسم رئيسي ليس الخلاصة')
+ # آخر قسم لا بد أن يكون خاتمة — بأي من الصيغ المعتمدة (انظر tools/vary_headings.py).
+ CLOSERS={'الخلاصة','خلاصة عملية','خطوتك التالية','ما يستحق أن تتذكره','قبل أن تبدأ'}
+ if not headings or headings[-1][1] not in CLOSERS:issues.append('آخر قسم رئيسي ليس خاتمة')
  # افحص عناوين المقال فقط (داخل <main>) حتى لا تُحسب عناوين التذييل أو الشريط الجانبي.
  main_scope=re.search(r'<main\b.*?</main>',t,re.S)
  scope=main_scope.group(0) if main_scope else t

@@ -337,6 +337,7 @@ def main():
  subprocess.run([sys.executable,str(ROOT/'tools'/'phase_one_seo.py')],check=True)
  enhance_supporting();remove_post_conclusion_extras()
  subprocess.run([sys.executable,str(ROOT/'tools'/'deepen_content.py')],check=True)
+ subprocess.run([sys.executable,str(ROOT/'tools'/'vary_headings.py')],check=True)
  # إعادة إضافة المصادر والربط للمقالات الجديدة بعد الصيانة
  titles={s:a['title'] for s,a in records().items()}
  for slug,d in NEW_ARTICLES.items():
