@@ -947,8 +947,41 @@ def apply(slug: str, ops: list[tuple[str, str, str]]) -> str:
     return f"✓ {slug}"
 
 
+def dedupe_accuracy_notes() -> list[str]:
+    """أزل تكرار كتلة accuracy-note داخل المقال الواحد.
+
+    سببه أن ``enhance_supporting`` يحقن نسخة محدّثة داخل SUPPORT-REVIEW بينما
+    نسخة أقدم من الكتلة نفسها ما زالت موجودة في الملف. نُبقي النسخة الواردة
+    داخل SUPPORT-REVIEW (الأحدث والأكمل) ونحذف ما عداها.
+    """
+    fixed = []
+    for path in sorted(POSTS.glob("*.html")):
+        text = path.read_text(encoding="utf-8")
+        notes = list(re.finditer(r'<div class="accuracy-note">.*?</p></div>', text, re.S))
+        if len(notes) < 2:
+            continue
+        sup = re.search(
+            r"<!-- SUPPORT-REVIEW-START -->.*?<!-- SUPPORT-REVIEW-END -->", text, re.S
+        )
+        # احذف من الآخر إلى الأول حتى لا تتغير المواضع، مع إبقاء ما داخل SUPPORT.
+        removed = 0
+        for m in reversed(notes):
+            inside = bool(sup and sup.start() <= m.start() < sup.end())
+            if inside or removed >= len(notes) - 1:
+                continue
+            text = text[: m.start()] + text[m.end():]
+            removed += 1
+        if removed:
+            path.write_text(text, encoding="utf-8")
+            fixed.append(f"{path.stem} (-{removed})")
+    return fixed
+
+
 def main() -> None:
     results = [apply(slug, ops) for slug, ops in BLOCKS.items()]
+    dd = dedupe_accuracy_notes()
+    if dd:
+        print('إزالة تكرار ملاحظات الدقة:', ', '.join(dd))
     for r in results:
         print(r)
     failures = [r for r in results if r.startswith("✗")]
