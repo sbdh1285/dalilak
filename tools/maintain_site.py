@@ -220,12 +220,12 @@ def fix_accessibility(text: str) -> str:
     text = text.replace('<div class="search-res" id="searchRes" role="status" aria-live="polite"></div></div>', '<div class="search-res" id="searchRes" role="status" aria-live="polite"></div>')
     text = re.sub(
         r'<button class="icon-btn" id="themeBtn"[^>]*>.*?</button>',
-        '<button class="icon-btn" id="themeBtn" type="button" aria-label="تفعيل الوضع الليلي" aria-pressed="false">🌙</button>',
+        '<button class="icon-btn" id="themeBtn" type="button" aria-label="تفعيل الوضع الليلي" aria-pressed="false">◐</button>',
         text,
     )
     text = re.sub(
         r'<button class="icon-btn burger" id="burger"[^>]*>.*?</button>',
-        '<button class="icon-btn burger" id="burger" type="button" aria-label="فتح القائمة" aria-controls="nav" aria-expanded="false">☰</button>',
+        '<button class="icon-btn burger" id="burger" type="button" aria-label="فتح القائمة" aria-controls="nav" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>القائمة</span></button>',
         text,
     )
     text = text.replace('<nav id="nav">', '<nav id="nav" aria-label="التنقل الرئيسي">')
@@ -326,7 +326,7 @@ def root_link_block(prefix: str = "") -> str:
     )
     return f'''<footer><div class="wrap">
   <div class="fgrid">
-    <div><div class="logo-ic" style="width:44px;height:44px;font-size:1.3rem">📘</div><h4 style="margin:10px 0 8px">دليلك</h4><p>دليلك اليومي لمحتوى عربي عملي ومفيد، مكتوب بوضوح ويُراجع ويُحدّث عند الحاجة.</p></div>
+    <div><div class="logo-ic" style="width:44px;height:44px"><svg viewBox="0 0 32 32" aria-hidden="true" style="width:100%;height:100%"><rect width="32" height="32" rx="9" fill="#2A3A96"/><g transform="rotate(-45 16 16)"><path d="M16 5.5 19.6 16H16Z" fill="#F2A81D"/><path d="M16 5.5 12.4 16H16Z" fill="#FFFFFF"/><path d="M16 26.5 19.6 16H16Z" fill="#8B97E8"/><path d="M16 26.5 12.4 16H16Z" fill="#5A68C8"/><circle cx="16" cy="16" r="2.6" fill="#fff"/></g></svg></div><h4 style="margin:10px 0 8px">دليلك</h4><p>مجلتك العربية لمحتوى عملي ومفيد، يُكتب بوضوح ويُراجع ويُحدّث عند الحاجة.</p></div>
     <div><h4>الأقسام</h4><a href="{prefix}category/home-tips.html">نصائح منزلية</a><a href="{prefix}category/recipes.html">وصفات لذيذة</a><a href="{prefix}category/knowledge.html">معلومات عامة</a><a href="{prefix}category/tech.html">تكنولوجيا</a></div>
     <div><h4>روابط مهمة</h4><a href="{prefix}about.html">من نحن</a><a href="{prefix}contact.html">اتصل بنا</a><a href="{prefix}privacy-policy.html">سياسة الخصوصية</a><a href="{prefix}terms.html">شروط الاستخدام</a><a href="{prefix}disclaimer.html">إخلاء المسؤولية</a><a href="{prefix}editorial-policy.html">سياسة التحرير</a><a href="{prefix}authors/editorial-team.html">فريق التحرير</a><a href="{prefix}sitemap.html">خريطة الموقع</a></div>
     <div><h4>تواصل معنا</h4>{contact_bit}</div>
@@ -364,11 +364,11 @@ def standard_head(title: str, description: str, canonical: str, prefix: str = ""
 <meta name="description" content="{description}">
 <link rel="canonical" href="{canonical}">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0f766e">
+<meta name="theme-color" content="#2a3a96">
 <link rel="preload" href="{prefix}fonts/tajawal-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="{prefix}favicon.svg">
 <link rel="manifest" href="{prefix}manifest.json">
-<link rel="stylesheet" href="{prefix}css/style.css?v=6">
+<link rel="stylesheet" href="{prefix}css/style.css?v=21">
 </head>'''
 
 
@@ -376,7 +376,7 @@ def standard_header(prefix: str = "") -> str:
     return f'''<header><div class="wrap hbar">
 <a class="logo" href="{prefix}index.html"><span class="logo-ic">📘</span> دليلك</a>
 <nav id="nav" aria-label="التنقل الرئيسي"><a href="{prefix}index.html">الرئيسية</a><a href="{prefix}category/home-tips.html">نصائح منزلية</a><a href="{prefix}category/recipes.html">وصفات لذيذة</a><a href="{prefix}category/knowledge.html">معلومات عامة</a><a href="{prefix}category/tech.html">تكنولوجيا</a><a href="{prefix}about.html">من نحن</a><a href="{prefix}contact.html">اتصل بنا</a></nav>
-<div class="h-actions"><div class="search-box"><input class="icon-btn" id="searchInput" type="search" aria-label="البحث في مقالات دليلك" autocomplete="off" placeholder="ابحث…" style="width:150px;text-align:right;padding:0 12px;font-family:inherit"><div class="search-res" id="searchRes" role="status" aria-live="polite"></div></div><button class="icon-btn" id="themeBtn" type="button" aria-label="تفعيل الوضع الليلي" aria-pressed="false">🌙</button><button class="icon-btn burger" id="burger" type="button" aria-label="فتح القائمة" aria-controls="nav" aria-expanded="false">☰</button></div>
+<div class="h-actions"><div class="search-box"><input class="icon-btn" id="searchInput" type="search" aria-label="البحث في مقالات دليلك" autocomplete="off" placeholder="ابحث في دليلك"><div class="search-res" id="searchRes" role="status" aria-live="polite"></div></div><button class="icon-btn" id="themeBtn" type="button" aria-label="تفعيل الوضع الليلي" aria-pressed="false">◐</button><button class="icon-btn burger" id="burger" type="button" aria-label="فتح القائمة" aria-controls="nav" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>القائمة</span></button></div>
 </div></header>'''
 
 

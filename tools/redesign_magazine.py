@@ -55,7 +55,7 @@ ICONS = {
 "recipes":'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v7m-3-7v5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V3M7 10v11m10-18v18m0-18c-3 2-4 5-4 8h4" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>',
 "knowledge":'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11v16H6.5A2.5 2.5 0 0 0 4 21.5zm16 0A2.5 2.5 0 0 0 17.5 3H13v16h4.5a2.5 2.5 0 0 1 2.5 2.5z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>',
 "tech":'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M9.5 5h5M10 18.5h4" stroke="currentColor" stroke-width="1.7"/></svg>'}
-BOOK_ICON='<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7.5c4.2-1 7.8-.2 11 2.3v16c-3.2-2.5-6.8-3.3-11-2.3zm22 0c-4.2-1-7.8-.2-11 2.3v16c3.2-2.5 6.8-3.3 11-2.3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M16 9.8v16" stroke="currentColor" stroke-width="2"/></svg>'
+LOGO_ICON='<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#2A3A96"/><g transform="rotate(-45 16 16)"><path d="M16 5.5 19.6 16H16Z" fill="#F2A81D"/><path d="M16 5.5 12.4 16H16Z" fill="#FFFFFF"/><path d="M16 26.5 19.6 16H16Z" fill="#8B97E8"/><path d="M16 26.5 12.4 16H16Z" fill="#5A68C8"/><circle cx="16" cy="16" r="2.6" fill="#fff"/></g></svg>'
 MENU_ICON='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>'
 
 
@@ -117,7 +117,7 @@ def article_records()->dict[str,dict]:
 
 
 def logo(prefix:str="")->str:
-    return f'<a class="logo" href="{prefix}index.html" aria-label="دليلك — الصفحة الرئيسية"><span class="logo-ic">{BOOK_ICON}</span><span class="logo-copy"><strong>دليلك</strong><small>مجلة عربية للمعرفة والحياة</small></span></a>'
+    return f'<a class="logo" href="{prefix}index.html" aria-label="دليلك — الصفحة الرئيسية"><span class="logo-ic">{LOGO_ICON}</span><span class="logo-copy"><strong>دليلك</strong><small>مجلتك العربية للمعرفة والحياة</small></span></a>'
 
 def active_for(path:Path)->str:
     rel=path.relative_to(ROOT).as_posix()
@@ -156,11 +156,14 @@ def inject_shell(path:Path,text:str)->str:
     text=re.sub(r'<div class="topline">.*?</div></div>\s*','',text,count=1,flags=re.S)
     text=re.sub(r'<header.*?</header>(?:<button class="nav-scrim".*?</button>)?',header(path),text,count=1,flags=re.S)
     text=re.sub(r'<footer>.*?</footer>',footer(path),text,count=1,flags=re.S)
-    text=text.replace('css/style.css?v=6','css/style.css?v=11').replace('css/style.css?v=7','css/style.css?v=11').replace('css/style.css?v=10','css/style.css?v=11')
-    text=text.replace('<meta name="theme-color" content="#0f766e">','<meta name="theme-color" content="#124e4a">')
+    for old in ('css/style.css?v=6','css/style.css?v=7','css/style.css?v=10','css/style.css?v=11','css/style.css?v=20'):
+        text=text.replace(old,'css/style.css?v=21')
+    text=text.replace('css/editorial.css?v=1','css/editorial.css?v=21').replace('css/editorial.css?v=20','css/editorial.css?v=21')
+    text=text.replace('<meta name="theme-color" content="#0f766e">','<meta name="theme-color" content="#2a3a96">').replace('<meta name="theme-color" content="#124e4a">','<meta name="theme-color" content="#2a3a96">')
     p=prefix_for(path)
-    preload=f'<link rel="preload" href="{p}fonts/ibm-plex-arabic-700.ttf" as="font" type="font/ttf" crossorigin>'
-    if 'ibm-plex-arabic-700.ttf' not in text:text=text.replace('</head>',preload+'\n</head>')
+    text=re.sub(r'<link rel="preload" href="[^"]*ibm-plex-arabic[^"]*" as="font"[^>]*>\s*','',text)
+    preload=f'<link rel="preload" href="{p}fonts/alexandria-arabic-700.woff2" as="font" type="font/woff2" crossorigin>'
+    if 'alexandria-arabic-700.woff2' not in text:text=text.replace('</head>',preload+'\n</head>')
     if '<meta property="og:title"' not in text:
         title_match=re.search(r'<title>(.*?)</title>',text,re.S);desc_match=re.search(r'<meta name="description" content="([^"]+)"',text);canonical_match=re.search(r'<link rel="canonical" href="([^"]+)"',text)
         if title_match and desc_match and canonical_match:
@@ -214,8 +217,9 @@ def home_main(records:dict[str,dict],old:str)->str:
 {jsonlds}</main>'''
 
 def redesign_home(path:Path,records:dict[str,dict])->None:
-    text=read(path); newmain=home_main(records,text)
-    text=re.sub(r'<main id="main-content">.*?</main>',newmain,text,count=1,flags=re.S)
+    text=read(path)
+    if 'class="ed-hero"' not in text:  # الصفحة الرئيسية التحريرية قائمة — لا تستبدلها
+        text=re.sub(r'<main id="main-content">.*?</main>',home_main(records,text),text,count=1,flags=re.S)
     text=inject_shell(path,text)
     text=text.replace('<meta property="og:title" content="دليلك | دليلك اليومي لنصائح عملية، وصفات شهية، ومعلومات مفيدة">','<meta property="og:title" content="دليلك | أفكار مفيدة لحياة يومية أسهل">').replace('<meta name="twitter:title" content="دليلك | دليلك اليومي لنصائح عملية، وصفات شهية، ومعلومات مفيدة">','<meta name="twitter:title" content="دليلك | أفكار مفيدة لحياة يومية أسهل">')
     text=re.sub(r'<meta name="description" content="[^"]+">',f'<meta name="description" content="{CONFIG["description"]}">',text,count=1)
@@ -297,7 +301,7 @@ def sync_css_config()->None:
     text=text[:root_start]+block+text[root_end:]; write(path,text)
 
 def update_favicon()->None:
-    write(ROOT/"favicon.svg",'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="8" fill="#124e4a"/><path d="M12 17c8-2 14-.5 20 4v31c-6-4.5-12-6-20-4zm40 0c-8-2-14-.5-20 4v31c6-4.5 12-6 20-4z" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/><path d="M32 21v31" stroke="#d97732" stroke-width="4"/></svg>''')
+    write(ROOT/"favicon.svg",'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#2A3A96"/><g transform="rotate(-45 32 32)"><path d="M32 11 39.2 32H32Z" fill="#F2A81D"/><path d="M32 11 24.8 32H32Z" fill="#FFFFFF"/><path d="M32 53 39.2 32H32Z" fill="#8B97E8"/><path d="M32 53 24.8 32H32Z" fill="#5A68C8"/><circle cx="32" cy="32" r="5.2" fill="#fff"/></g></svg>''')
 
 def main()->None:
     records=article_records()

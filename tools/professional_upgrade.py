@@ -38,7 +38,7 @@ def write(path: Path, text: str) -> None:
 def css_for(path: Path) -> str:
     nested = path.parent != ROOT
     prefix = "../" if nested else ""
-    return f'{prefix}css/style.css?v=11'
+    return f'{prefix}css/style.css?v=21'
 
 
 def rebuild_toc(body: str) -> str:
@@ -160,7 +160,7 @@ def global_html_fixes() -> None:
         )
         text = re.sub(
             r'<meta name="theme-color" content="[^"]*">',
-            '<meta name="theme-color" content="#124e4a">',
+            '<meta name="theme-color" content="#2a3a96">',
             text,
         )
         text = re.sub(r'href="(?:/dalilak/|\.\./)?css/style\.css\?v=\d+"', f'href="{css_for(path)}"', text)
@@ -457,11 +457,11 @@ def patch_tools() -> None:
 
     redesign = ROOT / "tools" / "redesign_magazine.py"
     r = read(redesign)
-    r = r.replace("css/style.css?v=8", "css/style.css?v=11")
-    r = r.replace("css/style.css?v=9", "css/style.css?v=11")
-    r = r.replace("css/style.css?v=10", "css/style.css?v=11")
+    r = r.replace("css/style.css?v=8", "css/style.css?v=21")
+    r = r.replace("css/style.css?v=9", "css/style.css?v=21")
+    r = r.replace("css/style.css?v=10", "css/style.css?v=21")
     if "dalilak/css/style.css" in r:
-        r = r.replace("/dalilak/css/style.css?v=11", "css/style.css?v=11")
+        r = r.replace("/dalilak/css/style.css?v=21", "css/style.css?v=21")
     write(redesign, r)
 
     phase = ROOT / "tools" / "phase_one_seo.py"
