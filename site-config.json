@@ -1,21 +1,21 @@
 {
   "siteName": "دليلك",
-  "shortDescription": "مجلة عربية عصرية لأفكار عملية ومعرفة موثوقة",
+  "shortDescription": "مجلتك العربية — أفكار عملية ومعرفة موثوقة",
   "tagline": "أفكار مفيدة لحياة يومية أسهل",
   "description": "محتوى عربي واضح في المنزل والطعام والمعرفة والتقنية، يُكتب ويُراجع بعناية ليمنحك فائدة عملية دون تعقيد.",
   "baseUrl": "https://sbdh1285.github.io/dalilak",
   "email": "dalilak77505@gmail.com",
   "authorName": "فريق تحرير دليلك",
   "heroImage": "images/hero-editorial.jpg",
-  "featuredArticle": "lemon-mint-drink",
+  "featuredArticle": "account-recovery-plan",
   "theme": {
-    "primary": "#124E4A",
-    "primaryDark": "#0B3533",
-    "accent": "#D97732",
-    "background": "#F7F5F0",
+    "primary": "#2A3A96",
+    "primaryDark": "#1C2A6E",
+    "accent": "#F2A81D",
+    "background": "#F5F6FB",
     "surface": "#FFFFFF",
-    "text": "#202725",
-    "muted": "#5C6864"
+    "text": "#181D33",
+    "muted": "#555D7A"
   },
   "categories": [
     {

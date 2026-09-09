@@ -1,11 +1,11 @@
 {
   "name": "دليلك",
   "short_name": "دليلك",
-  "description": "موقع دليلك العربي: نصائح منزلية عملية، وصفات شهية وسهلة، معلومات عامة ممتعة، وشروحات تقنية مبسطة لكل أفراد العائلة.",
+  "description": "مجلتك العربية: نصائح منزلية عملية، وصفات شهية وسهلة، معلومات عامة ممتعة، وشروحات تقنية مبسطة لكل أفراد العائلة.",
   "start_url": "/dalilak/",
   "display": "standalone",
-  "background_color": "#f5f7f8",
-  "theme_color": "#0f766e",
+  "background_color": "#F5F6FB",
+  "theme_color": "#2A3A96",
   "dir": "rtl",
   "lang": "ar",
   "icons": [
@@ -13,6 +13,24 @@
       "src": "favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
+    },
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "scope": "/dalilak/",

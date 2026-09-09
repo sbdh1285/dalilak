@@ -63,6 +63,7 @@
         var all = document.createElement('a'); all.className = 'all-results';
         all.href = new URL('search.html?q=' + encodeURIComponent(searchInput.value.trim()), siteBase).href;
         all.textContent = 'عرض كل النتائج ←'; searchResults.appendChild(all);
+        tagCategoryChips(searchResults);
       }
       searchResults.classList.add('open');
     });
@@ -75,6 +76,18 @@
   document.addEventListener('click', function (event) {
     if (searchResults && !event.target.closest('.search-box')) searchResults.classList.remove('open');
   });
+
+  /* تلوين شرائح التصنيفات حسب القسم */
+  var CATEGORY_KEYS = {'نصائح منزلية': 'home', 'وصفات لذيذة': 'recipes', 'معلومات عامة': 'knowledge', 'تكنولوجيا': 'tech'};
+  function tagCategoryChips(root) {
+    var scope = root || document;
+    var chips = scope.querySelectorAll ? scope.querySelectorAll('.cat-chip,.f-tag,.sr-cat,.art-category,.pop-cat,.ed-kicker') : [];
+    Array.prototype.forEach.call(chips, function (el) {
+      var key = CATEGORY_KEYS[(el.textContent || '').trim()];
+      if (key) el.setAttribute('data-cat', key);
+    });
+  }
+  tagCategoryChips();
 
   function setMenu(open) {
     if (!navigation || !burger) return;
