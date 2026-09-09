@@ -99,7 +99,7 @@ def article_records()->dict[str,dict]:
         body_end=min(body_ends) if body_ends else len(text)
         reading_minutes=calculate_reading_minutes(text[body_start:body_end])
         custom_cover=ROOT/'images'/'covers'/f'{path.stem}.jpg'
-        fallback=COVERS.get(path.stem,(f"images/og-{path.stem}.png",data["headline"]))
+        fallback=COVERS.get(path.stem,("images/og-default.png",data["headline"]))
         configured=ARTICLE_IMAGES.get(path.stem)
         if configured:
             cover_path=configured['path'];cover_alt=configured['alt']
@@ -177,45 +177,11 @@ def article_card(a:dict,prefix:str="",lead:bool=False)->str:
     cls="card lead-card" if lead else "card";picture=responsive_picture(a,prefix,'card-img','eager' if lead else 'lazy','(max-width: 640px) calc(100vw - 28px), (max-width: 900px) 50vw, 33vw',lead,'card-picture')
     return f'''<article class="{cls}"><a href="{prefix}posts/{a['slug']}.html">{picture}</a><div class="card-body"><span class="cat-chip">{a['category']}</span><h3><a href="{prefix}posts/{a['slug']}.html">{a['title']}</a></h3><p>{a['description']}</p><div class="card-meta"><time datetime="{a['published']}">{fmt_date(a['published'])}</time><span>{reading_time_label(a['minutes'])} قراءة</span></div></div></article>'''
 
-def story_row(a:dict,prefix:str="")->str:
-    picture=responsive_picture(a,prefix,'story-img','lazy','128px',False,'story-picture')
-    return f'''<a class="story-row" href="{prefix}posts/{a['slug']}.html">{picture}<div><span class="cat-chip">{a['category']}</span><h3>{a['title']}</h3><span class="story-meta">{fmt_date(a['published'])} · {reading_time_label(a['minutes'])}</span></div></a>'''
-
-def more_story(a:dict,prefix:str="")->str:
-    picture=responsive_picture(a,prefix,'more-img','lazy','(max-width: 640px) 125px, 172px',False,'more-picture')
-    return f'''<a class="more-story" href="{prefix}posts/{a['slug']}.html">{picture}<div><span class="cat-chip">{a['category']}</span><h3>{a['title']}</h3><p>{a['description']}</p></div></a>'''
-
-def home_main(records:dict[str,dict],old:str)->str:
-    ordered=sorted(records.values(),key=lambda x:x['published'],reverse=True)
-    feat=records[CONFIG['featuredArticle']]; latest=[x for x in ordered if x['slug']!=feat['slug']]
-    cats="".join(f'''<a class="cat-card" href="category/{c['slug']}.html"><div class="cat-ic">{ICONS[c['slug']]}</div><h3>{c['name']}</h3><p>{c['description']}</p><span class="cnt">استكشف القسم ←</span></a>''' for c in CONFIG['categories'])
-    latest_html=article_card(latest[0],lead=True)+f'<div class="story-stack">{"".join(story_row(x) for x in latest[1:5])}</div>'
-    more="".join(more_story(x) for x in latest[5:11])
-    hero_picture='<picture class="hero-picture"><source type="image/webp" srcset="images/responsive/hero-640.webp 640w, images/responsive/hero-960.webp 960w, images/responsive/hero-1440.webp 1440w" sizes="(max-width: 880px) 100vw, 55vw"><img src="'+CONFIG['heroImage']+'" alt="مكتب هادئ يضم كتبًا ودفترًا وأدوات ترمز إلى المعرفة والحياة اليومية" width="1440" height="900" fetchpriority="high" decoding="async"></picture>'
-    featured_picture=responsive_picture(feat,'','featured-img','eager','(max-width: 880px) 100vw, 60vw',True,'featured-picture')
-    organization={"@context":"https://schema.org","@type":"Organization","name":CONFIG['siteName'],"url":BASE,"description":CONFIG['description']}
-    if CONFIG.get('contact',{}).get('enabled') and CONFIG.get('email'):organization['email']=CONFIG['email']
-    faq_items=[
-        ("ما هو موقع دليلك؟","مجلة عربية تقدم محتوى عمليًا في النصائح المنزلية والوصفات والمعرفة والتكنولوجيا بلغة واضحة وتصميم مريح."),
-        ("هل المحتوى مجاني؟","نعم، جميع المقالات متاحة للقراءة دون تسجيل أو اشتراك."),
-        ("كيف يُراجع المحتوى؟","نراجع وضوح المقال ومصادر الادعاءات القابلة للتحقق، ونحدّث المحتوى عند اكتشاف خطأ أو تغير المعلومة."),
-        ("هل يمكن اقتراح موضوع أو إرسال تصحيح؟","نعم، نستقبل الاقتراحات والتصحيحات الموثقة عبر صفحة اتصل بنا.")]
-    faq={"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq_items]}
-    jsonlds='\n'.join('<script type="application/ld+json">'+json.dumps(x,ensure_ascii=False,separators=(',',':'))+'</script>' for x in (organization,faq))
-    return f'''<main id="main-content">
-<section class="home-hero"><div class="wrap"><div class="hero-grid"><div class="hero-copy"><span class="eyebrow">مجلة عربية عصرية</span><h1>{CONFIG['tagline']}</h1><p>{CONFIG['description']}</p><div class="cta-row"><a class="btn btn-a" href="category/home-tips.html">ابدأ القراءة</a><a class="btn btn-b" href="about.html">تعرّف على دليلك</a></div></div><div class="hero-media">{hero_picture}</div></div><div class="value-strip"><div class="value-item"><strong>محتوى واضح</strong><span>لغة مباشرة دون تعقيد</span></div><div class="value-item"><strong>أقسام متنوعة</strong><span>المنزل والطعام والمعرفة والتقنية</span></div><div class="value-item"><strong>قراءة مريحة</strong><span>تصميم عربي يركز على المحتوى</span></div><div class="value-item"><strong>تحديثات مستمرة</strong><span>مراجعة وتصحيح عند الحاجة</span></div></div></div></section>
-<section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">اختيار التحرير</span><h2>مقال مميز</h2></div></div><a class="featured" href="posts/{feat['slug']}.html">{featured_picture}<div class="f-body"><span class="f-tag">{feat['category']}</span><h2>{feat['title']}</h2><p>{feat['description']}</p><span class="read-link">اقرأ المقال ←</span></div></a></div></section>
-<section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">تصفّح حسب اهتمامك</span><h2>أقسام دليلك</h2></div></div><div class="cats">{cats}</div></div></section>
-<section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">نُشر حديثًا</span><h2>أحدث المقالات</h2></div><a href="sitemap.html">جميع المقالات ←</a></div><div class="magazine-latest">{latest_html}</div></div></section>
-<section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">مختارات إضافية</span><h2>للقراءة بعد ذلك</h2></div></div><div class="more-grid">{more}</div></div></section>
-<section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">مسارات عملية</span><h2>أدلة دليلك</h2></div><a href="sitemap.html">كل الأدلة والمقالات ←</a></div><div class="guide-feature-grid"><a href="guide-safe-cleaning.html"><span>01</span><h3>دليل التنظيف الآمن</h3><p>المنتجات والتهوية ومنع الخلطات الخطرة.</p></a><a href="guide-account-security.html"><span>02</span><h3>دليل حماية الحسابات</h3><p>المنع والاسترداد والدفع الآمن.</p></a><a href="guide-gulf-recipes.html"><span>03</span><h3>دليل الوصفات الخليجية</h3><p>الأرز والبهارات والمقبلات والمشروبات.</p></a><a href="guide-smartphone.html"><span>04</span><h3>دليل الهاتف</h3><p>الاختيار والفحص والحماية والاستخدام.</p></a></div></div></section>
-<section class="sec"><div class="wrap"><div class="sec-h"><div class="sec-title"><span class="section-kicker">عن الموقع</span><h2>أسئلة شائعة</h2></div></div><div class="faq"><details open><summary>ما هو موقع دليلك؟</summary><p>مجلة عربية تقدم محتوى عمليًا في النصائح المنزلية والوصفات والمعرفة والتكنولوجيا بلغة واضحة وتصميم مريح.</p></details><details><summary>هل المحتوى مجاني؟</summary><p>نعم، جميع المقالات متاحة للقراءة دون تسجيل أو اشتراك.</p></details><details><summary>كيف يُراجع المحتوى؟</summary><p>نراجع وضوح المقال ومصادر الادعاءات القابلة للتحقق، ونحدّث المحتوى عند اكتشاف خطأ أو تغير المعلومة.</p></details><details><summary>هل يمكن اقتراح موضوع أو إرسال تصحيح؟</summary><p>نعم، نستقبل الاقتراحات والتصحيحات الموثقة عبر صفحة اتصل بنا.</p></details></div></div></section>
-<section class="sec"><div class="wrap"><div class="trust-panel"><div><h2>الثقة تبدأ بالوضوح</h2><p>تعرّف على طريقة اختيار الموضوعات ومراجعة المعلومات والتعامل مع التصحيحات في سياسة التحرير.</p></div><a class="btn" href="editorial-policy.html">اقرأ سياسة التحرير</a></div></div></section>
-{jsonlds}</main>'''
-
 def redesign_home(path:Path,records:dict[str,dict])->None:
-    text=read(path); newmain=home_main(records,text)
-    text=re.sub(r'<main id="main-content">.*?</main>',newmain,text,count=1,flags=re.S)
+    # الصفحة الرئيسية تنسيق تحريري مُنسّق يدويًا (ed-*) — يُحظر إعادة توليد <main>
+    # تلقائيًا حتى لا يُمس التصميم المعتمد. تُحدّث هنا الغلاف والوسوم فقط،
+    # ويُحدّث قسم «أحدث المقالات» تحريريًا عند نشر مقالات جديدة.
+    text=read(path)
     text=inject_shell(path,text)
     text=text.replace('<meta property="og:title" content="دليلك | دليلك اليومي لنصائح عملية، وصفات شهية، ومعلومات مفيدة">','<meta property="og:title" content="دليلك | أفكار مفيدة لحياة يومية أسهل">').replace('<meta name="twitter:title" content="دليلك | دليلك اليومي لنصائح عملية، وصفات شهية، ومعلومات مفيدة">','<meta name="twitter:title" content="دليلك | أفكار مفيدة لحياة يومية أسهل">')
     text=re.sub(r'<meta name="description" content="[^"]+">',f'<meta name="description" content="{CONFIG["description"]}">',text,count=1)

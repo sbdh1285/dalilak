@@ -1,10 +1,10 @@
 {
-  "generated": "2026-08-17",
+  "generated": "2026-09-08",
   "summary": {
-    "pages": 54,
-    "articles": 34,
-    "images": 55,
-    "links": 327
+    "pages": 61,
+    "articles": 41,
+    "images": 68,
+    "links": 546
   },
   "articles": [
     {
@@ -13,7 +13,7 @@
       "headline": "خطة استرداد الحسابات قبل الاختراق: ورقة عمل عملية",
       "category": "تكنولوجيا",
       "datePublished": "2026-08-17",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -25,47 +25,63 @@
       },
       "toc": [
         {
-          "id": "quick",
+          "id": "seo-quick",
           "title": "الخلاصة السريعة"
         },
         {
-          "id": "inventory",
-          "title": "1. جرد الحسابات المهمة"
+          "id": "sec-inv",
+          "title": "جرد"
         },
         {
-          "id": "backup",
-          "title": "2. افصل عوامل الاسترداد"
+          "id": "sec-split",
+          "title": "افصل الاسترداد"
         },
         {
-          "id": "drill",
-          "title": "3. نفذ اختبارًا دون تسجيل الخروج"
+          "id": "sec-drill",
+          "title": "اختبار بلا تدمير"
         },
         {
-          "id": "incident",
-          "title": "4. عند الاشتباه بالاختراق"
-        },
-        {
-          "id": "worksheet",
-          "title": "ورقة العمل"
-        },
-        {
-          "id": "loss",
+          "id": "sec-loss",
           "title": "سيناريو فقد الهاتف"
         },
         {
-          "id": "shared",
-          "title": "الحسابات المشتركة والعمل"
+          "id": "sec-work",
+          "title": "حسابات عمل ومشتركة"
         },
         {
-          "id": "privacy",
-          "title": "ما الذي لا تكتبه في ورقة الجرد؟"
+          "id": "sec-privacy",
+          "title": "ما لا يُكتب في الجدول المكشوف"
         },
         {
-          "id": "schedule",
-          "title": "جدول مراجعة واقعي"
+          "id": "sec-when",
+          "title": "جدول مراجعة"
         },
         {
-          "id": "conclusion",
+          "id": "sec-hack",
+          "title": "عند الاشتباه"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-paper",
+          "title": "النسخة الورقية"
+        },
+        {
+          "id": "sec-manager",
+          "title": "مدير كلمات المرور"
+        },
+        {
+          "id": "sec-travel",
+          "title": "السفر"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في الاسترداد"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -77,10 +93,10 @@
     {
       "slug": "age-of-earth",
       "path": "posts/age-of-earth.html",
-      "headline": "كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة",
+      "headline": "كيف قدّر العلماء عمر الأرض؟ دليل مبسط للتأريخ الجيولوجي",
       "category": "معلومات عامة",
       "datePublished": "2026-07-08",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -92,23 +108,39 @@
       },
       "toc": [
         {
-          "id": "support-check",
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "sec-why",
+          "title": "لماذا لا تكفي الصخور الظاهرة؟"
+        },
+        {
+          "id": "sec-radio",
+          "title": "التأريخ الإشعاعي بعبارة مبسطة"
+        },
+        {
+          "id": "sec-timeline",
           "title": "كيف تقرأ الخط الزمني؟"
         },
         {
-          "id": "sec-0",
-          "title": "كيف عرف العلماء عمر الأرض؟"
+          "id": "sec-not",
+          "title": "ما الذي لا يثبته عمر الأرض؟"
         },
         {
-          "id": "sec-1",
-          "title": "الجدول الزمني لحياة الأرض"
+          "id": "sec-method",
+          "title": "لماذا يثق العلماء بالطريقة؟"
         },
         {
-          "id": "sec-2",
-          "title": "كيف نقيس هذه الأزمنة الهائلة؟"
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-3",
+          "id": "sec-field",
+          "title": "في الرحلة الجبلية"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -123,7 +155,7 @@
       "headline": "الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟",
       "category": "تكنولوجيا",
       "datePublished": "2026-07-22",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -143,35 +175,35 @@
           "title": "من التدريب إلى الإجابة"
         },
         {
+          "id": "sec-gen",
+          "title": "التوليد"
+        },
+        {
           "id": "seo-safe",
-          "title": "استخدام عملي أكثر أمانًا"
+          "title": "استخدام أأمن"
         },
         {
-          "id": "sec-0",
-          "title": "ما هو الذكاء الاصطناعي؟"
-        },
-        {
-          "id": "sec-1",
-          "title": "كيف «يتعلم» الذكاء الاصطناعي؟"
-        },
-        {
-          "id": "sec-2",
-          "title": "أمثلة من حياتك اليومية"
-        },
-        {
-          "id": "sec-3",
-          "title": "أنواع الذكاء الاصطناعي"
-        },
-        {
-          "id": "sec-4",
-          "title": "الذكاء الاصطناعي التوليدي: صانع المحتوى الجديد"
-        },
-        {
-          "id": "sec-5",
+          "id": "sec-faq",
           "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-6",
+          "id": "sec-limits",
+          "title": "حدود يومية"
+        },
+        {
+          "id": "sec-work",
+          "title": "في الدراسة والعمل"
+        },
+        {
+          "id": "sec-future",
+          "title": "كيف تبقى ماهرًا"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة مع الأدوات الذكية"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -183,10 +215,10 @@
     {
       "slug": "amazing-animal-facts",
       "path": "posts/amazing-animal-facts.html",
-      "headline": "عجائب مملكة الحيوان: حقائق تدهش الكبار قبل الصغار",
+      "headline": "كيف تتكيف الحيوانات مع بيئتها: أمثلة موثوقة بدل المبالغات",
       "category": "معلومات عامة",
       "datePublished": "2026-08-02",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -198,35 +230,43 @@
       },
       "toc": [
         {
-          "id": "support-check",
-          "title": "اختبار سريع للمعلومة"
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
         },
         {
-          "id": "sec-0",
-          "title": "الأخطبوط: عبقري البحار"
+          "id": "sec-adapt",
+          "title": "ما معنى التكيف؟"
         },
         {
-          "id": "sec-1",
-          "title": "الحوت الأزرق: عملاق كل العصور"
+          "id": "sec-food",
+          "title": "الغذاء ومكانه في السلسلة"
         },
         {
-          "id": "sec-2",
-          "title": "الحرباء: كاميرا حية"
+          "id": "sec-senses",
+          "title": "الحواس ليست نسخة من حواسنا"
         },
         {
-          "id": "sec-3",
-          "title": "النمل: حضارة تحت أقدامنا"
+          "id": "sec-move",
+          "title": "الحركة والطاقة"
         },
         {
-          "id": "sec-4",
-          "title": "خفافيش وطيور ودلافين"
+          "id": "sec-test",
+          "title": "اختبار سريع قبل النشر"
         },
         {
-          "id": "sec-5",
-          "title": "أرقام قياسية في مملكة الحيوان"
+          "id": "sec-human",
+          "title": "علاقتنا بالحيوانات"
         },
         {
-          "id": "sec-6",
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-city",
+          "title": "حيوانات المدن"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -238,10 +278,10 @@
     {
       "slug": "amazing-human-body-facts",
       "path": "posts/amazing-human-body-facts.html",
-      "headline": "حقائق مبسطة عن جسم الإنسان: القلب والعظام والجلد والدماغ",
+      "headline": "كيف يعمل القلب والدورة الدموية والجهاز العصبي بشكل مبسط",
       "category": "معلومات عامة",
       "datePublished": "2026-05-05",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -253,31 +293,43 @@
       },
       "toc": [
         {
-          "id": "sec-0",
-          "title": "القلب: مضخة تتكيف مع نشاطك"
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
         },
         {
-          "id": "sec-1",
-          "title": "العظام: نسيج حي يتجدد"
+          "id": "sec-heart",
+          "title": "القلب والدورة الدموية"
         },
         {
-          "id": "sec-2",
-          "title": "الجلد: حاجز منظم ومعقد"
+          "id": "sec-bone",
+          "title": "العظام نسيج حي"
         },
         {
-          "id": "sec-3",
-          "title": "الدماغ: شبكة عصبية لا آلة حسابية بسيطة"
+          "id": "sec-skin",
+          "title": "الجلد حاجز منظم"
         },
         {
-          "id": "sec-4",
-          "title": "المعدة: حمض وحاجز واقٍ"
+          "id": "sec-brain",
+          "title": "الدماغ شبكة لا آلة حاسبة"
         },
         {
-          "id": "sec-5",
-          "title": "حقائق عملية بدل الأرقام المدهشة"
+          "id": "sec-gut",
+          "title": "المعدة والهضم"
         },
         {
-          "id": "sec-6",
+          "id": "sec-practice",
+          "title": "حقائق عملية بدل المبالغات"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-move",
+          "title": "الحركة اليومية"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -289,10 +341,10 @@
     {
       "slug": "amazing-water-facts",
       "path": "posts/amazing-water-facts.html",
-      "headline": "حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا",
+      "headline": "دورة الماء وسلامة مياه الشرب: شرح عملي مبسط",
       "category": "معلومات عامة",
       "datePublished": "2026-07-25",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -304,39 +356,39 @@
       },
       "toc": [
         {
-          "id": "support-check",
-          "title": "ماء الشرب ليس مجرد كمية"
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
         },
         {
-          "id": "sec-0",
-          "title": "الماء في جسمك"
+          "id": "sec-cycle",
+          "title": "دورة الماء باختصار"
         },
         {
-          "id": "sec-1",
-          "title": "الماء على كوكب الأرض"
+          "id": "sec-where",
+          "title": "أين يوجد الماء؟"
         },
         {
-          "id": "sec-2",
-          "title": "دورة الماء: آلة إعادة التدوير الأعظم"
+          "id": "sec-quality",
+          "title": "الجودة ليست اللون فقط"
         },
         {
-          "id": "sec-3",
-          "title": "لماذا نحتاج إلى شرب الماء؟"
+          "id": "sec-home",
+          "title": "التخزين والاستخدام في البيت"
         },
         {
-          "id": "sec-4",
-          "title": "كم تحتاج من الماء يوميًا؟"
+          "id": "sec-energy",
+          "title": "الماء والطاقة مرتبطان"
         },
         {
-          "id": "sec-5",
-          "title": "حقائق سريعة تدهشك"
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-6",
-          "title": "كيف تحافظ على الماء؟"
+          "id": "sec-waste",
+          "title": "الهدر المنزلي"
         },
         {
-          "id": "sec-7",
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -346,12 +398,227 @@
       ]
     },
     {
+      "slug": "android-security-settings",
+      "path": "posts/android-security-settings.html",
+      "headline": "تأمين هاتف أندرويد: إعدادات حماية أساسية في 20 دقيقة",
+      "category": "تكنولوجيا",
+      "datePublished": "2026-09-04",
+      "dateModified": "2026-09-04",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/editorial/android-security-settings.jpg",
+        "alt": "هاتف ذكي بشاشة قفل على مكتب مع مفاتيح وبطاقة أمان"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "sec-update",
+          "title": "1. حدّث النظام أولًا"
+        },
+        {
+          "id": "sec-lock",
+          "title": "2. قفل الشاشة"
+        },
+        {
+          "id": "sec-2fa",
+          "title": "3. التحقق بخطوتين لحساباتك"
+        },
+        {
+          "id": "sec-perms",
+          "title": "4. راجع أذونات التطبيقات"
+        },
+        {
+          "id": "sec-install",
+          "title": "5. ثبّت من المتجر الرسمي فقط"
+        },
+        {
+          "id": "sec-find",
+          "title": "6. العثور على الجهاز"
+        },
+        {
+          "id": "sec-wifi",
+          "title": "7. شبكات واي فاي والبلوتوث"
+        },
+        {
+          "id": "sec-habits",
+          "title": "8. عادات يومية صغيرة"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في تأمين الهاتف"
+        },
+        {
+          "id": "sec-end",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.cisa.gov/secure-our-world/use-strong-passwords",
+        "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf"
+      ]
+    },
+    {
+      "slug": "arabic-coffee-guide",
+      "path": "posts/arabic-coffee-guide.html",
+      "headline": "القهوة العربية على الطريقة المنزلية: دلة وهيل وخطوات",
+      "category": "وصفات لذيذة",
+      "datePublished": "2026-09-04",
+      "dateModified": "2026-09-04",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/editorial/arabic-coffee-guide.jpg",
+        "alt": "دلة قهوة عربية نحاسية تصب في فناجين صغيرة مع هيل وتمر"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "sec-beans",
+          "title": "البن والتحميص"
+        },
+        {
+          "id": "sec-grind",
+          "title": "الطحن الناعم جدًا"
+        },
+        {
+          "id": "sec-tools",
+          "title": "الدلة والفنجان"
+        },
+        {
+          "id": "sec-steps",
+          "title": "خطوات التحضير"
+        },
+        {
+          "id": "sec-strength",
+          "title": "ضبط القوة والرائحة"
+        },
+        {
+          "id": "sec-sweet",
+          "title": "التحلية: سكر أم لا؟"
+        },
+        {
+          "id": "sec-serve",
+          "title": "التقديم والضيافة"
+        },
+        {
+          "id": "sec-store",
+          "title": "حفظ البن والقهوة"
+        },
+        {
+          "id": "sec-note",
+          "title": "ملاحظة عن الكافيين"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في القهوة العربية"
+        },
+        {
+          "id": "sec-end",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": []
+    },
+    {
+      "slug": "backup-photos-guide",
+      "path": "posts/backup-photos-guide.html",
+      "headline": "النسخ الاحتياطي للصور والملفات: خطة بسيطة قبل فوات الأوان",
+      "category": "تكنولوجيا",
+      "datePublished": "2026-09-04",
+      "dateModified": "2026-09-04",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/editorial/backup-photos-guide.jpg",
+        "alt": "هاتف ذكي وقرص صلب خارجي وألبوم صور على مكتب مضيء"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "sec-why",
+          "title": "لماذا نحتاج النسخ الاحتياطي؟"
+        },
+        {
+          "id": "sec-what",
+          "title": "ماذا تنسخ أولًا؟"
+        },
+        {
+          "id": "sec-cloud",
+          "title": "السحابة: النسخة التلقائية الأولى"
+        },
+        {
+          "id": "sec-local",
+          "title": "قرص خارجي: النسخة المحلية"
+        },
+        {
+          "id": "sec-offsite",
+          "title": "نسخة خارج المنزل"
+        },
+        {
+          "id": "sec-auto",
+          "title": "جدولة لا تعتمد على الذاكرة"
+        },
+        {
+          "id": "sec-test",
+          "title": "اختبر الاستعادة"
+        },
+        {
+          "id": "sec-phone",
+          "title": "عند شراء هاتف جديد"
+        },
+        {
+          "id": "sec-secure",
+          "title": "ملفات حساسة وكلمات المرور"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في النسخ الاحتياطي"
+        },
+        {
+          "id": "sec-end",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": []
+    },
+    {
       "slug": "chicken-kabsa",
       "path": "posts/chicken-kabsa.html",
       "headline": "كبسة الدجاج السعودية: طريقة منزلية خطوة بخطوة",
       "category": "وصفات لذيذة",
       "datePublished": "2026-07-28",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -371,23 +638,39 @@
           "title": "حل مشكلات الكبسة"
         },
         {
-          "id": "seo-serve",
-          "title": "التحضير المسبق والتقديم"
+          "id": "sec-ing",
+          "title": "المكونات لست حصص تقريبًا"
         },
         {
-          "id": "sec-0",
-          "title": "المكونات"
-        },
-        {
-          "id": "sec-1",
+          "id": "sec-steps",
           "title": "طريقة التحضير"
         },
         {
-          "id": "sec-2",
-          "title": "أسرار الكبسة الناجحة"
+          "id": "sec-spice",
+          "title": "البهارات"
         },
         {
-          "id": "sec-3",
+          "id": "sec-serve",
+          "title": "التقديم والحفظ"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-rice",
+          "title": "الأرز"
+        },
+        {
+          "id": "sec-chicken",
+          "title": "الدجاج"
+        },
+        {
+          "id": "sec-guest-k",
+          "title": "العزيمة"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -401,7 +684,7 @@
       "headline": "كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين",
       "category": "تكنولوجيا",
       "datePublished": "2026-04-25",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -418,42 +701,42 @@
         },
         {
           "id": "seo-table",
-          "title": "المواصفة المناسبة حسب استخدامك"
+          "title": "حسب الاستخدام"
         },
         {
-          "id": "seo-check",
-          "title": "قائمة فحص قبل الدفع"
+          "id": "sec-ram",
+          "title": "الذاكرة والتخزين"
         },
         {
-          "id": "sec-0",
-          "title": "أولًا: حدد ميزانيتك بصدق"
-        },
-        {
-          "id": "sec-1",
-          "title": "المعالج (Processor): محرك الهاتف"
-        },
-        {
-          "id": "sec-2",
-          "title": "الذاكرة: لا تقل عن هذه الأرقام"
-        },
-        {
-          "id": "sec-3",
-          "title": "الكاميرا: ماذا يعني الرقم الكبير فعلًا؟"
-        },
-        {
-          "id": "sec-4",
+          "id": "sec-bat",
           "title": "البطارية والشحن"
         },
         {
-          "id": "sec-5",
-          "title": "ما الذي يمكنك التضحية به؟"
+          "id": "sec-check",
+          "title": "قبل الدفع"
         },
         {
-          "id": "sec-6",
-          "title": "قواعد ذهبية قبل الشراء"
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-7",
+          "id": "sec-screen",
+          "title": "الشاشة واليد"
+        },
+        {
+          "id": "sec-cam",
+          "title": "الكاميرا بلا مبالغة"
+        },
+        {
+          "id": "sec-old",
+          "title": "شراء إصدار سابق"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة عند الشراء"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -468,7 +751,7 @@
       "headline": "مواد تنظيف لا تخلطها معًا: جدول سلامة منزلي",
       "category": "نصائح منزلية",
       "datePublished": "2026-08-17",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -480,43 +763,55 @@
       },
       "toc": [
         {
-          "id": "quick",
+          "id": "seo-quick",
           "title": "الخلاصة السريعة"
         },
         {
-          "id": "why",
+          "id": "sec-why",
           "title": "لماذا الخلط خطر؟"
         },
         {
-          "id": "table",
-          "title": "جدول «لا تخلط»"
+          "id": "sec-table",
+          "title": "جدول: لا تخلط هذه أبدًا"
         },
         {
-          "id": "label",
-          "title": "كيف تقرأ الملصق؟"
+          "id": "sec-label",
+          "title": "قراءة الملصق قبل الرش"
         },
         {
-          "id": "incident",
+          "id": "sec-vent",
+          "title": "تنبيه السلامة: التهوية قبل الرش"
+        },
+        {
+          "id": "sec-one",
+          "title": "منتج واحد في المرة"
+        },
+        {
+          "id": "sec-incident",
           "title": "إذا حدث خلط بالخطأ"
         },
         {
-          "id": "worksheet",
-          "title": "بطاقة قبل التنظيف"
+          "id": "sec-store",
+          "title": "التخزين والأطفال"
         },
         {
-          "id": "children",
-          "title": "الأطفال والحيوانات والعبوات"
+          "id": "sec-bleach",
+          "title": "استخدام الكلور بأمان"
         },
         {
-          "id": "room-plan",
-          "title": "خطة غرفة واحدة"
+          "id": "sec-drain",
+          "title": "المصارف والانسدادات"
         },
         {
-          "id": "faq",
+          "id": "sec-faq",
           "title": "أسئلة شائعة"
         },
         {
-          "id": "conclusion",
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في خلط المنظفات"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -531,7 +826,7 @@
       "headline": "قصة القهوة: رحلتها من اليمن إلى العالم",
       "category": "معلومات عامة",
       "datePublished": "2026-06-14",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -547,39 +842,31 @@
           "title": "الخلاصة السريعة"
         },
         {
-          "id": "seo-timeline",
-          "title": "خط زمني مختصر"
+          "id": "sec-origin",
+          "title": "الأصل النباتي والدور اليمني"
         },
         {
-          "id": "seo-yemen",
-          "title": "ما الذي يميز القهوة اليمنية؟"
+          "id": "sec-mocha",
+          "title": "لماذا المخا؟"
         },
         {
-          "id": "sec-0",
-          "title": "البداية: البن العربي في مرتفعات اليمن"
+          "id": "sec-culture",
+          "title": "القهوة كثقافة لا كوب فقط"
         },
         {
-          "id": "sec-1",
-          "title": "الصوفية والقهوة: صحوة العبادة"
+          "id": "sec-today",
+          "title": "ما الذي يبقى مهمًا اليوم؟"
         },
         {
-          "id": "sec-2",
-          "title": "ميناء المخا: بوابة القهوة إلى العالم"
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-3",
-          "title": "انتشار القهوة: من إسطنبول إلى أوروبا"
+          "id": "sec-brew",
+          "title": "التحضير المنزلي"
         },
         {
-          "id": "sec-4",
-          "title": "لماذا البن اليمني مميز؟"
-        },
-        {
-          "id": "sec-5",
-          "title": "القهوة اليوم: عودة الريادة"
-        },
-        {
-          "id": "sec-6",
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -589,12 +876,76 @@
       ]
     },
     {
+      "slug": "drain-maintenance-tips",
+      "path": "posts/drain-maintenance-tips.html",
+      "headline": "منع انسداد المصارف في المطبخ والحمام: عادات وأدوات آمنة",
+      "category": "نصائح منزلية",
+      "datePublished": "2026-09-04",
+      "dateModified": "2026-09-04",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/editorial/drain-maintenance-tips.jpg",
+        "alt": "زجاجة خل وعلبة بيكربونات وقفازات بجوار مصرف مطبخ نظيف"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "sec-causes",
+          "title": "ما الذي يسبب الانسداد؟"
+        },
+        {
+          "id": "sec-kitchen",
+          "title": "قواعد المطبخ"
+        },
+        {
+          "id": "sec-bath",
+          "title": "قواعد الحمام"
+        },
+        {
+          "id": "sec-maintain",
+          "title": "صيانة دورية خفيفة"
+        },
+        {
+          "id": "sec-full",
+          "title": "عند الانسداد الكامل"
+        },
+        {
+          "id": "sec-tech",
+          "title": "متى تستدعي فنيًا؟"
+        },
+        {
+          "id": "sec-chemicals",
+          "title": "مواد كاوية: تحذير"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة مع المصارف"
+        },
+        {
+          "id": "sec-end",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": []
+    },
+    {
       "slug": "eliminate-bad-smells",
       "path": "posts/eliminate-bad-smells.html",
       "headline": "كيف تتخلص من الروائح الكريهة في المنزل: دليل عملي",
       "category": "نصائح منزلية",
       "datePublished": "2026-06-09",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -606,27 +957,47 @@
       },
       "toc": [
         {
-          "id": "support-check",
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "sec-find",
+          "title": "تحديد المصدر"
+        },
+        {
+          "id": "sec-air",
+          "title": "التهوية"
+        },
+        {
+          "id": "sec-rooms",
+          "title": "مطبخ وحمام وغرف"
+        },
+        {
+          "id": "sec-pro",
           "title": "متى تحتاج فنيًا؟"
         },
         {
-          "id": "sec-0",
-          "title": "أولًا: المطبخ — المصدر الأول للروائح"
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-1",
-          "title": "ثانيًا: الحمام"
+          "id": "sec-cloth",
+          "title": "الأقمشة"
         },
         {
-          "id": "sec-2",
-          "title": "ثالثًا: حلول عامة لكل المنزل"
+          "id": "sec-ac",
+          "title": "المكيف"
         },
         {
-          "id": "sec-3",
-          "title": "الوقاية خير من العلاج"
+          "id": "sec-trash",
+          "title": "القمامة"
         },
         {
-          "id": "sec-4",
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة مع الروائح"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -641,7 +1012,7 @@
       "headline": "تطبيقات أندرويد مفيدة: 10 خيارات للاستخدام اليومي",
       "category": "تكنولوجيا",
       "datePublished": "2026-08-03",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -653,55 +1024,55 @@
       },
       "toc": [
         {
-          "id": "support-check",
-          "title": "اختبار الصلاحيات"
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
         },
         {
-          "id": "sec-0",
-          "title": "1. إدارة الملفات: Solid Explorer"
+          "id": "sec-builtin",
+          "title": "ابدأ بما هو مدمج في هاتفك"
         },
         {
-          "id": "sec-1",
-          "title": "2. مكافحة الفيروسات: Malwarebytes"
+          "id": "sec-cat",
+          "title": "فئات لا أسماء أبدية"
         },
         {
-          "id": "sec-2",
-          "title": "3. تنظيف الهاتف: Files by Google"
+          "id": "sec-perm",
+          "title": "الصلاحيات: ارفض ما لا يلزم"
         },
         {
-          "id": "sec-3",
-          "title": "4. الخصوصية: NetGuard"
+          "id": "sec-store",
+          "title": "المتجر الرسمي فقط"
         },
         {
-          "id": "sec-4",
-          "title": "5. الملاحظات: Google Keep"
+          "id": "sec-ads",
+          "title": "المجاني مقابل المدفوع"
         },
         {
-          "id": "sec-5",
-          "title": "6. القراءة: ReadEra"
+          "id": "sec-safe",
+          "title": "الأمان قبل الربط"
         },
         {
-          "id": "sec-6",
-          "title": "7. التصوير: Open Camera"
+          "id": "sec-backup",
+          "title": "النسخ قبل التجارب"
         },
         {
-          "id": "sec-7",
-          "title": "8. الرياضة والحركة: Google Fit"
+          "id": "sec-kids",
+          "title": "هواتف الأطفال"
         },
         {
-          "id": "sec-8",
-          "title": "9. البطارية: AccuBattery"
+          "id": "sec-hygiene",
+          "title": "نظافة رقمية شهرية"
         },
         {
-          "id": "sec-9",
-          "title": "10. الطقس: Weawow"
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-10",
-          "title": "تطبيقات تجنبها"
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في تطبيقات أندرويد"
         },
         {
-          "id": "sec-11",
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -716,7 +1087,7 @@
       "headline": "سلطة الفواكه المنعشة: وصفة سريعة في 10 دقائق",
       "category": "وصفات لذيذة",
       "datePublished": "2026-08-01",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -728,31 +1099,47 @@
       },
       "toc": [
         {
-          "id": "support-check",
-          "title": "اختيار التركيبة"
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
         },
         {
-          "id": "sec-0",
-          "title": "كيف تختار الفواكه؟"
+          "id": "sec-choose",
+          "title": "اختيار الفاكهة"
         },
         {
-          "id": "sec-1",
-          "title": "خطوات التحضير الصحيحة"
+          "id": "sec-wash",
+          "title": "الغسل الصحيح"
         },
         {
-          "id": "sec-2",
-          "title": "صوص العسل والليمون والنعناع"
+          "id": "sec-cut",
+          "title": "التقطيع العملي"
         },
         {
-          "id": "sec-3",
-          "title": "أفكار تقديم إبداعية"
+          "id": "sec-dressing",
+          "title": "صوص خفيف اختياري"
         },
         {
-          "id": "sec-4",
-          "title": "القيمة الغذائية والحصص"
+          "id": "sec-keep",
+          "title": "الحفظ والتقديم"
         },
         {
-          "id": "sec-5",
+          "id": "sec-party",
+          "title": "سلطة فواكه للضيوف"
+        },
+        {
+          "id": "sec-nutri",
+          "title": "القيمة الغذائية ببساطة"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في سلطة الفواكه"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -763,10 +1150,10 @@
     {
       "slug": "galaxies-and-stars",
       "path": "posts/galaxies-and-stars.html",
-      "headline": "عجائب الكون: رحلة بين المجرات والنجوم",
+      "headline": "ما الفرق بين النجم والكوكب والمجرة؟ شرح فلكي مبسط",
       "category": "معلومات عامة",
       "datePublished": "2026-07-18",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -778,31 +1165,39 @@
       },
       "toc": [
         {
-          "id": "support-check",
-          "title": "ثلاثة مفاهيم لا تخلط بينها"
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
         },
         {
-          "id": "sec-0",
-          "title": "ما هي المجرة؟"
+          "id": "sec-star",
+          "title": "ما النجم؟"
         },
         {
-          "id": "sec-1",
-          "title": "كم عدد المجرات في الكون؟"
+          "id": "sec-planet",
+          "title": "ما الكوكب؟"
         },
         {
-          "id": "sec-2",
-          "title": "أنواع المجرات"
+          "id": "sec-galaxy",
+          "title": "ما المجرة؟"
         },
         {
-          "id": "sec-3",
-          "title": "النجوم: مصانع الكون"
+          "id": "sec-light",
+          "title": "السنة الضوئية وضوء الماضي"
         },
         {
-          "id": "sec-4",
-          "title": "عجائب أخرى في الكون"
+          "id": "sec-observe",
+          "title": "كيف تراقب من غير ادعاء خبرة؟"
         },
         {
-          "id": "sec-5",
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-lightpollution",
+          "title": "التلوث الضوئي"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -817,7 +1212,7 @@
       "headline": "دليل بهارات الأرز الخليجي: الكبسة والمندي والمجبوس",
       "category": "وصفات لذيذة",
       "datePublished": "2026-08-17",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -829,55 +1224,66 @@
       },
       "toc": [
         {
-          "id": "quick",
+          "id": "seo-quick",
           "title": "الخلاصة السريعة"
         },
         {
-          "id": "compare",
+          "id": "sec-compare",
           "title": "مقارنة عملية"
         },
         {
-          "id": "base",
-          "title": "خلطة بداية قابلة للتعديل"
+          "id": "sec-base",
+          "title": "خلطة بداية"
         },
         {
-          "id": "whole",
-          "title": "متى تستخدم البهارات الصحيحة؟"
+          "id": "sec-whole",
+          "title": "صحيحة أم مطحونة؟"
         },
         {
-          "id": "lومي",
-          "title": "التعامل مع اللومي"
+          "id": "sec-loomi",
+          "title": "اللومي"
         },
         {
-          "id": "storage",
-          "title": "التخزين والتوثيق"
+          "id": "sec-test",
+          "title": "اختبار دون إفساد القدر"
         },
         {
-          "id": "safety",
-          "title": "ملاحظة حساسية وسلامة"
+          "id": "sec-log",
+          "title": "سجل الطبخة"
         },
         {
-          "id": "ratio",
-          "title": "طريقة اختبار الخلطة دون إفساد القدر"
+          "id": "sec-store",
+          "title": "تخزين"
         },
         {
-          "id": "log",
-          "title": "سجل طبخة قابل للتكرار"
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
         },
         {
-          "id": "variations",
-          "title": "الاختلافات الإقليمية"
+          "id": "sec-buy",
+          "title": "شراء البهارات"
         },
         {
-          "id": "ready",
-          "title": "الخلطات الجاهزة"
+          "id": "sec-salt",
+          "title": "الملح والخلطات الجاهزة"
         },
         {
-          "id": "conclusion",
+          "id": "sec-menu",
+          "title": "بناء وجبة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة مع بهارات الأرز"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
-      "sources": []
+      "sources": [
+        "https://www.fda.gov/media/74435/download",
+        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"
+      ]
     },
     {
       "slug": "laundry-guide-tips",
@@ -885,7 +1291,7 @@
       "headline": "غسيل الملابس بذكاء: دليلك الكامل لملابس نظيفة تدوم",
       "category": "نصائح منزلية",
       "datePublished": "2026-08-13",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -897,35 +1303,47 @@
       },
       "toc": [
         {
-          "id": "support-check",
-          "title": "قائمة قبل تشغيل الغسالة"
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
         },
         {
-          "id": "sec-0",
-          "title": "أولًا: الفرز — القاعدة الذهبية"
+          "id": "sec-sort",
+          "title": "الفرز قبل التشغيل"
         },
         {
-          "id": "sec-1",
-          "title": "ثانيًا: اقرأ رمز الغسيل (لكن بذكاء)"
+          "id": "sec-label",
+          "title": "قراءة الملصق والمنظف"
         },
         {
-          "id": "sec-2",
-          "title": "ثالثًا: الماء البارد هو الصديق"
+          "id": "sec-stain",
+          "title": "البقع قبل الغسالة"
         },
         {
-          "id": "sec-3",
-          "title": "رابعًا: البقع — عالجها قبل الغسيل لا بعده"
+          "id": "sec-machine",
+          "title": "الغسالة نفسها"
         },
         {
-          "id": "sec-4",
-          "title": "خامسًا: كمية المسحوق والمنعم الصحيحة"
+          "id": "sec-dry",
+          "title": "التجفيف والكي"
         },
         {
-          "id": "sec-5",
-          "title": "سادسًا: التجفيف الصحيح"
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-6",
+          "id": "sec-colors",
+          "title": "الألوان"
+        },
+        {
+          "id": "sec-delicates",
+          "title": "الحساس"
+        },
+        {
+          "id": "sec-smell",
+          "title": "رائحة الغسالة"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -935,12 +1353,84 @@
       ]
     },
     {
+      "slug": "learn-new-skills-guide",
+      "path": "posts/learn-new-skills-guide.html",
+      "headline": "كيف تتعلم مهارة جديدة بفعالية؟ خطوات عملية",
+      "category": "معلومات عامة",
+      "datePublished": "2026-09-04",
+      "dateModified": "2026-09-04",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/editorial/learn-new-skills-guide.jpg",
+        "alt": "مكتب دراسة منظم بدفتر مفتوح وكتب ونظارة ونبات صغير"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "sec-why",
+          "title": "لماذا نتوقف عن التعلم؟"
+        },
+        {
+          "id": "sec-split",
+          "title": "قسّم المهارة إلى أجزاء"
+        },
+        {
+          "id": "sec-practice",
+          "title": "الممارسة المنتظمة القصيرة تفوز"
+        },
+        {
+          "id": "sec-feedback",
+          "title": "التغذية الراجعة المبكرة"
+        },
+        {
+          "id": "sec-retrieval",
+          "title": "استرجع لا تعِد القراءة"
+        },
+        {
+          "id": "sec-sources",
+          "title": "مصادر أقل وتطبيق أكثر"
+        },
+        {
+          "id": "sec-plateau",
+          "title": "الهضاب طبيعية: لا تيأس"
+        },
+        {
+          "id": "sec-log",
+          "title": "سجّل تقدمك"
+        },
+        {
+          "id": "sec-rest",
+          "title": "النوم والراحة جزء من التعلم"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في تعلم المهارات"
+        },
+        {
+          "id": "sec-end",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": []
+    },
+    {
       "slug": "lemon-mint-drink",
       "path": "posts/lemon-mint-drink.html",
       "headline": "عصير الليمون بالنعناع المثلج: مشروب الصيف المثالي",
       "category": "وصفات لذيذة",
       "datePublished": "2026-08-15",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -952,35 +1442,55 @@
       },
       "toc": [
         {
-          "id": "support-check",
-          "title": "مقياس قابل للتعديل"
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
         },
         {
-          "id": "sec-0",
-          "title": "المكونات (لأربعة أكواب)"
+          "id": "sec-ing",
+          "title": "مكونات لأربعة أكواب"
         },
         {
-          "id": "sec-1",
-          "title": "طريقة التحضير"
+          "id": "sec-steps",
+          "title": "التحضير"
         },
         {
-          "id": "sec-2",
-          "title": "لماذا النعناع يفرك قبل إضافته؟"
+          "id": "sec-lemon",
+          "title": "اختيار الليمون والعصر"
         },
         {
-          "id": "sec-3",
-          "title": "تعديلات تناسب كل الأذواق"
+          "id": "sec-sweet",
+          "title": "التحلية بذكاء"
         },
         {
-          "id": "sec-4",
-          "title": "أفكار تقديم أنيقة"
+          "id": "sec-mint",
+          "title": "النعناع: طازجًا وقرب التقديم"
         },
         {
-          "id": "sec-5",
-          "title": "كم يدوم في الثلاجة؟"
+          "id": "sec-var",
+          "title": "تعديلات منعشة"
         },
         {
-          "id": "sec-6",
+          "id": "sec-keep",
+          "title": "الحفظ"
+        },
+        {
+          "id": "sec-health",
+          "title": "ملاحظات صحية واقعية"
+        },
+        {
+          "id": "sec-guest",
+          "title": "تقديم الضيافة"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في مشروب الليمون"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -994,7 +1504,7 @@
       "headline": "شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة",
       "category": "وصفات لذيذة",
       "datePublished": "2026-07-02",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1006,27 +1516,47 @@
       },
       "toc": [
         {
-          "id": "support-check",
-          "title": "ضبط القوام والحفظ"
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
         },
         {
-          "id": "sec-0",
-          "title": "المكونات"
+          "id": "sec-ing",
+          "title": "مكونات لست حصص تقريبًا"
         },
         {
-          "id": "sec-1",
-          "title": "طريقة التحضير"
+          "id": "sec-steps",
+          "title": "خطوات الطهي"
         },
         {
-          "id": "sec-2",
-          "title": "أسرار الشيف الثلاثة"
+          "id": "sec-fix",
+          "title": "ضبط القوام والطعم"
         },
         {
-          "id": "sec-3",
-          "title": "أخطاء شائعة يجب تجنبها"
+          "id": "sec-var",
+          "title": "تعديلات تناسب الجميع"
         },
         {
-          "id": "sec-4",
+          "id": "sec-top",
+          "title": "التقديم"
+        },
+        {
+          "id": "sec-batch",
+          "title": "الطهي بكمية أكبر"
+        },
+        {
+          "id": "sec-keep",
+          "title": "الحفظ وسلامة الغذاء"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في شوربة العدس"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -1035,12 +1565,80 @@
       ]
     },
     {
+      "slug": "microwave-steam-clean",
+      "path": "posts/microwave-steam-clean.html",
+      "headline": "تنظيف الميكروويف بالبخار: طريقة سريعة وآمنة",
+      "category": "نصائح منزلية",
+      "datePublished": "2026-09-04",
+      "dateModified": "2026-09-04",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/editorial/microwave-steam-clean.jpg",
+        "alt": "بخار يتصاعد من وعاء ماء وليمون داخل ميكروويف مفتوح لتنظيفه بالبخار"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "sec-why",
+          "title": "لماذا يتسخ الميكروويف بسرعة؟"
+        },
+        {
+          "id": "sec-tools",
+          "title": "ماذا تحتاج؟"
+        },
+        {
+          "id": "sec-steps",
+          "title": "خطوات التنظيف بالبخار"
+        },
+        {
+          "id": "sec-stains",
+          "title": "بقع عنيدة وجافة"
+        },
+        {
+          "id": "sec-smell",
+          "title": "التخلص من الروائح"
+        },
+        {
+          "id": "sec-turntable",
+          "title": "الصحن الدوار والزجاج"
+        },
+        {
+          "id": "sec-schedule",
+          "title": "جدول صيانة بسيط"
+        },
+        {
+          "id": "sec-safety",
+          "title": "احتياطات لا تتجاوزها"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في تنظيف الميكروويف"
+        },
+        {
+          "id": "sec-end",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": []
+    },
+    {
       "slug": "natural-cleaning-recipes",
       "path": "posts/natural-cleaning-recipes.html",
       "headline": "6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك",
       "category": "نصائح منزلية",
       "datePublished": "2026-05-28",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1056,43 +1654,51 @@
           "title": "الخلاصة السريعة"
         },
         {
-          "id": "seo-plan",
-          "title": "اختر الطريقة حسب السطح"
+          "id": "sec-surface",
+          "title": "اختر المنظف حسب السطح"
         },
         {
-          "id": "seo-check",
-          "title": "قائمة سلامة قبل البدء"
+          "id": "sec-tools",
+          "title": "الأدوات قبل الوصفات"
         },
         {
-          "id": "sec-0",
-          "title": "1. خلطة تنظيف الزجاج والمرايا"
+          "id": "sec-order",
+          "title": "الترتيب الصحيح: نظّف ثم عطّر ثم عقم إن لزم"
         },
         {
-          "id": "sec-1",
-          "title": "2. بيكربونات الصودا لتنظيف البالوعة"
+          "id": "sec-six",
+          "title": "ست مهام شائعة بالترتيب"
         },
         {
-          "id": "sec-2",
-          "title": "3. معجون بيكربونات الصودا لإزالة البقع"
+          "id": "sec-mix",
+          "title": "لماذا لا تخلط الخل والصودا «للتنظيف الأقوى»؟"
         },
         {
-          "id": "sec-3",
-          "title": "4. الليمون لتعقيم وتلميع الأسطح"
+          "id": "sec-soda",
+          "title": "بيكربونات الصودا"
         },
         {
-          "id": "sec-4",
-          "title": "5. زيت الزيتون والخل لتلميع الخشب"
+          "id": "sec-vinegar",
+          "title": "الخل"
         },
         {
-          "id": "sec-5",
-          "title": "6. تعطير الغرف بطبيعي"
+          "id": "sec-lemon",
+          "title": "الليمون"
         },
         {
-          "id": "sec-6",
-          "title": "احتياطات مهمة"
+          "id": "sec-spray",
+          "title": "تحضير المحاليل وعبواتها"
         },
         {
-          "id": "sec-7",
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في التنظيف «الطبيعي»"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -1107,7 +1713,7 @@
       "headline": "الوقاية من حشرات المنزل ومكافحتها بأمان",
       "category": "نصائح منزلية",
       "datePublished": "2026-08-11",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1119,35 +1725,55 @@
       },
       "toc": [
         {
-          "id": "sec-0",
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "sec-prevent",
           "title": "الوقاية أولًا"
         },
         {
-          "id": "sec-1",
-          "title": "النمل: أزل المصدر والمسار"
+          "id": "sec-ants",
+          "title": "النمل"
         },
         {
-          "id": "sec-2",
-          "title": "الصراصير: لا تصنع طعومًا مكشوفة"
+          "id": "sec-roach",
+          "title": "الصراصير"
         },
         {
-          "id": "sec-3",
-          "title": "البعوض: امنع التكاثر واللدغ"
+          "id": "sec-mosquito",
+          "title": "البعوض"
         },
         {
-          "id": "sec-4",
-          "title": "الذباب: النظافة والمصائد المناسبة"
+          "id": "sec-others",
+          "title": "ذباب وعناكب وسمك فضي"
         },
         {
-          "id": "sec-5",
-          "title": "العناكب والسمك الفضي"
+          "id": "sec-pesticide",
+          "title": "إن استخدمت مبيدًا"
         },
         {
-          "id": "sec-6",
-          "title": "استخدام المبيدات"
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-7",
+          "id": "sec-entry",
+          "title": "نقاط الدخول"
+        },
+        {
+          "id": "sec-pet",
+          "title": "الحيوانات الأليفة"
+        },
+        {
+          "id": "sec-travel",
+          "title": "السفر والأثاث المستعمل"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة مع الحشرات"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -1162,7 +1788,7 @@
       "headline": "كيكة البرتقال بدون فرن: طريقة القدر خطوة بخطوة",
       "category": "وصفات لذيذة",
       "datePublished": "2026-07-15",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1174,31 +1800,43 @@
       },
       "toc": [
         {
-          "id": "support-check",
-          "title": "قبل قلب الكيكة"
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
         },
         {
-          "id": "sec-0",
+          "id": "sec-ing",
           "title": "المكونات"
         },
         {
-          "id": "sec-1",
-          "title": "طريقة التحضير"
+          "id": "sec-steps",
+          "title": "خطوات التحضير"
         },
         {
-          "id": "sec-2",
-          "title": "لماذا تعمل طريقة القدر؟"
+          "id": "sec-pan",
+          "title": "اختيار القدر والقالب"
         },
         {
-          "id": "sec-3",
+          "id": "sec-mix",
+          "title": "الخلط الصحيح"
+        },
+        {
+          "id": "sec-trouble",
+          "title": "حل المشكلات الشائعة"
+        },
+        {
+          "id": "sec-cool",
+          "title": "التبريد والتقديم"
+        },
+        {
+          "id": "sec-faq",
           "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-4",
-          "title": "أفكار للتقديم"
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في كيك القدر"
         },
         {
-          "id": "sec-5",
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -1212,7 +1850,7 @@
       "headline": "كيف تنظم ثلاجتك وتقلل هدر الطعام",
       "category": "نصائح منزلية",
       "datePublished": "2026-08-04",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1228,35 +1866,47 @@
           "title": "الخلاصة السريعة"
         },
         {
-          "id": "seo-plan",
-          "title": "نظام أسبوعي يقلل النسيان"
+          "id": "sec-temp",
+          "title": "الحرارة والقياس"
         },
         {
-          "id": "seo-table",
-          "title": "خريطة مختصرة للرفوف"
+          "id": "sec-map",
+          "title": "خريطة الرفوف"
         },
         {
-          "id": "sec-0",
-          "title": "لماذا تنظيم الثلاجة؟"
+          "id": "sec-week",
+          "title": "نظام أسبوعي"
         },
         {
-          "id": "sec-1",
-          "title": "خريطة الثلاجة المثالية: ماذا يوضع أين؟"
+          "id": "sec-leftover",
+          "title": "تبريد البقايا"
         },
         {
-          "id": "sec-2",
-          "title": "نظام «الأول فيخرج أولًا»"
+          "id": "sec-shop",
+          "title": "التسوق الأقل هدرًا"
         },
         {
-          "id": "sec-3",
-          "title": "درجة الحرارة الصحيحة"
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-4",
-          "title": "حفظ بقايا الطعام بذكاء"
+          "id": "sec-produce",
+          "title": "الخضار"
         },
         {
-          "id": "sec-5",
+          "id": "sec-meat",
+          "title": "اللحوم"
+        },
+        {
+          "id": "sec-door",
+          "title": "الباب"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في الثلاجة"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -1271,7 +1921,7 @@
       "headline": "أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين",
       "category": "تكنولوجيا",
       "datePublished": "2026-06-03",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1288,34 +1938,54 @@
         },
         {
           "id": "seo-plan",
-          "title": "خطة حماية مرتبة حسب الأولوية"
+          "title": "خطة حسب الأولوية"
         },
         {
           "id": "seo-check",
-          "title": "علامات تستدعي تصرفًا فوريًا"
+          "title": "علامات فورية"
         },
         {
-          "id": "sec-0",
-          "title": "1. كلمة المرور: خط الدفاع الأول"
+          "id": "sec-pass",
+          "title": "كلمات المرور"
         },
         {
-          "id": "sec-1",
-          "title": "2. التحقق بخطوتين: حارس البوابة"
+          "id": "sec-mfa",
+          "title": "المصادقة"
         },
         {
-          "id": "sec-2",
-          "title": "3. تعرف على الاحتيال قبل أن تقع فيه"
+          "id": "sec-phish",
+          "title": "التصيد"
         },
         {
-          "id": "sec-3",
-          "title": "4. عادات يومية تحميك"
+          "id": "sec-daily",
+          "title": "عادات"
         },
         {
-          "id": "sec-4",
-          "title": "ماذا تفعل إذا اخترق حسابك؟"
+          "id": "sec-hack",
+          "title": "إذا اخترق الحساب"
         },
         {
-          "id": "sec-5",
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-sim",
+          "title": "سرقة الشريحة"
+        },
+        {
+          "id": "sec-social",
+          "title": "التواصل الاجتماعي"
+        },
+        {
+          "id": "sec-email",
+          "title": "البريد"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في حماية الحسابات"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -1330,7 +2000,7 @@
       "headline": "بسبوسة القشطة: حلى سهل يذوب في الفم",
       "category": "وصفات لذيذة",
       "datePublished": "2026-08-12",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1342,27 +2012,47 @@
       },
       "toc": [
         {
-          "id": "support-check",
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "sec-ing",
+          "title": "مكونات أساسية"
+        },
+        {
+          "id": "sec-steps",
+          "title": "الخطوات"
+        },
+        {
+          "id": "sec-done",
           "title": "علامات النضج"
         },
         {
-          "id": "sec-0",
-          "title": "المكونات"
+          "id": "sec-keep",
+          "title": "الحفظ"
         },
         {
-          "id": "sec-1",
-          "title": "طريقة التحضير"
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-2",
-          "title": "أخطاء تفسد البسبوسة"
+          "id": "sec-semolina",
+          "title": "لماذا نريح السميد؟"
         },
         {
-          "id": "sec-3",
-          "title": "تنويعات لذيذة"
+          "id": "sec-syrup",
+          "title": "القطر دون إغراق"
         },
         {
-          "id": "sec-4",
+          "id": "sec-layer",
+          "title": "رص القشطة"
+        },
+        {
+          "id": "sec-serve-q",
+          "title": "التقديم والضيافة"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -1376,7 +2066,7 @@
       "headline": "تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة",
       "category": "نصائح منزلية",
       "datePublished": "2026-08-05",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1388,35 +2078,51 @@
       },
       "toc": [
         {
-          "id": "support-check",
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "sec-order",
           "title": "ترتيب يقلل إعادة العمل"
         },
         {
-          "id": "sec-0",
-          "title": "قبل أن تبدأ: تجهيز 5 دقائق"
+          "id": "sec-zones",
+          "title": "تقسيم الدقائق"
         },
         {
-          "id": "sec-1",
-          "title": "الدقائق 5-15: الأسطح الساخنة والشحوم"
+          "id": "sec-tools",
+          "title": "أدوات بسيطة"
         },
         {
-          "id": "sec-2",
-          "title": "الدقائق 15-22: الحوض والصرف"
+          "id": "sec-food",
+          "title": "سلامة الغذاء أثناء المسح"
         },
         {
-          "id": "sec-3",
-          "title": "الدقائق 22-27: اللمسات النهائية"
+          "id": "sec-deep",
+          "title": "ما الذي لا يدخل في نصف الساعة؟"
         },
         {
-          "id": "sec-4",
-          "title": "الدقائق 27-30: الأرضية"
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-5",
-          "title": "أدوات تجعل التنظيف أسرع"
+          "id": "sec-dishes",
+          "title": "الأطباق"
         },
         {
-          "id": "sec-6",
+          "id": "sec-stove",
+          "title": "الموقد"
+        },
+        {
+          "id": "sec-habit",
+          "title": "عادة بعد الطبخ"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة بعد الطبخ"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -1426,12 +2132,82 @@
       ]
     },
     {
+      "slug": "rice-pudding-recipe",
+      "path": "posts/rice-pudding-recipe.html",
+      "headline": "أرز بالحليب كريمي: حلوى سهلة على الموقد",
+      "category": "وصفات لذيذة",
+      "datePublished": "2026-09-04",
+      "dateModified": "2026-09-04",
+      "author": {
+        "@type": "Organization",
+        "name": "فريق تحرير دليلك",
+        "url": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html"
+      },
+      "cover": {
+        "src": "../images/editorial/rice-pudding-recipe.jpg",
+        "alt": "طبق أرز بالحليب الكريمي مزين بالقرفة واللوز مع ملعقة على طاولة خشبية"
+      },
+      "toc": [
+        {
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "sec-why",
+          "title": "لماذا الأرز قصير الحبة؟"
+        },
+        {
+          "id": "sec-ing",
+          "title": "المكونات"
+        },
+        {
+          "id": "sec-steps",
+          "title": "الخطوات"
+        },
+        {
+          "id": "sec-texture",
+          "title": "ضبط القوام"
+        },
+        {
+          "id": "sec-flavors",
+          "title": "نكهات تخصّصها لبيتك"
+        },
+        {
+          "id": "sec-serve",
+          "title": "التقديم"
+        },
+        {
+          "id": "sec-store",
+          "title": "الحفظ وسلامة الغذاء"
+        },
+        {
+          "id": "sec-lactose",
+          "title": "حساسية اللاكتوز وبدائل الحليب"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في أرز بالحليب"
+        },
+        {
+          "id": "sec-end",
+          "title": "الخلاصة"
+        }
+      ],
+      "sources": [
+        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"
+      ]
+    },
+    {
       "slug": "safe-online-payments",
       "path": "posts/safe-online-payments.html",
       "headline": "الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك",
       "category": "تكنولوجيا",
       "datePublished": "2026-07-30",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1447,35 +2223,55 @@
           "title": "الخلاصة السريعة"
         },
         {
-          "id": "seo-plan",
-          "title": "فحص المتجر قبل الشراء"
+          "id": "sec-shop",
+          "title": "افحص المتجر قبل أن تدفع"
         },
         {
-          "id": "seo-incident",
-          "title": "ماذا تفعل بعد عملية مشبوهة؟"
+          "id": "sec-redflags",
+          "title": "علامات خطر واضحة"
         },
         {
-          "id": "sec-0",
-          "title": "قبل أن تدفع: علامات الموقع الآمن"
+          "id": "sec-pay",
+          "title": "اختر وسيلة الدفع الأنسب"
         },
         {
-          "id": "sec-1",
-          "title": "الأهم: لا تشارك بيانات البطاقة أو رموز التحقق مع جهة غير موثوقة"
+          "id": "sec-3ds",
+          "title": "رسالة التحقق: لا تشاركها أبدًا"
         },
         {
-          "id": "sec-2",
-          "title": "أدوات تحميك أثناء الدفع"
+          "id": "sec-phish",
+          "title": "رسائل الشحن والتصيد"
         },
         {
-          "id": "sec-3",
-          "title": "ماذا تفعل عند الشك في عملية احتيال؟"
+          "id": "sec-public",
+          "title": "شبكات عامة وأجهزة مشتركة"
         },
         {
-          "id": "sec-4",
-          "title": "عادات يومية تحميك"
+          "id": "sec-sub",
+          "title": "الاشتراكات والتجارب المجانية"
         },
         {
-          "id": "sec-5",
+          "id": "sec-social",
+          "title": "الشراء من منصات التواصل"
+        },
+        {
+          "id": "sec-invoice",
+          "title": "وثّق العملية"
+        },
+        {
+          "id": "sec-incident",
+          "title": "بعد عملية مشبوهة"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في الدفع الإلكتروني"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -1490,7 +2286,7 @@
       "headline": "سمبوسك الجبن المقرمش: وصفة العجينة الذهبية",
       "category": "وصفات لذيذة",
       "datePublished": "2026-08-14",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1502,39 +2298,47 @@
       },
       "toc": [
         {
-          "id": "support-check",
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
+        },
+        {
+          "id": "sec-dough",
+          "title": "عجينة السمبوسة"
+        },
+        {
+          "id": "sec-fill",
+          "title": "حشوة جبن متوازنة"
+        },
+        {
+          "id": "sec-fold",
+          "title": "الإغلاق الصحيح"
+        },
+        {
+          "id": "sec-cook",
           "title": "القلي أو الفرن"
         },
         {
-          "id": "sec-0",
-          "title": "المكونات"
+          "id": "sec-oil",
+          "title": "الزيت بأمان"
         },
         {
-          "id": "sec-1",
-          "title": "طريقة تحضير العجينة"
+          "id": "sec-freeze",
+          "title": "التجميد والتحضير المسبق"
         },
         {
-          "id": "sec-2",
-          "title": "طريقة تحضير الحشوة"
+          "id": "sec-serve",
+          "title": "التقديم والضيافة"
         },
         {
-          "id": "sec-3",
-          "title": "التشكيل: مثلث أم ظرف؟"
-        },
-        {
-          "id": "sec-4",
-          "title": "القلي المثالي"
-        },
-        {
-          "id": "sec-5",
-          "title": "بديل بالفرن بكمية زيت أقل"
-        },
-        {
-          "id": "sec-6",
+          "id": "sec-faq",
           "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-7",
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في السمبوسة"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -1548,7 +2352,7 @@
       "headline": "10 خطوات عملية لتقليل استهلاك الكهرباء في المنزل",
       "category": "نصائح منزلية",
       "datePublished": "2026-06-21",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1564,55 +2368,55 @@
           "title": "الخلاصة السريعة"
         },
         {
-          "id": "seo-plan",
-          "title": "تدقيق منزلي خلال 30 دقيقة"
+          "id": "sec-audit",
+          "title": "تدقيق ثلاثين دقيقة"
         },
         {
-          "id": "seo-table",
-          "title": "أين تبدأ؟"
+          "id": "sec-ac",
+          "title": "التكييف أول بند في الحر"
         },
         {
-          "id": "sec-0",
-          "title": "1. استبدل الإضاءة التقليدية بمصابيح LED"
+          "id": "sec-waterheat",
+          "title": "الماء الساخن"
         },
         {
-          "id": "sec-1",
-          "title": "2. افصل الأجهزة غير المستخدمة"
+          "id": "sec-kitchen",
+          "title": "الاستهلاك الخفي في المطبخ"
         },
         {
-          "id": "sec-2",
-          "title": "3. اضبط المكيف على 24 درجة"
+          "id": "sec-laundry",
+          "title": "الغسيل والتجفيف"
         },
         {
-          "id": "sec-3",
-          "title": "4. استخدم الغسالة في الماء البارد"
+          "id": "sec-standby",
+          "title": "الاستعداد والشواحن"
         },
         {
-          "id": "sec-4",
-          "title": "5. ضع الثلاجة في المكان الصحيح"
+          "id": "sec-light",
+          "title": "الإضاءة والعادات الصغيرة"
         },
         {
-          "id": "sec-5",
-          "title": "6. استخدم سخان الماء بذكاء"
+          "id": "sec-seal",
+          "title": "العزل البسيط قبل التكييف"
         },
         {
-          "id": "sec-6",
-          "title": "7. أغلق الأجهزة بدل الشاشة"
+          "id": "sec-buy",
+          "title": "عند الاستبدال"
         },
         {
-          "id": "sec-7",
-          "title": "8. جفف الملابس بالهواء"
+          "id": "sec-read",
+          "title": "قراءة العداد بانتظام"
         },
         {
-          "id": "sec-8",
-          "title": "9. عزل الحرارة بسيط"
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-9",
-          "title": "10. راقب فاتورتك"
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في التوفير"
         },
         {
-          "id": "sec-10",
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -1627,7 +2431,7 @@
       "headline": "توفير بيانات الجوال: 8 حيل عملية توفر لك الكثير",
       "category": "تكنولوجيا",
       "datePublished": "2026-08-06",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1639,47 +2443,51 @@
       },
       "toc": [
         {
-          "id": "support-check",
-          "title": "تجربة أسبوع واحد"
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
         },
         {
-          "id": "sec-0",
-          "title": "1. اكتشف التطبيقات الشرهة أولًا"
+          "id": "sec-measure",
+          "title": "ابدأ بالقياس لا بالتخمين"
         },
         {
-          "id": "sec-1",
-          "title": "2. امنع التطبيقات من العمل في الخلفية"
+          "id": "sec-hogs",
+          "title": "جدول المستهلكين الشائعين"
         },
         {
-          "id": "sec-2",
-          "title": "3. أوقف التحديثات التلقائية للتطبيقات"
+          "id": "sec-settings",
+          "title": "إعدادات مجدية خطوة بخطوة"
         },
         {
-          "id": "sec-3",
-          "title": "4. فعّل وضع توفير البيانات في التطبيقات"
+          "id": "sec-video",
+          "title": "الفيديو: أكبر فاتورة صامتة"
         },
         {
-          "id": "sec-4",
-          "title": "5. خرائط بلا بيانات: التحميل المسبق"
+          "id": "sec-offline",
+          "title": "خرائط وموسيقى دون اتصال"
         },
         {
-          "id": "sec-5",
-          "title": "6. متصفح بضغط البيانات"
+          "id": "sec-cloud",
+          "title": "الصور والسحابة"
         },
         {
-          "id": "sec-6",
-          "title": "7. توخَّ الحذر مع الفيديو — أكبر مستهلك"
+          "id": "sec-hotspot",
+          "title": "نقطة الاتصال"
         },
         {
-          "id": "sec-7",
-          "title": "8. رصد حصة البيانات وضبط تنبيه"
+          "id": "sec-roam",
+          "title": "التجوال والسفر"
         },
         {
-          "id": "sec-8",
-          "title": "مكافأة: تحقق من باقاتك البديلة"
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-9",
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة مع الباقة"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -1694,7 +2502,7 @@
       "headline": "تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة",
       "category": "تكنولوجيا",
       "datePublished": "2026-08-10",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1706,43 +2514,55 @@
       },
       "toc": [
         {
-          "id": "support-check",
-          "title": "حدد عنق الزجاجة"
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
         },
         {
-          "id": "sec-0",
-          "title": "1. أعد التشغيل — بجدية"
+          "id": "sec-diag",
+          "title": "شخّص قبل أن تلمس"
         },
         {
-          "id": "sec-1",
-          "title": "2. تخلّص من برامج بدء التشغيل"
+          "id": "sec-steps",
+          "title": "خطوات مرتبة قبل التفكير بالترقية"
         },
         {
-          "id": "sec-2",
-          "title": "3. نظّف مساحة القرص"
+          "id": "sec-startup",
+          "title": "برامج بدء التشغيل"
         },
         {
-          "id": "sec-3",
-          "title": "4. افحص البرامج الضارة"
+          "id": "sec-storage",
+          "title": "حرر مساحة القرص"
         },
         {
-          "id": "sec-4",
-          "title": "5. أغلق البرامج الثقيلة في الخلفية"
+          "id": "sec-update",
+          "title": "التحديث من المصدر الرسمي"
         },
         {
-          "id": "sec-5",
-          "title": "6. حدّث نظامك وبرامجك"
+          "id": "sec-scan",
+          "title": "البرمجيات الضارة والنوافذ المخادعة"
         },
         {
-          "id": "sec-6",
-          "title": "7. فكر في ترقية ذكية (اختياري)"
+          "id": "sec-browser",
+          "title": "المتصفح: عشرات التبويبات"
         },
         {
-          "id": "sec-7",
-          "title": "ما الذي يجب أن تتجنبه؟"
+          "id": "sec-heat",
+          "title": "الغبار والحرارة"
         },
         {
-          "id": "sec-8",
+          "id": "sec-upgrade",
+          "title": "متى ترفع العتاد؟"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة مع الجهاز البطيء"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -1757,7 +2577,7 @@
       "headline": "ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية",
       "category": "نصائح منزلية",
       "datePublished": "2026-05-12",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1769,31 +2589,66 @@
       },
       "toc": [
         {
-          "id": "support-check",
-          "title": "اختر نتيجة واحدة"
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
         },
         {
-          "id": "sec-0",
-          "title": "لماذا 15 دقيقة يوميًا؟"
+          "id": "sec-one",
+          "title": "نتيجة واحدة واضحة"
         },
         {
-          "id": "sec-1",
-          "title": "خطة الأسبوع: مهام كل يوم"
+          "id": "sec-basket",
+          "title": "سلة واحدة تتحرك معك"
         },
         {
-          "id": "sec-2",
-          "title": "قواعد ذهبية تجعل الترتيب أسهل"
+          "id": "sec-minutes",
+          "title": "كيف توزع الخمس عشرة دقيقة؟"
         },
         {
-          "id": "sec-3",
-          "title": "أدوات صغيرة تسهّل المهمة"
+          "id": "sec-zones",
+          "title": "خطط لكل منطقة"
         },
         {
-          "id": "sec-4",
+          "id": "sec-week",
+          "title": "جدول أسبوعي مقترح"
+        },
+        {
+          "id": "sec-habits",
+          "title": "عادات دقيقتين تمنع الفوضى العائدة"
+        },
+        {
+          "id": "sec-kitchen",
+          "title": "جولة المطبخ السريعة"
+        },
+        {
+          "id": "sec-deep",
+          "title": "متى تحتاج جلسة أعمق؟"
+        },
+        {
+          "id": "sec-body",
+          "title": "جسدك أولًا"
+        },
+        {
+          "id": "sec-kids",
+          "title": "مع الأطفال"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في الترتيب السريع"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
-      "sources": []
+      "sources": [
+        "https://www.nia.nih.gov/health/falls-and-falls-prevention/falls-and-fractures-older-adults-causes-and-prevention",
+        "https://www.cdc.gov/steadi/pdf/check_for_safety_brochure-a.pdf"
+      ]
     },
     {
       "slug": "used-smartphone-checklist",
@@ -1801,7 +2656,7 @@
       "headline": "شراء هاتف مستعمل: قائمة فحص قبل الدفع",
       "category": "تكنولوجيا",
       "datePublished": "2026-08-17",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1813,47 +2668,55 @@
       },
       "toc": [
         {
-          "id": "quick",
+          "id": "seo-quick",
           "title": "الخلاصة السريعة"
         },
         {
-          "id": "ownership",
-          "title": "أولًا: الملكية وقفل التنشيط"
+          "id": "sec-own",
+          "title": "الملكية أولًا"
         },
         {
-          "id": "hardware",
-          "title": "ثانيًا: اختبار العتاد"
+          "id": "sec-hw",
+          "title": "فحص العتاد أمامك"
         },
         {
-          "id": "software",
-          "title": "ثالثًا: النظام والتحديثات"
+          "id": "sec-water",
+          "title": "مؤشرات الماء والرطوبة"
         },
         {
-          "id": "deal",
-          "title": "رابعًا: توثيق الصفقة"
+          "id": "sec-sw",
+          "title": "النظام والتحديثات"
         },
         {
-          "id": "after",
-          "title": "بعد الشراء"
+          "id": "sec-imei",
+          "title": "الرقم التسلسلي والاستعلام الرسمي"
         },
         {
-          "id": "price",
-          "title": "كيف تقرر إن كان السعر منطقيًا؟"
-        },
-        {
-          "id": "battery",
-          "title": "فحص البطارية دون ادعاء دقة كاملة"
-        },
-        {
-          "id": "repair",
+          "id": "sec-repair",
           "title": "علامات إصلاح سابق"
         },
         {
-          "id": "receipt",
-          "title": "قائمة التسليم"
+          "id": "sec-price",
+          "title": "السعر الواقعي"
         },
         {
-          "id": "conclusion",
+          "id": "sec-meet",
+          "title": "مكان اللقاء والفحص"
+        },
+        {
+          "id": "sec-after",
+          "title": "بعد الشراء مباشرة"
+        },
+        {
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في شراء الهاتف المستعمل"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -1865,10 +2728,10 @@
     {
       "slug": "why-we-need-sleep",
       "path": "posts/why-we-need-sleep.html",
-      "headline": "لماذا نحتاج إلى النوم؟ أهمية النوم لصحتك وعقلك",
+      "headline": "النوم الصحي: كم نحتاج وما الذي يعطّل النوم؟",
       "category": "معلومات عامة",
       "datePublished": "2026-05-20",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1880,31 +2743,39 @@
       },
       "toc": [
         {
-          "id": "support-check",
-          "title": "سجل بسيط لمدة أسبوعين"
+          "id": "seo-quick",
+          "title": "الخلاصة السريعة"
         },
         {
-          "id": "sec-0",
-          "title": "ماذا يحدث في دماغك أثناء النوم؟"
+          "id": "sec-why",
+          "title": "لماذا النوم ليس وقتًا ضائعًا؟"
         },
         {
-          "id": "sec-1",
-          "title": "الفوائد الأربع الكبرى للنوم"
+          "id": "sec-stages",
+          "title": "مراحل النوم بلغة بسيطة"
         },
         {
-          "id": "sec-2",
-          "title": "ماذا يحدث عند النوم أقل من 6 ساعات؟"
+          "id": "sec-need",
+          "title": "كم ساعة؟"
         },
         {
-          "id": "sec-3",
-          "title": "كم ساعة تحتاج؟"
+          "id": "sec-habits",
+          "title": "عادات إيقاع يومي"
         },
         {
-          "id": "sec-4",
-          "title": "نصائح علمية لنوم أفضل"
+          "id": "sec-danger",
+          "title": "متى لا تكفي النصائح العامة؟"
         },
         {
-          "id": "sec-5",
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
+        },
+        {
+          "id": "sec-shift",
+          "title": "العمل بنوبات"
+        },
+        {
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
@@ -1919,7 +2790,7 @@
       "headline": "مناقيش الزعتر: وصفة بيتية سهلة واقتصادية خطوة بخطوة",
       "category": "وصفات لذيذة",
       "datePublished": "2026-04-18",
-      "dateModified": "2026-08-17",
+      "dateModified": "2026-09-04",
       "author": {
         "@type": "Organization",
         "name": "فريق تحرير دليلك",
@@ -1935,43 +2806,54 @@
           "title": "الخلاصة السريعة"
         },
         {
-          "id": "seo-table",
-          "title": "دليل ضبط العجينة"
+          "id": "sec-ingredients",
+          "title": "مقادير تكفي صينية منزلية"
         },
         {
-          "id": "seo-store",
+          "id": "seo-table",
+          "title": "ضبط العجينة عند الخطأ"
+        },
+        {
+          "id": "sec-dough",
+          "title": "العجينة خطوة بخطوة"
+        },
+        {
+          "id": "sec-yeast",
+          "title": "الخميرة والتخمير"
+        },
+        {
+          "id": "sec-zaatar",
+          "title": "خلطة الزعتر"
+        },
+        {
+          "id": "sec-bake",
+          "title": "الخبز في الفرن المنزلي"
+        },
+        {
+          "id": "sec-store",
           "title": "الحفظ وإعادة التسخين"
         },
         {
-          "id": "sec-0",
-          "title": "المكونات"
+          "id": "sec-serve-z",
+          "title": "التقديم والضيافة"
         },
         {
-          "id": "sec-1",
-          "title": "طريقة تحضير العجينة"
+          "id": "sec-faq",
+          "title": "أسئلة شائعة"
         },
         {
-          "id": "sec-2",
-          "title": "تحضير خلطة الزعتر"
+          "id": "sec-mistakes",
+          "title": "أخطاء شائعة في المناقيش"
         },
         {
-          "id": "sec-3",
-          "title": "التشكيل والخبز"
-        },
-        {
-          "id": "sec-4",
-          "title": "أسرار نجاح المناقيش"
-        },
-        {
-          "id": "sec-5",
-          "title": "أفكار للتقديم"
-        },
-        {
-          "id": "sec-6",
+          "id": "sec-end",
           "title": "الخلاصة"
         }
       ],
-      "sources": []
+      "sources": [
+        "https://www.fda.gov/media/154050/download",
+        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"
+      ]
     }
   ],
   "pages": [
@@ -1980,7 +2862,7 @@
       "title": "الصفحة غير موجودة | دليلك",
       "description": "عذرًا، الصفحة التي تبحث عنها غير موجودة.",
       "canonical": "https://sbdh1285.github.io/dalilak/404.html",
-      "h1": "عذرًا! الصفحة غير موجودة",
+      "h1": "الصفحة غير موجودة",
       "links": [
         "#main-content",
         "about.html",
@@ -1994,6 +2876,7 @@
         "editorial-policy.html",
         "guide-safe-cleaning.html",
         "index.html",
+        "mailto:dalilak77505@gmail.com",
         "privacy-policy.html",
         "sitemap.html",
         "terms.html"
@@ -2003,7 +2886,7 @@
     {
       "path": "about.html",
       "title": "من نحن | دليلك",
-      "description": "تعرف على موقع دليلك: رسالتنا، قيمنا، ولماذا نكتب المحتوى العربي المفيد.",
+      "description": "تعرّف على مجلة دليلك: منهج الكتابة والمراجعة وحدود المحتوى وكيف تُرسل تصحيحًا.",
       "canonical": "https://sbdh1285.github.io/dalilak/about.html",
       "h1": "من نحن",
       "links": [
@@ -2019,6 +2902,7 @@
         "editorial-policy.html",
         "guide-safe-cleaning.html",
         "index.html",
+        "mailto:dalilak77505@gmail.com",
         "privacy-policy.html",
         "sitemap.html",
         "terms.html"
@@ -2028,7 +2912,7 @@
     {
       "path": "authors/editorial-team.html",
       "title": "فريق تحرير دليلك | دليلك",
-      "description": "صفحة فريق تحرير دليلك المسؤول عن إعداد المحتوى العربي ومراجعته وتحديثه.",
+      "description": "الجهة التحريرية لموقع دليلك: المنهج وحدود الخبرة وطريقة التصحيح.",
       "canonical": "https://sbdh1285.github.io/dalilak/authors/editorial-team.html",
       "h1": "فريق تحرير دليلك",
       "links": [
@@ -2046,7 +2930,8 @@
         "../index.html",
         "../privacy-policy.html",
         "../sitemap.html",
-        "../terms.html"
+        "../terms.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": []
     },
@@ -2070,8 +2955,10 @@
         "../guide-safe-cleaning.html",
         "../index.html",
         "../posts/cleaning-products-never-mix.html",
+        "../posts/drain-maintenance-tips.html",
         "../posts/eliminate-bad-smells.html",
         "../posts/laundry-guide-tips.html",
+        "../posts/microwave-steam-clean.html",
         "../posts/natural-cleaning-recipes.html",
         "../posts/natural-insect-repellents.html",
         "../posts/organize-fridge-waste.html",
@@ -2080,11 +2967,14 @@
         "../posts/tidy-home-in-15-minutes.html",
         "../privacy-policy.html",
         "../sitemap.html",
-        "../terms.html"
+        "../terms.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/cleaning-products-never-mix.jpg",
+        "../images/editorial/drain-maintenance-tips.jpg",
         "../images/editorial/eliminate-bad-smells.jpg",
+        "../images/editorial/microwave-steam-clean.jpg",
         "../images/editorial/natural-cleaning-recipes.jpg",
         "../images/editorial/organize-fridge-waste.jpg",
         "../images/editorial/save-electricity-bill.jpg",
@@ -2119,10 +3009,12 @@
         "../posts/amazing-water-facts.html",
         "../posts/coffee-story-yemen.html",
         "../posts/galaxies-and-stars.html",
+        "../posts/learn-new-skills-guide.html",
         "../posts/why-we-need-sleep.html",
         "../privacy-policy.html",
         "../sitemap.html",
-        "../terms.html"
+        "../terms.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -2131,6 +3023,7 @@
         "../images/editorial/amazing-water-facts.jpg",
         "../images/editorial/coffee-story-yemen.jpg",
         "../images/editorial/galaxies-and-stars.jpg",
+        "../images/editorial/learn-new-skills-guide.jpg",
         "../images/editorial/why-we-need-sleep.jpg"
       ]
     },
@@ -2153,6 +3046,7 @@
         "../editorial-policy.html",
         "../guide-safe-cleaning.html",
         "../index.html",
+        "../posts/arabic-coffee-guide.html",
         "../posts/chicken-kabsa.html",
         "../posts/fruit-salad-recipe.html",
         "../posts/gulf-rice-spices-guide.html",
@@ -2160,18 +3054,22 @@
         "../posts/lentil-soup-recipe.html",
         "../posts/orange-cake-no-oven.html",
         "../posts/qishta-basbousa.html",
+        "../posts/rice-pudding-recipe.html",
         "../posts/samosa-cheese-dough.html",
         "../posts/zaatar-manakeesh.html",
         "../privacy-policy.html",
         "../sitemap.html",
-        "../terms.html"
+        "../terms.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
+        "../images/editorial/arabic-coffee-guide.jpg",
         "../images/editorial/chicken-kabsa.jpg",
         "../images/editorial/fruit-salad-recipe.jpg",
         "../images/editorial/gulf-rice-spices-guide.jpg",
         "../images/editorial/lentil-soup-recipe.jpg",
         "../images/editorial/orange-cake-no-oven.jpg",
+        "../images/editorial/rice-pudding-recipe.jpg",
         "../images/editorial/zaatar-manakeesh.jpg",
         "../images/new-lemon-mint-drink.jpg",
         "../images/new-qishta-basbousa.jpg",
@@ -2199,6 +3097,8 @@
         "../index.html",
         "../posts/account-recovery-plan.html",
         "../posts/ai-explained-simply.html",
+        "../posts/android-security-settings.html",
+        "../posts/backup-photos-guide.html",
         "../posts/choose-smartphone-budget.html",
         "../posts/essential-android-apps.html",
         "../posts/protect-online-accounts.html",
@@ -2208,11 +3108,14 @@
         "../posts/used-smartphone-checklist.html",
         "../privacy-policy.html",
         "../sitemap.html",
-        "../terms.html"
+        "../terms.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/account-recovery-plan.jpg",
         "../images/editorial/ai-explained-simply.jpg",
+        "../images/editorial/android-security-settings.jpg",
+        "../images/editorial/backup-photos-guide.jpg",
         "../images/editorial/choose-smartphone-budget.jpg",
         "../images/editorial/essential-android-apps.jpg",
         "../images/editorial/protect-online-accounts.jpg",
@@ -2225,7 +3128,7 @@
     {
       "path": "contact.html",
       "title": "اتصل بنا | دليلك",
-      "description": "تواصل مع فريق دليلك: استفسارات، اقتراحات مواضيع، وملاحظات على المقالات.",
+      "description": "تواصل مع مجلة دليلك عبر البريد dalilak77505@gmail.com أو نموذج الاتصال.",
       "canonical": "https://sbdh1285.github.io/dalilak/contact.html",
       "h1": "اتصل بنا",
       "links": [
@@ -2241,6 +3144,7 @@
         "editorial-policy.html",
         "guide-safe-cleaning.html",
         "index.html",
+        "mailto:dalilak77505@gmail.com",
         "privacy-policy.html",
         "sitemap.html",
         "terms.html"
@@ -2250,7 +3154,7 @@
     {
       "path": "disclaimer.html",
       "title": "إخلاء المسؤولية | دليلك",
-      "description": "إخلاء مسؤولية دليلك: المحتوى للأغراض العامة ولا يشكل نصيحة متخصصة.",
+      "description": "إخلاء مسؤولية دليلك: المحتوى تثقيفي ولا يغني عن المختص ولا يضمن قبول الإعلانات.",
       "canonical": "https://sbdh1285.github.io/dalilak/disclaimer.html",
       "h1": "إخلاء المسؤولية",
       "links": [
@@ -2266,6 +3170,7 @@
         "editorial-policy.html",
         "guide-safe-cleaning.html",
         "index.html",
+        "mailto:dalilak77505@gmail.com",
         "privacy-policy.html",
         "sitemap.html",
         "terms.html"
@@ -2275,7 +3180,7 @@
     {
       "path": "editorial-policy.html",
       "title": "سياسة التحرير | دليلك",
-      "description": "تعرف على آلية إعداد محتوى دليلك ومراجعته وتصحيحه وتحديثه.",
+      "description": "سياسة تحرير دليلك: اختيار الموضوع والمصادر والتصحيح واستخدام الأدوات الرقمية.",
       "canonical": "https://sbdh1285.github.io/dalilak/editorial-policy.html",
       "h1": "سياسة التحرير",
       "links": [
@@ -2291,6 +3196,7 @@
         "editorial-policy.html",
         "guide-safe-cleaning.html",
         "index.html",
+        "mailto:dalilak77505@gmail.com",
         "privacy-policy.html",
         "sitemap.html",
         "terms.html"
@@ -2316,6 +3222,7 @@
         "editorial-policy.html",
         "guide-safe-cleaning.html",
         "index.html",
+        "mailto:dalilak77505@gmail.com",
         "posts/account-recovery-plan.html",
         "posts/ai-explained-simply.html",
         "posts/protect-online-accounts.html",
@@ -2350,6 +3257,7 @@
         "editorial-policy.html",
         "guide-safe-cleaning.html",
         "index.html",
+        "mailto:dalilak77505@gmail.com",
         "posts/chicken-kabsa.html",
         "posts/gulf-rice-spices-guide.html",
         "posts/lemon-mint-drink.html",
@@ -2386,6 +3294,7 @@
         "editorial-policy.html",
         "guide-safe-cleaning.html",
         "index.html",
+        "mailto:dalilak77505@gmail.com",
         "posts/cleaning-products-never-mix.html",
         "posts/eliminate-bad-smells.html",
         "posts/laundry-guide-tips.html",
@@ -2424,6 +3333,7 @@
         "editorial-policy.html",
         "guide-safe-cleaning.html",
         "index.html",
+        "mailto:dalilak77505@gmail.com",
         "posts/choose-smartphone-budget.html",
         "posts/essential-android-apps.html",
         "posts/protect-online-accounts.html",
@@ -2446,7 +3356,7 @@
       "title": "دليلك | نصائح ووصفات ومعلومات عربية مفيدة",
       "description": "محتوى عربي واضح في المنزل والطعام والمعرفة والتقنية، يُكتب ويُراجع بعناية ليمنحك فائدة عملية دون تعقيد.",
       "canonical": "https://sbdh1285.github.io/dalilak/",
-      "h1": "أفكار مفيدة لحياة يومية أسهل",
+      "h1": "خطة استرداد الحسابات قبل الاختراق: ورقة عمل عملية",
       "links": [
         "#main-content",
         "about.html",
@@ -2463,14 +3373,26 @@
         "guide-safe-cleaning.html",
         "guide-smartphone.html",
         "index.html",
+        "mailto:dalilak77505@gmail.com",
         "posts/account-recovery-plan.html",
+        "posts/age-of-earth.html",
+        "posts/amazing-animal-facts.html",
+        "posts/amazing-water-facts.html",
+        "posts/android-security-settings.html",
+        "posts/arabic-coffee-guide.html",
+        "posts/backup-photos-guide.html",
         "posts/cleaning-products-never-mix.html",
+        "posts/drain-maintenance-tips.html",
+        "posts/galaxies-and-stars.html",
         "posts/gulf-rice-spices-guide.html",
         "posts/laundry-guide-tips.html",
+        "posts/learn-new-skills-guide.html",
         "posts/lemon-mint-drink.html",
+        "posts/microwave-steam-clean.html",
         "posts/natural-insect-repellents.html",
         "posts/qishta-basbousa.html",
         "posts/quick-kitchen-cleaning.html",
+        "posts/rice-pudding-recipe.html",
         "posts/samosa-cheese-dough.html",
         "posts/save-mobile-data.html",
         "posts/speed-up-slow-computer.html",
@@ -2481,39 +3403,41 @@
       ],
       "images": [
         "images/editorial/account-recovery-plan.jpg",
+        "images/editorial/amazing-animal-facts.jpg",
+        "images/editorial/android-security-settings.jpg",
+        "images/editorial/arabic-coffee-guide.jpg",
+        "images/editorial/backup-photos-guide.jpg",
         "images/editorial/cleaning-products-never-mix.jpg",
+        "images/editorial/drain-maintenance-tips.jpg",
         "images/editorial/gulf-rice-spices-guide.jpg",
-        "images/editorial/used-smartphone-checklist.jpg",
-        "images/hero-editorial.jpg",
-        "images/new-laundry-guide-tips.jpg",
-        "images/new-lemon-mint-drink.jpg",
-        "images/new-natural-insect-repellents.jpg",
-        "images/new-qishta-basbousa.jpg",
-        "images/new-quick-kitchen-cleaning.jpg",
-        "images/new-samosa-cheese-dough.jpg",
-        "images/new-save-mobile-data.jpg",
-        "images/new-speed-up-slow-computer.jpg"
+        "images/editorial/learn-new-skills-guide.jpg",
+        "images/editorial/microwave-steam-clean.jpg",
+        "images/editorial/rice-pudding-recipe.jpg"
       ]
     },
     {
       "path": "posts/account-recovery-plan.html",
       "title": "خطة استرداد الحسابات قبل الاختراق: ورقة عمل عملية | دليلك",
-      "description": "خطة عملية لتجهيز بريد الاسترداد ورموز النسخ الاحتياطية والأجهزة الموثوقة وترتيب الحسابات قبل فقد الهاتف أو التعرض للاختراق.",
+      "description": "جهّز بريد الاسترداد والرموز الاحتياطية والأجهزة الموثوقة وترتيب الحسابات قبل فقد الهاتف أو الاختراق.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/account-recovery-plan.html",
       "h1": "خطة استرداد الحسابات قبل الاختراق: ورقة عمل عملية",
       "links": [
-        "#backup",
-        "#conclusion",
-        "#drill",
-        "#incident",
-        "#inventory",
-        "#loss",
         "#main-content",
-        "#privacy",
-        "#quick",
-        "#schedule",
-        "#shared",
-        "#worksheet",
+        "#sec-drill",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-hack",
+        "#sec-inv",
+        "#sec-loss",
+        "#sec-manager",
+        "#sec-mistakes",
+        "#sec-paper",
+        "#sec-privacy",
+        "#sec-split",
+        "#sec-travel",
+        "#sec-when",
+        "#sec-work",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -2532,7 +3456,8 @@
         "../sitemap.html",
         "../terms.html",
         "https://www.cisa.gov/secure-our-world/use-strong-passwords",
-        "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf"
+        "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/account-recovery-plan.jpg"
@@ -2540,17 +3465,21 @@
     },
     {
       "path": "posts/age-of-earth.html",
-      "title": "كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة | دليلك",
-      "description": "كم عمر الأرض؟ كيف قدر العلماء عمر الأرض بـ 4.54 مليار سنة؟ رحلة عبر الزمن الجيولوجي: نشأة الأرض، الحياة الأولى، الديناصورات، والإنسان.",
+      "title": "كيف قدّر العلماء عمر الأرض؟ دليل مبسط للتأريخ الجيولوجي | دليلك",
+      "description": "شرح مبسط لكيف قُدّر عمر الأرض بنحو 4.54 مليار سنة عبر التأريخ الإشعاعي للنيازك والمعادن، مع قراءة الخط الزمني الجيولوجي بحذر.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/age-of-earth.html",
-      "h1": "كم يبلغ عمر الأرض؟ رحلة عبر 4.5 مليار سنة",
+      "h1": "كيف قدّر العلماء عمر الأرض؟ دليل مبسط للتأريخ الجيولوجي",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#support-check",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-field",
+        "#sec-method",
+        "#sec-not",
+        "#sec-radio",
+        "#sec-timeline",
+        "#sec-why",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -2577,7 +3506,8 @@
         "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fage-of-earth.html&text=%D9%83%D9%85%20%D9%8A%D8%A8%D9%84%D8%BA%20%D8%B9%D9%85%D8%B1%20%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%D8%9F%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%B9%D8%A8%D8%B1%204.5%20%D9%85%D9%84%D9%8A%D8%A7%D8%B1%20%D8%B3%D9%86%D8%A9",
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fage-of-earth.html&text=%D9%83%D9%85%20%D9%8A%D8%A8%D9%84%D8%BA%20%D8%B9%D9%85%D8%B1%20%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%D8%9F%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%B9%D8%A8%D8%B1%204.5%20%D9%85%D9%84%D9%8A%D8%A7%D8%B1%20%D8%B3%D9%86%D8%A9",
         "https://wa.me/?text=%D9%83%D9%85%20%D9%8A%D8%A8%D9%84%D8%BA%20%D8%B9%D9%85%D8%B1%20%D8%A7%D9%84%D8%A3%D8%B1%D8%B6%D8%9F%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%B9%D8%A8%D8%B1%204.5%20%D9%85%D9%84%D9%8A%D8%A7%D8%B1%20%D8%B3%D9%86%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fage-of-earth.html",
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fage-of-earth.html"
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fage-of-earth.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -2593,18 +3523,18 @@
     {
       "path": "posts/ai-explained-simply.html",
       "title": "الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟ | دليلك",
-      "description": "شرح مبسط ودقيق للذكاء الاصطناعي: التدريب والاستدلال والذكاء التوليدي والأخطاء والخصوصية وكيفية استخدام الأدوات بوعي.",
+      "description": "شرح الذكاء الاصطناعي: بيانات وتدريب واستدلال، حدود الأخطاء والخصوصية، وكيف تستخدم الأدوات كمساعد لا كمصدر نهائي.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/ai-explained-simply.html",
       "h1": "الذكاء الاصطناعي ببساطة: ما هو وكيف يعمل؟",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-future",
+        "#sec-gen",
+        "#sec-limits",
+        "#sec-mistakes",
+        "#sec-work",
         "#seo-flow",
         "#seo-quick",
         "#seo-safe",
@@ -2635,7 +3565,8 @@
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fai-explained-simply.html&text=%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D8%A8%D8%A8%D8%B3%D8%A7%D8%B7%D8%A9%3A%20%D9%85%D8%A7%20%D9%87%D9%88%20%D9%88%D9%83%D9%8A%D9%81%20%D9%8A%D8%B9%D9%85%D9%84%D8%9F",
         "https://wa.me/?text=%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D8%A8%D8%A8%D8%B3%D8%A7%D8%B7%D8%A9%3A%20%D9%85%D8%A7%20%D9%87%D9%88%20%D9%88%D9%83%D9%8A%D9%81%20%D9%8A%D8%B9%D9%85%D9%84%D8%9F%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fai-explained-simply.html",
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fai-explained-simply.html",
-        "https://www.nist.gov/itl/ai-risk-management-framework"
+        "https://www.nist.gov/itl/ai-risk-management-framework",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -2651,20 +3582,22 @@
     },
     {
       "path": "posts/amazing-animal-facts.html",
-      "title": "عجائب مملكة الحيوان: حقائق تدهش الكبار قبل الصغار | دليلك",
-      "description": "حقائق مدهشة عن مملكة الحيوان: الأخطبوط والحوت الأزرق والحرباء والنمل — قدرات غريبة وعجيبة تثير الدهشة للكبار والصغار.",
+      "title": "كيف تتكيف الحيوانات مع بيئتها: أمثلة موثوقة بدل المبالغات | دليلك",
+      "description": "شرح مبسط لتكيف الحيوانات مع البيئة والغذاء والحركة والحواس، مع طريقة التحقق من الحقائق الشائعة قبل مشاركتها.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/amazing-animal-facts.html",
-      "h1": "عجائب مملكة الحيوان: حقائق تدهش الكبار قبل الصغار",
+      "h1": "كيف تتكيف الحيوانات مع بيئتها: أمثلة موثوقة بدل المبالغات",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
-        "#support-check",
+        "#sec-adapt",
+        "#sec-city",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-food",
+        "#sec-human",
+        "#sec-move",
+        "#sec-senses",
+        "#sec-test",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -2691,7 +3624,8 @@
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-animal-facts.html&text=%D8%B9%D8%AC%D8%A7%D8%A6%D8%A8%20%D9%85%D9%85%D9%84%D9%83%D8%A9%20%D8%A7%D9%84%D8%AD%D9%8A%D9%88%D8%A7%D9%86%3A%20%D8%AD%D9%82%D8%A7%D8%A6%D9%82%20%D8%AA%D8%AF%D9%87%D8%B4%20%D8%A7%D9%84%D9%83%D8%A8%D8%A7%D8%B1%20%D9%82%D8%A8%D9%84%20%D8%A7%D9%84%D8%B5%D8%BA%D8%A7%D8%B1",
         "https://wa.me/?text=%D8%B9%D8%AC%D8%A7%D8%A6%D8%A8%20%D9%85%D9%85%D9%84%D9%83%D8%A9%20%D8%A7%D9%84%D8%AD%D9%8A%D9%88%D8%A7%D9%86%3A%20%D8%AD%D9%82%D8%A7%D8%A6%D9%82%20%D8%AA%D8%AF%D9%87%D8%B4%20%D8%A7%D9%84%D9%83%D8%A8%D8%A7%D8%B1%20%D9%82%D8%A8%D9%84%20%D8%A7%D9%84%D8%B5%D8%BA%D8%A7%D8%B1%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-animal-facts.html",
         "https://www.britannica.com/animal/animal",
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-animal-facts.html"
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-animal-facts.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -2706,19 +3640,22 @@
     },
     {
       "path": "posts/amazing-human-body-facts.html",
-      "title": "حقائق مبسطة عن جسم الإنسان: القلب والعظام والجلد والدماغ | دليلك",
-      "description": "حقائق مدهشة وممتعة عن جسم الإنسان: القلب، العظام، الجلد، الدماغ، والمعدة — معلومات علمية مبسطة تثير الدهشة.",
+      "title": "كيف يعمل القلب والدورة الدموية والجهاز العصبي بشكل مبسط | دليلك",
+      "description": "شرح مبسط لعمل القلب والعظام والجلد والدماغ والجهاز الهضمي، مع حدود الأرقام الشائعة ومتى تستشير مختصًا.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/amazing-human-body-facts.html",
-      "h1": "حقائق مبسطة عن جسم الإنسان: القلب والعظام والجلد والدماغ",
+      "h1": "كيف يعمل القلب والدورة الدموية والجهاز العصبي بشكل مبسط",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
+        "#sec-bone",
+        "#sec-brain",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-gut",
+        "#sec-heart",
+        "#sec-move",
+        "#sec-practice",
+        "#sec-skin",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -2745,7 +3682,8 @@
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-human-body-facts.html&text=%D8%AD%D9%82%D8%A7%D8%A6%D9%82%20%D9%85%D8%AF%D9%87%D8%B4%D8%A9%20%D8%B9%D9%86%20%D8%AC%D8%B3%D9%85%20%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86%20%D9%84%D9%85%20%D8%AA%D9%83%D9%86%20%D8%AA%D8%B9%D8%B1%D9%81%D9%87%D8%A7",
         "https://wa.me/?text=%D8%AD%D9%82%D8%A7%D8%A6%D9%82%20%D9%85%D8%AF%D9%87%D8%B4%D8%A9%20%D8%B9%D9%86%20%D8%AC%D8%B3%D9%85%20%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D8%A7%D9%86%20%D9%84%D9%85%20%D8%AA%D9%83%D9%86%20%D8%AA%D8%B9%D8%B1%D9%81%D9%87%D8%A7%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-human-body-facts.html",
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-human-body-facts.html",
-        "https://www.ncbi.nlm.nih.gov/books/NBK607445/"
+        "https://www.ncbi.nlm.nih.gov/books/NBK607445/",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -2760,21 +3698,21 @@
     },
     {
       "path": "posts/amazing-water-facts.html",
-      "title": "حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا | دليلك",
-      "description": "حقائق مدهشة عن الماء: نسبة الماء في جسم الإنسان، الماء الصالح للشرب، دورة الماء، ولماذا الماء ضروري للحياة — معلومات مبسطة.",
+      "title": "دورة الماء وسلامة مياه الشرب: شرح عملي مبسط | دليلك",
+      "description": "شرح دورة الماء وتوزيعه على الأرض، والفرق بين الكمية والجودة، وكيف تتعامل مع مياه الشرب والتخزين في المنزل.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/amazing-water-facts.html",
-      "h1": "حقائق مدهشة عن الماء: سائل الحياة الذي يحيط بنا",
+      "h1": "دورة الماء وسلامة مياه الشرب: شرح عملي مبسط",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
-        "#sec-7",
-        "#support-check",
+        "#sec-cycle",
+        "#sec-end",
+        "#sec-energy",
+        "#sec-faq",
+        "#sec-home",
+        "#sec-quality",
+        "#sec-waste",
+        "#sec-where",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -2801,7 +3739,8 @@
         "https://wa.me/?text=%D8%AD%D9%82%D8%A7%D8%A6%D9%82%20%D9%85%D8%AF%D9%87%D8%B4%D8%A9%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D8%A7%D8%A1%3A%20%D8%B3%D8%A7%D8%A6%D9%84%20%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%20%D8%A7%D9%84%D8%B0%D9%8A%20%D9%8A%D8%AD%D9%8A%D8%B7%20%D8%A8%D9%86%D8%A7%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-water-facts.html",
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Famazing-water-facts.html",
         "https://www.usgs.gov/special-topics/water-science-school",
-        "https://www.who.int/news-room/fact-sheets/detail/drinking-water"
+        "https://www.who.int/news-room/fact-sheets/detail/drinking-water",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -2815,19 +3754,156 @@
       ]
     },
     {
+      "path": "posts/android-security-settings.html",
+      "title": "تأمين هاتف أندرويد: إعدادات حماية أساسية في 20 دقيقة | دليلك",
+      "description": "أهم إعدادات أمان أندرويد: قفل شاشة قوي، تحديثات النظام، التحقق بخطوتين، مراجعة أذونات التطبيقات، والعثور على الجهاز عن بُعد.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/android-security-settings.html",
+      "h1": "تأمين هاتف أندرويد: إعدادات حماية أساسية في 20 دقيقة",
+      "links": [
+        "#main-content",
+        "#sec-2fa",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-find",
+        "#sec-habits",
+        "#sec-install",
+        "#sec-lock",
+        "#sec-mistakes",
+        "#sec-perms",
+        "#sec-update",
+        "#sec-wifi",
+        "#seo-quick",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/account-recovery-plan.html",
+        "../posts/protect-online-accounts.html",
+        "../posts/used-smartphone-checklist.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://www.cisa.gov/secure-our-world/use-strong-passwords",
+        "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf",
+        "mailto:dalilak77505@gmail.com"
+      ],
+      "images": [
+        "../images/editorial/android-security-settings.jpg"
+      ]
+    },
+    {
+      "path": "posts/arabic-coffee-guide.html",
+      "title": "القهوة العربية على الطريقة المنزلية: دلة وهيل وخطوات | دليلك",
+      "description": "حضّر قهوة عربية خفيفة برائحة الهيل في بيتك: اختيار البن ودرجة التحميص، خطوات الدلة الهادئة، ضبط القوة، وتقديمها مع الحلويات.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/arabic-coffee-guide.html",
+      "h1": "القهوة العربية على الطريقة المنزلية: دلة وهيل وخطوات",
+      "links": [
+        "#main-content",
+        "#sec-beans",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-grind",
+        "#sec-mistakes",
+        "#sec-note",
+        "#sec-serve",
+        "#sec-steps",
+        "#sec-store",
+        "#sec-strength",
+        "#sec-sweet",
+        "#sec-tools",
+        "#seo-quick",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/coffee-story-yemen.html",
+        "../posts/qishta-basbousa.html",
+        "../posts/samosa-cheese-dough.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "mailto:dalilak77505@gmail.com"
+      ],
+      "images": [
+        "../images/editorial/arabic-coffee-guide.jpg"
+      ]
+    },
+    {
+      "path": "posts/backup-photos-guide.html",
+      "title": "النسخ الاحتياطي للصور والملفات: خطة بسيطة قبل فوات الأوان | دليلك",
+      "description": "خطة نسخ احتياطي عملية: قاعدة النسختين، السحابة والقرص الخارجي معًا، نسخة خارج المنزل، جدولة تلقائية، واختبار الاستعادة دوريًا.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/backup-photos-guide.html",
+      "h1": "النسخ الاحتياطي للصور والملفات: خطة بسيطة قبل فوات الأوان",
+      "links": [
+        "#main-content",
+        "#sec-auto",
+        "#sec-cloud",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-local",
+        "#sec-mistakes",
+        "#sec-offsite",
+        "#sec-phone",
+        "#sec-secure",
+        "#sec-test",
+        "#sec-what",
+        "#sec-why",
+        "#seo-quick",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/account-recovery-plan.html",
+        "../posts/essential-android-apps.html",
+        "../posts/safe-online-payments.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "mailto:dalilak77505@gmail.com"
+      ],
+      "images": [
+        "../images/editorial/backup-photos-guide.jpg"
+      ]
+    },
+    {
       "path": "posts/chicken-kabsa.html",
       "title": "كبسة الدجاج السعودية: طريقة منزلية خطوة بخطوة | دليلك",
-      "description": "طريقة منزلية واضحة لكبسة الدجاج بالأرز البسمتي: المقادير، ضبط المرق، نضج الدجاج، حل مشكلات الأرز وخيارات التقديم.",
+      "description": "طريقة كبسة دجاج منزلية: مقادير، تحمير، ضبط المرق حسب نوع الأرز، نضج آمن للدجاج، وحل مشكلات الأرز المعجن أو القاسي.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/chicken-kabsa.html",
       "h1": "كبسة الدجاج السعودية: طريقة منزلية خطوة بخطوة",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
+        "#sec-chicken",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-guest-k",
+        "#sec-ing",
+        "#sec-rice",
+        "#sec-serve",
+        "#sec-spice",
+        "#sec-steps",
         "#seo-quick",
-        "#seo-serve",
         "#seo-table",
         "../about.html",
         "../authors/editorial-team.html",
@@ -2857,7 +3933,8 @@
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchicken-kabsa.html&text=%D9%83%D8%A8%D8%B3%D8%A9%20%D8%A7%D9%84%D8%AF%D8%AC%D8%A7%D8%AC%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%3A%20%D8%A7%D9%84%D9%88%D8%B5%D9%81%D8%A9%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9",
         "https://wa.me/?text=%D9%83%D8%A8%D8%B3%D8%A9%20%D8%A7%D9%84%D8%AF%D8%AC%D8%A7%D8%AC%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9%3A%20%D8%A7%D9%84%D9%88%D8%B5%D9%81%D8%A9%20%D8%A7%D9%84%D8%A3%D8%B5%D9%84%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchicken-kabsa.html",
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchicken-kabsa.html",
-        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"
+        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -2874,20 +3951,20 @@
     {
       "path": "posts/choose-smartphone-budget.html",
       "title": "كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين | دليلك",
-      "description": "دليل عملي لاختيار هاتف يناسب الميزانية حسب الاستخدام والتحديثات والبطارية والتخزين والكاميرا، مع قائمة فحص قبل الشراء.",
+      "description": "اختيار هاتف حسب الاستخدام والتحديثات والبطارية والتخزين والكاميرا، مع قائمة فحص قبل الشراء من غير أرقام مثالية للجميع.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/choose-smartphone-budget.html",
       "h1": "كيف تختار هاتفًا ذكيًا يناسب ميزانيتك؟ دليل المبتدئين",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
-        "#sec-7",
-        "#seo-check",
+        "#sec-bat",
+        "#sec-cam",
+        "#sec-check",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-mistakes",
+        "#sec-old",
+        "#sec-ram",
+        "#sec-screen",
         "#seo-quick",
         "#seo-table",
         "../about.html",
@@ -2918,7 +3995,8 @@
         "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchoose-smartphone-budget.html&text=%D9%83%D9%8A%D9%81%20%D8%AA%D8%AE%D8%AA%D8%A7%D8%B1%20%D9%87%D8%A7%D8%AA%D9%81%D9%8B%D8%A7%20%D8%B0%D9%83%D9%8A%D9%8B%D8%A7%20%D9%8A%D9%86%D8%A7%D8%B3%D8%A8%20%D9%85%D9%8A%D8%B2%D8%A7%D9%86%D9%8A%D8%AA%D9%83%D8%9F%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86",
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchoose-smartphone-budget.html&text=%D9%83%D9%8A%D9%81%20%D8%AA%D8%AE%D8%AA%D8%A7%D8%B1%20%D9%87%D8%A7%D8%AA%D9%81%D9%8B%D8%A7%20%D8%B0%D9%83%D9%8A%D9%8B%D8%A7%20%D9%8A%D9%86%D8%A7%D8%B3%D8%A8%20%D9%85%D9%8A%D8%B2%D8%A7%D9%86%D9%8A%D8%AA%D9%83%D8%9F%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86",
         "https://wa.me/?text=%D9%83%D9%8A%D9%81%20%D8%AA%D8%AE%D8%AA%D8%A7%D8%B1%20%D9%87%D8%A7%D8%AA%D9%81%D9%8B%D8%A7%20%D8%B0%D9%83%D9%8A%D9%8B%D8%A7%20%D9%8A%D9%86%D8%A7%D8%B3%D8%A8%20%D9%85%D9%8A%D8%B2%D8%A7%D9%86%D9%8A%D8%AA%D9%83%D8%9F%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchoose-smartphone-budget.html",
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchoose-smartphone-budget.html"
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fchoose-smartphone-budget.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -2934,21 +4012,24 @@
     {
       "path": "posts/cleaning-products-never-mix.html",
       "title": "مواد تنظيف لا تخلطها معًا: جدول سلامة منزلي | دليلك",
-      "description": "جدول عملي يوضح خلطات التنظيف الخطرة، طريقة قراءة الملصق، التهوية، التخزين، وما يجب فعله عند التعرض للأبخرة.",
+      "description": "جدول خلطات التنظيف الخطرة، قراءة الملصق، التهوية، التخزين، وما تفعله عند التعرض للأبخرة.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/cleaning-products-never-mix.html",
       "h1": "مواد تنظيف لا تخلطها معًا: جدول سلامة منزلي",
       "links": [
-        "#children",
-        "#conclusion",
-        "#faq",
-        "#incident",
-        "#label",
         "#main-content",
-        "#quick",
-        "#room-plan",
-        "#table",
-        "#why",
-        "#worksheet",
+        "#sec-bleach",
+        "#sec-drain",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-incident",
+        "#sec-label",
+        "#sec-mistakes",
+        "#sec-one",
+        "#sec-store",
+        "#sec-table",
+        "#sec-vent",
+        "#sec-why",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -2967,7 +4048,8 @@
         "../sitemap.html",
         "../terms.html",
         "https://www.cdc.gov/natural-disasters/safety/how-to-safely-clean-and-sanitize-with-bleach.html",
-        "https://www.cdc.gov/niosh/docs/2012-126/pdfs/2012-126.pdf"
+        "https://www.cdc.gov/niosh/docs/2012-126/pdfs/2012-126.pdf",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/cleaning-products-never-mix.jpg"
@@ -2976,21 +4058,19 @@
     {
       "path": "posts/coffee-story-yemen.html",
       "title": "قصة القهوة: رحلتها من اليمن إلى العالم | دليلك",
-      "description": "تاريخ القهوة في اليمن: من أصل البن في إثيوبيا إلى زراعته وتجارته في اليمن ودور ميناء المخا في انتشار القهوة عالميًا.",
+      "description": "تاريخ القهوة في اليمن: الموطن النباتي الأرجح في إثيوبيا، الزراعة والتجارة اليمنية، ودور ميناء المخا في انتشار القهوة عالميًا.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/coffee-story-yemen.html",
       "h1": "قصة القهوة: رحلتها من اليمن إلى العالم",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
+        "#sec-brew",
+        "#sec-culture",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-mocha",
+        "#sec-origin",
+        "#sec-today",
         "#seo-quick",
-        "#seo-timeline",
-        "#seo-yemen",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -3017,7 +4097,8 @@
         "https://wa.me/?text=%D9%82%D8%B5%D8%A9%20%D8%A7%D9%84%D9%82%D9%87%D9%88%D8%A9%3A%20%D8%B1%D8%AD%D9%84%D8%AA%D9%87%D8%A7%20%D9%85%D9%86%20%D8%A7%D9%84%D9%8A%D9%85%D9%86%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fcoffee-story-yemen.html",
         "https://www.britannica.com/topic/coffee",
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fcoffee-story-yemen.html",
-        "https://www.ico.org/documents/icc-105-14e-statement-yemen.pdf"
+        "https://www.ico.org/documents/icc-105-14e-statement-yemen.pdf",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3030,19 +4111,66 @@
       ]
     },
     {
+      "path": "posts/drain-maintenance-tips.html",
+      "title": "منع انسداد المصارف في المطبخ والحمام: عادات وأدوات آمنة | دليلك",
+      "description": "حافظ على مصارفك مفتوحة بعادات يومية بسيطة: لا دهون في البالوعة، مصفاة للشعر، ماء ساخن دوري، ومتى تستخدم البيكربونات والخل أو تستدعي فنيًا.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/drain-maintenance-tips.html",
+      "h1": "منع انسداد المصارف في المطبخ والحمام: عادات وأدوات آمنة",
+      "links": [
+        "#main-content",
+        "#sec-bath",
+        "#sec-causes",
+        "#sec-chemicals",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-full",
+        "#sec-kitchen",
+        "#sec-maintain",
+        "#sec-mistakes",
+        "#sec-tech",
+        "#seo-quick",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/cleaning-products-never-mix.html",
+        "../posts/natural-cleaning-recipes.html",
+        "../posts/quick-kitchen-cleaning.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "mailto:dalilak77505@gmail.com"
+      ],
+      "images": [
+        "../images/editorial/drain-maintenance-tips.jpg"
+      ]
+    },
+    {
       "path": "posts/eliminate-bad-smells.html",
       "title": "كيف تتخلص من الروائح الكريهة في المنزل: دليل عملي | دليلك",
-      "description": "طرق عملية لتقليل الروائح الكريهة في المنزل: تحديد المصدر، تنظيف المطبخ والحمام، تحسين التهوية، ومتى تحتاج إلى فني.",
+      "description": "طرق عملية لتحديد مصدر الرائحة في المطبخ والحمام والغرف، وتحسين التهوية، ومتى تحتاج فنيًا أو طوارئ.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/eliminate-bad-smells.html",
       "h1": "كيف تتخلص من الروائح الكريهة في المنزل: دليل عملي",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#support-check",
+        "#sec-ac",
+        "#sec-air",
+        "#sec-cloth",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-find",
+        "#sec-mistakes",
+        "#sec-pro",
+        "#sec-rooms",
+        "#sec-trash",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -3070,7 +4198,8 @@
         "https://wa.me/?text=%D9%83%D9%8A%D9%81%20%D8%AA%D8%AA%D8%AE%D9%84%D8%B5%20%D9%85%D9%86%20%D8%A7%D9%84%D8%B1%D9%88%D8%A7%D8%A6%D8%AD%20%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%87%D8%A9%20%D9%81%D9%8A%20%D9%85%D9%86%D8%B2%D9%84%D9%83%20%D9%86%D9%87%D8%A7%D8%A6%D9%8A%D9%8B%D8%A7%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Feliminate-bad-smells.html",
         "https://www.cdc.gov/mold-health/about/index.html",
         "https://www.epa.gov/indoor-air-quality-iaq",
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Feliminate-bad-smells.html"
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Feliminate-bad-smells.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3087,24 +4216,24 @@
     {
       "path": "posts/essential-android-apps.html",
       "title": "تطبيقات أندرويد مفيدة: 10 خيارات للاستخدام اليومي | دليلك",
-      "description": "عشرة تطبيقات أندرويد مفيدة لإدارة الملفات والخصوصية والملاحظات والقراءة والتصوير، مع ضرورة مراجعة السعر والصلاحيات الحالية.",
+      "description": "فئات تطبيقات أندرويد للنسخ والملفات والملاحظات والقراءة والتصوير، مع مراجعة السعر والصلاحيات في المتجر الرسمي كل مرة.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/essential-android-apps.html",
       "h1": "تطبيقات أندرويد مفيدة: 10 خيارات للاستخدام اليومي",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-10",
-        "#sec-11",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
-        "#sec-7",
-        "#sec-8",
-        "#sec-9",
-        "#support-check",
+        "#sec-ads",
+        "#sec-backup",
+        "#sec-builtin",
+        "#sec-cat",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-hygiene",
+        "#sec-kids",
+        "#sec-mistakes",
+        "#sec-perm",
+        "#sec-safe",
+        "#sec-store",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -3131,7 +4260,8 @@
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fessential-android-apps.html&text=%D8%A3%D9%81%D8%B6%D9%84%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%A3%D9%86%D8%AF%D8%B1%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%3A%2010%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D9%84%D8%A7%20%D8%BA%D9%86%D9%89%20%D8%B9%D9%86%D9%87%D8%A7",
         "https://wa.me/?text=%D8%A3%D9%81%D8%B6%D9%84%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D8%A3%D9%86%D8%AF%D8%B1%D9%88%D9%8A%D8%AF%20%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%3A%2010%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA%20%D9%84%D8%A7%20%D8%BA%D9%86%D9%89%20%D8%B9%D9%86%D9%87%D8%A7%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fessential-android-apps.html",
         "https://www.android.com/safety/",
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fessential-android-apps.html"
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fessential-android-apps.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3147,18 +4277,22 @@
     {
       "path": "posts/fruit-salad-recipe.html",
       "title": "سلطة الفواكه المنعشة: وصفة سريعة في 10 دقائق | دليلك",
-      "description": "وصفة سلطة الفواكه المنعشة: اختيار الفواكه الموسمية، تقطيع وتحضير صحيح، صوص العسل والليمون والنعناع، وأفكار تقديم مميزة.",
+      "description": "سلطة فواكه موسمية: غسل آمن، تقطيع متقارب، فواكه طرية آخرًا، وصوص عسل وليمون اختياري.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/fruit-salad-recipe.html",
       "h1": "سلطة الفواكه المنعشة: وصفة سريعة في 10 دقائق",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#support-check",
+        "#sec-choose",
+        "#sec-cut",
+        "#sec-dressing",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-keep",
+        "#sec-mistakes",
+        "#sec-nutri",
+        "#sec-party",
+        "#sec-wash",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -3185,7 +4319,8 @@
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ffruit-salad-recipe.html&text=%D8%B3%D9%84%D8%B7%D8%A9%20%D8%A7%D9%84%D9%81%D9%88%D8%A7%D9%83%D9%87%20%D8%A7%D9%84%D9%85%D9%86%D8%B9%D8%B4%D8%A9%3A%20%D8%B7%D8%A8%D9%82%20%D8%B5%D8%AD%D9%8A%20%D9%88%D9%84%D8%B0%D9%8A%D8%B0%20%D9%81%D9%8A%2010%20%D8%AF%D9%82%D8%A7%D8%A6%D9%82",
         "https://wa.me/?text=%D8%B3%D9%84%D8%B7%D8%A9%20%D8%A7%D9%84%D9%81%D9%88%D8%A7%D9%83%D9%87%20%D8%A7%D9%84%D9%85%D9%86%D8%B9%D8%B4%D8%A9%3A%20%D8%B7%D8%A8%D9%82%20%D8%B5%D8%AD%D9%8A%20%D9%88%D9%84%D8%B0%D9%8A%D8%B0%20%D9%81%D9%8A%2010%20%D8%AF%D9%82%D8%A7%D8%A6%D9%82%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ffruit-salad-recipe.html",
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ffruit-salad-recipe.html",
-        "https://www.fda.gov/food/people-risk-foodborne-illness/cleaning-food-safety-moms-be"
+        "https://www.fda.gov/food/people-risk-foodborne-illness/cleaning-food-safety-moms-be",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3201,19 +4336,21 @@
     },
     {
       "path": "posts/galaxies-and-stars.html",
-      "title": "عجائب الكون: رحلة بين المجرات والنجوم | دليلك",
-      "description": "رحلة في عجائب الكون: المجرات والنجوم، مجرة درب التبانة، حجم الكون، الثقوب السوداء، والنجوم النيوترونية — معلومات مبسطة وممتعة.",
+      "title": "ما الفرق بين النجم والكوكب والمجرة؟ شرح فلكي مبسط | دليلك",
+      "description": "شرح الفرق بين النجوم والكواكب والمجرات، ومعنى السنة الضوئية، ولماذا نرى ضوء الماضي في السماء.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/galaxies-and-stars.html",
-      "h1": "عجائب الكون: رحلة بين المجرات والنجوم",
+      "h1": "ما الفرق بين النجم والكوكب والمجرة؟ شرح فلكي مبسط",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#support-check",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-galaxy",
+        "#sec-light",
+        "#sec-lightpollution",
+        "#sec-observe",
+        "#sec-planet",
+        "#sec-star",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -3240,7 +4377,8 @@
         "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fgalaxies-and-stars.html&text=%D8%B9%D8%AC%D8%A7%D8%A6%D8%A8%20%D8%A7%D9%84%D9%83%D9%88%D9%86%3A%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D9%8A%D9%86%20%D8%A7%D9%84%D9%85%D8%AC%D8%B1%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D9%86%D8%AC%D9%88%D9%85",
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fgalaxies-and-stars.html&text=%D8%B9%D8%AC%D8%A7%D8%A6%D8%A8%20%D8%A7%D9%84%D9%83%D9%88%D9%86%3A%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D9%8A%D9%86%20%D8%A7%D9%84%D9%85%D8%AC%D8%B1%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D9%86%D8%AC%D9%88%D9%85",
         "https://wa.me/?text=%D8%B9%D8%AC%D8%A7%D8%A6%D8%A8%20%D8%A7%D9%84%D9%83%D9%88%D9%86%3A%20%D8%B1%D8%AD%D9%84%D8%A9%20%D8%A8%D9%8A%D9%86%20%D8%A7%D9%84%D9%85%D8%AC%D8%B1%D8%A7%D8%AA%20%D9%88%D8%A7%D9%84%D9%86%D8%AC%D9%88%D9%85%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fgalaxies-and-stars.html",
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fgalaxies-and-stars.html"
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fgalaxies-and-stars.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3256,23 +4394,25 @@
     {
       "path": "posts/gulf-rice-spices-guide.html",
       "title": "دليل بهارات الأرز الخليجي: الكبسة والمندي والمجبوس | دليلك",
-      "description": "مرجع عملي يوضح الفروق العامة بين بهارات الكبسة والمندي والمجبوس وطريقة بناء خلطة متوازنة وتخزينها وتعديلها دون ادعاء وصفة واحدة أصلية.",
+      "description": "فروق عامة بين بهارات الكبسة والمندي والمجبوس، خلطة بداية قابلة للتعديل، تخزين، واللومي من غير ادعاء وصفة أصلية واحدة.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/gulf-rice-spices-guide.html",
       "h1": "دليل بهارات الأرز الخليجي: الكبسة والمندي والمجبوس",
       "links": [
-        "#base",
-        "#compare",
-        "#conclusion",
-        "#log",
-        "#lومي",
         "#main-content",
-        "#quick",
-        "#ratio",
-        "#ready",
-        "#safety",
-        "#storage",
-        "#variations",
-        "#whole",
+        "#sec-base",
+        "#sec-buy",
+        "#sec-compare",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-log",
+        "#sec-loomi",
+        "#sec-menu",
+        "#sec-mistakes",
+        "#sec-salt",
+        "#sec-store",
+        "#sec-test",
+        "#sec-whole",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -3289,7 +4429,10 @@
         "../posts/zaatar-manakeesh.html",
         "../privacy-policy.html",
         "../sitemap.html",
-        "../terms.html"
+        "../terms.html",
+        "https://www.fda.gov/media/74435/download",
+        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/gulf-rice-spices-guide.jpg"
@@ -3298,19 +4441,22 @@
     {
       "path": "posts/laundry-guide-tips.html",
       "title": "غسيل الملابس بذكاء: دليلك الكامل لملابس نظيفة تدوم | دليلك",
-      "description": "دليل غسيل الملابس الصحيح: فرز الملابس، درجات حرارة الغسيل، اختيار المسحوق، إزالة البقع قبل الغسيل، والتجفيف السليم.",
+      "description": "دليل غسيل عملي: فرز الملابس، قراءة الملصق، درجات الحرارة، البقع، التجفيف، وما لا يجوز خلطه من المنظفات.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/laundry-guide-tips.html",
       "h1": "غسيل الملابس بذكاء: دليلك الكامل لملابس نظيفة تدوم",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
-        "#support-check",
+        "#sec-colors",
+        "#sec-delicates",
+        "#sec-dry",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-label",
+        "#sec-machine",
+        "#sec-smell",
+        "#sec-sort",
+        "#sec-stain",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -3338,7 +4484,8 @@
         "https://wa.me/?text=%D8%BA%D8%B3%D9%8A%D9%84%20%D8%A7%D9%84%D9%85%D9%84%D8%A7%D8%A8%D8%B3%20%D8%A8%D8%B0%D9%83%D8%A7%D8%A1%3A%20%D8%AF%D9%84%D9%8A%D9%84%D9%83%20%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%20%D9%84%D9%85%D9%84%D8%A7%D8%A8%D8%B3%20%D9%86%D8%B8%D9%8A%D9%81%D8%A9%20%D8%AA%D8%AF%D9%88%D9%85%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flaundry-guide-tips.html",
         "https://www.energystar.gov/products/clothes_washers",
         "https://www.epa.gov/saferchoice",
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flaundry-guide-tips.html"
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flaundry-guide-tips.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3353,21 +4500,70 @@
       ]
     },
     {
+      "path": "posts/learn-new-skills-guide.html",
+      "title": "كيف تتعلم مهارة جديدة بفعالية؟ خطوات عملية | دليلك",
+      "description": "تعلم أي مهارة أسرع بتقسيمها إلى أجزاء صغيرة، وممارسة منتظمة قصيرة مع تغذية راجعة، والاسترجاع النشط، وفهم أن التقدم غير خطي.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/learn-new-skills-guide.html",
+      "h1": "كيف تتعلم مهارة جديدة بفعالية؟ خطوات عملية",
+      "links": [
+        "#main-content",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-feedback",
+        "#sec-log",
+        "#sec-mistakes",
+        "#sec-plateau",
+        "#sec-practice",
+        "#sec-rest",
+        "#sec-retrieval",
+        "#sec-sources",
+        "#sec-split",
+        "#sec-why",
+        "#seo-quick",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/amazing-human-body-facts.html",
+        "../posts/coffee-story-yemen.html",
+        "../posts/why-we-need-sleep.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "mailto:dalilak77505@gmail.com"
+      ],
+      "images": [
+        "../images/editorial/learn-new-skills-guide.jpg"
+      ]
+    },
+    {
       "path": "posts/lemon-mint-drink.html",
       "title": "عصير الليمون بالنعناع المثلج: مشروب الصيف المثالي | دليلك",
-      "description": "طريقة عمل عصير الليمون بالنعناع المثلج في البيت: مكونات بسيطة، نسبة السكر المثالية، نعناع طازج، وأفكار تقديم أنيقة للضيافة.",
+      "description": "عصير ليمون ونعناع منزلي: غسل الثمار، ضبط الحلاوة حسب الحموضة، وإضافة النعناع والثلج قرب التقديم.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/lemon-mint-drink.html",
       "h1": "عصير الليمون بالنعناع المثلج: مشروب الصيف المثالي",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
-        "#support-check",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-guest",
+        "#sec-health",
+        "#sec-ing",
+        "#sec-keep",
+        "#sec-lemon",
+        "#sec-mint",
+        "#sec-mistakes",
+        "#sec-steps",
+        "#sec-sweet",
+        "#sec-var",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -3394,7 +4590,8 @@
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flemon-mint-drink.html&text=%D8%B9%D8%B5%D9%8A%D8%B1%20%D8%A7%D9%84%D9%84%D9%8A%D9%85%D9%88%D9%86%20%D8%A8%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9%20%D8%A7%D9%84%D9%85%D8%AB%D9%84%D8%AC%3A%20%D9%85%D8%B4%D8%B1%D9%88%D8%A8%20%D8%A7%D9%84%D8%B5%D9%8A%D9%81%20%D8%A7%D9%84%D9%85%D8%AB%D8%A7%D9%84%D9%8A",
         "https://wa.me/?text=%D8%B9%D8%B5%D9%8A%D8%B1%20%D8%A7%D9%84%D9%84%D9%8A%D9%85%D9%88%D9%86%20%D8%A8%D8%A7%D9%84%D9%86%D8%B9%D9%86%D8%A7%D8%B9%20%D8%A7%D9%84%D9%85%D8%AB%D9%84%D8%AC%3A%20%D9%85%D8%B4%D8%B1%D9%88%D8%A8%20%D8%A7%D9%84%D8%B5%D9%8A%D9%81%20%D8%A7%D9%84%D9%85%D8%AB%D8%A7%D9%84%D9%8A%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flemon-mint-drink.html",
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flemon-mint-drink.html",
-        "https://www.fda.gov/food/people-risk-foodborne-illness/cleaning-food-safety-moms-be"
+        "https://www.fda.gov/food/people-risk-foodborne-illness/cleaning-food-safety-moms-be",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3411,17 +4608,22 @@
     {
       "path": "posts/lentil-soup-recipe.html",
       "title": "شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة | دليلك",
-      "description": "وصفة شوربة العدس التقليدية خطوة بخطوة: المكونات، طريقة التحضير، أسرار القوام الكريمي والنكهة، وأخطاء شائعة يجب تجنبها.",
+      "description": "شوربة عدس عربية: غسل العدس، تشويح البصل، ضبط القوام بالخلط، والليمون في النهاية، مع حفظ آمن للبقايا.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/lentil-soup-recipe.html",
       "h1": "شوربة العدس الشهية: الوصفة التقليدية خطوة بخطوة",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#support-check",
+        "#sec-batch",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-fix",
+        "#sec-ing",
+        "#sec-keep",
+        "#sec-mistakes",
+        "#sec-steps",
+        "#sec-top",
+        "#sec-var",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -3448,7 +4650,8 @@
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flentil-soup-recipe.html&text=%D8%B4%D9%88%D8%B1%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D8%AF%D8%B3%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%A9%3A%20%D8%A7%D9%84%D9%88%D8%B5%D9%81%D8%A9%20%D8%A7%D9%84%D8%AA%D9%82%D9%84%D9%8A%D8%AF%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9",
         "https://wa.me/?text=%D8%B4%D9%88%D8%B1%D8%A8%D8%A9%20%D8%A7%D9%84%D8%B9%D8%AF%D8%B3%20%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%A9%3A%20%D8%A7%D9%84%D9%88%D8%B5%D9%81%D8%A9%20%D8%A7%D9%84%D8%AA%D9%82%D9%84%D9%8A%D8%AF%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flentil-soup-recipe.html",
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Flentil-soup-recipe.html",
-        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"
+        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3463,23 +4666,68 @@
       ]
     },
     {
+      "path": "posts/microwave-steam-clean.html",
+      "title": "تنظيف الميكروويف بالبخار: طريقة سريعة وآمنة | دليلك",
+      "description": "نظّف الميكروويف من الداخل بالبخار والليمون دون مواد كاوية: خطوات للبقع العنيدة والروائح، مع احتياطات المعادن والأواني ومتى تستدعي فنيًا.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/microwave-steam-clean.html",
+      "h1": "تنظيف الميكروويف بالبخار: طريقة سريعة وآمنة",
+      "links": [
+        "#main-content",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-mistakes",
+        "#sec-safety",
+        "#sec-schedule",
+        "#sec-smell",
+        "#sec-stains",
+        "#sec-steps",
+        "#sec-tools",
+        "#sec-turntable",
+        "#sec-why",
+        "#seo-quick",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/eliminate-bad-smells.html",
+        "../posts/natural-cleaning-recipes.html",
+        "../posts/quick-kitchen-cleaning.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "mailto:dalilak77505@gmail.com"
+      ],
+      "images": [
+        "../images/editorial/microwave-steam-clean.jpg"
+      ]
+    },
+    {
       "path": "posts/natural-cleaning-recipes.html",
       "title": "6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك | دليلك",
-      "description": "دليل تنظيف المنزل بمواد بسيطة مع جدول للأسطح واحتياطات السلامة والمواد التي لا يجوز خلطها، والفرق بين التنظيف والتعقيم.",
+      "description": "دليل تنظيف بمواد بسيطة مع جدول للأسطح واحتياطات السلامة وما لا يجوز خلطه، والفرق بين التنظيف والتعقيم.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/natural-cleaning-recipes.html",
       "h1": "6 وصفات تنظيف طبيعية بمواد موجودة في مطبخك",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
-        "#sec-7",
-        "#seo-check",
-        "#seo-plan",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-lemon",
+        "#sec-mistakes",
+        "#sec-mix",
+        "#sec-order",
+        "#sec-six",
+        "#sec-soda",
+        "#sec-spray",
+        "#sec-surface",
+        "#sec-tools",
+        "#sec-vinegar",
         "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
@@ -3510,7 +4758,8 @@
         "https://wa.me/?text=6%20%D9%88%D8%B5%D9%81%D8%A7%D8%AA%20%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9%20%D8%A8%D9%85%D9%88%D8%A7%D8%AF%20%D9%85%D9%88%D8%AC%D9%88%D8%AF%D8%A9%20%D9%81%D9%8A%20%D9%85%D8%B7%D8%A8%D8%AE%D9%83%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fnatural-cleaning-recipes.html",
         "https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html",
         "https://www.epa.gov/saferchoice",
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fnatural-cleaning-recipes.html"
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fnatural-cleaning-recipes.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3527,19 +4776,24 @@
     {
       "path": "posts/natural-insect-repellents.html",
       "title": "الوقاية من حشرات المنزل ومكافحتها بأمان | دليلك",
-      "description": "دليل للوقاية من حشرات المنزل وتقليل مصادرها واستخدام المصائد أو المنتجات المسجلة وفق التعليمات عند الحاجة.",
+      "description": "دليل وقاية من حشرات المنزل: منع الطعام والماء والشقوق، ثم المصائد والمنتجات المسجلة، ومتى تطلب مختصًا.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/natural-insect-repellents.html",
       "h1": "الوقاية من حشرات المنزل ومكافحتها بأمان",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
-        "#sec-7",
+        "#sec-ants",
+        "#sec-end",
+        "#sec-entry",
+        "#sec-faq",
+        "#sec-mistakes",
+        "#sec-mosquito",
+        "#sec-others",
+        "#sec-pesticide",
+        "#sec-pet",
+        "#sec-prevent",
+        "#sec-roach",
+        "#sec-travel",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -3567,7 +4821,8 @@
         "https://wa.me/?text=%D8%B7%D8%B1%D8%AF%20%D8%A7%D9%84%D8%AD%D8%B4%D8%B1%D8%A7%D8%AA%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%20%D8%A8%D8%B7%D8%B1%D9%82%20%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A%D8%A9%20%D9%88%D8%A2%D9%85%D9%86%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fnatural-insect-repellents.html",
         "https://www.epa.gov/ipm",
         "https://www.epa.gov/safepestcontrol",
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fnatural-insect-repellents.html"
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fnatural-insect-repellents.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3584,18 +4839,21 @@
     {
       "path": "posts/orange-cake-no-oven.html",
       "title": "كيكة البرتقال بدون فرن: طريقة القدر خطوة بخطوة | دليلك",
-      "description": "طريقة عمل كيكة البرتقال الهشة بدون فرن باستخدام القدر: مكونات بسيطة، خطوات واضحة، ونصائح للحصول على كيك رطب وهش.",
+      "description": "كيكة برتقال على الموقد: قدر سميك ونار هادئة جدًا، عدم فتح الغطاء مبكرًا، واختبار النضج قبل القلب.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/orange-cake-no-oven.html",
       "h1": "كيكة البرتقال بدون فرن: طريقة القدر خطوة بخطوة",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#support-check",
+        "#sec-cool",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-ing",
+        "#sec-mistakes",
+        "#sec-mix",
+        "#sec-pan",
+        "#sec-steps",
+        "#sec-trouble",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -3622,7 +4880,8 @@
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Forange-cake-no-oven.html&text=%D9%83%D9%8A%D9%83%D8%A9%20%D8%A7%D9%84%D8%A8%D8%B1%D8%AA%D9%82%D8%A7%D9%84%20%D8%A7%D9%84%D9%87%D8%B4%D8%A9%20%D8%A8%D8%AF%D9%88%D9%86%20%D9%81%D8%B1%D9%86%3A%20%D8%B7%D8%B1%D9%8A%D9%82%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D8%B1%20%D8%A7%D9%84%D8%B3%D8%AD%D8%B1%D9%8A%D8%A9",
         "https://wa.me/?text=%D9%83%D9%8A%D9%83%D8%A9%20%D8%A7%D9%84%D8%A8%D8%B1%D8%AA%D9%82%D8%A7%D9%84%20%D8%A7%D9%84%D9%87%D8%B4%D8%A9%20%D8%A8%D8%AF%D9%88%D9%86%20%D9%81%D8%B1%D9%86%3A%20%D8%B7%D8%B1%D9%8A%D9%82%D8%A9%20%D8%A7%D9%84%D9%82%D8%AF%D8%B1%20%D8%A7%D9%84%D8%B3%D8%AD%D8%B1%D9%8A%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Forange-cake-no-oven.html",
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Forange-cake-no-oven.html",
-        "https://www.fda.gov/media/114863/download"
+        "https://www.fda.gov/media/114863/download",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3639,20 +4898,23 @@
     {
       "path": "posts/organize-fridge-waste.html",
       "title": "كيف تنظم ثلاجتك وتقلل هدر الطعام | دليلك",
-      "description": "طريقة تنظيم الثلاجة وحفظ الطعام بأمان: توزيع الرفوف، درجة الحرارة، تبريد البقايا، نظام الأولوية وقائمة أسبوعية لتقليل الهدر.",
+      "description": "تنظيم الثلاجة: توزيع الرفوف، درجة الحرارة، تبريد البقايا، صندوق استخدم أولًا، وقائمة تسوق تقلل الهدر.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/organize-fridge-waste.html",
       "h1": "كيف تنظم ثلاجتك وتقلل هدر الطعام",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#seo-plan",
+        "#sec-door",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-leftover",
+        "#sec-map",
+        "#sec-meat",
+        "#sec-mistakes",
+        "#sec-produce",
+        "#sec-shop",
+        "#sec-temp",
+        "#sec-week",
         "#seo-quick",
-        "#seo-table",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -3683,7 +4945,8 @@
         "https://wa.me/?text=%D9%83%D9%8A%D9%81%20%D8%AA%D9%86%D8%B8%D9%85%20%D8%AB%D9%84%D8%A7%D8%AC%D8%AA%D9%83%20%D9%88%D8%AA%D9%85%D9%86%D8%B9%20%D9%87%D8%AF%D8%B1%20%D8%A7%D9%84%D8%B7%D8%B9%D8%A7%D9%85%20%D9%86%D9%87%D8%A7%D8%A6%D9%8A%D9%8B%D8%A7%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Forganize-fridge-waste.html",
         "https://www.energystar.gov/products/refrigerators",
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Forganize-fridge-waste.html",
-        "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/refrigeration"
+        "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/refrigeration",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3700,17 +4963,22 @@
     {
       "path": "posts/protect-online-accounts.html",
       "title": "أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين | دليلك",
-      "description": "دليل حماية الحسابات من الاختراق: كلمات مرور فريدة، مدير كلمات المرور، المصادقة متعددة العوامل، مفاتيح المرور وخطة استرداد الحساب.",
+      "description": "حماية الحسابات: بريد رئيسي، كلمات مرور فريدة، مدير كلمات، مصادقة قوية، رموز استرداد، والتصرف عند الاختراق.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/protect-online-accounts.html",
       "h1": "أساسيات حماية حساباتك على الإنترنت: دليل عملي للمبتدئين",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
+        "#sec-daily",
+        "#sec-email",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-hack",
+        "#sec-mfa",
+        "#sec-mistakes",
+        "#sec-pass",
+        "#sec-phish",
+        "#sec-sim",
+        "#sec-social",
         "#seo-check",
         "#seo-plan",
         "#seo-quick",
@@ -3742,7 +5010,8 @@
         "https://wa.me/?text=%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A7%D8%AA%20%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20%D8%AD%D8%B3%D8%A7%D8%A8%D8%A7%D8%AA%D9%83%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%A5%D9%86%D8%AA%D8%B1%D9%86%D8%AA%3A%20%D8%AF%D9%84%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%20%D9%84%D9%84%D9%85%D8%A8%D8%AA%D8%AF%D8%A6%D9%8A%D9%86%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fprotect-online-accounts.html",
         "https://www.cisa.gov/MFA",
         "https://www.cisa.gov/secure-our-world/use-strong-passwords",
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fprotect-online-accounts.html"
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fprotect-online-accounts.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3758,17 +5027,22 @@
     {
       "path": "posts/qishta-basbousa.html",
       "title": "بسبوسة القشطة: حلى سهل يذوب في الفم | دليلك",
-      "description": "طريقة عمل بسبوسة بالقشطة خطوة بخطوة: المكونات، طريقة التحضير، القطر العطري، ونصائح للحصول على بسبوسة طرية ناجحة.",
+      "description": "بسبوسة سميد بطبقة قشطة وقطر: راحة السميد، قشطة متماسكة باردة، وقطر يُسكب تدريجيًا على الساخن.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/qishta-basbousa.html",
       "h1": "بسبوسة القشطة: حلى سهل يذوب في الفم",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#support-check",
+        "#sec-done",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-ing",
+        "#sec-keep",
+        "#sec-layer",
+        "#sec-semolina",
+        "#sec-serve-q",
+        "#sec-steps",
+        "#sec-syrup",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -3795,7 +5069,8 @@
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fqishta-basbousa.html&text=%D8%A8%D8%B3%D8%A8%D9%88%D8%B3%D8%A9%20%D8%A7%D9%84%D9%82%D8%B4%D8%B7%D8%A9%3A%20%D8%AD%D9%84%D9%89%20%D8%B3%D9%87%D9%84%20%D9%8A%D8%B0%D9%88%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%81%D9%85",
         "https://wa.me/?text=%D8%A8%D8%B3%D8%A8%D9%88%D8%B3%D8%A9%20%D8%A7%D9%84%D9%82%D8%B4%D8%B7%D8%A9%3A%20%D8%AD%D9%84%D9%89%20%D8%B3%D9%87%D9%84%20%D9%8A%D8%B0%D9%88%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D9%81%D9%85%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fqishta-basbousa.html",
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fqishta-basbousa.html",
-        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"
+        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3812,19 +5087,23 @@
     {
       "path": "posts/quick-kitchen-cleaning.html",
       "title": "تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة | دليلك",
-      "description": "خطة تنظيف المطبخ في 30 دقيقة: الترتيب الصحيح للتنظيف، أدوات سريعة، وحيل لتوفير الوقت في المطابخ المزدحمة.",
+      "description": "خطة تنظيف مطبخ مرتبة من الأعلى إلى الأسفل مع الفرق بين التنظيف والتعقيم واحتياطات السطوح الساخنة والدهون.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/quick-kitchen-cleaning.html",
       "h1": "تنظيف المطبخ في 30 دقيقة: خطة سريعة للمطابخ المزدحمة",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
-        "#support-check",
+        "#sec-deep",
+        "#sec-dishes",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-food",
+        "#sec-habit",
+        "#sec-mistakes",
+        "#sec-order",
+        "#sec-stove",
+        "#sec-tools",
+        "#sec-zones",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -3852,7 +5131,8 @@
         "https://wa.me/?text=%D8%AA%D9%86%D8%B8%D9%8A%D9%81%20%D8%A7%D9%84%D9%85%D8%B7%D8%A8%D8%AE%20%D9%81%D9%8A%2030%20%D8%AF%D9%82%D9%8A%D9%82%D8%A9%3A%20%D8%AE%D8%B7%D8%A9%20%D8%B3%D8%B1%D9%8A%D8%B9%D8%A9%20%D9%84%D9%84%D9%85%D8%B7%D8%A7%D8%A8%D8%AE%20%D8%A7%D9%84%D9%85%D8%B2%D8%AF%D8%AD%D9%85%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fquick-kitchen-cleaning.html",
         "https://www.cdc.gov/hygiene/about/when-and-how-to-clean-and-disinfect-your-home.html",
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fquick-kitchen-cleaning.html",
-        "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/cleanliness-helps-prevent"
+        "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/cleanliness-helps-prevent",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3867,21 +5147,70 @@
       ]
     },
     {
+      "path": "posts/rice-pudding-recipe.html",
+      "title": "أرز بالحليب كريمي: حلوى سهلة على الموقد | دليلك",
+      "description": "حلوى الأرز بالحليب منزلية: أرز قصير الحبة، حليب وسكر وفانيليا، تحريك هادئ حتى يكثف، ونكهات القرفة وماء الورد مع حفظ آمن.",
+      "canonical": "https://sbdh1285.github.io/dalilak/posts/rice-pudding-recipe.html",
+      "h1": "أرز بالحليب كريمي: حلوى سهلة على الموقد",
+      "links": [
+        "#main-content",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-flavors",
+        "#sec-ing",
+        "#sec-lactose",
+        "#sec-mistakes",
+        "#sec-serve",
+        "#sec-steps",
+        "#sec-store",
+        "#sec-texture",
+        "#sec-why",
+        "#seo-quick",
+        "../about.html",
+        "../authors/editorial-team.html",
+        "../category/home-tips.html",
+        "../category/knowledge.html",
+        "../category/recipes.html",
+        "../category/tech.html",
+        "../contact.html",
+        "../disclaimer.html",
+        "../editorial-policy.html",
+        "../guide-safe-cleaning.html",
+        "../index.html",
+        "../posts/lentil-soup-recipe.html",
+        "../posts/orange-cake-no-oven.html",
+        "../posts/qishta-basbousa.html",
+        "../privacy-policy.html",
+        "../sitemap.html",
+        "../terms.html",
+        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf",
+        "mailto:dalilak77505@gmail.com"
+      ],
+      "images": [
+        "../images/editorial/rice-pudding-recipe.jpg"
+      ]
+    },
+    {
       "path": "posts/safe-online-payments.html",
       "title": "الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك | دليلك",
-      "description": "دليل الدفع الإلكتروني بأمان: فحص المتجر، حماية البطاقة، تجنب التصيد، التصرف بعد عملية مشبوهة وحفظ أدلة الشراء.",
+      "description": "فحص المتجر قبل الدفع، حماية البطاقة والرموز، تجنب التصيد، والاعتراض بعد عملية مشبوهة مع حفظ الأدلة.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/safe-online-payments.html",
       "h1": "الدفع الإلكتروني بأمان: دليلك الكامل لحماية أموالك",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#seo-incident",
-        "#seo-plan",
+        "#sec-3ds",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-incident",
+        "#sec-invoice",
+        "#sec-mistakes",
+        "#sec-pay",
+        "#sec-phish",
+        "#sec-public",
+        "#sec-redflags",
+        "#sec-shop",
+        "#sec-social",
+        "#sec-sub",
         "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
@@ -3909,7 +5238,8 @@
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsafe-online-payments.html&text=%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D8%A7%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%20%D8%A8%D8%A3%D9%85%D8%A7%D9%86%3A%20%D8%AF%D9%84%D9%8A%D9%84%D9%83%20%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%20%D9%84%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20%D8%A3%D9%85%D9%88%D8%A7%D9%84%D9%83",
         "https://wa.me/?text=%D8%A7%D9%84%D8%AF%D9%81%D8%B9%20%D8%A7%D9%84%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%20%D8%A8%D8%A3%D9%85%D8%A7%D9%86%3A%20%D8%AF%D9%84%D9%8A%D9%84%D9%83%20%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%20%D9%84%D8%AD%D9%85%D8%A7%D9%8A%D8%A9%20%D8%A3%D9%85%D9%88%D8%A7%D9%84%D9%83%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsafe-online-payments.html",
         "https://www.cisa.gov/news-events/news/shop-safely-online-holiday-season-tips-secure-our-world",
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsafe-online-payments.html"
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsafe-online-payments.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3925,20 +5255,22 @@
     {
       "path": "posts/samosa-cheese-dough.html",
       "title": "سمبوسك الجبن المقرمش: وصفة العجينة الذهبية | دليلك",
-      "description": "طريقة عمل سمبوسك الجبن المقرمش: عجينة ذهبية هشة، حشوة الجبن الذائب، القلي والفرن، ونصائح لتجنب التسريب.",
+      "description": "سمبوسك جبن بعجينة منزلية: عجينة مرتاحة، حشوة قليلة الرطوبة، إغلاق محكم، وقلي متوسط أو فرن.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/samosa-cheese-dough.html",
       "h1": "سمبوسك الجبن المقرمش: وصفة العجينة الذهبية",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
-        "#sec-7",
-        "#support-check",
+        "#sec-cook",
+        "#sec-dough",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-fill",
+        "#sec-fold",
+        "#sec-freeze",
+        "#sec-mistakes",
+        "#sec-oil",
+        "#sec-serve",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -3965,7 +5297,8 @@
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsamosa-cheese-dough.html&text=%D8%B3%D9%85%D8%A8%D9%88%D8%B3%D9%83%20%D8%A7%D9%84%D8%AC%D8%A8%D9%86%20%D8%A7%D9%84%D9%85%D9%82%D8%B1%D9%85%D8%B4%3A%20%D9%88%D8%B5%D9%81%D8%A9%20%D8%A7%D9%84%D8%B9%D8%AC%D9%8A%D9%86%D8%A9%20%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9",
         "https://wa.me/?text=%D8%B3%D9%85%D8%A8%D9%88%D8%B3%D9%83%20%D8%A7%D9%84%D8%AC%D8%A8%D9%86%20%D8%A7%D9%84%D9%85%D9%82%D8%B1%D9%85%D8%B4%3A%20%D9%88%D8%B5%D9%81%D8%A9%20%D8%A7%D9%84%D8%B9%D8%AC%D9%8A%D9%86%D8%A9%20%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsamosa-cheese-dough.html",
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsamosa-cheese-dough.html",
-        "https://www.fda.gov/media/114863/download"
+        "https://www.fda.gov/media/114863/download",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -3982,25 +5315,25 @@
     {
       "path": "posts/save-electricity-bill.html",
       "title": "10 خطوات عملية لتقليل استهلاك الكهرباء في المنزل | دليلك",
-      "description": "خطوات عملية لتقليل استهلاك الكهرباء في المنزل عبر قياس الاستهلاك وضبط التكييف والإضاءة والغسيل والأجهزة دون وعود توفير مبالغ فيها.",
+      "description": "خفض استهلاك الكهرباء بالقياس أولًا ثم التكييف والإضاءة والغسيل والأجهزة، من غير وعد بنسبة توفير واحدة للجميع.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/save-electricity-bill.html",
       "h1": "10 خطوات عملية لتقليل استهلاك الكهرباء في المنزل",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-10",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
-        "#sec-7",
-        "#sec-8",
-        "#sec-9",
-        "#seo-plan",
+        "#sec-ac",
+        "#sec-audit",
+        "#sec-buy",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-kitchen",
+        "#sec-laundry",
+        "#sec-light",
+        "#sec-mistakes",
+        "#sec-read",
+        "#sec-seal",
+        "#sec-standby",
+        "#sec-waterheat",
         "#seo-quick",
-        "#seo-table",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -4030,7 +5363,8 @@
         "https://wa.me/?text=10%20%D8%B7%D8%B1%D9%82%20%D8%B0%D9%83%D9%8A%D8%A9%20%D9%84%D8%AA%D8%AE%D9%81%D9%8A%D8%B6%20%D9%81%D8%A7%D8%AA%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%83%D9%87%D8%B1%D8%A8%D8%A7%D8%A1%20%D8%AF%D9%88%D9%86%20%D8%AA%D8%BA%D9%8A%D9%8A%D8%B1%20%D8%B9%D8%A7%D8%AF%D8%A7%D8%AA%D9%83%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsave-electricity-bill.html",
         "https://www.energystar.gov/saveathome",
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsave-electricity-bill.html",
-        "https://www.iea.org/topics/energy-efficiency"
+        "https://www.iea.org/topics/energy-efficiency",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -4047,22 +5381,23 @@
     {
       "path": "posts/save-mobile-data.html",
       "title": "توفير بيانات الجوال: 8 حيل عملية توفر لك الكثير | دليلك",
-      "description": "8 حيل عملية لتوفير بيانات الجوال: معرفة التطبيقات الشرهة، إيقاف التحديثات التلقائية، تحميل الخرائط مسبقًا، وضغط الفيديو.",
+      "description": "تقليل بيانات الجوال: معرفة التطبيقات الشرهة، التحديث عبر واي فاي، جودة الفيديو، والخرائط دون اتصال، مع اختلاف أسماء الإعدادات.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/save-mobile-data.html",
       "h1": "توفير بيانات الجوال: 8 حيل عملية توفر لك الكثير",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
-        "#sec-7",
-        "#sec-8",
-        "#sec-9",
-        "#support-check",
+        "#sec-cloud",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-hogs",
+        "#sec-hotspot",
+        "#sec-measure",
+        "#sec-mistakes",
+        "#sec-offline",
+        "#sec-roam",
+        "#sec-settings",
+        "#sec-video",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -4088,7 +5423,8 @@
         "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsave-mobile-data.html&text=%D8%AA%D9%88%D9%81%D9%8A%D8%B1%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%84%3A%208%20%D8%AD%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D8%AA%D9%88%D9%81%D8%B1%20%D9%84%D9%83%20%D8%A7%D9%84%D9%83%D8%AB%D9%8A%D8%B1",
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsave-mobile-data.html&text=%D8%AA%D9%88%D9%81%D9%8A%D8%B1%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%84%3A%208%20%D8%AD%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D8%AA%D9%88%D9%81%D8%B1%20%D9%84%D9%83%20%D8%A7%D9%84%D9%83%D8%AB%D9%8A%D8%B1",
         "https://wa.me/?text=%D8%AA%D9%88%D9%81%D9%8A%D8%B1%20%D8%A8%D9%8A%D8%A7%D9%86%D8%A7%D8%AA%20%D8%A7%D9%84%D8%AC%D9%88%D8%A7%D9%84%3A%208%20%D8%AD%D9%8A%D9%84%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D8%AA%D9%88%D9%81%D8%B1%20%D9%84%D9%83%20%D8%A7%D9%84%D9%83%D8%AB%D9%8A%D8%B1%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsave-mobile-data.html",
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsave-mobile-data.html"
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fsave-mobile-data.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -4104,21 +5440,24 @@
     {
       "path": "posts/speed-up-slow-computer.html",
       "title": "تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة | دليلك",
-      "description": "7 خطوات مجانية لتسريع الكمبيوتر البطيء: إعادة التشغيل، برامج بدء التشغيل، تنظيف القرص، البرامج الضارة، والترقية الذكية.",
+      "description": "تسريع حاسوب بطيء: نسخة احتياطية، برامج بدء التشغيل، مساحة القرص، فحص ضار موثوق، وترقية مدروسة دون منظفات سجل مجهولة.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/speed-up-slow-computer.html",
       "h1": "تسريع الكمبيوتر البطيء: 7 خطوات مجانية وفعالة",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
-        "#sec-7",
-        "#sec-8",
-        "#support-check",
+        "#sec-browser",
+        "#sec-diag",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-heat",
+        "#sec-mistakes",
+        "#sec-scan",
+        "#sec-startup",
+        "#sec-steps",
+        "#sec-storage",
+        "#sec-update",
+        "#sec-upgrade",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -4145,7 +5484,8 @@
         "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fspeed-up-slow-computer.html&text=%D8%AA%D8%B3%D8%B1%D9%8A%D8%B9%20%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%20%D8%A7%D9%84%D8%A8%D8%B7%D9%8A%D8%A1%3A%207%20%D8%AE%D8%B7%D9%88%D8%A7%D8%AA%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%88%D9%81%D8%B9%D8%A7%D9%84%D8%A9",
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fspeed-up-slow-computer.html&text=%D8%AA%D8%B3%D8%B1%D9%8A%D8%B9%20%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%20%D8%A7%D9%84%D8%A8%D8%B7%D9%8A%D8%A1%3A%207%20%D8%AE%D8%B7%D9%88%D8%A7%D8%AA%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%88%D9%81%D8%B9%D8%A7%D9%84%D8%A9",
         "https://wa.me/?text=%D8%AA%D8%B3%D8%B1%D9%8A%D8%B9%20%D8%A7%D9%84%D9%83%D9%85%D8%A8%D9%8A%D9%88%D8%AA%D8%B1%20%D8%A7%D9%84%D8%A8%D8%B7%D9%8A%D8%A1%3A%207%20%D8%AE%D8%B7%D9%88%D8%A7%D8%AA%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%88%D9%81%D8%B9%D8%A7%D9%84%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fspeed-up-slow-computer.html",
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fspeed-up-slow-computer.html"
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fspeed-up-slow-computer.html",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -4161,17 +5501,25 @@
     {
       "path": "posts/tidy-home-in-15-minutes.html",
       "title": "ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية | دليلك",
-      "description": "خطة عملية لترتيب المنزل في 15 دقيقة يوميًا فقط: جدول أسبوعي، قواعد ذهبية، وأدوات تساعدك على الحفاظ على ترتيب البيت بصورة أسهل.",
+      "description": "خطة مرنة لترتيب يومي قصير: نتيجة واحدة واضحة، مسار الغرف، وما لا تحمله إن كان يؤلم أو يهدد بالسقوط.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/tidy-home-in-15-minutes.html",
       "h1": "ترتيب المنزل في 15 دقيقة يوميًا: خطة عملية",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#support-check",
+        "#sec-basket",
+        "#sec-body",
+        "#sec-deep",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-habits",
+        "#sec-kids",
+        "#sec-kitchen",
+        "#sec-minutes",
+        "#sec-mistakes",
+        "#sec-one",
+        "#sec-week",
+        "#sec-zones",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -4197,7 +5545,10 @@
         "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ftidy-home-in-15-minutes.html&text=%D8%AA%D8%B1%D8%AA%D9%8A%D8%A8%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%20%D9%81%D9%8A%2015%20%D8%AF%D9%82%D9%8A%D9%82%D8%A9%20%D9%8A%D9%88%D9%85%D9%8A%D9%8B%D8%A7%3A%20%D8%AE%D8%B7%D8%A9%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%85%D8%AC%D8%B1%D9%91%D8%A8%D8%A9",
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ftidy-home-in-15-minutes.html&text=%D8%AA%D8%B1%D8%AA%D9%8A%D8%A8%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%20%D9%81%D9%8A%2015%20%D8%AF%D9%82%D9%8A%D9%82%D8%A9%20%D9%8A%D9%88%D9%85%D9%8A%D9%8B%D8%A7%3A%20%D8%AE%D8%B7%D8%A9%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%85%D8%AC%D8%B1%D9%91%D8%A8%D8%A9",
         "https://wa.me/?text=%D8%AA%D8%B1%D8%AA%D9%8A%D8%A8%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%20%D9%81%D9%8A%2015%20%D8%AF%D9%82%D9%8A%D9%82%D8%A9%20%D9%8A%D9%88%D9%85%D9%8A%D9%8B%D8%A7%3A%20%D8%AE%D8%B7%D8%A9%20%D8%B9%D9%85%D9%84%D9%8A%D8%A9%20%D9%85%D8%AC%D8%B1%D9%91%D8%A8%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ftidy-home-in-15-minutes.html",
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ftidy-home-in-15-minutes.html"
+        "https://www.cdc.gov/steadi/pdf/check_for_safety_brochure-a.pdf",
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Ftidy-home-in-15-minutes.html",
+        "https://www.nia.nih.gov/health/falls-and-falls-prevention/falls-and-fractures-older-adults-causes-and-prevention",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -4214,22 +5565,24 @@
     {
       "path": "posts/used-smartphone-checklist.html",
       "title": "شراء هاتف مستعمل: قائمة فحص قبل الدفع | دليلك",
-      "description": "قائمة فحص عملية للهاتف المستعمل تشمل الملكية وقفل التنشيط والتحديثات والبطارية والشاشة والكاميرا والشبكة وإعادة الضبط الآمنة.",
+      "description": "فحص هاتف مستعمل: الملكية وقفل التنشيط، البطارية والشاشة والكاميرا والشبكة، والتحديثات، وإعادة الضبط بعد إزالة حساب البائع.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/used-smartphone-checklist.html",
       "h1": "شراء هاتف مستعمل: قائمة فحص قبل الدفع",
       "links": [
-        "#after",
-        "#battery",
-        "#conclusion",
-        "#deal",
-        "#hardware",
         "#main-content",
-        "#ownership",
-        "#price",
-        "#quick",
-        "#receipt",
-        "#repair",
-        "#software",
+        "#sec-after",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-hw",
+        "#sec-imei",
+        "#sec-meet",
+        "#sec-mistakes",
+        "#sec-own",
+        "#sec-price",
+        "#sec-repair",
+        "#sec-sw",
+        "#sec-water",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -4248,7 +5601,8 @@
         "../sitemap.html",
         "../terms.html",
         "https://support.google.com/android/answer/7680439",
-        "https://support.google.com/pixelphone/answer/4596836"
+        "https://support.google.com/pixelphone/answer/4596836",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/used-smartphone-checklist.jpg"
@@ -4256,19 +5610,21 @@
     },
     {
       "path": "posts/why-we-need-sleep.html",
-      "title": "لماذا نحتاج إلى النوم؟ أهمية النوم لصحتك وعقلك | دليلك",
-      "description": "لماذا نحتاج النوم؟ مراحل النوم، فوائده للذاكرة والمناعة، مخاطر الحرمان من النوم، ونصائح علمية لنوم أفضل وأعمق.",
+      "title": "النوم الصحي: كم نحتاج وما الذي يعطّل النوم؟ | دليلك",
+      "description": "شرح مبسط لأهمية النوم ومراحله والحرمان منه، مع عادات عملية للإيقاع اليومي وحدود النصائح العامة.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/why-we-need-sleep.html",
-      "h1": "لماذا نحتاج إلى النوم؟ أهمية النوم لصحتك وعقلك",
+      "h1": "النوم الصحي: كم نحتاج وما الذي يعطّل النوم؟",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#support-check",
+        "#sec-danger",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-habits",
+        "#sec-need",
+        "#sec-shift",
+        "#sec-stages",
+        "#sec-why",
+        "#seo-quick",
         "../about.html",
         "../authors/editorial-team.html",
         "../category/home-tips.html",
@@ -4294,7 +5650,8 @@
         "https://wa.me/?text=%D9%84%D9%85%D8%A7%D8%B0%D8%A7%20%D9%86%D8%AD%D8%AA%D8%A7%D8%AC%20%D8%A5%D9%84%D9%89%20%D8%A7%D9%84%D9%86%D9%88%D9%85%D8%9F%20%D8%A3%D9%87%D9%85%D9%8A%D8%A9%20%D8%A7%D9%84%D9%86%D9%88%D9%85%20%D9%84%D8%B5%D8%AD%D8%AA%D9%83%20%D9%88%D8%B9%D9%82%D9%84%D9%83%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fwhy-we-need-sleep.html",
         "https://www.cdc.gov/sleep/about/index.html",
         "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fwhy-we-need-sleep.html",
-        "https://www.nhlbi.nih.gov/health/sleep-deprivation"
+        "https://www.nhlbi.nih.gov/health/sleep-deprivation",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -4309,20 +5666,22 @@
     {
       "path": "posts/zaatar-manakeesh.html",
       "title": "مناقيش الزعتر: وصفة بيتية سهلة واقتصادية خطوة بخطوة | دليلك",
-      "description": "طريقة مناقيش الزعتر في البيت بمقادير موزونة: عجينة طرية، تخمير صحيح، خلطة زعتر متوازنة وخبز على حرارة مرتفعة.",
+      "description": "مناقيش زعتر منزلية: عجينة بميزان تقريبي، تخمير حتى الانتفاخ، خلطة زعتر متوازنة، وصينية ساخنة.",
       "canonical": "https://sbdh1285.github.io/dalilak/posts/zaatar-manakeesh.html",
       "h1": "مناقيش الزعتر: وصفة بيتية سهلة واقتصادية خطوة بخطوة",
       "links": [
         "#main-content",
-        "#sec-0",
-        "#sec-1",
-        "#sec-2",
-        "#sec-3",
-        "#sec-4",
-        "#sec-5",
-        "#sec-6",
+        "#sec-bake",
+        "#sec-dough",
+        "#sec-end",
+        "#sec-faq",
+        "#sec-ingredients",
+        "#sec-mistakes",
+        "#sec-serve-z",
+        "#sec-store",
+        "#sec-yeast",
+        "#sec-zaatar",
         "#seo-quick",
-        "#seo-store",
         "#seo-table",
         "../about.html",
         "../authors/editorial-team.html",
@@ -4350,7 +5709,10 @@
         "https://t.me/share/url?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fzaatar-manakeesh.html&text=%D9%85%D9%86%D8%A7%D9%82%D9%8A%D8%B4%20%D8%A7%D9%84%D8%B2%D8%B9%D8%AA%D8%B1%3A%20%D9%88%D8%B5%D9%81%D8%A9%20%D8%A8%D9%8A%D8%AA%D9%8A%D8%A9%20%D8%B3%D9%87%D9%84%D8%A9%20%D9%88%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9",
         "https://twitter.com/intent/tweet?url=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fzaatar-manakeesh.html&text=%D9%85%D9%86%D8%A7%D9%82%D9%8A%D8%B4%20%D8%A7%D9%84%D8%B2%D8%B9%D8%AA%D8%B1%3A%20%D9%88%D8%B5%D9%81%D8%A9%20%D8%A8%D9%8A%D8%AA%D9%8A%D8%A9%20%D8%B3%D9%87%D9%84%D8%A9%20%D9%88%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9",
         "https://wa.me/?text=%D9%85%D9%86%D8%A7%D9%82%D9%8A%D8%B4%20%D8%A7%D9%84%D8%B2%D8%B9%D8%AA%D8%B1%3A%20%D9%88%D8%B5%D9%81%D8%A9%20%D8%A8%D9%8A%D8%AA%D9%8A%D8%A9%20%D8%B3%D9%87%D9%84%D8%A9%20%D9%88%D8%A7%D9%82%D8%AA%D8%B5%D8%A7%D8%AF%D9%8A%D8%A9%20%D8%AE%D8%B7%D9%88%D8%A9%20%D8%A8%D8%AE%D8%B7%D9%88%D8%A9%20https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fzaatar-manakeesh.html",
-        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fzaatar-manakeesh.html"
+        "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsbdh1285.github.io%2Fdalilak%2Fposts%2Fzaatar-manakeesh.html",
+        "https://www.fda.gov/media/154050/download",
+        "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf",
+        "mailto:dalilak77505@gmail.com"
       ],
       "images": [
         "../images/editorial/age-of-earth.jpg",
@@ -4367,7 +5729,7 @@
     {
       "path": "privacy-policy.html",
       "title": "سياسة الخصوصية | دليلك",
-      "description": "سياسة خصوصية دليلك الحالية: الاستضافة والتخزين المحلي وحالة التواصل والتحليلات والإعلانات.",
+      "description": "سياسة خصوصية دليلك: الاستضافة والتخزين المحلي وحالة التواصل وخطط الإعلانات المستقبلية.",
       "canonical": "https://sbdh1285.github.io/dalilak/privacy-policy.html",
       "h1": "سياسة الخصوصية",
       "links": [
@@ -4383,6 +5745,7 @@
         "editorial-policy.html",
         "guide-safe-cleaning.html",
         "index.html",
+        "mailto:dalilak77505@gmail.com",
         "privacy-policy.html",
         "sitemap.html",
         "terms.html"
@@ -4408,6 +5771,7 @@
         "editorial-policy.html",
         "guide-safe-cleaning.html",
         "index.html",
+        "mailto:dalilak77505@gmail.com",
         "privacy-policy.html",
         "sitemap.html",
         "terms.html"
@@ -4436,24 +5800,31 @@
         "guide-safe-cleaning.html",
         "guide-smartphone.html",
         "index.html",
+        "mailto:dalilak77505@gmail.com",
         "posts/account-recovery-plan.html",
         "posts/age-of-earth.html",
         "posts/ai-explained-simply.html",
         "posts/amazing-animal-facts.html",
         "posts/amazing-human-body-facts.html",
         "posts/amazing-water-facts.html",
+        "posts/android-security-settings.html",
+        "posts/arabic-coffee-guide.html",
+        "posts/backup-photos-guide.html",
         "posts/chicken-kabsa.html",
         "posts/choose-smartphone-budget.html",
         "posts/cleaning-products-never-mix.html",
         "posts/coffee-story-yemen.html",
+        "posts/drain-maintenance-tips.html",
         "posts/eliminate-bad-smells.html",
         "posts/essential-android-apps.html",
         "posts/fruit-salad-recipe.html",
         "posts/galaxies-and-stars.html",
         "posts/gulf-rice-spices-guide.html",
         "posts/laundry-guide-tips.html",
+        "posts/learn-new-skills-guide.html",
         "posts/lemon-mint-drink.html",
         "posts/lentil-soup-recipe.html",
+        "posts/microwave-steam-clean.html",
         "posts/natural-cleaning-recipes.html",
         "posts/natural-insect-repellents.html",
         "posts/orange-cake-no-oven.html",
@@ -4461,6 +5832,7 @@
         "posts/protect-online-accounts.html",
         "posts/qishta-basbousa.html",
         "posts/quick-kitchen-cleaning.html",
+        "posts/rice-pudding-recipe.html",
         "posts/safe-online-payments.html",
         "posts/samosa-cheese-dough.html",
         "posts/save-electricity-bill.html",
@@ -4479,7 +5851,7 @@
     {
       "path": "terms.html",
       "title": "شروط الاستخدام | دليلك",
-      "description": "شروط استخدام موقع دليلك: حقوق الملكية، استخدام المحتوى، وإخلاء المسؤولية.",
+      "description": "شروط استخدام دليلك: طبيعة المحتوى والملكية وحدود المسؤولية والإعلانات.",
       "canonical": "https://sbdh1285.github.io/dalilak/terms.html",
       "h1": "شروط الاستخدام",
       "links": [
@@ -4495,6 +5867,7 @@
         "editorial-policy.html",
         "guide-safe-cleaning.html",
         "index.html",
+        "mailto:dalilak77505@gmail.com",
         "privacy-policy.html",
         "sitemap.html",
         "terms.html"
@@ -4520,6 +5893,7 @@
         "editorial-policy.html",
         "guide-safe-cleaning.html",
         "index.html",
+        "mailto:dalilak77505@gmail.com",
         "privacy-policy.html",
         "sitemap.html",
         "terms.html"
