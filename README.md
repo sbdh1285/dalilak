@@ -76,7 +76,7 @@ python3 tools/audit_site.py
 python3 tools/configure_domain.py --domain example.com --email contact@example.com --enable-contact
 ```
 
-ينشئ الأمر `CNAME` ويحدث canonical وSchema وsitemap وRSS وrobots والنموذج. لا تستخدم `--enable-contact` قبل إنشاء البريد والتأكد من استقباله.
+ينشئ الأمر `CNAME` ويحدث الروابط والبريد في ملفات النشر (بما فيها روابط المشاركة المرمزة)، ثم يعيد التوليد الآمن ويتحقق بكل بوابات الجودة. لا تستخدم `--enable-contact` قبل إنشاء البريد والتأكد من استقباله. راجع قائمة الجاهزية ويوم الربط في `docs/domain-readiness.md`.
 
 ## نموذج التواصل
 
