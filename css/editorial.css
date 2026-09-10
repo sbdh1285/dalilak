@@ -39,7 +39,7 @@
 .ed-hero-side{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow-sm);padding:20px;display:flex;flex-direction:column;gap:6px}
 .ed-side-head{display:flex;align-items:center;justify-content:space-between;padding:2px 4px 14px;border-bottom:1px solid var(--line);margin-bottom:8px}
 .ed-side-head .ed-kicker{background:transparent;padding:4px 0}
-.ed-side-item{display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:center;padding:12px 10px;border-radius:var(--r-md);transition:background .18s;color:var(--text)}
+.ed-side-item{flex:1;display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:center;align-content:center;padding:12px 10px;border-radius:var(--r-md);transition:background .18s;color:var(--text)}
 .ed-side-item:hover{background:var(--surface-2);color:var(--text)}
 .ed-side-num{font-family:var(--title);font-weight:800;font-size:1.7rem;color:#C5CCF2;line-height:1;transition:color .18s}
 [data-theme="dark"] .ed-side-num{color:#39406E}
@@ -89,8 +89,8 @@
 .ed-band-lead:hover h3{color:var(--primary)}
 [data-theme="dark"] .ed-band-lead:hover h3{color:var(--secondary)}
 .ed-band-lead p{margin:0;color:var(--muted);font-size:.9rem}
-.ed-band-list{display:grid;gap:12px;align-content:start}
-.ed-band-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:16px 18px;transition:transform .18s,border-color .18s;color:var(--text)}
+.ed-band-list{display:grid;gap:12px;align-content:stretch;grid-auto-rows:1fr}
+.ed-band-item{display:flex;flex-direction:column;justify-content:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:16px 18px;transition:transform .18s,border-color .18s;color:var(--text)}
 .ed-band-item:hover{transform:translateX(-4px);border-color:var(--accent);color:var(--text)}
 .ed-band-item h4{display:flex;align-items:center;gap:10px;font-size:.96rem;font-weight:700;line-height:1.7}
 .ed-band-item h4:before{content:"";flex:0 0 7px;width:7px;height:7px;background:var(--accent);transform:rotate(45deg);border-radius:1.5px}

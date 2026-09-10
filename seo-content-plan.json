@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17",
+  "updated": "2026-09-09",
   "siteFocus": "مجلة عربية عملية للمنزل والطعام والمعرفة الرقمية والمعلومات المبسطة",
   "strategy": "بناء عناقيد مترابطة والتركيز على نية البحث والقيمة الأصلية بدل كثافة الكلمات المفتاحية",
   "articles": [
@@ -274,6 +274,62 @@
       "intent": "informational",
       "role": "supporting",
       "priority": 2
+    },
+    {
+      "slug": "android-security-settings",
+      "targetQuery": "إعدادات أمان أندرويد الأساسية",
+      "cluster": "الأمان الرقمي",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "backup-photos-guide",
+      "targetQuery": "طريقة النسخ الاحتياطي للصور والملفات",
+      "cluster": "النسخ الاحتياطي",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "microwave-steam-clean",
+      "targetQuery": "طريقة تنظيف الميكروويف بالبخار",
+      "cluster": "التنظيف الآمن",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "drain-maintenance-tips",
+      "targetQuery": "منع انسداد مصارف المطبخ والحمام",
+      "cluster": "صيانة المنزل",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "arabic-coffee-guide",
+      "targetQuery": "طريقة تحضير القهوة العربية في البيت",
+      "cluster": "مشروبات منزلية",
+      "intent": "recipe",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "rice-pudding-recipe",
+      "targetQuery": "طريقة عمل أرز بالحليب",
+      "cluster": "حلويات عربية",
+      "intent": "recipe",
+      "role": "supporting",
+      "priority": 2
+    },
+    {
+      "slug": "learn-new-skills-guide",
+      "targetQuery": "كيف أتعلم مهارة جديدة بسرعة",
+      "cluster": "تطوير الذات",
+      "intent": "informational",
+      "role": "supporting",
+      "priority": 3
     }
   ]
 }

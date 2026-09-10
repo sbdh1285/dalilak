@@ -13,7 +13,7 @@ from urllib.parse import quote
 ROOT = Path(__file__).resolve().parents[1]
 SITE_CONFIG = json.loads((ROOT / "site-config.json").read_text(encoding="utf-8")) if (ROOT / "site-config.json").exists() else {}
 BASE = SITE_CONFIG.get("baseUrl", "https://sbdh1285.github.io/dalilak").rstrip("/")
-TODAY = "2026-08-17"
+TODAY = date.today().isoformat()
 
 CATEGORY_ICONS = {
     "نصائح منزلية": "🏠",
@@ -146,10 +146,17 @@ SOURCES = {
     ],
     "tidy-home-in-15-minutes": [
         ("المعهد الوطني للشيخوخة (NIA) — الوقاية من السقوط وإزالة مخاطر التعثر في المنزل", "https://www.nia.nih.gov/health/falls-and-falls-prevention/falls-and-fractures-older-adults-causes-and-prevention"),
-        ("مراكز مكافحة الأمراض (CDC) — فحص المنزل للوقاية من السقوط", "https://www.cdc.gov/steadi/pdf/check_for_safety_brochure-a.pdf"),
+        ("مراكز مكافحة الأمراض (CDC) — قائمة فحص المنزل للوقاية من السقوط", "https://www.cdc.gov/steadi/pdf/steadi-brochure-checkforsafety-508.pdf"),
     ],
     "zaatar-manakeesh": [
         ("إدارة الغذاء والدواء الأمريكية (FDA) — سلامة الطعام في المنزل: تنظيف وفصل وطهي وتبريد", "https://www.fda.gov/media/154050/download"),
+        ("وزارة الزراعة الأمريكية (USDA FSIS) — دليل سلامة الطعام في المطبخ", "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"),
+    ],
+    "android-security-settings": [
+        ("CISA — كلمات المرور القوية", "https://www.cisa.gov/secure-our-world/use-strong-passwords"),
+        ("CISA — المصادقة المقاومة للتصيد", "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf"),
+    ],
+    "rice-pudding-recipe": [
         ("وزارة الزراعة الأمريكية (USDA FSIS) — دليل سلامة الطعام في المطبخ", "https://www.fsis.usda.gov/sites/default/files/media_file/2020-12/Kitchen-Companion.pdf"),
     ],
 }
@@ -368,7 +375,7 @@ def standard_head(title: str, description: str, canonical: str, prefix: str = ""
 <link rel="preload" href="{prefix}fonts/tajawal-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="{prefix}favicon.svg">
 <link rel="manifest" href="{prefix}manifest.json">
-<link rel="stylesheet" href="{prefix}css/style.css?v=21">
+<link rel="stylesheet" href="{prefix}css/style.css?v=22">
 </head>'''
 
 
