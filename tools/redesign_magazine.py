@@ -99,7 +99,7 @@ def article_records()->dict[str,dict]:
         body_end=min(body_ends) if body_ends else len(text)
         reading_minutes=calculate_reading_minutes(text[body_start:body_end])
         custom_cover=ROOT/'images'/'covers'/f'{path.stem}.jpg'
-        fallback=COVERS.get(path.stem,(f"images/og-{path.stem}.png",data["headline"]))
+        fallback=COVERS.get(path.stem,("images/og-default.png",data["headline"]))
         configured=ARTICLE_IMAGES.get(path.stem)
         if configured:
             cover_path=configured['path'];cover_alt=configured['alt']
