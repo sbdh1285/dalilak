@@ -158,7 +158,7 @@ def inject_shell(path:Path,text:str)->str:
     text=re.sub(r'<footer>.*?</footer>',footer(path),text,count=1,flags=re.S)
     for old in ('css/style.css?v=6','css/style.css?v=7','css/style.css?v=10','css/style.css?v=11','css/style.css?v=20','css/style.css?v=21'):
         text=text.replace(old,'css/style.css?v=22')
-    text=text.replace('css/editorial.css?v=1','css/editorial.css?v=21').replace('css/editorial.css?v=20','css/editorial.css?v=21')
+    text=text.replace('css/editorial.css?v=1','css/editorial.css?v=22').replace('css/editorial.css?v=20','css/editorial.css?v=22').replace('css/editorial.css?v=21','css/editorial.css?v=22')
     text=text.replace('<meta name="theme-color" content="#0f766e">','<meta name="theme-color" content="#2a3a96">').replace('<meta name="theme-color" content="#124e4a">','<meta name="theme-color" content="#2a3a96">')
     p=prefix_for(path)
     text=re.sub(r'<link rel="preload" href="[^"]*ibm-plex-arabic[^"]*" as="font"[^>]*>\s*','',text)

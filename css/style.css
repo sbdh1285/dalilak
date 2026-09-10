@@ -62,7 +62,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:1.02rem;line-height:1.95;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 body.menu-open{overflow:hidden}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 picture{display:block;max-width:100%}
 a{color:var(--secondary);text-decoration:none;transition:color .16s ease}
 a:hover{color:var(--accent-ink)}
