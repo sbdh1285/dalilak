@@ -375,7 +375,7 @@ def standard_head(title: str, description: str, canonical: str, prefix: str = ""
 <link rel="preload" href="{prefix}fonts/tajawal-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="{prefix}favicon.svg">
 <link rel="manifest" href="{prefix}manifest.json">
-<link rel="stylesheet" href="{prefix}css/style.css?v=21">
+<link rel="stylesheet" href="{prefix}css/style.css?v=22">
 </head>'''
 
 
