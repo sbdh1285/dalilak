@@ -21,7 +21,7 @@
 <link rel="preload" href="fonts/tajawal-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="manifest" href="manifest.json">
-<link rel="stylesheet" href="css/style.css?v=21">
+<link rel="stylesheet" href="css/style.css?v=22">
 <link rel="preload" href="fonts/alexandria-arabic-700.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
@@ -47,12 +47,13 @@
 <script>
 (function(){
 var box=document.getElementById('pageSearch'),out=document.getElementById('pageResults'),idx=null;
+function esc(s){return String(s).replace(/[&<>'\"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]})}
 var base=(location.pathname.indexOf('/posts/')>=0||location.pathname.indexOf('/category/')>=0)?'../':'';
 fetch(base+'search-index.json').then(function(r){return r.json()}).then(function(d){idx=d;var q=new URLSearchParams(location.search).get('q');if(q){box.value=q;run(q.toLowerCase())}}).catch(function(){});
 function run(q){out.innerHTML='';if(!idx||!q||q.length<2){out.innerHTML='<p style="color:var(--mut)">اكتب كلمة من حرفين على الأقل.</p>';return;}
 var h=idx.filter(function(x){return (x.t&&x.t.toLowerCase().indexOf(q)>-1)||(x.c&&x.c.toLowerCase().indexOf(q)>-1)});
 if(!h.length){out.innerHTML='<p style="color:var(--mut)">لا توجد نتائج مطابقة.</p>';return;}
-h.forEach(function(x){var a=document.createElement('a');a.className='card';a.href=base+'posts/'+x.s+'.html';a.innerHTML='<div class="card-body"><span class="cat-chip">'+x.c+'</span><h3>'+x.t+'</h3></div>';out.appendChild(a)});}
+h.forEach(function(x){var a=document.createElement('a');a.className='card';a.href=base+'posts/'+encodeURIComponent(x.s)+'.html';a.innerHTML='<div class="card-body"><span class="cat-chip">'+esc(x.c)+'</span><h3>'+esc(x.t)+'</h3></div>';out.appendChild(a)});}
 box.addEventListener('input',function(){run(box.value.trim().toLowerCase())});
 })();
 </script>

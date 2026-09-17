@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """إنشاء جرد داخلي للصفحات والمقالات والصور والروابط."""
 from pathlib import Path
+from datetime import date
 import json,re
 ROOT=Path(__file__).resolve().parents[1]
 def jsonlds(text):
@@ -18,6 +19,6 @@ for p in sorted(ROOT.rglob('*.html')):
   toc_match=re.search(r'<nav class="toc" aria-label="جدول محتويات المقال">.*?<ul>(.*?)</ul></nav>',t,re.S);toc=[{'id':a,'title':re.sub('<.*?>','',n).strip()} for a,n in re.findall(r'href="#([^"]+)">(.*?)</a>',toc_match.group(1),re.S)] if toc_match else []
   cover=re.search(r'<img class="art-img" src="([^"]+)" alt="([^"]+)',t)
   articles.append({'slug':p.stem,'path':rel,'headline':article.get('headline'),'category':article.get('articleSection'),'datePublished':article.get('datePublished'),'dateModified':article.get('dateModified'),'author':article.get('author'),'cover':{'src':cover.group(1),'alt':cover.group(2)} if cover else None,'toc':toc,'sources':[url for section in re.findall(r'<section class="sources".*?</section>',t,re.S) for url in re.findall(r'href="([^"]+)"',section)]})
-out={'generated':'2026-08-17','summary':{'pages':len(pages),'articles':len(articles),'images':len(set(i for p in pages for i in p['images'])),'links':len(set(i for p in pages for i in p['links']))},'articles':articles,'pages':pages}
+out={'generated':date.today().isoformat(),'summary':{'pages':len(pages),'articles':len(articles),'images':len(set(i for p in pages for i in p['images'])),'links':len(set(i for p in pages for i in p['links']))},'articles':articles,'pages':pages}
 (ROOT/'docs'/'site-inventory.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(out['summary'])

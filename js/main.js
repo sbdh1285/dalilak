@@ -18,12 +18,16 @@
     });
   }
 
+  var indexFailed = false;
   fetch(new URL('search-index.json', siteBase))
     .then(function (response) { if (!response.ok) throw new Error(); return response.json(); })
     .then(function (data) { index = Array.isArray(data) ? data : []; })
-    .catch(function () { index = []; });
+    .catch(function () { index = []; indexFailed = true; });
 
-  if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  /* الوضع الليلي: localStorage يرمي استثناءً في التصفح الخاص/المحظور */
+  function getTheme() { try { return localStorage.getItem('theme'); } catch (error) { return null; } }
+  function setTheme(value) { try { localStorage.setItem('theme', value); } catch (error) {} }
+  if (getTheme() === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
   function updateThemeButton() {
     if (!themeButton) return;
     var dark = document.documentElement.getAttribute('data-theme') === 'dark';
@@ -35,8 +39,8 @@
   updateThemeButton();
   if (themeButton) themeButton.addEventListener('click', function () {
     var dark = document.documentElement.getAttribute('data-theme') === 'dark';
-    if (dark) { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
-    else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+    if (dark) { document.documentElement.removeAttribute('data-theme'); setTheme('light'); }
+    else { document.documentElement.setAttribute('data-theme', 'dark'); setTheme('dark'); }
     updateThemeButton();
   });
 
@@ -46,7 +50,9 @@
       searchResults.innerHTML = '';
       if (query.length < 2) { searchResults.classList.remove('open'); return; }
       if (!index.length) {
-        searchResults.innerHTML = '<span class="search-message">جارٍ تحميل البحث…</span>';
+        searchResults.innerHTML = indexFailed
+          ? '<span class="search-message">تعذّر تحميل البحث، حاول لاحقًا</span>'
+          : '<span class="search-message">جارٍ تحميل البحث…</span>';
         searchResults.classList.add('open'); return;
       }
       var hits = index.filter(function (item) {
@@ -117,7 +123,17 @@
   window.copyLink = function () {
     var toast = document.getElementById('toast');
     function showToast() { if (!toast) return; toast.classList.add('show'); setTimeout(function(){toast.classList.remove('show');},2200); }
-    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(location.href).then(showToast).catch(showToast);
-    else showToast();
+    function legacyCopy() {
+      try {
+        var area = document.createElement('textarea');
+        area.value = location.href; area.setAttribute('readonly', '');
+        area.style.position = 'fixed'; area.style.opacity = '0';
+        document.body.appendChild(area); area.select();
+        document.execCommand('copy'); document.body.removeChild(area);
+      } catch (error) {}
+      showToast();
+    }
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(location.href).then(showToast).catch(legacyCopy);
+    else legacyCopy();
   };
 })();
