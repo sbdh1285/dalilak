@@ -164,6 +164,13 @@ def inject_shell(path:Path,text:str)->str:
     text=re.sub(r'<link rel="preload" href="[^"]*ibm-plex-arabic[^"]*" as="font"[^>]*>\s*','',text)
     preload=f'<link rel="preload" href="{p}fonts/alexandria-arabic-700.woff2" as="font" type="font/woff2" crossorigin>'
     if 'alexandria-arabic-700.woff2' not in text:text=text.replace('</head>',preload+'\n</head>')
+    verification=(CONFIG.get('googleSiteVerification') or '').strip()
+    if verification:
+        vtag=f'<meta name="google-site-verification" content="{html.escape(verification,quote=True)}">'
+        if 'name="google-site-verification"' in text:
+            text=re.sub(r'<meta\s+name="google-site-verification"\s+content="[^"]*"\s*/?>',vtag,text,count=1)
+        else:
+            text=re.sub(r'(<meta name="viewport"[^>]*>)',r'\1\n'+vtag,text,count=1) if '<meta name="viewport"' in text else text.replace('</head>',vtag+'\n</head>',1)
     if '<meta property="og:title"' not in text:
         title_match=re.search(r'<title>(.*?)</title>',text,re.S);desc_match=re.search(r'<meta name="description" content="([^"]+)"',text);canonical_match=re.search(r'<link rel="canonical" href="([^"]+)"',text)
         if title_match and desc_match and canonical_match:
@@ -319,6 +326,6 @@ def main()->None:
             write(path,text)
     sync_css_config()
     update_favicon()
-    page_count=sum(1 for p in ROOT.rglob('*.html') if 'node_modules' not in p.parts)
+    page_count=sum(1 for p in ROOT.rglob('*.html') if 'node_modules' not in p.parts and not (p.parent==ROOT and p.name.startswith('google')))
     print(f"تم تطبيق قالب المجلة على {page_count} صفحة و{len(records)} مقالًا.")
 if __name__=="__main__":main()

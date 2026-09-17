@@ -11,6 +11,7 @@ def jsonlds(text):
 pages=[];articles=[]
 for p in sorted(ROOT.rglob('*.html')):
  if 'node_modules' in p.parts:continue
+ if p.parent==ROOT and p.name.startswith('google'):continue
  t=p.read_text(encoding='utf-8');rel=p.relative_to(ROOT).as_posix();title=re.search(r'<title>(.*?)</title>',t,re.S);desc=re.search(r'<meta name="description" content="([^"]+)',t);canonical=re.search(r'<link rel="canonical" href="([^"]+)',t);h1=re.search(r'<h1[^>]*>(.*?)</h1>',t,re.S)
  links=sorted(set(re.findall(r'<a[^>]+href="([^"]+)',t)));images=sorted(set(re.findall(r'<img[^>]+src="([^"]+)',t)))
  pages.append({'path':rel,'title':re.sub('<.*?>','',title.group(1)).strip() if title else None,'description':desc.group(1) if desc else None,'canonical':canonical.group(1) if canonical else None,'h1':re.sub('<.*?>','',h1.group(1)).strip() if h1 else None,'links':links,'images':images})

@@ -3,7 +3,7 @@
 from pathlib import Path
 import json,re,subprocess,sys,xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1];errors=[]
-pages=[p for p in ROOT.rglob('*.html') if 'node_modules' not in p.parts];posts=list((ROOT/'posts').glob('*.html'))
+pages=[p for p in ROOT.rglob('*.html') if 'node_modules' not in p.parts and not (p.parent==ROOT and p.name.startswith('google'))];posts=list((ROOT/'posts').glob('*.html'))
 required={'title':r'<title>','description':r'<meta name="description"','canonical':r'<link rel="canonical"','og:title':r'<meta property="og:title"','og:description':r'<meta property="og:description"','og:url':r'<meta property="og:url"','og:image':r'<meta property="og:image"','robots':r'<meta name="robots"'}
 for p in pages:
  t=p.read_text(encoding='utf-8');rel=p.relative_to(ROOT).as_posix()

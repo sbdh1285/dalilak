@@ -208,6 +208,7 @@ def create_new_articles():
 def apply_accuracy_rewrites():
  for path in ROOT.rglob('*.html'):
   if 'node_modules' in path.parts:continue
+  if path.parent==ROOT and path.name.startswith('google'):continue
   text=read(path)
   for old,new in TITLE_RENAMES.items():text=text.replace(old,new)
   for old,new in TEXT_FIXES.items():text=text.replace(old,new)
