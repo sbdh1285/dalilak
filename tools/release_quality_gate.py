@@ -36,7 +36,9 @@ for script in ('content_quality_audit.py','reading_time_audit.py','audit_site.py
  result=subprocess.run([sys.executable,str(ROOT/'tools'/script)],capture_output=True,text=True)
  if result.returncode:errors.append((script,result.stdout+result.stderr))
 summary={'pages':len(pages),'articles':len(posts),'sources':sum('class="sources"' in p.read_text(encoding='utf-8') for p in posts),'mappedImages':len(json.loads((ROOT/'images'/'article-images.json').read_text(encoding='utf-8'))),'sitemapUrls':len(ET.parse(ROOT/'sitemap.xml').getroot()),'forms':forms,'publishedEmails':len(mailtos),'errors':len(errors)}
-report=['# تقرير بوابة الجودة قبل النشر','',f'**التاريخ:** 17 أغسطس 2026  ',f'**النتيجة:** {"اجتاز" if not errors else "فشل"}','','## الملخص']+[f'- {k}: {v}' for k,v in summary.items()]+['','## الفحوص','- بنية الصفحات وحقول SEO وOpen Graph.','- H1 وlang وRTL وCanonical.','- تطابق جدول المحتويات وترتيب الخلاصة.','- الصور والمسارات والتكرار والنصوص البديلة.','- الروابط الداخلية والخصوصية والنموذج والبريد.','- sitemap وRSS وعدم وجود كود AdSense.','- أصالة المقالات وتشابه النصوص والمصادر المطلوبة.']
+from datetime import date
+today_str = date.today().isoformat()
+report=['# تقرير بوابة الجودة قبل النشر','',f'**التاريخ:** {today_str}  ',f'**النتيجة:** {"اجتاز" if not errors else "فشل"}','','## الملخص']+[f'- {k}: {v}' for k,v in summary.items()]+['','## الفحوص','- بنية الصفحات وحقول SEO وOpen Graph.','- H1 وlang وRTL وCanonical.','- تطابق جدول المحتويات وترتيب الخلاصة.','- الصور والمسارات والتكرار والنصوص البديلة.','- الروابط الداخلية والخصوصية والنموذج والبريد.','- sitemap وRSS وعدم وجود كود AdSense.','- أصالة المقالات وتشابه النصوص والمصادر المطلوبة.']
 if errors:report+=['','## الأخطاء']+[f'- **{a}:** {b}' for a,b in errors]
 (ROOT/'docs'/'release-quality-report.md').write_text('\n'.join(report)+'\n',encoding='utf-8');print(json.dumps(summary,ensure_ascii=False))
 if errors:
