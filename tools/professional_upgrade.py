@@ -152,6 +152,8 @@ def global_html_fixes() -> None:
     for path in ROOT.rglob("*.html"):
         if "node_modules" in path.parts:
             continue
+        if path.parent == ROOT and path.name.startswith("google"):
+            continue
         text = read(path)
         text = re.sub(
             r'<meta name="viewport" content="[^"]*">',

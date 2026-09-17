@@ -83,6 +83,16 @@ python3 tools/configure_domain.py --domain example.com --email contact@example.c
 
 النموذج مفعّل حاليًا عبر FormSubmit إلى البريد الرسمي الموحد في `site-config.json`. عند أول تفعيل يجب تأكيد رسالة FormSubmit واختبار الإرسال؛ لا تعرض أي بريد أو نموذج غير عامل.
 
+## التحقق من Google Search Console
+
+لرفع كود التحقق (وسم `meta` أو ملف `googleXXXX.html`) نفّذ:
+
+```bash
+python3 tools/add_google_verification.py --code "الصق-الكود-هنا"
+```
+
+الكود يُحفظ في `site-config.json` ويُعاد حقنه تلقائيًا عند أي توليد لاحق. الخطوات الكاملة في `docs/google-verification.md`.
+
 ## AdSense
 
 ملف `ads.txt` قالب فقط إلى أن يتم قبول الموقع والحصول على معرف ناشر حقيقي. لا تضع معرفًا وهميًا.

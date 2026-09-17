@@ -40,6 +40,7 @@
     }
   ],
   "customDomain": "",
+  "googleSiteVerification": "",
   "contact": {
     "enabled": true,
     "provider": "formsubmit",

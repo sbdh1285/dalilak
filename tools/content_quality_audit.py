@@ -62,7 +62,7 @@ for files in hashes.values():
 search=json.loads((ROOT/'search-index.json').read_text(encoding='utf-8'))
 if len(search)!=len(rows):errors.append(('count',[f'فهرس البحث {len(search)} والمقالات {len(rows)}']))
 # الخصوصية والبريد والنموذج
-pages=[p for p in ROOT.rglob('*.html') if 'node_modules' not in p.parts]
+pages=[p for p in ROOT.rglob('*.html') if 'node_modules' not in p.parts and not (p.parent==ROOT and p.name.startswith('google'))]
 for p in pages:
  if p.name!='privacy-policy.html' and 'privacy-policy.html' not in p.read_text(encoding='utf-8'):errors.append((str(p.relative_to(ROOT)),['رابط الخصوصية مفقود']))
 mailtos=[]

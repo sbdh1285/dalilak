@@ -247,6 +247,7 @@ def improve_author_page()->None:
 def apply_global_cleanup()->None:
     for path in ROOT.rglob('*.html'):
         if 'node_modules' in path.parts:continue
+        if path.parent==ROOT and path.name.startswith('google'):continue
         text=read(path)
         for old,new in TITLE_RENAMES.items():text=text.replace(old,new)
         for old,new in GLOBAL_TEXT_FIXES.items():text=text.replace(old,new)

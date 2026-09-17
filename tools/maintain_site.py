@@ -361,6 +361,15 @@ def fix_general_page(path: Path) -> None:
     write(path, text)
 
 
+def verification_meta_tag() -> str:
+    code = (SITE_CONFIG.get("googleSiteVerification") or "").strip()
+    return f'\n<meta name="google-site-verification" content="{code}">' if code else ""
+
+
+def is_google_verification_file(path: Path) -> bool:
+    return path.parent == ROOT and path.name.startswith("google") and path.suffix == ".html"
+
+
 def standard_head(title: str, description: str, canonical: str, prefix: str = "") -> str:
     return f'''<!DOCTYPE html>
 <html lang="ar" dir="rtl">
@@ -370,7 +379,7 @@ def standard_head(title: str, description: str, canonical: str, prefix: str = ""
 <title>{title} | دليلك</title>
 <meta name="description" content="{description}">
 <link rel="canonical" href="{canonical}">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow">{verification_meta_tag()}
 <meta name="theme-color" content="#2a3a96">
 <link rel="preload" href="{prefix}fonts/tajawal-700.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="{prefix}favicon.svg">
@@ -623,6 +632,8 @@ def main() -> None:
     for path in sorted(ROOT.rglob("*.html")):
         if "node_modules" in path.parts or "qa" in path.parts or path.parent.name == "posts":
             continue
+        if is_google_verification_file(path):
+            continue
         fix_general_page(path)
 
     update_manifest()
@@ -636,6 +647,8 @@ def main() -> None:
     # وحّد إصدار CSS بعد التعديل.
     for path in ROOT.rglob("*.html"):
         if "node_modules" in path.parts or "qa" in path.parts:
+            continue
+        if is_google_verification_file(path):
             continue
         text = read(path).replace('css/style.css?v=5', 'css/style.css?v=6')
         write(path, text)

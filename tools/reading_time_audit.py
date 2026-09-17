@@ -10,6 +10,7 @@ for slug,a in records.items():
  checked+=1
 for path in ROOT.rglob('*.html'):
  if 'node_modules' in path.parts:continue
+ if path.parent==ROOT and path.name.startswith('google'):continue
  text=path.read_text(encoding='utf-8')
  if re.search(r'(?<!\d)0 (?:دقائق|دقيقة|دقيقتان)',text):errors.append((str(path.relative_to(ROOT)),'قيمة صفرية',''))
  if '2 دقائق قراءة' in text:errors.append((str(path.relative_to(ROOT)),'صياغة المثنى غير صحيحة','دقيقتان قراءة'))
