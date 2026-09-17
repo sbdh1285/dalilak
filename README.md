@@ -69,7 +69,19 @@ python3 tools/pre_domain_content.py
 python3 tools/audit_site.py
 ```
 
+## الفهرسة الفورية (IndexNow)
+
+مع كل دمج في `main` يُبلغ سير عمل **IndexNow** محركات Bing وYandex وSeznam بالصفحات
+التي تغيّرت (بما فيها أي مقال جديد) خلال ثوانٍ من النشر، مع إشعار كامل دوري بكل روابط
+`sitemap.xml` وإمكانية إشعار رابط محدد يدويًا من تبويب Actions. التفاصيل الكاملة في
+`docs/indexnow.md`، ولتجربة السكربت محليًا:
+
+```bash
+python3 tools/indexnow_ping.py --feed-top 10 --dry-run
+```
+
 ## النشر وربط الدومين
+
 
 الموقع ملفات ثابتة ويُنشر من فرع `main` عبر GitHub Pages. بعد شراء الدومين وإنشاء البريد الرسمي:
 
